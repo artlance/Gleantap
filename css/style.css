@@ -12047,7 +12047,7 @@ button.button {
   background: var(--theme-white);
 }
 .create-campaign-automations-filled-content {
-  width: 1000px;
+  width: 1440px;
   margin: 0 auto 20px;
   text-align: center;
 }
@@ -12224,6 +12224,7 @@ button.button {
   .create-campaign-option-save a {
     width: 41px;
     padding: 0;
+    font-size: 0;
     text-indent: -9999px;
   }
 }
@@ -12255,20 +12256,24 @@ button.button {
   }
 }
 @media (max-width: 767.98px) {
-  .create-campaign-options-other .create-campaign-option {
-    max-width: 50%;
+  .create-campaign-option:nth-child(1) {
+    flex: 0 0 80px;
+    max-width: 0 0 80px;
+  }
+  .create-campaign-option:nth-child(2) {
+    flex: 0 0 calc(100% - 80px);
+    max-width: 0 0 calc(100% - 80px);
+    text-align: right;
+  }
+  .create-campaign-option:nth-child(2) > * {
+    text-align: left;
+  }
+  .create-campaign-option-back {
+    width: 80px;
   }
   .create-campaign-option-send {
+    width: 110px;
     margin-left: 8px;
-    width: 60px;
-  }
-  .create-campaign-option-send .button {
-    vertical-align: top;
-    font-size: 0;
-    line-height: 0;
-  }
-  .create-campaign-option-send .button-icon {
-    margin: 0 auto 2px;
   }
   .create-campaign-tags-new {
     flex: 0 0 100%;
@@ -12319,9 +12324,6 @@ button.button {
   }
   .create-campaign-automations-filled {
     margin: 0 -10px;
-  }
-  .create-campaign-automations-filled-content {
-    width: 500px;
   }
   .create-campaign-automations-filled-plus {
     margin-top: 30px;
@@ -17854,7 +17856,7 @@ button.button {
   display: none;
 }
 .new-segmentation-conditions-add {
-  display: block;
+  display: inline-block;
   position: relative;
   margin-top: 10px;
   padding: 3px 0 2px 34px;

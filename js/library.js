@@ -59,9 +59,6 @@
 !function (e) { "function" == typeof define && define.amd ? define(["jquery"], e) : e(jQuery) }(function (M) { M.ui = M.ui || {}; var r; M.ui.version = "1.12.1", M.ui.keyCode = { BACKSPACE: 8, COMMA: 188, DELETE: 46, DOWN: 40, END: 35, ENTER: 13, ESCAPE: 27, HOME: 36, LEFT: 37, PAGE_DOWN: 34, PAGE_UP: 33, PERIOD: 190, RIGHT: 39, SPACE: 32, TAB: 9, UP: 38 }; function e() { this._curInst = null, this._keyEvent = !1, this._disabledInputs = [], this._datepickerShowing = !1, this._inDialog = !1, this._mainDivId = "ui-datepicker-div", this._inlineClass = "ui-datepicker-inline", this._appendClass = "ui-datepicker-append", this._triggerClass = "ui-datepicker-trigger", this._dialogClass = "ui-datepicker-dialog", this._disableClass = "ui-datepicker-disabled", this._unselectableClass = "ui-datepicker-unselectable", this._currentClass = "ui-datepicker-current-day", this._dayOverClass = "ui-datepicker-days-cell-over", this.regional = [], this.regional[""] = { closeText: "Done", prevText: "Prev", nextText: "Next", currentText: "Today", monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"], monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], dayNames: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], dayNamesShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], dayNamesMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"], weekHeader: "Wk", dateFormat: "mm/dd/yy", firstDay: 0, isRTL: !1, showMonthAfterYear: !1, yearSuffix: "" }, this._defaults = { showOn: "focus", showAnim: "fadeIn", showOptions: {}, defaultDate: null, appendText: "", buttonText: "...", buttonImage: "", buttonImageOnly: !1, hideIfNoPrevNext: !1, navigationAsDateFormat: !1, gotoCurrent: !1, changeMonth: !1, changeYear: !1, yearRange: "c-10:c+10", showOtherMonths: !1, selectOtherMonths: !1, showWeek: !1, calculateWeek: this.iso8601Week, shortYearCutoff: "+10", minDate: null, maxDate: null, duration: "fast", beforeShowDay: null, beforeShow: null, onSelect: null, onChangeMonthYear: null, onClose: null, numberOfMonths: 1, showCurrentAtPos: 0, stepMonths: 1, stepBigMonths: 12, altField: "", altFormat: "", constrainInput: !0, showButtonPanel: !1, autoSize: !1, disabled: !1 }, M.extend(this._defaults, this.regional[""]), this.regional.en = M.extend(!0, {}, this.regional[""]), this.regional["en-US"] = M.extend(!0, {}, this.regional.en), this.dpDiv = a(M("<div id='" + this._mainDivId + "' class='ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'></div>")) } function a(e) { var t = "button, .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-calendar td a"; return e.on("mouseout", t, function () { M(this).removeClass("ui-state-hover"), -1 !== this.className.indexOf("ui-datepicker-prev") && M(this).removeClass("ui-datepicker-prev-hover"), -1 !== this.className.indexOf("ui-datepicker-next") && M(this).removeClass("ui-datepicker-next-hover") }).on("mouseover", t, n) } function n() { M.datepicker._isDisabledDatepicker((r.inline ? r.dpDiv.parent() : r.input)[0]) || (M(this).parents(".ui-datepicker-calendar").find("a").removeClass("ui-state-hover"), M(this).addClass("ui-state-hover"), -1 !== this.className.indexOf("ui-datepicker-prev") && M(this).addClass("ui-datepicker-prev-hover"), -1 !== this.className.indexOf("ui-datepicker-next") && M(this).addClass("ui-datepicker-next-hover")) } function o(e, t) { for (var a in M.extend(e, t), t) null == t[a] && (e[a] = t[a]); return e } M.extend(M.ui, { datepicker: { version: "1.12.1" } }), M.extend(e.prototype, { markerClassName: "hasDatepicker", maxRows: 4, _widgetDatepicker: function () { return this.dpDiv }, setDefaults: function (e) { return o(this._defaults, e || {}), this }, _attachDatepicker: function (e, t) { var a, i = e.nodeName.toLowerCase(), s = "div" === i || "span" === i; e.id || (this.uuid += 1, e.id = "dp" + this.uuid), (a = this._newInst(M(e), s)).settings = M.extend({}, t || {}), "input" === i ? this._connectDatepicker(e, a) : s && this._inlineDatepicker(e, a) }, _newInst: function (e, t) { return { id: e[0].id.replace(/([^A-Za-z0-9_\-])/g, "\\\\$1"), input: e, selectedDay: 0, selectedMonth: 0, selectedYear: 0, drawMonth: 0, drawYear: 0, inline: t, dpDiv: t ? a(M("<div class='" + this._inlineClass + " ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'></div>")) : this.dpDiv } }, _connectDatepicker: function (e, t) { var a = M(e); t.append = M([]), t.trigger = M([]), a.hasClass(this.markerClassName) || (this._attachments(a, t), a.addClass(this.markerClassName).on("keydown", this._doKeyDown).on("keypress", this._doKeyPress).on("keyup", this._doKeyUp), this._autoSize(t), M.data(e, "datepicker", t), t.settings.disabled && this._disableDatepicker(e)) }, _attachments: function (e, t) { var a, i = this._get(t, "appendText"), s = this._get(t, "isRTL"); t.append && t.append.remove(), i && (t.append = M("<span class='" + this._appendClass + "'>" + i + "</span>"), e[s ? "before" : "after"](t.append)), e.off("focus", this._showDatepicker), t.trigger && t.trigger.remove(), "focus" !== (a = this._get(t, "showOn")) && "both" !== a || e.on("focus", this._showDatepicker), "button" !== a && "both" !== a || (i = this._get(t, "buttonText"), a = this._get(t, "buttonImage"), t.trigger = M(this._get(t, "buttonImageOnly") ? M("<img/>").addClass(this._triggerClass).attr({ src: a, alt: i, title: i }) : M("<button type='button'></button>").addClass(this._triggerClass).html(a ? M("<img/>").attr({ src: a, alt: i, title: i }) : i)), e[s ? "before" : "after"](t.trigger), t.trigger.on("click", function () { return M.datepicker._datepickerShowing && M.datepicker._lastInput === e[0] ? M.datepicker._hideDatepicker() : (M.datepicker._datepickerShowing && M.datepicker._lastInput !== e[0] && M.datepicker._hideDatepicker(), M.datepicker._showDatepicker(e[0])), !1 })) }, _autoSize: function (e) { var t, a, i, s, r, n; this._get(e, "autoSize") && !e.inline && (r = new Date(2009, 11, 20), (n = this._get(e, "dateFormat")).match(/[DM]/) && (t = function (e) { for (s = i = a = 0; s < e.length; s++)e[s].length > a && (a = e[s].length, i = s); return i }, r.setMonth(t(this._get(e, n.match(/MM/) ? "monthNames" : "monthNamesShort"))), r.setDate(t(this._get(e, n.match(/DD/) ? "dayNames" : "dayNamesShort")) + 20 - r.getDay())), e.input.attr("size", this._formatDate(e, r).length)) }, _inlineDatepicker: function (e, t) { var a = M(e); a.hasClass(this.markerClassName) || (a.addClass(this.markerClassName).append(t.dpDiv), M.data(e, "datepicker", t), this._setDate(t, this._getDefaultDate(t), !0), this._updateDatepicker(t), this._updateAlternate(t), t.settings.disabled && this._disableDatepicker(e), t.dpDiv.css("display", "block")) }, _dialogDatepicker: function (e, t, a, i, s) { var r, n = this._dialogInst; return n || (this.uuid += 1, r = "dp" + this.uuid, this._dialogInput = M("<input type='text' id='" + r + "' style='position: absolute; top: -100px; width: 0px;'/>"), this._dialogInput.on("keydown", this._doKeyDown), M("body").append(this._dialogInput), (n = this._dialogInst = this._newInst(this._dialogInput, !1)).settings = {}, M.data(this._dialogInput[0], "datepicker", n)), o(n.settings, i || {}), t = t && t.constructor === Date ? this._formatDate(n, t) : t, this._dialogInput.val(t), this._pos = s ? s.length ? s : [s.pageX, s.pageY] : null, this._pos || (r = document.documentElement.clientWidth, i = document.documentElement.clientHeight, t = document.documentElement.scrollLeft || document.body.scrollLeft, s = document.documentElement.scrollTop || document.body.scrollTop, this._pos = [r / 2 - 100 + t, i / 2 - 150 + s]), this._dialogInput.css("left", this._pos[0] + 20 + "px").css("top", this._pos[1] + "px"), n.settings.onSelect = a, this._inDialog = !0, this.dpDiv.addClass(this._dialogClass), this._showDatepicker(this._dialogInput[0]), M.blockUI && M.blockUI(this.dpDiv), M.data(this._dialogInput[0], "datepicker", n), this }, _destroyDatepicker: function (e) { var t, a = M(e), i = M.data(e, "datepicker"); a.hasClass(this.markerClassName) && (t = e.nodeName.toLowerCase(), M.removeData(e, "datepicker"), "input" === t ? (i.append.remove(), i.trigger.remove(), a.removeClass(this.markerClassName).off("focus", this._showDatepicker).off("keydown", this._doKeyDown).off("keypress", this._doKeyPress).off("keyup", this._doKeyUp)) : "div" !== t && "span" !== t || a.removeClass(this.markerClassName).empty(), r === i && (r = null)) }, _enableDatepicker: function (t) { var e, a = M(t), i = M.data(t, "datepicker"); a.hasClass(this.markerClassName) && ("input" === (e = t.nodeName.toLowerCase()) ? (t.disabled = !1, i.trigger.filter("button").each(function () { this.disabled = !1 }).end().filter("img").css({ opacity: "1.0", cursor: "" })) : "div" !== e && "span" !== e || ((a = a.children("." + this._inlineClass)).children().removeClass("ui-state-disabled"), a.find("select.ui-datepicker-month, select.ui-datepicker-year").prop("disabled", !1)), this._disabledInputs = M.map(this._disabledInputs, function (e) { return e === t ? null : e })) }, _disableDatepicker: function (t) { var e, a = M(t), i = M.data(t, "datepicker"); a.hasClass(this.markerClassName) && ("input" === (e = t.nodeName.toLowerCase()) ? (t.disabled = !0, i.trigger.filter("button").each(function () { this.disabled = !0 }).end().filter("img").css({ opacity: "0.5", cursor: "default" })) : "div" !== e && "span" !== e || ((a = a.children("." + this._inlineClass)).children().addClass("ui-state-disabled"), a.find("select.ui-datepicker-month, select.ui-datepicker-year").prop("disabled", !0)), this._disabledInputs = M.map(this._disabledInputs, function (e) { return e === t ? null : e }), this._disabledInputs[this._disabledInputs.length] = t) }, _isDisabledDatepicker: function (e) { if (!e) return !1; for (var t = 0; t < this._disabledInputs.length; t++)if (this._disabledInputs[t] === e) return !0; return !1 }, _getInst: function (e) { try { return M.data(e, "datepicker") } catch (e) { throw "Missing instance data for this datepicker" } }, _optionDatepicker: function (e, t, a) { var i, s, r, n, d = this._getInst(e); if (2 === arguments.length && "string" == typeof t) return "defaults" === t ? M.extend({}, M.datepicker._defaults) : d ? "all" === t ? M.extend({}, d.settings) : this._get(d, t) : null; i = t || {}, "string" == typeof t && ((i = {})[t] = a), d && (this._curInst === d && this._hideDatepicker(), s = this._getDateDatepicker(e, !0), r = this._getMinMaxDate(d, "min"), n = this._getMinMaxDate(d, "max"), o(d.settings, i), null !== r && void 0 !== i.dateFormat && void 0 === i.minDate && (d.settings.minDate = this._formatDate(d, r)), null !== n && void 0 !== i.dateFormat && void 0 === i.maxDate && (d.settings.maxDate = this._formatDate(d, n)), "disabled" in i && (i.disabled ? this._disableDatepicker(e) : this._enableDatepicker(e)), this._attachments(M(e), d), this._autoSize(d), this._setDate(d, s), this._updateAlternate(d), this._updateDatepicker(d)) }, _changeDatepicker: function (e, t, a) { this._optionDatepicker(e, t, a) }, _refreshDatepicker: function (e) { e = this._getInst(e); e && this._updateDatepicker(e) }, _setDateDatepicker: function (e, t) { e = this._getInst(e); e && (this._setDate(e, t), this._updateDatepicker(e), this._updateAlternate(e)) }, _getDateDatepicker: function (e, t) { e = this._getInst(e); return e && !e.inline && this._setDateFromField(e, t), e ? this._getDate(e) : null }, _doKeyDown: function (e) { var t, a, i = M.datepicker._getInst(e.target), s = !0, r = i.dpDiv.is(".ui-datepicker-rtl"); if (i._keyEvent = !0, M.datepicker._datepickerShowing) switch (e.keyCode) { case 9: M.datepicker._hideDatepicker(), s = !1; break; case 13: return (a = M("td." + M.datepicker._dayOverClass + ":not(." + M.datepicker._currentClass + ")", i.dpDiv))[0] && M.datepicker._selectDay(e.target, i.selectedMonth, i.selectedYear, a[0]), (t = M.datepicker._get(i, "onSelect")) ? (a = M.datepicker._formatDate(i), t.apply(i.input ? i.input[0] : null, [a, i])) : M.datepicker._hideDatepicker(), !1; case 27: M.datepicker._hideDatepicker(); break; case 33: M.datepicker._adjustDate(e.target, e.ctrlKey ? -M.datepicker._get(i, "stepBigMonths") : -M.datepicker._get(i, "stepMonths"), "M"); break; case 34: M.datepicker._adjustDate(e.target, e.ctrlKey ? +M.datepicker._get(i, "stepBigMonths") : +M.datepicker._get(i, "stepMonths"), "M"); break; case 35: (e.ctrlKey || e.metaKey) && M.datepicker._clearDate(e.target), s = e.ctrlKey || e.metaKey; break; case 36: (e.ctrlKey || e.metaKey) && M.datepicker._gotoToday(e.target), s = e.ctrlKey || e.metaKey; break; case 37: (e.ctrlKey || e.metaKey) && M.datepicker._adjustDate(e.target, r ? 1 : -1, "D"), s = e.ctrlKey || e.metaKey, e.originalEvent.altKey && M.datepicker._adjustDate(e.target, e.ctrlKey ? -M.datepicker._get(i, "stepBigMonths") : -M.datepicker._get(i, "stepMonths"), "M"); break; case 38: (e.ctrlKey || e.metaKey) && M.datepicker._adjustDate(e.target, -7, "D"), s = e.ctrlKey || e.metaKey; break; case 39: (e.ctrlKey || e.metaKey) && M.datepicker._adjustDate(e.target, r ? -1 : 1, "D"), s = e.ctrlKey || e.metaKey, e.originalEvent.altKey && M.datepicker._adjustDate(e.target, e.ctrlKey ? +M.datepicker._get(i, "stepBigMonths") : +M.datepicker._get(i, "stepMonths"), "M"); break; case 40: (e.ctrlKey || e.metaKey) && M.datepicker._adjustDate(e.target, 7, "D"), s = e.ctrlKey || e.metaKey; break; default: s = !1 } else 36 === e.keyCode && e.ctrlKey ? M.datepicker._showDatepicker(this) : s = !1; s && (e.preventDefault(), e.stopPropagation()) }, _doKeyPress: function (e) { var t, a = M.datepicker._getInst(e.target); if (M.datepicker._get(a, "constrainInput")) return t = M.datepicker._possibleChars(M.datepicker._get(a, "dateFormat")), a = String.fromCharCode(null == e.charCode ? e.keyCode : e.charCode), e.ctrlKey || e.metaKey || a < " " || !t || -1 < t.indexOf(a) }, _doKeyUp: function (e) { var t = M.datepicker._getInst(e.target); if (t.input.val() !== t.lastVal) try { M.datepicker.parseDate(M.datepicker._get(t, "dateFormat"), t.input ? t.input.val() : null, M.datepicker._getFormatConfig(t)) && (M.datepicker._setDateFromField(t), M.datepicker._updateAlternate(t), M.datepicker._updateDatepicker(t)) } catch (e) { } return !0 }, _showDatepicker: function (e) { var t, a, i, s; "input" !== (e = e.target || e).nodeName.toLowerCase() && (e = M("input", e.parentNode)[0]), M.datepicker._isDisabledDatepicker(e) || M.datepicker._lastInput === e || (s = M.datepicker._getInst(e), M.datepicker._curInst && M.datepicker._curInst !== s && (M.datepicker._curInst.dpDiv.stop(!0, !0), s && M.datepicker._datepickerShowing && M.datepicker._hideDatepicker(M.datepicker._curInst.input[0])), !1 !== (a = (i = M.datepicker._get(s, "beforeShow")) ? i.apply(e, [e, s]) : {}) && (o(s.settings, a), s.lastVal = null, M.datepicker._lastInput = e, M.datepicker._setDateFromField(s), M.datepicker._inDialog && (e.value = ""), M.datepicker._pos || (M.datepicker._pos = M.datepicker._findPos(e), M.datepicker._pos[1] += e.offsetHeight), t = !1, M(e).parents().each(function () { return !(t |= "fixed" === M(this).css("position")) }), i = { left: M.datepicker._pos[0], top: M.datepicker._pos[1] }, M.datepicker._pos = null, s.dpDiv.empty(), s.dpDiv.css({ position: "absolute", display: "block", top: "-1000px" }), M.datepicker._updateDatepicker(s), i = M.datepicker._checkOffset(s, i, t), s.dpDiv.css({ position: M.datepicker._inDialog && M.blockUI ? "static" : t ? "fixed" : "absolute", display: "none", left: i.left + "px", top: i.top + "px" }), s.inline || (a = M.datepicker._get(s, "showAnim"), i = M.datepicker._get(s, "duration"), s.dpDiv.css("z-index", function (e) { for (var t, a; e.length && e[0] !== document;) { if (("absolute" === (t = e.css("position")) || "relative" === t || "fixed" === t) && (a = parseInt(e.css("zIndex"), 10), !isNaN(a) && 0 !== a)) return a; e = e.parent() } return 0 }(M(e)) + 1), M.datepicker._datepickerShowing = !0, M.effects && M.effects.effect[a] ? s.dpDiv.show(a, M.datepicker._get(s, "showOptions"), i) : s.dpDiv[a || "show"](a ? i : null), M.datepicker._shouldFocusInput(s) && s.input.trigger("focus"), M.datepicker._curInst = s))) }, _updateDatepicker: function (e) { this.maxRows = 4, (r = e).dpDiv.empty().append(this._generateHTML(e)), this._attachHandlers(e); var t, a = this._getNumberOfMonths(e), i = a[1], s = e.dpDiv.find("." + this._dayOverClass + " a"); 0 < s.length && n.apply(s.get(0)), e.dpDiv.removeClass("ui-datepicker-multi-2 ui-datepicker-multi-3 ui-datepicker-multi-4").width(""), 1 < i && e.dpDiv.addClass("ui-datepicker-multi-" + i).css("width", 17 * i + "em"), e.dpDiv[(1 !== a[0] || 1 !== a[1] ? "add" : "remove") + "Class"]("ui-datepicker-multi"), e.dpDiv[(this._get(e, "isRTL") ? "add" : "remove") + "Class"]("ui-datepicker-rtl"), e === M.datepicker._curInst && M.datepicker._datepickerShowing && M.datepicker._shouldFocusInput(e) && e.input.trigger("focus"), e.yearshtml && (t = e.yearshtml, setTimeout(function () { t === e.yearshtml && e.yearshtml && e.dpDiv.find("select.ui-datepicker-year:first").replaceWith(e.yearshtml), t = e.yearshtml = null }, 0)) }, _shouldFocusInput: function (e) { return e.input && e.input.is(":visible") && !e.input.is(":disabled") && !e.input.is(":focus") }, _checkOffset: function (e, t, a) { var i = e.dpDiv.outerWidth(), s = e.dpDiv.outerHeight(), r = e.input ? e.input.outerWidth() : 0, n = e.input ? e.input.outerHeight() : 0, d = document.documentElement.clientWidth + (a ? 0 : M(document).scrollLeft()), o = document.documentElement.clientHeight + (a ? 0 : M(document).scrollTop()); return t.left -= this._get(e, "isRTL") ? i - r : 0, t.left -= a && t.left === e.input.offset().left ? M(document).scrollLeft() : 0, t.top -= a && t.top === e.input.offset().top + n ? M(document).scrollTop() : 0, t.left -= Math.min(t.left, t.left + i > d && i < d ? Math.abs(t.left + i - d) : 0), t.top -= Math.min(t.top, t.top + s > o && s < o ? Math.abs(s + n) : 0), t }, _findPos: function (e) { for (var t = this._getInst(e), a = this._get(t, "isRTL"); e && ("hidden" === e.type || 1 !== e.nodeType || M.expr.filters.hidden(e));)e = e[a ? "previousSibling" : "nextSibling"]; return [(t = M(e).offset()).left, t.top] }, _hideDatepicker: function (e) { var t, a, i = this._curInst; !i || e && i !== M.data(e, "datepicker") || this._datepickerShowing && (t = this._get(i, "showAnim"), a = this._get(i, "duration"), e = function () { M.datepicker._tidyDialog(i) }, M.effects && (M.effects.effect[t] || M.effects[t]) ? i.dpDiv.hide(t, M.datepicker._get(i, "showOptions"), a, e) : i.dpDiv["slideDown" === t ? "slideUp" : "fadeIn" === t ? "fadeOut" : "hide"](t ? a : null, e), t || e(), this._datepickerShowing = !1, (e = this._get(i, "onClose")) && e.apply(i.input ? i.input[0] : null, [i.input ? i.input.val() : "", i]), this._lastInput = null, this._inDialog && (this._dialogInput.css({ position: "absolute", left: "0", top: "-100px" }), M.blockUI && (M.unblockUI(), M("body").append(this.dpDiv))), this._inDialog = !1) }, _tidyDialog: function (e) { e.dpDiv.removeClass(this._dialogClass).off(".ui-datepicker-calendar") }, _checkExternalClick: function (e) { var t; M.datepicker._curInst && (t = M(e.target), e = M.datepicker._getInst(t[0]), (t[0].id === M.datepicker._mainDivId || 0 !== t.parents("#" + M.datepicker._mainDivId).length || t.hasClass(M.datepicker.markerClassName) || t.closest("." + M.datepicker._triggerClass).length || !M.datepicker._datepickerShowing || M.datepicker._inDialog && M.blockUI) && (!t.hasClass(M.datepicker.markerClassName) || M.datepicker._curInst === e) || M.datepicker._hideDatepicker()) }, _adjustDate: function (e, t, a) { var i = M(e), e = this._getInst(i[0]); this._isDisabledDatepicker(i[0]) || (this._adjustInstDate(e, t + ("M" === a ? this._get(e, "showCurrentAtPos") : 0), a), this._updateDatepicker(e)) }, _gotoToday: function (e) { var t = M(e), a = this._getInst(t[0]); this._get(a, "gotoCurrent") && a.currentDay ? (a.selectedDay = a.currentDay, a.drawMonth = a.selectedMonth = a.currentMonth, a.drawYear = a.selectedYear = a.currentYear) : (e = new Date, a.selectedDay = e.getDate(), a.drawMonth = a.selectedMonth = e.getMonth(), a.drawYear = a.selectedYear = e.getFullYear()), this._notifyChange(a), this._adjustDate(t) }, _selectMonthYear: function (e, t, a) { var i = M(e), e = this._getInst(i[0]); e["selected" + ("M" === a ? "Month" : "Year")] = e["draw" + ("M" === a ? "Month" : "Year")] = parseInt(t.options[t.selectedIndex].value, 10), this._notifyChange(e), this._adjustDate(i) }, _selectDay: function (e, t, a, i) { var s = M(e); M(i).hasClass(this._unselectableClass) || this._isDisabledDatepicker(s[0]) || ((s = this._getInst(s[0])).selectedDay = s.currentDay = M("a", i).html(), s.selectedMonth = s.currentMonth = t, s.selectedYear = s.currentYear = a, this._selectDate(e, this._formatDate(s, s.currentDay, s.currentMonth, s.currentYear))) }, _clearDate: function (e) { e = M(e); this._selectDate(e, "") }, _selectDate: function (e, t) { var a = M(e), e = this._getInst(a[0]); t = null != t ? t : this._formatDate(e), e.input && e.input.val(t), this._updateAlternate(e), (a = this._get(e, "onSelect")) ? a.apply(e.input ? e.input[0] : null, [t, e]) : e.input && e.input.trigger("change"), e.inline ? this._updateDatepicker(e) : (this._hideDatepicker(), this._lastInput = e.input[0], "object" != typeof e.input[0] && e.input.trigger("focus"), this._lastInput = null) }, _updateAlternate: function (e) { var t, a, i = this._get(e, "altField"); i && (t = this._get(e, "altFormat") || this._get(e, "dateFormat"), a = this._getDate(e), e = this.formatDate(t, a, this._getFormatConfig(e)), M(i).val(e)) }, noWeekends: function (e) { e = e.getDay(); return [0 < e && e < 6, ""] }, iso8601Week: function (e) { var t = new Date(e.getTime()); return t.setDate(t.getDate() + 4 - (t.getDay() || 7)), e = t.getTime(), t.setMonth(0), t.setDate(1), Math.floor(Math.round((e - t) / 864e5) / 7) + 1 }, parseDate: function (t, s, e) { if (null == t || null == s) throw "Invalid arguments"; if ("" === (s = "object" == typeof s ? s.toString() : s + "")) return null; function r(e) { return (e = v + 1 < t.length && t.charAt(v + 1) === e) && v++, e } function a(e) { var t = r(e), t = "@" === e ? 14 : "!" === e ? 20 : "y" === e && t ? 4 : "o" === e ? 3 : 2, t = new RegExp("^\\d{" + ("y" === e ? t : 1) + "," + t + "}"); if (!(t = s.substring(l).match(t))) throw "Missing number at position " + l; return l += t[0].length, parseInt(t[0], 10) } function i(e, t, a) { var i = -1, t = M.map(r(e) ? a : t, function (e, t) { return [[t, e]] }).sort(function (e, t) { return -(e[1].length - t[1].length) }); if (M.each(t, function (e, t) { var a = t[1]; if (s.substr(l, a.length).toLowerCase() === a.toLowerCase()) return i = t[0], l += a.length, !1 }), -1 !== i) return i + 1; throw "Unknown name at position " + l } function n() { if (s.charAt(l) !== t.charAt(v)) throw "Unexpected literal at position " + l; l++ } for (var d, o, c, l = 0, h = (e ? e.shortYearCutoff : null) || this._defaults.shortYearCutoff, h = "string" != typeof h ? h : (new Date).getFullYear() % 100 + parseInt(h, 10), u = (e ? e.dayNamesShort : null) || this._defaults.dayNamesShort, p = (e ? e.dayNames : null) || this._defaults.dayNames, g = (e ? e.monthNamesShort : null) || this._defaults.monthNamesShort, _ = (e ? e.monthNames : null) || this._defaults.monthNames, f = -1, k = -1, D = -1, m = -1, y = !1, v = 0; v < t.length; v++)if (y) "'" !== t.charAt(v) || r("'") ? n() : y = !1; else switch (t.charAt(v)) { case "d": D = a("d"); break; case "D": i("D", u, p); break; case "o": m = a("o"); break; case "m": k = a("m"); break; case "M": k = i("M", g, _); break; case "y": f = a("y"); break; case "@": f = (c = new Date(a("@"))).getFullYear(), k = c.getMonth() + 1, D = c.getDate(); break; case "!": f = (c = new Date((a("!") - this._ticksTo1970) / 1e4)).getFullYear(), k = c.getMonth() + 1, D = c.getDate(); break; case "'": r("'") ? n() : y = !0; break; default: n() }if (l < s.length && (o = s.substr(l), !/^\s+/.test(o))) throw "Extra/unparsed characters found in date: " + o; if (-1 === f ? f = (new Date).getFullYear() : f < 100 && (f += (new Date).getFullYear() - (new Date).getFullYear() % 100 + (f <= h ? 0 : -100)), -1 < m) for (k = 1, D = m; ;) { if (D <= (d = this._getDaysInMonth(f, k - 1))) break; k++, D -= d } if ((c = this._daylightSavingAdjust(new Date(f, k - 1, D))).getFullYear() !== f || c.getMonth() + 1 !== k || c.getDate() !== D) throw "Invalid date"; return c }, ATOM: "yy-mm-dd", COOKIE: "D, dd M yy", ISO_8601: "yy-mm-dd", RFC_822: "D, d M y", RFC_850: "DD, dd-M-y", RFC_1036: "D, d M y", RFC_1123: "D, d M yy", RFC_2822: "D, d M yy", RSS: "D, d M y", TICKS: "!", TIMESTAMP: "@", W3C: "yy-mm-dd", _ticksTo1970: 24 * (718685 + Math.floor(492.5) - Math.floor(19.7) + Math.floor(4.925)) * 60 * 60 * 1e7, formatDate: function (t, e, a) { if (!e) return ""; function s(e) { return (e = n + 1 < t.length && t.charAt(n + 1) === e) && n++, e } function i(e, t, a) { var i = "" + t; if (s(e)) for (; i.length < a;)i = "0" + i; return i } function r(e, t, a, i) { return (s(e) ? i : a)[t] } var n, d = (a ? a.dayNamesShort : null) || this._defaults.dayNamesShort, o = (a ? a.dayNames : null) || this._defaults.dayNames, c = (a ? a.monthNamesShort : null) || this._defaults.monthNamesShort, l = (a ? a.monthNames : null) || this._defaults.monthNames, h = "", u = !1; if (e) for (n = 0; n < t.length; n++)if (u) "'" !== t.charAt(n) || s("'") ? h += t.charAt(n) : u = !1; else switch (t.charAt(n)) { case "d": h += i("d", e.getDate(), 2); break; case "D": h += r("D", e.getDay(), d, o); break; case "o": h += i("o", Math.round((new Date(e.getFullYear(), e.getMonth(), e.getDate()).getTime() - new Date(e.getFullYear(), 0, 0).getTime()) / 864e5), 3); break; case "m": h += i("m", e.getMonth() + 1, 2); break; case "M": h += r("M", e.getMonth(), c, l); break; case "y": h += s("y") ? e.getFullYear() : (e.getFullYear() % 100 < 10 ? "0" : "") + e.getFullYear() % 100; break; case "@": h += e.getTime(); break; case "!": h += 1e4 * e.getTime() + this._ticksTo1970; break; case "'": s("'") ? h += "'" : u = !0; break; default: h += t.charAt(n) }return h }, _possibleChars: function (t) { function e(e) { return (e = s + 1 < t.length && t.charAt(s + 1) === e) && s++, e } for (var a = "", i = !1, s = 0; s < t.length; s++)if (i) "'" !== t.charAt(s) || e("'") ? a += t.charAt(s) : i = !1; else switch (t.charAt(s)) { case "d": case "m": case "y": case "@": a += "0123456789"; break; case "D": case "M": return null; case "'": e("'") ? a += "'" : i = !0; break; default: a += t.charAt(s) }return a }, _get: function (e, t) { return (void 0 !== e.settings[t] ? e.settings : this._defaults)[t] }, _setDateFromField: function (e, t) { if (e.input.val() !== e.lastVal) { var a = this._get(e, "dateFormat"), i = e.lastVal = e.input ? e.input.val() : null, s = this._getDefaultDate(e), r = s, n = this._getFormatConfig(e); try { r = this.parseDate(a, i, n) || s } catch (e) { i = t ? "" : i } e.selectedDay = r.getDate(), e.drawMonth = e.selectedMonth = r.getMonth(), e.drawYear = e.selectedYear = r.getFullYear(), e.currentDay = i ? r.getDate() : 0, e.currentMonth = i ? r.getMonth() : 0, e.currentYear = i ? r.getFullYear() : 0, this._adjustInstDate(e) } }, _getDefaultDate: function (e) { return this._restrictMinMax(e, this._determineDate(e, this._get(e, "defaultDate"), new Date)) }, _determineDate: function (d, e, t) { var a, i, e = null == e || "" === e ? t : "string" == typeof e ? function (e) { try { return M.datepicker.parseDate(M.datepicker._get(d, "dateFormat"), e, M.datepicker._getFormatConfig(d)) } catch (e) { } for (var t = (e.toLowerCase().match(/^c/) ? M.datepicker._getDate(d) : null) || new Date, a = t.getFullYear(), i = t.getMonth(), s = t.getDate(), r = /([+\-]?[0-9]+)\s*(d|D|w|W|m|M|y|Y)?/g, n = r.exec(e); n;) { switch (n[2] || "d") { case "d": case "D": s += parseInt(n[1], 10); break; case "w": case "W": s += 7 * parseInt(n[1], 10); break; case "m": case "M": i += parseInt(n[1], 10), s = Math.min(s, M.datepicker._getDaysInMonth(a, i)); break; case "y": case "Y": a += parseInt(n[1], 10), s = Math.min(s, M.datepicker._getDaysInMonth(a, i)) }n = r.exec(e) } return new Date(a, i, s) }(e) : "number" == typeof e ? isNaN(e) ? t : (a = e, (i = new Date).setDate(i.getDate() + a), i) : new Date(e.getTime()); return (e = e && "Invalid Date" === e.toString() ? t : e) && (e.setHours(0), e.setMinutes(0), e.setSeconds(0), e.setMilliseconds(0)), this._daylightSavingAdjust(e) }, _daylightSavingAdjust: function (e) { return e ? (e.setHours(12 < e.getHours() ? e.getHours() + 2 : 0), e) : null }, _setDate: function (e, t, a) { var i = !t, s = e.selectedMonth, r = e.selectedYear, t = this._restrictMinMax(e, this._determineDate(e, t, new Date)); e.selectedDay = e.currentDay = t.getDate(), e.drawMonth = e.selectedMonth = e.currentMonth = t.getMonth(), e.drawYear = e.selectedYear = e.currentYear = t.getFullYear(), s === e.selectedMonth && r === e.selectedYear || a || this._notifyChange(e), this._adjustInstDate(e), e.input && e.input.val(i ? "" : this._formatDate(e)) }, _getDate: function (e) { return !e.currentYear || e.input && "" === e.input.val() ? null : this._daylightSavingAdjust(new Date(e.currentYear, e.currentMonth, e.currentDay)) }, _attachHandlers: function (e) { var t = this._get(e, "stepMonths"), a = "#" + e.id.replace(/\\\\/g, "\\"); e.dpDiv.find("[data-handler]").map(function () { var e = { prev: function () { M.datepicker._adjustDate(a, -t, "M") }, next: function () { M.datepicker._adjustDate(a, +t, "M") }, hide: function () { M.datepicker._hideDatepicker() }, today: function () { M.datepicker._gotoToday(a) }, selectDay: function () { return M.datepicker._selectDay(a, +this.getAttribute("data-month"), +this.getAttribute("data-year"), this), !1 }, selectMonth: function () { return M.datepicker._selectMonthYear(a, this, "M"), !1 }, selectYear: function () { return M.datepicker._selectMonthYear(a, this, "Y"), !1 } }; M(this).on(this.getAttribute("data-event"), e[this.getAttribute("data-handler")]) }) }, _generateHTML: function (e) { var t, a, i, s, r, n, d, o, c, l, h, u, p, g, _, f, k, D, m, y, v, M, b, w, C, I, x, Y, S, N, F, T = new Date, A = this._daylightSavingAdjust(new Date(T.getFullYear(), T.getMonth(), T.getDate())), K = this._get(e, "isRTL"), j = this._get(e, "showButtonPanel"), O = this._get(e, "hideIfNoPrevNext"), E = this._get(e, "navigationAsDateFormat"), R = this._getNumberOfMonths(e), P = this._get(e, "showCurrentAtPos"), T = this._get(e, "stepMonths"), L = 1 !== R[0] || 1 !== R[1], W = this._daylightSavingAdjust(e.currentDay ? new Date(e.currentYear, e.currentMonth, e.currentDay) : new Date(9999, 9, 9)), H = this._getMinMaxDate(e, "min"), U = this._getMinMaxDate(e, "max"), z = e.drawMonth - P, B = e.drawYear; if (z < 0 && (z += 12, B--), U) for (t = this._daylightSavingAdjust(new Date(U.getFullYear(), U.getMonth() - R[0] * R[1] + 1, U.getDate())), t = H && t < H ? H : t; this._daylightSavingAdjust(new Date(B, z, 1)) > t;)--z < 0 && (z = 11, B--); for (e.drawMonth = z, e.drawYear = B, P = this._get(e, "prevText"), P = E ? this.formatDate(P, this._daylightSavingAdjust(new Date(B, z - T, 1)), this._getFormatConfig(e)) : P, a = this._canAdjustMonth(e, -1, B, z) ? "<a class='ui-datepicker-prev ui-corner-all' data-handler='prev' data-event='click' title='" + P + "'><span class='ui-icon ui-icon-circle-triangle-" + (K ? "e" : "w") + "'>" + P + "</span></a>" : O ? "" : "<a class='ui-datepicker-prev ui-corner-all ui-state-disabled' title='" + P + "'><span class='ui-icon ui-icon-circle-triangle-" + (K ? "e" : "w") + "'>" + P + "</span></a>", P = this._get(e, "nextText"), P = E ? this.formatDate(P, this._daylightSavingAdjust(new Date(B, z + T, 1)), this._getFormatConfig(e)) : P, i = this._canAdjustMonth(e, 1, B, z) ? "<a class='ui-datepicker-next ui-corner-all' data-handler='next' data-event='click' title='" + P + "'><span class='ui-icon ui-icon-circle-triangle-" + (K ? "w" : "e") + "'>" + P + "</span></a>" : O ? "" : "<a class='ui-datepicker-next ui-corner-all ui-state-disabled' title='" + P + "'><span class='ui-icon ui-icon-circle-triangle-" + (K ? "w" : "e") + "'>" + P + "</span></a>", O = this._get(e, "currentText"), P = this._get(e, "gotoCurrent") && e.currentDay ? W : A, O = E ? this.formatDate(O, P, this._getFormatConfig(e)) : O, E = e.inline ? "" : "<button type='button' class='ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all' data-handler='hide' data-event='click'>" + this._get(e, "closeText") + "</button>", E = j ? "<div class='ui-datepicker-buttonpane ui-widget-content'>" + (K ? E : "") + (this._isInRange(e, P) ? "<button type='button' class='ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all' data-handler='today' data-event='click'>" + O + "</button>" : "") + (K ? "" : E) + "</div>" : "", s = parseInt(this._get(e, "firstDay"), 10), s = isNaN(s) ? 0 : s, r = this._get(e, "showWeek"), n = this._get(e, "dayNames"), d = this._get(e, "dayNamesMin"), o = this._get(e, "monthNames"), c = this._get(e, "monthNamesShort"), l = this._get(e, "beforeShowDay"), h = this._get(e, "showOtherMonths"), u = this._get(e, "selectOtherMonths"), p = this._getDefaultDate(e), g = "", f = 0; f < R[0]; f++) { for (k = "", this.maxRows = 4, D = 0; D < R[1]; D++) { if (m = this._daylightSavingAdjust(new Date(B, z, e.selectedDay)), b = " ui-corner-all", y = "", L) { if (y += "<div class='ui-datepicker-group", 1 < R[1]) switch (D) { case 0: y += " ui-datepicker-group-first", b = " ui-corner-" + (K ? "right" : "left"); break; case R[1] - 1: y += " ui-datepicker-group-last", b = " ui-corner-" + (K ? "left" : "right"); break; default: y += " ui-datepicker-group-middle", b = "" }y += "'>" } for (y += "<div class='ui-datepicker-header ui-widget-header ui-helper-clearfix" + b + "'>" + (/all|left/.test(b) && 0 === f ? K ? i : a : "") + (/all|right/.test(b) && 0 === f ? K ? a : i : "") + this._generateMonthYearHeader(e, z, B, H, U, 0 < f || 0 < D, o, c) + "</div><table class='ui-datepicker-calendar'><thead><tr>", v = r ? "<th class='ui-datepicker-week-col'>" + this._get(e, "weekHeader") + "</th>" : "", _ = 0; _ < 7; _++)v += "<th scope='col'" + (5 <= (_ + s + 6) % 7 ? " class='ui-datepicker-week-end'" : "") + "><span title='" + n[M = (_ + s) % 7] + "'>" + d[M] + "</span></th>"; for (y += v + "</tr></thead><tbody>", w = this._getDaysInMonth(B, z), B === e.selectedYear && z === e.selectedMonth && (e.selectedDay = Math.min(e.selectedDay, w)), b = (this._getFirstDayOfMonth(B, z) - s + 7) % 7, w = Math.ceil((b + w) / 7), C = L && this.maxRows > w ? this.maxRows : w, this.maxRows = C, I = this._daylightSavingAdjust(new Date(B, z, 1 - b)), x = 0; x < C; x++) { for (y += "<tr>", Y = r ? "<td class='ui-datepicker-week-col'>" + this._get(e, "calculateWeek")(I) + "</td>" : "", _ = 0; _ < 7; _++)S = l ? l.apply(e.input ? e.input[0] : null, [I]) : [!0, ""], F = (N = I.getMonth() !== z) && !u || !S[0] || H && I < H || U && U < I, Y += "<td class='" + (5 <= (_ + s + 6) % 7 ? " ui-datepicker-week-end" : "") + (N ? " ui-datepicker-other-month" : "") + (I.getTime() === m.getTime() && z === e.selectedMonth && e._keyEvent || p.getTime() === I.getTime() && p.getTime() === m.getTime() ? " " + this._dayOverClass : "") + (F ? " " + this._unselectableClass + " ui-state-disabled" : "") + (N && !h ? "" : " " + S[1] + (I.getTime() === W.getTime() ? " " + this._currentClass : "") + (I.getTime() === A.getTime() ? " ui-datepicker-today" : "")) + "'" + (N && !h || !S[2] ? "" : " title='" + S[2].replace(/'/g, "&#39;") + "'") + (F ? "" : " data-handler='selectDay' data-event='click' data-month='" + I.getMonth() + "' data-year='" + I.getFullYear() + "'") + ">" + (N && !h ? "&#xa0;" : F ? "<span class='ui-state-default'>" + I.getDate() + "</span>" : "<a class='ui-state-default" + (I.getTime() === A.getTime() ? " ui-state-highlight" : "") + (I.getTime() === W.getTime() ? " ui-state-active" : "") + (N ? " ui-priority-secondary" : "") + "' href='#'>" + I.getDate() + "</a>") + "</td>", I.setDate(I.getDate() + 1), I = this._daylightSavingAdjust(I); y += Y + "</tr>" } 11 < ++z && (z = 0, B++), k += y += "</tbody></table>" + (L ? "</div>" + (0 < R[0] && D === R[1] - 1 ? "<div class='ui-datepicker-row-break'></div>" : "") : "") } g += k } return g += E, e._keyEvent = !1, g }, _generateMonthYearHeader: function (e, t, a, i, s, r, n, d) { var o, c, l, h, u, p, g, _ = this._get(e, "changeMonth"), f = this._get(e, "changeYear"), k = this._get(e, "showMonthAfterYear"), D = "<div class='ui-datepicker-title'>", m = ""; if (r || !_) m += "<span class='ui-datepicker-month'>" + n[t] + "</span>"; else { for (o = i && i.getFullYear() === a, c = s && s.getFullYear() === a, m += "<select class='ui-datepicker-month' data-handler='selectMonth' data-event='change'>", l = 0; l < 12; l++)(!o || l >= i.getMonth()) && (!c || l <= s.getMonth()) && (m += "<option value='" + l + "'" + (l === t ? " selected='selected'" : "") + ">" + d[l] + "</option>"); m += "</select>" } if (k || (D += m + (!r && _ && f ? "" : "&#xa0;")), !e.yearshtml) if (e.yearshtml = "", r || !f) D += "<span class='ui-datepicker-year'>" + a + "</span>"; else { for (h = this._get(e, "yearRange").split(":"), u = (new Date).getFullYear(), p = (n = function (e) { e = e.match(/c[+\-].*/) ? a + parseInt(e.substring(1), 10) : e.match(/[+\-].*/) ? u + parseInt(e, 10) : parseInt(e, 10); return isNaN(e) ? u : e })(h[0]), g = Math.max(p, n(h[1] || "")), p = i ? Math.max(p, i.getFullYear()) : p, g = s ? Math.min(g, s.getFullYear()) : g, e.yearshtml += "<select class='ui-datepicker-year' data-handler='selectYear' data-event='change'>"; p <= g; p++)e.yearshtml += "<option value='" + p + "'" + (p === a ? " selected='selected'" : "") + ">" + p + "</option>"; e.yearshtml += "</select>", D += e.yearshtml, e.yearshtml = null } return D += this._get(e, "yearSuffix"), k && (D += (!r && _ && f ? "" : "&#xa0;") + m), D += "</div>" }, _adjustInstDate: function (e, t, a) { var i = e.selectedYear + ("Y" === a ? t : 0), s = e.selectedMonth + ("M" === a ? t : 0), t = Math.min(e.selectedDay, this._getDaysInMonth(i, s)) + ("D" === a ? t : 0), t = this._restrictMinMax(e, this._daylightSavingAdjust(new Date(i, s, t))); e.selectedDay = t.getDate(), e.drawMonth = e.selectedMonth = t.getMonth(), e.drawYear = e.selectedYear = t.getFullYear(), "M" !== a && "Y" !== a || this._notifyChange(e) }, _restrictMinMax: function (e, t) { var a = this._getMinMaxDate(e, "min"), e = this._getMinMaxDate(e, "max"), t = a && t < a ? a : t; return e && e < t ? e : t }, _notifyChange: function (e) { var t = this._get(e, "onChangeMonthYear"); t && t.apply(e.input ? e.input[0] : null, [e.selectedYear, e.selectedMonth + 1, e]) }, _getNumberOfMonths: function (e) { e = this._get(e, "numberOfMonths"); return null == e ? [1, 1] : "number" == typeof e ? [1, e] : e }, _getMinMaxDate: function (e, t) { return this._determineDate(e, this._get(e, t + "Date"), null) }, _getDaysInMonth: function (e, t) { return 32 - this._daylightSavingAdjust(new Date(e, t, 32)).getDate() }, _getFirstDayOfMonth: function (e, t) { return new Date(e, t, 1).getDay() }, _canAdjustMonth: function (e, t, a, i) { var s = this._getNumberOfMonths(e), s = this._daylightSavingAdjust(new Date(a, i + (t < 0 ? t : s[0] * s[1]), 1)); return t < 0 && s.setDate(this._getDaysInMonth(s.getFullYear(), s.getMonth())), this._isInRange(e, s) }, _isInRange: function (e, t) { var a = this._getMinMaxDate(e, "min"), i = this._getMinMaxDate(e, "max"), s = null, r = null, n = this._get(e, "yearRange"); return n && (e = n.split(":"), n = (new Date).getFullYear(), s = parseInt(e[0], 10), r = parseInt(e[1], 10), e[0].match(/[+\-].*/) && (s += n), e[1].match(/[+\-].*/) && (r += n)), (!a || t.getTime() >= a.getTime()) && (!i || t.getTime() <= i.getTime()) && (!s || t.getFullYear() >= s) && (!r || t.getFullYear() <= r) }, _getFormatConfig: function (e) { var t = this._get(e, "shortYearCutoff"); return { shortYearCutoff: t = "string" != typeof t ? t : (new Date).getFullYear() % 100 + parseInt(t, 10), dayNamesShort: this._get(e, "dayNamesShort"), dayNames: this._get(e, "dayNames"), monthNamesShort: this._get(e, "monthNamesShort"), monthNames: this._get(e, "monthNames") } }, _formatDate: function (e, t, a, i) { t || (e.currentDay = e.selectedDay, e.currentMonth = e.selectedMonth, e.currentYear = e.selectedYear); t = t ? "object" == typeof t ? t : this._daylightSavingAdjust(new Date(i, a, t)) : this._daylightSavingAdjust(new Date(e.currentYear, e.currentMonth, e.currentDay)); return this.formatDate(this._get(e, "dateFormat"), t, this._getFormatConfig(e)) } }), M.fn.datepicker = function (e) { if (!this.length) return this; M.datepicker.initialized || (M(document).on("mousedown", M.datepicker._checkExternalClick), M.datepicker.initialized = !0), 0 === M("#" + M.datepicker._mainDivId).length && M("body").append(M.datepicker.dpDiv); var t = Array.prototype.slice.call(arguments, 1); return "string" == typeof e && ("isDisabled" === e || "getDate" === e || "widget" === e) || "option" === e && 2 === arguments.length && "string" == typeof arguments[1] ? M.datepicker["_" + e + "Datepicker"].apply(M.datepicker, [this[0]].concat(t)) : this.each(function () { "string" == typeof e ? M.datepicker["_" + e + "Datepicker"].apply(M.datepicker, [this].concat(t)) : M.datepicker._attachDatepicker(this, e) }) }, M.datepicker = new e, M.datepicker.initialized = !1, M.datepicker.uuid = (new Date).getTime(), M.datepicker.version = "1.12.1"; M.datepicker });
 
 
-/* jquery.panzoom.min.js 3.2.2 (c) Timmy Willison - MIT License */
-
-!function (a, b) { "function" == typeof define && define.amd ? define(["jquery"], function (c) { return b(a, c) }) : "object" == typeof exports ? b(a, require("jquery")) : b(a, a.jQuery) }("undefined" != typeof window ? window : this, function (a, b) { "use strict"; function c(a, b) { for (var c = a.length; --c;)if (Math.round(+a[c]) !== Math.round(+b[c])) return !1; return !0 } function d(a) { var c = { range: !0, animate: !0 }; return "boolean" == typeof a ? c.animate = a : b.extend(c, a), c } function e(a, c, d, e, f, g, h, i, j) { "array" === b.type(a) ? this.elements = [+a[0], +a[2], +a[4], +a[1], +a[3], +a[5], 0, 0, 1] : this.elements = [a, c, d, e, f, g, h || 0, i || 0, j || 1] } function f(a, b, c) { this.elements = [a, b, c] } function g(a, c) { if (!(this instanceof g)) return new g(a, c); 1 !== a.nodeType && b.error("Panzoom called on non-Element node"), b.contains(h, a) || b.error("Panzoom element must be attached to the document"); var d = b.data(a, i); if (d) return d; this.options = c = b.extend({}, g.defaults, c), this.elem = a; var e = this.$elem = b(a); this.$set = c.$set && c.$set.length ? c.$set : e, this.$doc = b(a.ownerDocument || h), this.$parent = e.parent(), this.parent = this.$parent[0], this.isSVG = n.test(a.namespaceURI) && "svg" !== a.nodeName.toLowerCase(), this.panning = !1, this._buildTransform(), this._transform = b.cssProps.transform ? b.cssProps.transform.replace(m, "-$1").toLowerCase() : "transform", this._buildTransition(), this.resetDimensions(); var f = b(), j = this; b.each(["$zoomIn", "$zoomOut", "$zoomRange", "$reset"], function (a, b) { j[b] = c[b] || f }), this.enable(), this.scale = this.getMatrix()[0], this._checkPanWhenZoomed(), b.data(a, i, this) } var h = a.document, i = "__pz__", j = Array.prototype.slice, k = /trident\/7./i, l = function () { if (k.test(navigator.userAgent)) return !1; var a = h.createElement("input"); return a.setAttribute("oninput", "return"), "function" == typeof a.oninput }(), m = /([A-Z])/g, n = /^http:[\w\.\/]+svg$/, o = "(\\-?\\d[\\d\\.e-]*)", p = new RegExp("^matrix\\(" + o + "\\,?\\s*" + o + "\\,?\\s*" + o + "\\,?\\s*" + o + "\\,?\\s*" + o + "\\,?\\s*" + o + "\\)$"); return e.prototype = { x: function (a) { var b = a instanceof f, c = this.elements, d = a.elements; return b && 3 === d.length ? new f(c[0] * d[0] + c[1] * d[1] + c[2] * d[2], c[3] * d[0] + c[4] * d[1] + c[5] * d[2], c[6] * d[0] + c[7] * d[1] + c[8] * d[2]) : d.length === c.length && new e(c[0] * d[0] + c[1] * d[3] + c[2] * d[6], c[0] * d[1] + c[1] * d[4] + c[2] * d[7], c[0] * d[2] + c[1] * d[5] + c[2] * d[8], c[3] * d[0] + c[4] * d[3] + c[5] * d[6], c[3] * d[1] + c[4] * d[4] + c[5] * d[7], c[3] * d[2] + c[4] * d[5] + c[5] * d[8], c[6] * d[0] + c[7] * d[3] + c[8] * d[6], c[6] * d[1] + c[7] * d[4] + c[8] * d[7], c[6] * d[2] + c[7] * d[5] + c[8] * d[8]) }, inverse: function () { var a = 1 / this.determinant(), b = this.elements; return new e(a * (b[8] * b[4] - b[7] * b[5]), a * -(b[8] * b[1] - b[7] * b[2]), a * (b[5] * b[1] - b[4] * b[2]), a * -(b[8] * b[3] - b[6] * b[5]), a * (b[8] * b[0] - b[6] * b[2]), a * -(b[5] * b[0] - b[3] * b[2]), a * (b[7] * b[3] - b[6] * b[4]), a * -(b[7] * b[0] - b[6] * b[1]), a * (b[4] * b[0] - b[3] * b[1])) }, determinant: function () { var a = this.elements; return a[0] * (a[8] * a[4] - a[7] * a[5]) - a[3] * (a[8] * a[1] - a[7] * a[2]) + a[6] * (a[5] * a[1] - a[4] * a[2]) } }, f.prototype.e = e.prototype.e = function (a) { return this.elements[a] }, g.rmatrix = p, g.defaults = { eventNamespace: ".panzoom", transition: !0, cursor: "move", disablePan: !1, disableZoom: !1, disableXAxis: !1, disableYAxis: !1, which: 1, increment: .3, linearZoom: !1, panOnlyWhenZoomed: !1, minScale: .3, maxScale: 6, rangeStep: .05, duration: 200, easing: "ease-in-out", contain: !1 }, g.prototype = { constructor: g, instance: function () { return this }, enable: function () { this._initStyle(), this._bind(), this.disabled = !1 }, disable: function () { this.disabled = !0, this._resetStyle(), this._unbind() }, isDisabled: function () { return this.disabled }, destroy: function () { this.disable(), b.removeData(this.elem, i) }, resetDimensions: function () { this.container = this.parent.getBoundingClientRect(); var a = this.elem, c = a.getBoundingClientRect(), d = Math.abs(this.scale); this.dimensions = { width: c.width, height: c.height, left: b.css(a, "left", !0) || 0, top: b.css(a, "top", !0) || 0, border: { top: b.css(a, "borderTopWidth", !0) * d || 0, bottom: b.css(a, "borderBottomWidth", !0) * d || 0, left: b.css(a, "borderLeftWidth", !0) * d || 0, right: b.css(a, "borderRightWidth", !0) * d || 0 }, margin: { top: b.css(a, "marginTop", !0) * d || 0, left: b.css(a, "marginLeft", !0) * d || 0 } } }, reset: function (a) { a = d(a); var b = this.setMatrix(this._origTransform, a); a.silent || this._trigger("reset", b) }, resetZoom: function (a) { a = d(a); var b = this.getMatrix(this._origTransform); a.dValue = b[3], this.zoom(b[0], a) }, resetPan: function (a) { var b = this.getMatrix(this._origTransform); this.pan(b[4], b[5], d(a)) }, setTransform: function (a) { for (var c = this.$set, d = c.length; d--;)b.style(c[d], "transform", a), this.isSVG && c[d].setAttribute("transform", a) }, getTransform: function (a) { var c = this.$set, d = c[0]; return a ? this.setTransform(a) : (a = b.style(d, "transform"), !this.isSVG || a && "none" !== a || (a = b.attr(d, "transform") || "none")), "none" === a || p.test(a) || this.setTransform(a = b.css(d, "transform")), a || "none" }, getMatrix: function (a) { var b = p.exec(a || this.getTransform()); return b && b.shift(), b || [1, 0, 0, 1, 0, 0] }, getScale: function (a) { return Math.sqrt(Math.pow(a[0], 2) + Math.pow(a[1], 2)) }, setMatrix: function (a, c) { if (!this.disabled) { c || (c = {}), "string" == typeof a && (a = this.getMatrix(a)); var d = this.getScale(a), e = void 0 !== c.contain ? c.contain : this.options.contain; if (e) { var f = c.dims; f || (this.resetDimensions(), f = this.dimensions); var g, h, i, j = this.container, k = f.width, l = f.height, m = j.width, n = j.height, o = m / k, p = n / l; "center" !== this.$parent.css("textAlign") || "inline" !== b.css(this.elem, "display") ? (i = (k - this.elem.offsetWidth) / 2, g = i - f.border.left, h = k - m - i + f.border.right) : g = h = (k - m) / 2; var q = (l - n) / 2 + f.border.top, r = (l - n) / 2 - f.border.top - f.border.bottom; a[4] = "invert" === e || "automatic" === e && o < 1.01 ? Math.max(Math.min(a[4], g - f.border.left), -h) : Math.min(Math.max(a[4], g), -h), a[5] = "invert" === e || "automatic" === e && p < 1.01 ? Math.max(Math.min(a[5], q - f.border.top), -r) : Math.min(Math.max(a[5], q), -r) } if ("skip" !== c.animate && this.transition(!c.animate), c.range && this.$zoomRange.val(d), this.options.disableXAxis || this.options.disableYAxis) { var s = this.getMatrix(); this.options.disableXAxis && (a[4] = s[4]), this.options.disableYAxis && (a[5] = s[5]) } return this.setTransform("matrix(" + a.join(",") + ")"), this.scale = d, this._checkPanWhenZoomed(d), c.silent || this._trigger("change", a), a } }, isPanning: function () { return this.panning }, transition: function (a) { if (this._transition) for (var c = a || !this.options.transition ? "none" : this._transition, d = this.$set, e = d.length; e--;)b.style(d[e], "transition") !== c && b.style(d[e], "transition", c) }, pan: function (a, b, c) { if (!this.options.disablePan) { c || (c = {}); var d = c.matrix; d || (d = this.getMatrix()), c.relative && (a += +d[4], b += +d[5]), d[4] = a, d[5] = b, this.setMatrix(d, c), c.silent || this._trigger("pan", d[4], d[5]) } }, zoom: function (a, c) { "object" == typeof a ? (c = a, a = null) : c || (c = {}); var d = b.extend({}, this.options, c); if (!d.disableZoom) { var g = !1, h = d.matrix || this.getMatrix(), i = new e(h), j = this.getScale(h); "number" != typeof a ? (a = d.linearZoom ? 1 + d.increment * (a ? -1 : 1) / j : a ? 1 / (1 + d.increment) : 1 + d.increment, g = !0) : a = 1 / j, a = Math.max(Math.min(a, d.maxScale / j), d.minScale / j); var k = i.x(new e(a, 0, 0, 0, "number" == typeof d.dValue ? d.dValue / j : a, 0)), l = d.focal; if (l && !d.disablePan) { this.resetDimensions(); var m = d.dims = this.dimensions, n = l.clientX, o = l.clientY; this.isSVG || (n -= m.width / j / 2, o -= m.height / j / 2); var p = new f(n, o, 1), q = this.parentOffset || this.$parent.offset(), r = new e(1, 0, q.left - this.$doc.scrollLeft(), 0, 1, q.top - this.$doc.scrollTop()), s = i.inverse().x(r.inverse().x(p)); i = i.x(new e([a, 0, 0, a, 0, 0])), p = r.x(i.x(s)), h[4] = +h[4] + (n - p.e(0)), h[5] = +h[5] + (o - p.e(1)) } h[0] = k.e(0), h[1] = k.e(3), h[2] = k.e(1), h[3] = k.e(4), this.setMatrix(h, { animate: void 0 !== d.animate ? d.animate : g, range: !d.noSetRange }), d.silent || this._trigger("zoom", a, d) } }, option: function (a, c) { var d; if (!a) return b.extend({}, this.options); if ("string" == typeof a) { if (1 === arguments.length) return void 0 !== this.options[a] ? this.options[a] : null; d = {}, d[a] = c } else d = a; this._setOptions(d) }, _setOptions: function (a) { b.each(a, b.proxy(function (a, c) { switch (a) { case "disablePan": this._resetStyle(); case "$zoomIn": case "$zoomOut": case "$zoomRange": case "$reset": case "disableZoom": case "onStart": case "onChange": case "onZoom": case "onPan": case "onEnd": case "onReset": case "eventNamespace": this._unbind() }switch (this.options[a] = c, a) { case "disablePan": this._initStyle(); case "$zoomIn": case "$zoomOut": case "$zoomRange": case "$reset": this[a] = c; case "disableZoom": case "onStart": case "onChange": case "onZoom": case "onPan": case "onEnd": case "onReset": case "eventNamespace": this._bind(); break; case "cursor": b.style(this.elem, "cursor", c); break; case "minScale": this.$zoomRange.attr("min", c); break; case "maxScale": this.$zoomRange.attr("max", c); break; case "rangeStep": this.$zoomRange.attr("step", c); break; case "startTransform": this._buildTransform(); break; case "duration": case "easing": this._buildTransition(); case "transition": this.transition(); break; case "panOnlyWhenZoomed": this._checkPanWhenZoomed(); break; case "$set": c instanceof b && c.length && (this.$set = c, this._initStyle(), this._buildTransform()) } }, this)) }, _checkPanWhenZoomed: function (a) { var b = this.options; if (b.panOnlyWhenZoomed) { a || (a = this.getMatrix()[0]); var c = a <= b.minScale; b.disablePan !== c && this.option("disablePan", c) } }, _initStyle: function () { var a = { "transform-origin": this.isSVG ? "0 0" : "50% 50%" }; this.options.disablePan || (a.cursor = this.options.cursor), this.$set.css(a); var c = this.$parent; c.length && !b.nodeName(this.parent, "body") && (a = { overflow: "hidden" }, "static" === c.css("position") && (a.position = "relative"), c.css(a)) }, _resetStyle: function () { this.$elem.css({ cursor: "", transition: "" }), this.$parent.css({ overflow: "", position: "" }) }, _bind: function () { var a = this, c = this.options, d = c.eventNamespace, e = "mousedown" + d + " pointerdown" + d + " MSPointerDown" + d, f = "touchstart" + d + " " + e, h = "touchend" + d + " click" + d + " pointerup" + d + " MSPointerUp" + d, i = {}, j = this.$reset, k = this.$zoomRange; if (b.each(["Start", "Change", "Zoom", "Pan", "End", "Reset"], function () { var a = c["on" + this]; b.isFunction(a) && (i["panzoom" + this.toLowerCase() + d] = a) }), c.disablePan && c.disableZoom || (i[f] = function (b) { var d; ("touchstart" === b.type ? !(d = b.touches || b.originalEvent.touches) || (1 !== d.length || c.disablePan) && 2 !== d.length : c.disablePan || (b.which || b.originalEvent.which) !== c.which) || (b.preventDefault(), b.stopPropagation(), a._startMove(b, d)) }, 3 === c.which && (i.contextmenu = !1)), this.$elem.on(i), j.length && j.on(h, function (b) { b.preventDefault(), a.reset() }), k.length && k.attr({ step: c.rangeStep === g.defaults.rangeStep && k.attr("step") || c.rangeStep, min: c.minScale, max: c.maxScale }).prop({ value: this.getMatrix()[0] }), !c.disableZoom) { var m = this.$zoomIn, n = this.$zoomOut; m.length && n.length && (m.on(h, function (b) { b.preventDefault(), a.zoom() }), n.on(h, function (b) { b.preventDefault(), a.zoom(!0) })), k.length && (i = {}, i[e] = function () { a.transition(!0) }, i[(l ? "input" : "change") + d] = function () { a.zoom(+this.value, { noSetRange: !0 }) }, k.on(i)) } }, _unbind: function () { this.$elem.add(this.$zoomIn).add(this.$zoomOut).add(this.$reset).off(this.options.eventNamespace) }, _buildTransform: function () { return this._origTransform = this.getTransform(this.options.startTransform) }, _buildTransition: function () { if (this._transform) { var a = this.options; this._transition = this._transform + " " + a.duration + "ms " + a.easing } }, _getDistance: function (a) { var b = a[0], c = a[1]; return Math.sqrt(Math.pow(Math.abs(c.clientX - b.clientX), 2) + Math.pow(Math.abs(c.clientY - b.clientY), 2)) }, _getMiddle: function (a) { var b = a[0], c = a[1]; return { clientX: (c.clientX - b.clientX) / 2 + b.clientX, clientY: (c.clientY - b.clientY) / 2 + b.clientY } }, _trigger: function (a) { "string" == typeof a && (a = "panzoom" + a), this.$elem.triggerHandler(a, [this].concat(j.call(arguments, 1))) }, _startMove: function (a, d) { if (!this.panning) { var e, f, g, i, j, k, l, m, n = this, o = this.options, p = o.eventNamespace, q = this.getMatrix(), r = q.slice(0), s = +r[4], t = +r[5], u = { matrix: q, animate: "skip" }, v = a.type; "pointerdown" === v ? (e = "pointermove", f = "pointerup") : "touchstart" === v ? (e = "touchmove", f = "touchend") : "MSPointerDown" === v ? (e = "MSPointerMove", f = "MSPointerUp") : (e = "mousemove", f = "mouseup"), e += p, f += p, this.transition(!0), this.panning = !0, this._trigger("start", a, d); var w = function (a, b) { if (b) { if (2 === b.length) { if (null != g) return; return g = n._getDistance(b), i = n.getScale(q), void (j = n._getMiddle(b)) } if (null != k) return; (m = b[0]) && (k = m.pageX, l = m.pageY) } null == k && (k = a.pageX, l = a.pageY) }; w(a, d); var x = function (a) { var b; if (a.preventDefault(), d = a.touches || a.originalEvent.touches, w(a, d), d) { if (2 === d.length) { var c = n._getMiddle(d), e = n._getDistance(d) - g; return n.zoom(e * (o.increment / 100) + i, { focal: c, matrix: q, animate: "skip" }), n.pan(+q[4] + c.clientX - j.clientX, +q[5] + c.clientY - j.clientY, u), void (j = c) } b = d[0] || { pageX: 0, pageY: 0 } } b || (b = a), n.pan(s + b.pageX - k, t + b.pageY - l, u) }; b(h).off(p).on(e, x).on(f, function (a) { a.preventDefault(), b(this).off(p), n.panning = !1, a.type = "panzoomend", n._trigger(a, q, !c(q, r)) }) } } }, b.Panzoom = g, b.fn.panzoom = function (a) { var c, d, e, f; return "string" == typeof a ? (f = [], d = j.call(arguments, 1), this.each(function () { c = b.data(this, i), c ? "_" !== a.charAt(0) && "function" == typeof (e = c[a]) && void 0 !== (e = e.apply(c, d)) && f.push(e) : f.push(void 0) }), f.length ? 1 === f.length ? f[0] : f : this) : this.each(function () { new g(this, a) }) }, g });
 
 // jquery.multi-select.js
 // by mySociety
@@ -498,3 +495,1319 @@
 })(jQuery);
 
 (function (g) { g.Zebra_Tooltips = function (j, s) { var b = this, k, h, q; b.settings = {}; b.hide = function (c, a) { var b = c.data("Zebra_Tooltip"); b && (b.sticky = !1, a && (b.destroy = !0), c.data("Zebra_Tooltip", b), l(c)) }; b.show = function (b, a) { var d = b.data("Zebra_Tooltip"); d && (d.sticky = !0, d.muted = !1, a && (d.destroy = !0), b.data("Zebra_Tooltip", d), n(b)) }; var m = function (c) { var a = c.data("Zebra_Tooltip"); if (!a.tooltip) { var d = jQuery("<div>", { "class": "Zebra_Tooltip", css: { opacity: 0, display: "block" } }), f = jQuery("<div>", { "class": "Zebra_Tooltip_Message", css: { "max-width": b.settings.max_width, "background-color": b.settings.background_color, color: b.settings.color } }).html(b.settings.content ? b.settings.content : a.content).appendTo(d), a = jQuery("<div>", { "class": "Zebra_Tooltip_Arrow" }).appendTo(d), e = jQuery("<div>").appendTo(a); b.settings.keep_visible && (d.bind("mouseleave" + (b.settings.close_on_click ? " click" : ""), function () { l(c) }), d.bind("mouseenter", function () { n(c) })); d.appendTo("body"); var p = d.outerWidth(), j = d.outerHeight(), m = e.outerWidth(), r = e.outerHeight(), a = { tooltip: d, tooltip_width: p, tooltip_height: j + r / 2, message: f, arrow_container: a, arrow_width: m, arrow_height: r, arrow: e }, e = f.outerWidth(), p = f.outerHeight(); d.css({ width: a.tooltip_width, height: a.tooltip_height }); a.tooltip_width += f.outerWidth() - e; a.tooltip_height += f.outerHeight() - p; d.css({ width: a.tooltip_width, height: a.tooltip_height, display: "none" }); a = g.extend(c.data("Zebra_Tooltip"), a); c.data("Zebra_Tooltip", a) } a.sticky && !a.close && (jQuery("<a>", { "class": "Zebra_Tooltip_Close", href: "javascript:void(0)" }).html("x").bind("click", function (a) { a.preventDefault(); a = c.data("Zebra_Tooltip"); a.sticky = !1; c.data("Zebra_Tooltip", a); l(c) }).appendTo(a.message), a.close = !0, a = g.extend(c.data("Zebra_Tooltip"), a), c.data("Zebra_Tooltip", a)); if (a.window_resized || a.window_scrolled) d = g(window), a.window_resized && (k = d.width(), d.height(), f = c.offset(), g.extend(a, { element_left: f.left, element_top: f.top, element_width: c.outerWidth(), element_height: c.outerHeight() })), q = d.scrollTop(), h = d.scrollLeft(), d = "left" == b.settings.position ? a.element_left - a.tooltip_width + a.arrow_width : "right" == b.settings.position ? a.element_left + a.element_width - a.arrow_width : a.element_left + (a.element_width - a.tooltip_width) / 2, f = a.element_top - a.tooltip_height, e = "left" == b.settings.position ? a.tooltip_width - a.arrow_width - a.arrow_width / 2 : "right" == b.settings.position ? a.arrow_width / 2 : (a.tooltip_width - a.arrow_width) / 2, d + a.tooltip_width > k + h && (e -= k + h - (d + a.tooltip_width) - 6, d = k + h - a.tooltip_width - 6, e + a.arrow_width > a.tooltip_width - 6 && (e = a.tooltip_width - 6 - a.arrow_width), d + e + a.arrow_width / 2 < a.element_left && (e = -1E4)), d < h && (e -= h - d, d = h + 2, 0 > e && (e = a.arrow_width / 2), d + e + a.arrow_width / 2 > a.element_left + a.element_width && (e = -1E4)), a.arrow_container.removeClass("Zebra_Tooltip_Arrow_Top"), a.arrow_container.addClass("Zebra_Tooltip_Arrow_Bottom"), a.message.css("margin-top", ""), a.arrow.css("borderColor", b.settings.background_color + " transparent transparent"), f < q ? (f = a.element_top + a.element_height - b.settings.vertical_offset, a.animation_offset = Math.abs(a.animation_offset), a.message.css("margin-top", a.arrow_height / 2), a.arrow_container.removeClass("Zebra_Tooltip_Arrow_Bottom"), a.arrow_container.addClass("Zebra_Tooltip_Arrow_Top"), a.arrow.css("borderColor", "transparent transparent " + b.settings.background_color)) : (a.animation_offset = -Math.abs(a.animation_offset), f += b.settings.vertical_offset), a.arrow_container.css("left", e), a.tooltip.css({ left: d, top: f }), g.extend(a, { tooltip_left: d, tooltip_top: f, arrow_left: e }), a.window_resized = !1, a.window_scrolled = !1, a = g.extend(c.data("Zebra_Tooltip"), a), c.data("Zebra_Tooltip", a); return a }, l = function (c) { var a = c.data("Zebra_Tooltip"); clearTimeout(a.hide_timeout); a.sticky || (clearTimeout(a.show_timeout), a.hide_timeout = setTimeout(function () { if (a.tooltip) { if (b.settings.onBeforeHide && "function" == typeof b.settings.onBeforeHide) b.settings.onBeforeHide(c); a.close = !1; a.destroy && (a.muted = !0); c.data("Zebra_Tooltip", a); g("a.Zebra_Tooltip_Close", a.tooltip).remove(); a.tooltip.stop(); a.tooltip.animate({ opacity: 0, top: a.tooltip_top + a.animation_offset }, b.settings.animation_speed, function () { g(this).css("display", "none"); if (b.settings.onHide && "function" == typeof b.settings.onHide) b.settings.onHide(c) }) } }, b.settings.hide_delay)) }, n = function (c) { var a = c.data("Zebra_Tooltip"); clearTimeout(a.show_timeout); a.muted || (clearTimeout(a.hide_timeout), a.show_timeout = setTimeout(function () { a = m(c); if (b.settings.onBeforeShow && "function" == typeof b.settings.onBeforeShow) b.settings.onBeforeShow(c); "block" != a.tooltip.css("display") && a.tooltip.css({ top: a.tooltip_top + a.animation_offset }); a.tooltip.css("display", "block"); a.tooltip.stop(); a.tooltip.animate({ top: a.tooltip_top, opacity: b.settings.opacity }, b.settings.animation_speed, function () { if (b.settings.onShow && "function" == typeof b.settings.onShow) b.settings.onShow(c) }) }, b.settings.show_delay)) }; b.settings = g.extend({}, { animation_speed: 150, animation_offset: 0, background_color: "#fff", close_on_click: !0, color: "#FFF", content: !1, hide_delay: 100, keep_visible: !0, max_width: 295, opacity: 1, position: "center", prerender: !1, show_delay: 0, vertical_offset: 0, onBeforeHide: null, onHide: null, onBeforeShow: null, onShow: null }, s); j.each(function () { var c = g(this); c.bind({ mouseenter: function () { n(c) }, mouseleave: function () { l(c) } }); c.data("Zebra_Tooltip", { tooltip: null, content: c.attr("title") || "", window_resized: !0, window_scrolled: !0, show_timeout: null, hide_timeout: null, animation_offset: b.settings.animation_offset, sticky: !1, destroy: !1, muted: !1 }); c.attr("title", ""); b.settings.prerender && m(c) }); g(window).bind("scroll resize", function (b) { j.each(function () { var a = g(this).data("Zebra_Tooltip"); "scroll" == b.type ? a.window_scrolled = !0 : a.window_resized = !0; g(this).data("Zebra_Tooltip", a) }) }) } })(jQuery);
+
+
+/**
+ * @license jquery.panzoom.js v3.2.2
+ * Updated: Wed May 08 2019
+ * Add pan and zoom functionality to any element
+ * Copyright (c) timmy willison
+ * Released under the MIT license
+ * https://github.com/timmywil/jquery.panzoom/blob/master/MIT-License.txt
+ */
+
+(function (global, factory) {
+    // AMD
+    if (typeof define === 'function' && define.amd) {
+        define(['jquery'], function (jQuery) {
+            return factory(global, jQuery);
+        });
+        // CommonJS/Browserify
+    } else if (typeof exports === 'object') {
+        factory(global, require('jquery'));
+        // Global
+    } else {
+        factory(global, global.jQuery);
+    }
+}(typeof window !== 'undefined' ? window : this, function (window, $) {
+    'use strict';
+
+    var document = window.document;
+    var datakey = '__pz__';
+    var slice = Array.prototype.slice;
+    var rIE11 = /trident\/7./i;
+    var supportsInputEvent = (function () {
+        // IE11 returns a false positive
+        if (rIE11.test(navigator.userAgent)) {
+            return false;
+        }
+        var input = document.createElement('input');
+        input.setAttribute('oninput', 'return');
+        return typeof input.oninput === 'function';
+    })();
+
+    // Regex
+    var rupper = /([A-Z])/g;
+    var rsvg = /^http:[\w\.\/]+svg$/;
+
+    var floating = '(\\-?\\d[\\d\\.e-]*)';
+    var commaSpace = '\\,?\\s*';
+    var rmatrix = new RegExp(
+        '^matrix\\(' +
+        floating + commaSpace +
+        floating + commaSpace +
+        floating + commaSpace +
+        floating + commaSpace +
+        floating + commaSpace +
+        floating + '\\)$'
+    );
+
+    /**
+     * Utility for determining transform matrix equality
+     * Checks backwards to test translation first
+     * @param {Array} first
+     * @param {Array} second
+     */
+    function matrixEquals(first, second) {
+        var i = first.length;
+        while (--i) {
+            if (Math.round(+first[i]) !== Math.round(+second[i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * Creates the options object for reset functions
+     * @param {Boolean|Object} opts See reset methods
+     * @returns {Object} Returns the newly-created options object
+     */
+    function createResetOptions(opts) {
+        var options = { range: true, animate: true };
+        if (typeof opts === 'boolean') {
+            options.animate = opts;
+        } else {
+            $.extend(options, opts);
+        }
+        return options;
+    }
+
+    /**
+     * Represent a transformation matrix with a 3x3 matrix for calculations
+     * Matrix functions adapted from Louis Remi's jQuery.transform (https://github.com/louisremi/jquery.transform.js)
+     * @param {Array|Number} a An array of six values representing a 2d transformation matrix
+     */
+    function Matrix(a, b, c, d, e, f, g, h, i) {
+        if ($.type(a) === 'array') {
+            this.elements = [
+                +a[0], +a[2], +a[4],
+                +a[1], +a[3], +a[5],
+                0, 0, 1
+            ];
+        } else {
+            this.elements = [
+                a, b, c,
+                d, e, f,
+                g || 0, h || 0, i || 1
+            ];
+        }
+    }
+
+    Matrix.prototype = {
+        /**
+         * Multiply a 3x3 matrix by a similar matrix or a vector
+         * @param {Matrix|Vector} matrix
+         * @return {Matrix|Vector} Returns a vector if multiplying by a vector
+         */
+        x: function (matrix) {
+            var isVector = matrix instanceof Vector;
+
+            var a = this.elements,
+                b = matrix.elements;
+
+            if (isVector && b.length === 3) {
+                // b is actually a vector
+                return new Vector(
+                    a[0] * b[0] + a[1] * b[1] + a[2] * b[2],
+                    a[3] * b[0] + a[4] * b[1] + a[5] * b[2],
+                    a[6] * b[0] + a[7] * b[1] + a[8] * b[2]
+                );
+            } else if (b.length === a.length) {
+                // b is a 3x3 matrix
+                return new Matrix(
+                    a[0] * b[0] + a[1] * b[3] + a[2] * b[6],
+                    a[0] * b[1] + a[1] * b[4] + a[2] * b[7],
+                    a[0] * b[2] + a[1] * b[5] + a[2] * b[8],
+
+                    a[3] * b[0] + a[4] * b[3] + a[5] * b[6],
+                    a[3] * b[1] + a[4] * b[4] + a[5] * b[7],
+                    a[3] * b[2] + a[4] * b[5] + a[5] * b[8],
+
+                    a[6] * b[0] + a[7] * b[3] + a[8] * b[6],
+                    a[6] * b[1] + a[7] * b[4] + a[8] * b[7],
+                    a[6] * b[2] + a[7] * b[5] + a[8] * b[8]
+                );
+            }
+            return false; // fail
+        },
+        /**
+         * Generates an inverse of the current matrix
+         * @returns {Matrix}
+         */
+        inverse: function () {
+            var d = 1 / this.determinant(),
+                a = this.elements;
+            return new Matrix(
+                d * (a[8] * a[4] - a[7] * a[5]),
+                d * (-(a[8] * a[1] - a[7] * a[2])),
+                d * (a[5] * a[1] - a[4] * a[2]),
+
+                d * (-(a[8] * a[3] - a[6] * a[5])),
+                d * (a[8] * a[0] - a[6] * a[2]),
+                d * (-(a[5] * a[0] - a[3] * a[2])),
+
+                d * (a[7] * a[3] - a[6] * a[4]),
+                d * (-(a[7] * a[0] - a[6] * a[1])),
+                d * (a[4] * a[0] - a[3] * a[1])
+            );
+        },
+        /**
+         * Calculates the determinant of the current matrix
+         * @returns {Number}
+         */
+        determinant: function () {
+            var a = this.elements;
+            return a[0] * (a[8] * a[4] - a[7] * a[5]) - a[3] * (a[8] * a[1] - a[7] * a[2]) + a[6] * (a[5] * a[1] - a[4] * a[2]);
+        }
+    };
+
+    /**
+     * Create a vector containing three values
+     */
+    function Vector(x, y, z) {
+        this.elements = [x, y, z];
+    }
+
+    /**
+     * Get the element at zero-indexed index i
+     * @param {Number} i
+     */
+    Vector.prototype.e = Matrix.prototype.e = function (i) {
+        return this.elements[i];
+    };
+
+    /**
+     * Create a Panzoom object for a given element
+     * @constructor
+     * @param {Element} elem - Element to use pan and zoom
+     * @param {Object} [options] - An object literal containing options to override default options
+     *  (See Panzoom.defaults for ones not listed below)
+     * @param {jQuery} [options.$zoomIn] - zoom in buttons/links collection (you can also bind these yourself
+     *  e.g. $button.on('click', function(e) { e.preventDefault(); $elem.panzoom('zoomIn'); });)
+     * @param {jQuery} [options.$zoomOut] - zoom out buttons/links collection on which to bind zoomOut
+     * @param {jQuery} [options.$zoomRange] - zoom in/out with this range control
+     * @param {jQuery} [options.$reset] - Reset buttons/links collection on which to bind the reset method
+     * @param {Function} [options.on[Start|Change|Zoom|Pan|End|Reset] - Optional callbacks for panzoom events
+     */
+    function Panzoom(elem, options) {
+
+        // Allow instantiation without `new` keyword
+        if (!(this instanceof Panzoom)) {
+            return new Panzoom(elem, options);
+        }
+
+        // Sanity checks
+        if (elem.nodeType !== 1) {
+            $.error('Panzoom called on non-Element node');
+        }
+        if (!$.contains(document, elem)) {
+            $.error('Panzoom element must be attached to the document');
+        }
+
+        // Don't remake
+        var d = $.data(elem, datakey);
+        if (d) {
+            return d;
+        }
+
+        // Extend default with given object literal
+        // Each instance gets its own options
+        this.options = options = $.extend({}, Panzoom.defaults, options);
+        this.elem = elem;
+        var $elem = this.$elem = $(elem);
+        this.$set = options.$set && options.$set.length ? options.$set : $elem;
+        this.$doc = $(elem.ownerDocument || document);
+        this.$parent = $elem.parent();
+        this.parent = this.$parent[0];
+
+        // This is SVG if the namespace is SVG
+        // However, while <svg> elements are SVG, we want to treat those like other elements
+        this.isSVG = rsvg.test(elem.namespaceURI) && elem.nodeName.toLowerCase() !== 'svg';
+
+        this.panning = false;
+
+        // Save the original transform value
+        // Save the prefixed transform style key
+        // Set the starting transform
+        this._buildTransform();
+
+        // Build the appropriately-prefixed transform style property name
+        // De-camelcase
+        this._transform = $.cssProps.transform ? $.cssProps.transform.replace(rupper, '-$1').toLowerCase() : 'transform';
+
+        // Build the transition value
+        this._buildTransition();
+
+        // Build containment dimensions
+        this.resetDimensions();
+
+        // Add zoom and reset buttons to `this`
+        var $empty = $();
+        var self = this;
+        $.each(['$zoomIn', '$zoomOut', '$zoomRange', '$reset'], function (i, name) {
+            self[name] = options[name] || $empty;
+        });
+
+        this.enable();
+
+        this.scale = this.getMatrix()[0];
+        this._checkPanWhenZoomed();
+
+        // Save the instance
+        $.data(elem, datakey, this);
+    }
+
+    // Attach regex for possible use (immutable)
+    Panzoom.rmatrix = rmatrix;
+
+    Panzoom.defaults = {
+        // Should always be non-empty
+        // Used to bind jQuery events without collisions
+        // A guid is not added here as different instantiations/versions of panzoom
+        // on the same element is not supported, so don't do it.
+        eventNamespace: '.panzoom',
+
+        // Whether or not to transition the scale
+        transition: true,
+
+        // Default cursor style for the element
+        cursor: 'move',
+
+        // There may be some use cases for zooming without panning or vice versa
+        disablePan: false,
+        disableZoom: false,
+
+        // Pan only on the X or Y axes
+        disableXAxis: false,
+        disableYAxis: false,
+
+        // Set whether you'd like to pan on left (1), middle (2), or right click (3)
+        which: 1,
+
+        // The increment at which to zoom
+        // Should be a number greater than 0
+        increment: 0.3,
+
+        // When no scale is passed, this option tells
+        // the `zoom` method to increment
+        // the scale *linearly* based on the increment option.
+        // This often ends up looking like very little happened at larger zoom levels.
+        // The default is to multiply/divide the scale based on the increment.
+        linearZoom: false,
+
+        // Pan only when the scale is greater than minScale
+        panOnlyWhenZoomed: false,
+
+        // min and max zoom scales
+        minScale: 0.3,
+        maxScale: 6,
+
+        // The default step for the range input
+        // Precendence: default < HTML attribute < option setting
+        rangeStep: 0.05,
+
+        // Animation duration (ms)
+        duration: 200,
+        // CSS easing used for scale transition
+        easing: 'ease-in-out',
+
+        // Indicate that the element should be contained within it's parent when panning
+        // Note: this does not affect zooming outside of the parent
+        // Set this value to 'invert' to only allow panning outside of the parent element (basically the opposite of the normal use of contain)
+        // 'invert' is useful for a large panzoom element where you don't want to show anything behind it
+        contain: false
+    };
+
+    Panzoom.prototype = {
+        constructor: Panzoom,
+
+        /**
+         * @returns {Panzoom} Returns the instance
+         */
+        instance: function () {
+            return this;
+        },
+
+        /**
+         * Enable or re-enable the panzoom instance
+         */
+        enable: function () {
+            // Unbind first
+            this._initStyle();
+            this._bind();
+            this.disabled = false;
+        },
+
+        /**
+         * Disable panzoom
+         */
+        disable: function () {
+            this.disabled = true;
+            this._resetStyle();
+            this._unbind();
+        },
+
+        /**
+         * @returns {Boolean} Returns whether the current panzoom instance is disabled
+         */
+        isDisabled: function () {
+            return this.disabled;
+        },
+
+        /**
+         * Destroy the panzoom instance
+         */
+        destroy: function () {
+            this.disable();
+            $.removeData(this.elem, datakey);
+        },
+
+        /**
+         * Builds the restricing dimensions from the containment element
+         * Also used with focal points
+         * Call this method whenever the dimensions of the element or parent are changed
+         */
+        resetDimensions: function () {
+            // Reset container properties
+            this.container = this.parent.getBoundingClientRect();
+
+            // Set element properties
+            var elem = this.elem;
+            // getBoundingClientRect() works with SVG, offsetWidth does not
+            var dims = elem.getBoundingClientRect();
+            var absScale = Math.abs(this.scale);
+            this.dimensions = {
+                width: dims.width,
+                height: dims.height,
+                left: $.css(elem, 'left', true) || 0,
+                top: $.css(elem, 'top', true) || 0,
+                // Borders and margins are scaled
+                border: {
+                    top: $.css(elem, 'borderTopWidth', true) * absScale || 0,
+                    bottom: $.css(elem, 'borderBottomWidth', true) * absScale || 0,
+                    left: $.css(elem, 'borderLeftWidth', true) * absScale || 0,
+                    right: $.css(elem, 'borderRightWidth', true) * absScale || 0
+                },
+                margin: {
+                    top: $.css(elem, 'marginTop', true) * absScale || 0,
+                    left: $.css(elem, 'marginLeft', true) * absScale || 0
+                }
+            };
+        },
+
+        /**
+         * Return the element to it's original transform matrix
+         * @param {Boolean} [options] If a boolean is passed, animate the reset (default: true). If an options object is passed, simply pass that along to setMatrix.
+         * @param {Boolean} [options.silent] Silence the reset event
+         */
+        reset: function (options) {
+            options = createResetOptions(options);
+            // Reset the transform to its original value
+            var matrix = this.setMatrix(this._origTransform, options);
+            if (!options.silent) {
+                this._trigger('reset', matrix);
+            }
+        },
+
+        /**
+         * Only resets zoom level
+         * @param {Boolean|Object} [options] Whether to animate the reset (default: true) or an object of options to pass to zoom()
+         */
+        resetZoom: function (options) {
+            options = createResetOptions(options);
+            var origMatrix = this.getMatrix(this._origTransform);
+            options.dValue = origMatrix[3];
+            this.zoom(origMatrix[0], options);
+        },
+
+        /**
+         * Only reset panning
+         * @param {Boolean|Object} [options] Whether to animate the reset (default: true) or an object of options to pass to pan()
+         */
+        resetPan: function (options) {
+            var origMatrix = this.getMatrix(this._origTransform);
+            this.pan(origMatrix[4], origMatrix[5], createResetOptions(options));
+        },
+
+        /**
+         * Sets a transform on the $set
+         * For SVG, the style attribute takes precedence
+         * and allows us to animate
+         * @param {String} transform
+         */
+        setTransform: function (transform) {
+            var $set = this.$set;
+            var i = $set.length;
+            while (i--) {
+                $.style($set[i], 'transform', transform);
+
+                // Support IE9-11, Edge 13-14+
+                // Set attribute alongside style attribute
+                // since IE and Edge do not respect style settings on SVG
+                // See https://css-tricks.com/transforms-on-svg-elements/
+                if (this.isSVG) {
+                    $set[i].setAttribute('transform', transform);
+                }
+            }
+        },
+
+        /**
+         * Retrieving the transform is different for SVG
+         *  (unless a style transform is already present)
+         * Uses the $set collection for retrieving the transform
+         * @param {String} [transform] Pass in an transform value (like 'scale(1.1)')
+         *  to have it formatted into matrix format for use by Panzoom
+         * @returns {String} Returns the current transform value of the element
+         */
+        getTransform: function (transform) {
+            var $set = this.$set;
+            var transformElem = $set[0];
+            if (transform) {
+                this.setTransform(transform);
+            } else {
+
+                // IE and Edge still set the transform style properly
+                // They just don't render it on SVG
+                // So we get a correct value here
+                transform = $.style(transformElem, 'transform');
+
+                if (this.isSVG && (!transform || transform === 'none')) {
+                    transform = $.attr(transformElem, 'transform') || 'none';
+                }
+            }
+
+            // Convert any transforms set by the user to matrix format
+            // by setting to computed
+            if (transform !== 'none' && !rmatrix.test(transform)) {
+
+                // Get computed and set for next time
+                this.setTransform(transform = $.css(transformElem, 'transform'));
+            }
+
+            return transform || 'none';
+        },
+
+        /**
+         * Retrieve the current transform matrix for $elem (or turn a transform into it's array values)
+         * @param {String} [transform] matrix-formatted transform value
+         * @returns {Array} Returns the current transform matrix split up into it's parts, or a default matrix
+         */
+        getMatrix: function (transform) {
+            var matrix = rmatrix.exec(transform || this.getTransform());
+            if (matrix) {
+                matrix.shift();
+            }
+            return matrix || [1, 0, 0, 1, 0, 0];
+        },
+
+        /**
+         * Get the current scale.
+         * @param {String} [transform] matrix-formatted transform value
+         * @returns {Number} Current scale relative to the initial scale (height / width = 1)
+         */
+        getScale: function (matrix) {
+            return Math.sqrt(Math.pow(matrix[0], 2) + Math.pow(matrix[1], 2));
+        },
+
+        /**
+         * Given a matrix object, quickly set the current matrix of the element
+         * @param {Array|String} matrix
+         * @param {Object} [options]
+         * @param {Boolean|String} [options.animate] Whether to animate the transform change, or 'skip' indicating that it is unnecessary to set
+         * @param {Boolean} [options.contain] Override the global contain option
+         * @param {Boolean} [options.range] If true, $zoomRange's value will be updated.
+         * @param {Boolean} [options.silent] If true, the change event will not be triggered
+         * @returns {Array} Returns the newly-set matrix
+         */
+        setMatrix: function (matrix, options) {
+            if (this.disabled) { return; }
+            if (!options) { options = {}; }
+            // Convert to array
+            if (typeof matrix === 'string') {
+                matrix = this.getMatrix(matrix);
+            }
+            var scale = this.getScale(matrix);
+            var contain = typeof options.contain !== 'undefined' ? options.contain : this.options.contain;
+
+            // Apply containment
+            if (contain) {
+                var dims = options.dims;
+                if (!dims) {
+                    this.resetDimensions();
+                    dims = this.dimensions;
+                }
+                var spaceWLeft, spaceWRight, scaleDiff;
+                var container = this.container;
+                var width = dims.width;
+                var height = dims.height;
+                var conWidth = container.width;
+                var conHeight = container.height;
+                var zoomAspectW = conWidth / width;
+                var zoomAspectH = conHeight / height;
+
+                // If the element is not naturally centered,
+                // assume full space right
+                if (this.$parent.css('textAlign') !== 'center' || $.css(this.elem, 'display') !== 'inline') {
+                    // offsetWidth gets us the width without the transform
+                    scaleDiff = (width - this.elem.offsetWidth) / 2;
+                    spaceWLeft = scaleDiff - dims.border.left;
+                    spaceWRight = width - conWidth - scaleDiff + dims.border.right;
+                } else {
+                    spaceWLeft = spaceWRight = ((width - conWidth) / 2);
+                }
+                var spaceHTop = ((height - conHeight) / 2) + dims.border.top;
+                var spaceHBottom = ((height - conHeight) / 2) - dims.border.top - dims.border.bottom;
+
+                if (contain === 'invert' || contain === 'automatic' && zoomAspectW < 1.01) {
+                    matrix[4] = Math.max(Math.min(matrix[4], spaceWLeft - dims.border.left), -spaceWRight);
+                } else {
+                    matrix[4] = Math.min(Math.max(matrix[4], spaceWLeft), -spaceWRight);
+                }
+
+                if (contain === 'invert' || (contain === 'automatic' && zoomAspectH < 1.01)) {
+                    matrix[5] = Math.max(Math.min(matrix[5], spaceHTop - dims.border.top), -spaceHBottom);
+                } else {
+                    matrix[5] = Math.min(Math.max(matrix[5], spaceHTop), -spaceHBottom);
+                }
+            }
+
+            // Animate
+            if (options.animate !== 'skip') {
+                // Set transition
+                this.transition(!options.animate);
+            }
+
+            // Update range element
+            if (options.range) {
+                this.$zoomRange.val(scale);
+            }
+
+            // Set the matrix on this.$set
+            if (this.options.disableXAxis || this.options.disableYAxis) {
+                var originalMatrix = this.getMatrix();
+                if (this.options.disableXAxis) {
+                    matrix[4] = originalMatrix[4];
+                }
+                if (this.options.disableYAxis) {
+                    matrix[5] = originalMatrix[5];
+                }
+            }
+            this.setTransform('matrix(' + matrix.join(',') + ')');
+
+            this.scale = scale;
+
+            // Disable/enable panning if zooming is at minimum and panOnlyWhenZoomed is true
+            this._checkPanWhenZoomed(scale);
+
+            if (!options.silent) {
+                this._trigger('change', matrix);
+            }
+
+            return matrix;
+        },
+
+        /**
+         * @returns {Boolean} Returns whether the panzoom element is currently being dragged
+         */
+        isPanning: function () {
+            return this.panning;
+        },
+
+        /**
+         * Apply the current transition to the element, if allowed
+         * @param {Boolean} [off] Indicates that the transition should be turned off
+         */
+        transition: function (off) {
+            if (!this._transition) { return; }
+            var transition = off || !this.options.transition ? 'none' : this._transition;
+            var $set = this.$set;
+            var i = $set.length;
+            while (i--) {
+                // Avoid reflows when zooming
+                if ($.style($set[i], 'transition') !== transition) {
+                    $.style($set[i], 'transition', transition);
+                }
+            }
+        },
+
+        /**
+         * Pan the element to the specified translation X and Y
+         * Note: this is not the same as setting jQuery#offset() or jQuery#position()
+         * @param {Number} x
+         * @param {Number} y
+         * @param {Object} [options] These options are passed along to setMatrix
+         * @param {Array} [options.matrix] The matrix being manipulated (if already known so it doesn't have to be retrieved again)
+         * @param {Boolean} [options.silent] Silence the pan event. Note that this will also silence the setMatrix change event.
+         * @param {Boolean} [options.relative] Make the x and y values relative to the existing matrix
+         */
+        pan: function (x, y, options) {
+            if (this.options.disablePan) { return; }
+            if (!options) { options = {}; }
+            var matrix = options.matrix;
+            if (!matrix) {
+                matrix = this.getMatrix();
+            }
+            // Cast existing matrix values to numbers
+            if (options.relative) {
+                x += +matrix[4];
+                y += +matrix[5];
+            }
+            matrix[4] = x;
+            matrix[5] = y;
+            this.setMatrix(matrix, options);
+            if (!options.silent) {
+                this._trigger('pan', matrix[4], matrix[5]);
+            }
+        },
+
+        /**
+         * Zoom in/out the element using the scale properties of a transform matrix
+         * @param {Number|Boolean} [scale] The scale to which to zoom or a boolean indicating to transition a zoom out
+         * @param {Object} [opts] All global options can be overwritten by this options object. For example, override the default increment.
+         * @param {Boolean} [opts.noSetRange] Specify that the method should not set the $zoomRange value (as is the case when $zoomRange is calling zoom on change)
+         * @param {jQuery.Event|Object} [opts.focal] A focal point on the panzoom element on which to zoom.
+         *  If an object, set the clientX and clientY properties to the position relative to the parent
+         * @param {Boolean} [opts.animate] Whether to animate the zoom (defaults to true if scale is not a number, false otherwise)
+         * @param {Boolean} [opts.silent] Silence the zoom event
+         * @param {Array} [opts.matrix] Optionally pass the current matrix so it doesn't need to be retrieved
+         * @param {Number} [opts.dValue] Think of a transform matrix as four values a, b, c, d
+         *  where a/d are the horizontal/vertical scale values and b/c are the skew values
+         *  (5 and 6 of matrix array are the tx/ty transform values).
+         *  Normally, the scale is set to both the a and d values of the matrix.
+         *  This option allows you to specify a different d value for the zoom.
+         *  For instance, to flip vertically, you could set -1 as the dValue.
+         */
+        zoom: function (scale, opts) {
+            // Shuffle arguments
+            if (typeof scale === 'object') {
+                opts = scale;
+                scale = null;
+            } else if (!opts) {
+                opts = {};
+            }
+            var options = $.extend({}, this.options, opts);
+            // Check if disabled
+            if (options.disableZoom) { return; }
+            var animate = false;
+            var matrix = options.matrix || this.getMatrix();
+            var surfaceM = new Matrix(matrix);
+            var startScale = this.getScale(matrix);
+
+            // Calculate zoom based on increment
+            if (typeof scale !== 'number') {
+                if (options.linearZoom) {
+                    scale = 1 + (options.increment * (scale ? -1 : 1)) / startScale;
+                } else {
+                    scale = scale ? (1 / (1 + options.increment)) : (1 + options.increment);
+                }
+                animate = true;
+            } else {
+                scale = 1 / startScale;
+            }
+
+            // Constrain scale
+            scale = Math.max(Math.min(scale, options.maxScale / startScale), options.minScale / startScale);
+            var m = surfaceM.x(new Matrix(scale, 0, 0, 0, (typeof options.dValue === 'number' ? options.dValue / startScale : scale), 0));
+
+            // Calculate focal point based on scale
+            var focal = options.focal;
+            if (focal && !options.disablePan) {
+                // Adapted from code by Florian Günther
+                // https://github.com/florianguenther/zui53
+                this.resetDimensions();
+                var dims = options.dims = this.dimensions;
+                var clientX = focal.clientX;
+                var clientY = focal.clientY;
+
+                // Adjust the focal point for transform-origin 50% 50%
+                // SVG elements have a transform origin of 0 0
+                if (!this.isSVG) {
+                    clientX -= (dims.width / startScale) / 2;
+                    clientY -= (dims.height / startScale) / 2;
+                }
+
+                var clientV = new Vector(clientX, clientY, 1);
+                // Supply an offset manually if necessary
+                var o = this.parentOffset || this.$parent.offset();
+                var offsetM = new Matrix(1, 0, o.left - this.$doc.scrollLeft(), 0, 1, o.top - this.$doc.scrollTop());
+                var surfaceV = surfaceM.inverse().x(offsetM.inverse().x(clientV));
+                surfaceM = surfaceM.x(new Matrix([scale, 0, 0, scale, 0, 0]));
+                clientV = offsetM.x(surfaceM.x(surfaceV));
+                matrix[4] = +matrix[4] + (clientX - clientV.e(0));
+                matrix[5] = +matrix[5] + (clientY - clientV.e(1));
+            }
+
+            // Set the scale
+            matrix[0] = m.e(0);
+            matrix[1] = m.e(3);
+            matrix[2] = m.e(1);
+            matrix[3] = m.e(4);
+
+            // Calling zoom may still pan the element
+            this.setMatrix(matrix, {
+                animate: typeof options.animate !== 'undefined' ? options.animate : animate,
+                // Set the zoomRange value
+                range: !options.noSetRange
+            });
+
+            // Trigger zoom event
+            if (!options.silent) {
+                this._trigger('zoom', scale, options);
+            }
+        },
+
+        /**
+         * Get/set option on an existing instance
+         * @returns {Array|undefined} If getting, returns an array of all values
+         *   on each instance for a given key. If setting, continue chaining by returning undefined.
+         */
+        option: function (key, value) {
+            var options;
+            if (!key) {
+                // Avoids returning direct reference
+                return $.extend({}, this.options);
+            }
+
+            if (typeof key === 'string') {
+                if (arguments.length === 1) {
+                    return this.options[key] !== undefined ?
+                        this.options[key] :
+                        null;
+                }
+                options = {};
+                options[key] = value;
+            } else {
+                options = key;
+            }
+
+            this._setOptions(options);
+        },
+
+        /**
+         * Internally sets options
+         * @param {Object} options - An object literal of options to set
+         * @private
+         */
+        _setOptions: function (options) {
+            $.each(options, $.proxy(function (key, value) {
+                switch (key) {
+                    case 'disablePan':
+                        this._resetStyle();
+                    /* falls through */
+                    case '$zoomIn':
+                    case '$zoomOut':
+                    case '$zoomRange':
+                    case '$reset':
+                    case 'disableZoom':
+                    case 'onStart':
+                    case 'onChange':
+                    case 'onZoom':
+                    case 'onPan':
+                    case 'onEnd':
+                    case 'onReset':
+                    case 'eventNamespace':
+                        this._unbind();
+                }
+                this.options[key] = value;
+                switch (key) {
+                    case 'disablePan':
+                        this._initStyle();
+                    /* falls through */
+                    case '$zoomIn':
+                    case '$zoomOut':
+                    case '$zoomRange':
+                    case '$reset':
+                        // Set these on the instance
+                        this[key] = value;
+                    /* falls through */
+                    case 'disableZoom':
+                    case 'onStart':
+                    case 'onChange':
+                    case 'onZoom':
+                    case 'onPan':
+                    case 'onEnd':
+                    case 'onReset':
+                    case 'eventNamespace':
+                        this._bind();
+                        break;
+                    case 'cursor':
+                        $.style(this.elem, 'cursor', value);
+                        break;
+                    case 'minScale':
+                        this.$zoomRange.attr('min', value);
+                        break;
+                    case 'maxScale':
+                        this.$zoomRange.attr('max', value);
+                        break;
+                    case 'rangeStep':
+                        this.$zoomRange.attr('step', value);
+                        break;
+                    case 'startTransform':
+                        this._buildTransform();
+                        break;
+                    case 'duration':
+                    case 'easing':
+                        this._buildTransition();
+                    /* falls through */
+                    case 'transition':
+                        this.transition();
+                        break;
+                    case 'panOnlyWhenZoomed':
+                        this._checkPanWhenZoomed();
+                        break;
+                    case '$set':
+                        if (value instanceof $ && value.length) {
+                            this.$set = value;
+                            // Reset styles
+                            this._initStyle();
+                            this._buildTransform();
+                        }
+                }
+            }, this));
+        },
+
+        /**
+         * Disable/enable panning depending on whether the current scale
+         * matches the minimum
+         * @param {Number} [scale]
+         * @private
+         */
+        _checkPanWhenZoomed: function (scale) {
+            var options = this.options;
+            if (options.panOnlyWhenZoomed) {
+                if (!scale) {
+                    scale = this.getMatrix()[0];
+                }
+                var toDisable = scale <= options.minScale;
+                if (options.disablePan !== toDisable) {
+                    this.option('disablePan', toDisable);
+                }
+            }
+        },
+
+        /**
+         * Initialize base styles for the element and its parent
+         * @private
+         */
+        _initStyle: function () {
+            var styles = {
+                // Set the same default whether SVG or HTML
+                // transform-origin cannot be changed to 50% 50% in IE9-11 or Edge 13-14+
+                'transform-origin': this.isSVG ? '0 0' : '50% 50%'
+            };
+            // Set elem styles
+            if (!this.options.disablePan) {
+                styles.cursor = this.options.cursor;
+            }
+            this.$set.css(styles);
+
+            // Set parent to relative if set to static
+            var $parent = this.$parent;
+            // No need to add styles to the body
+            if ($parent.length && !$.nodeName(this.parent, 'body')) {
+                styles = {
+                    overflow: 'hidden'
+                };
+                if ($parent.css('position') === 'static') {
+                    styles.position = 'relative';
+                }
+                $parent.css(styles);
+            }
+        },
+
+        /**
+         * Undo any styles attached in this plugin
+         * @private
+         */
+        _resetStyle: function () {
+            this.$elem.css({
+                'cursor': '',
+                'transition': ''
+            });
+            this.$parent.css({
+                'overflow': '',
+                'position': ''
+            });
+        },
+
+        /**
+         * Binds all necessary events
+         * @private
+         */
+        _bind: function () {
+            var self = this;
+            var options = this.options;
+            var ns = options.eventNamespace;
+            var str_down = 'mousedown' + ns + ' pointerdown' + ns + ' MSPointerDown' + ns;
+            var str_start = 'touchstart' + ns + ' ' + str_down;
+            var str_click = 'touchend' + ns + ' click' + ns + ' pointerup' + ns + ' MSPointerUp' + ns;
+            var events = {};
+            var $reset = this.$reset;
+            var $zoomRange = this.$zoomRange;
+
+            // Bind panzoom events from options
+            $.each(['Start', 'Change', 'Zoom', 'Pan', 'End', 'Reset'], function () {
+                var m = options['on' + this];
+                if ($.isFunction(m)) {
+                    events['panzoom' + this.toLowerCase() + ns] = m;
+                }
+            });
+
+            // Bind $elem drag and click/touchdown events
+            // Bind touchstart if either panning or zooming is enabled
+            if (!options.disablePan || !options.disableZoom) {
+                events[str_start] = function (e) {
+
+                    //var thisTarget = e.closest('.drop-toggle');
+                    var thisTarget = e;
+
+                    var touches;
+                    if (
+                        (e.type === 'touchstart' ? (touches = e.touches || e.originalEvent.touches) && ((touches.length === 1 && !options.disablePan) || touches.length === 2) : !options.disablePan && (e.which || e.originalEvent.which) === options.which)
+                        && !thisTarget.target.closest('.panzoom-exclude')
+                    ) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        self._startMove(e, touches);
+                    }
+                };
+                // Prevent the contextmenu event
+                // if we're binding to right-click
+                if (options.which === 3) {
+                    events.contextmenu = false;
+                }
+            }
+            this.$elem.on(events);
+
+            // Bind reset
+            if ($reset.length) {
+                $reset.on(str_click, function (e) {
+                    e.preventDefault();
+                    self.reset();
+                });
+            }
+
+            // Set default attributes for the range input
+            if ($zoomRange.length) {
+                $zoomRange.attr({
+                    // Only set the range step if explicit or
+                    // set the default if there is no attribute present
+                    step: options.rangeStep === Panzoom.defaults.rangeStep &&
+                        $zoomRange.attr('step') ||
+                        options.rangeStep,
+                    min: options.minScale,
+                    max: options.maxScale
+                }).prop({
+                    value: this.getMatrix()[0]
+                });
+            }
+
+            // No bindings if zooming is disabled
+            if (options.disableZoom) {
+                return;
+            }
+
+            var $zoomIn = this.$zoomIn;
+            var $zoomOut = this.$zoomOut;
+
+            // Bind zoom in/out
+            // Don't bind one without the other
+            if ($zoomIn.length && $zoomOut.length) {
+                // preventDefault cancels future mouse events on touch events
+                $zoomIn.on(str_click, function (e) {
+                    e.preventDefault();
+                    self.zoom();
+                });
+                $zoomOut.on(str_click, function (e) {
+                    e.preventDefault();
+                    self.zoom(true);
+                });
+            }
+
+            if ($zoomRange.length) {
+                events = {};
+                // Cannot prevent default action here
+                events[str_down] = function () {
+                    self.transition(true);
+                };
+                // Zoom on input events if available and change events
+                // See https://github.com/timmywil/jquery.panzoom/issues/90
+                events[(supportsInputEvent ? 'input' : 'change') + ns] = function () {
+                    self.zoom(+this.value, { noSetRange: true });
+                };
+                $zoomRange.on(events);
+            }
+        },
+
+        /**
+         * Unbind all events
+         * @private
+         */
+        _unbind: function () {
+            this.$elem
+                .add(this.$zoomIn)
+                .add(this.$zoomOut)
+                .add(this.$reset)
+                .off(this.options.eventNamespace);
+        },
+
+        /**
+         * Builds the original transform value
+         * @private
+         */
+        _buildTransform: function () {
+            // Save the original transform
+            // Retrieving this also adds the correct prefixed style name
+            // to jQuery's internal $.cssProps
+            return this._origTransform = this.getTransform(this.options.startTransform);
+        },
+
+        /**
+         * Set transition property for later use when zooming
+         * @private
+         */
+        _buildTransition: function () {
+            if (this._transform) {
+                var options = this.options;
+                this._transition = this._transform + ' ' + options.duration + 'ms ' + options.easing;
+            }
+        },
+
+        /**
+         * Calculates the distance between two touch points
+         * Remember pythagorean?
+         * @param {Array} touches
+         * @returns {Number} Returns the distance
+         * @private
+         */
+        _getDistance: function (touches) {
+            var touch1 = touches[0];
+            var touch2 = touches[1];
+            return Math.sqrt(Math.pow(Math.abs(touch2.clientX - touch1.clientX), 2) + Math.pow(Math.abs(touch2.clientY - touch1.clientY), 2));
+        },
+
+        /**
+         * Constructs an approximated point in the middle of two touch points
+         * @returns {Object} Returns an object containing pageX and pageY
+         * @private
+         */
+        _getMiddle: function (touches) {
+            var touch1 = touches[0];
+            var touch2 = touches[1];
+            return {
+                clientX: ((touch2.clientX - touch1.clientX) / 2) + touch1.clientX,
+                clientY: ((touch2.clientY - touch1.clientY) / 2) + touch1.clientY
+            };
+        },
+
+        /**
+         * Trigger a panzoom event on our element
+         * The event is passed the Panzoom instance
+         * @param {String|jQuery.Event} event
+         * @param {Mixed} arg1[, arg2, arg3, ...] Arguments to append to the trigger
+         * @private
+         */
+        _trigger: function (event) {
+            if (typeof event === 'string') {
+                event = 'panzoom' + event;
+            }
+            this.$elem.triggerHandler(event, [this].concat(slice.call(arguments, 1)));
+        },
+
+        /**
+         * Starts the pan
+         * This is bound to mouse/touchmove on the element
+         * @param {jQuery.Event} event An event with pageX, pageY, and possibly the touches list
+         * @param {TouchList} [touches] The touches list if present
+         * @private
+         */
+        _startMove: function (event, touches) {
+            if (this.panning) {
+                return;
+            }
+            var moveEvent, endEvent,
+                startDistance, startScale, startMiddle,
+                startPageX, startPageY, touch;
+            var self = this;
+            var options = this.options;
+            var ns = options.eventNamespace;
+            var matrix = this.getMatrix();
+            var original = matrix.slice(0);
+            var origPageX = +original[4];
+            var origPageY = +original[5];
+            var panOptions = { matrix: matrix, animate: 'skip' };
+            var type = event.type;
+
+            // Use proper events
+            if (type === 'pointerdown') {
+                moveEvent = 'pointermove';
+                endEvent = 'pointerup';
+            } else if (type === 'touchstart') {
+                moveEvent = 'touchmove';
+                endEvent = 'touchend';
+            } else if (type === 'MSPointerDown') {
+                moveEvent = 'MSPointerMove';
+                endEvent = 'MSPointerUp';
+            } else {
+                moveEvent = 'mousemove';
+                endEvent = 'mouseup';
+            }
+
+            // Add namespace
+            moveEvent += ns;
+            endEvent += ns;
+
+            // Remove any transitions happening
+            this.transition(true);
+
+            // Indicate that we are currently panning
+            this.panning = true;
+
+            // Trigger start event
+            this._trigger('start', event, touches);
+
+            var setStart = function (event, touches) {
+                if (touches) {
+                    if (touches.length === 2) {
+                        if (startDistance != null) {
+                            return;
+                        }
+                        startDistance = self._getDistance(touches);
+                        startScale = self.getScale(matrix);
+                        startMiddle = self._getMiddle(touches);
+                        return;
+                    }
+                    if (startPageX != null) {
+                        return;
+                    }
+                    if ((touch = touches[0])) {
+                        startPageX = touch.pageX;
+                        startPageY = touch.pageY;
+                    }
+                }
+                if (startPageX != null) {
+                    return;
+                }
+                startPageX = event.pageX;
+                startPageY = event.pageY;
+            };
+
+            setStart(event, touches);
+
+            var move = function (e) {
+                var coords;
+                e.preventDefault();
+                touches = e.touches || e.originalEvent.touches;
+                setStart(e, touches);
+
+                if (touches) {
+                    if (touches.length === 2) {
+
+                        // Calculate move on middle point
+                        var middle = self._getMiddle(touches);
+                        var diff = self._getDistance(touches) - startDistance;
+
+                        // Set zoom
+                        self.zoom(diff * (options.increment / 100) + startScale, {
+                            focal: middle,
+                            matrix: matrix,
+                            animate: 'skip'
+                        });
+
+                        // Set pan
+                        self.pan(
+                            +matrix[4] + middle.clientX - startMiddle.clientX,
+                            +matrix[5] + middle.clientY - startMiddle.clientY,
+                            panOptions
+                        );
+                        startMiddle = middle;
+                        return;
+                    }
+                    coords = touches[0] || { pageX: 0, pageY: 0 };
+                }
+
+                if (!coords) {
+                    coords = e;
+                }
+
+                self.pan(
+                    origPageX + coords.pageX - startPageX,
+                    origPageY + coords.pageY - startPageY,
+                    panOptions
+                );
+            };
+
+            // Bind the handlers
+            $(document)
+                .off(ns)
+                .on(moveEvent, move)
+                .on(endEvent, function (e) {
+                    e.preventDefault();
+                    // Unbind all document events
+                    $(this).off(ns);
+                    self.panning = false;
+                    // Trigger our end event
+                    // Simply set the type to "panzoomend" to pass through all end properties
+                    // jQuery's `not` is used here to compare Array equality
+                    e.type = 'panzoomend';
+                    self._trigger(e, matrix, !matrixEquals(matrix, original));
+                });
+        }
+    };
+
+    // Add Panzoom as a static property
+    $.Panzoom = Panzoom;
+
+    /**
+     * Extend jQuery
+     * @param {Object|String} options - The name of a method to call on the prototype
+     *  or an object literal of options
+     * @returns {jQuery|Mixed} jQuery instance for regular chaining or the return value(s) of a panzoom method call
+     */
+    $.fn.panzoom = function (options) {
+        var instance, args, m, ret;
+
+        // Call methods widget-style
+        if (typeof options === 'string') {
+            ret = [];
+            args = slice.call(arguments, 1);
+            this.each(function () {
+                instance = $.data(this, datakey);
+
+                if (!instance) {
+                    ret.push(undefined);
+
+                    // Ignore methods beginning with `_`
+                } else if (options.charAt(0) !== '_' &&
+                    typeof (m = instance[options]) === 'function' &&
+                    // If nothing is returned, do not add to return values
+                    (m = m.apply(instance, args)) !== undefined) {
+
+                    ret.push(m);
+                }
+            });
+
+            // Return an array of values for the jQuery instances
+            // Or the value itself if there is only one
+            // Or keep chaining
+            return ret.length ?
+                (ret.length === 1 ? ret[0] : ret) :
+                this;
+        }
+
+        return this.each(function () { new Panzoom(this, options); });
+    };
+
+    return Panzoom;
+}));

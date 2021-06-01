@@ -718,9 +718,9 @@ $(document).ready(function () {
                 .parents('.create-campaign-automations-add')
                 .find('.create-campaign-automations-add-button')
                 .show();
-            console.log('hide all');
+            //console.log('hide all');
         } else if ($target.closest('.create-campaign-automations-add-button').length) {
-            console.log('hide not this');
+            //console.log('hide not this');
         }
     });
 
@@ -755,6 +755,17 @@ $(document).ready(function () {
     });
 
     //-----------------------------------------//
+
+    function checkActiveAutomation3() {
+        if ($('#campaign-step-3').hasClass('active')) {
+            $('.create-campaign-zoom').fadeIn(150);
+        } else {
+            $('.create-campaign-zoom').fadeOut(150);
+        }
+    }
+    checkActiveAutomation3();
+
+    //-----------------------------------------////-----------------------------------------//
 
     //create campaign automations condition
     $(document).on('click', '.create-campaign-automations-add-condition', function (event) {
@@ -966,6 +977,8 @@ $(document).ready(function () {
 
     //-----------------------------------------//
 
+    //panZoomElement.panzoom("option", "ignoreChildrensEvents", false);
+
     //panzoom
     var panZoomElement = $('.panzoom');
     panZoomElement.panzoom({
@@ -975,8 +988,23 @@ $(document).ready(function () {
         maxScale: 1,
         minScale: 0.2,
         increment: 0.1,
-        contain: true,
+        //contain: true,
         transition: true,
+    });
+
+    var panX = ($('.panzoom-parent').innerWidth() - parseInt($('.panzoom')[0].style.width)) / 2;
+    //console.log(panX);
+    panZoomElement.panzoom("pan", panX, 0, {
+        animate: false,
+        silent: true
+    });
+
+    $(window).resize(function () {
+        var panX = ($('.panzoom-parent').innerWidth() - parseInt($('.panzoom')[0].style.width)) / 2;
+        panZoomElement.panzoom("pan", panX, 0, {
+            animate: true,
+            silent: true
+        });
     });
 
     $(document).on('mouseenter', '.panzoom select, .panzoom input, .panzoom textarea', function () {
@@ -1033,9 +1061,19 @@ $(document).ready(function () {
         var thisText = $(this).text();
         var thisDataTarget = $(this).parents('.emotions-list').data('emotions-textarea');
         //console.log(thisText, thisDataTarget);
-        var thisTextarea = $('[data-textarea=' + thisDataTarget + ']');
+        //
+        var thisTextarea = $('.blur[data-textarea=' + thisDataTarget + ']');
+        if (!thisTextarea.length) {
+            thisTextarea = $('[data-textarea=' + thisDataTarget + ']').last();
+        }
         var thisTextareaVal = thisTextarea.val();
         thisTextarea.val(thisTextareaVal + ' ' + thisText);
+    });
+
+    $(document).on('focusout', '[data-textarea]', function () {
+        var thisData = $(this).data('textarea');
+        $('[data-textarea=' + thisData + ']').removeClass('blur');
+        $(this).addClass('blur');
     });
 
 
@@ -1741,7 +1779,7 @@ toggleProfile = () => document.querySelector(`#chat-popup`).classList.toggle(`sh
 closeProfile = () => document.querySelector(`#chat-popup`).classList.remove(`show-profile`)
 
 dragStart = event => {
-    console.log(event)
+    //console.log(event)
     event.currentTarget.classList.add('dragging')
 }
 
@@ -1945,7 +1983,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const groupsFooter = document.querySelector(`#groups-send-toggle`)
     if (groupsFooter) {
         groupsFooter.onclick = e => {
-            console.log(document.querySelector(`#groups-send`))
+            //console.log(document.querySelector(`#groups-send`))
             document.querySelector(`#send-groups`).classList.add(`opened`)
         }
     }

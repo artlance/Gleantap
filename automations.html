@@ -171,7 +171,7 @@
     <!-- /.sidebar-bottom -->
 </aside>        <div class="content-site content-site-overflow">
             <div class="create-campaign">
-                <div class="create-campaign-step completed">
+                <div class="create-campaign-step completed" id="campaign-step-1">
                     <div class="create-campaign-step-caption">
                         <div class="create-campaign-step-number">1</div>
                         <div class="create-campaign-step-title">Campaign name &amp;&nbsp;goal</div>
@@ -311,7 +311,7 @@
                     <!-- /.create-campaign-step-content -->
                 </div>
                 <!-- /.create-campaign-step -->
-                <div class="create-campaign-step completed">
+                <div class="create-campaign-step completed" id="campaign-step-2">
                     <div class="create-campaign-step-caption">
                         <div class="create-campaign-step-number">2</div>
                         <div class="create-campaign-step-title">Segmentation</div>
@@ -554,7 +554,7 @@
                     <!-- /.create-campaign-step-content -->
                 </div>
                 <!-- /.create-campaign-step -->
-                <div class="create-campaign-step active">
+                <div class="create-campaign-step active" id="campaign-step-3">
                     <div class="create-campaign-step-caption">
                         <div class="create-campaign-step-number">3</div>
                         <div class="create-campaign-step-title">Automations</div>
@@ -583,12 +583,12 @@
                         <div class="panzoom">
                             <div class="create-campaign-automations-content">
                                 <div class="create-campaign-automations-add">
-                                    <a href="#" class="create-campaign-automations-add-button zoom-change-height"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <a href="#" class="create-campaign-automations-add-button zoom-change-height panzoom-exclude"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="white" class="svg-fill"/>
 </svg>
 </a>
                                     <div class="create-campaign-automations-add-block">
-                                        <div class="create-campaign-automations-add-list">
+                                        <div class="create-campaign-automations-add-list panzoom-exclude">
                                             <div class="create-campaign-automations-add-item">
                                                 <a href="#add-action" class="create-campaign-automations-add-action panel-toggle zoom-change-height">
                                                     <span class="create-campaign-automations-add-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -623,7 +623,7 @@
                                         <!-- /.create-campaign-automations-add-list -->
                                     </div>
                                     <!-- /.create-campaign-automations-add-block -->
-                                    <div class="create-campaign-automations-delay">
+                                    <div class="create-campaign-automations-delay panzoom-exclude">
                                         <div class="create-campaign-automations-delay-title">Delay</div>
                                         <div class="create-campaign-specific-row">
                                             <div class="create-campaign-specific-row-n">
@@ -666,7 +666,7 @@
                                         </div>
                                     </div>
                                     <!-- /.create-campaign-automations-delay -->
-                                    <div class="create-campaign-automations-condition">
+                                    <div class="create-campaign-automations-condition panzoom-exclude">
                                         <div class="create-campaign-automations-condition-title">Condition</div>
                                         <div class="create-campaign-automations-condition-content">
                                             <div class="create-campaign-automations-condition-row">
@@ -1085,6 +1085,19 @@ Add new conditions</a>
                 <!-- /.ongoing-day-list -->
             </div>
             <!-- /.ongoing-day -->
+            <div class="ongoing-day-select">
+                <select class="multi-select" multiple>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">test long option 0</option>
+                    <option value="8">test long option 1</option>
+                    <option value="9">test long option 2</option>
+                </select>
+            </div>
             <label for="ongoing-time" class="ongoing-label">What time to send</label>
             <div class="ongoing-time">
                 <div class="ongoing-time-col">
@@ -1435,7 +1448,7 @@ Add new conditions</a>
             <template id="add-action-subject">
                 <div class="add-action-form-input add-action-form-delete-active">
                     <label for="add-action-form-subject-1" class="add-action-form-subject">Subject <span class="add-action-form-subject-index"></span>:</label>
-                    <input type="text" class="input-text" id="add-action-form-subject-1" value="">
+                    <input data-textarea="textarea-newsletter" type="text" class="input-text" id="add-action-form-subject-1" value="">
                     <a href="#" class="add-action-form-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
 </svg>
@@ -1463,7 +1476,7 @@ Add new conditions</a>
             <div class="add-action-form-input-pull">
                 <div class="add-action-form-input">
                     <label for="add-action-form-subject-1" class="add-action-form-subject">Subject <span class="add-action-form-subject-index">1</span>:</label>
-                    <input type="text" class="input-text" id="add-action-form-subject-1" value="Test subject">
+                    <input data-textarea="textarea-newsletter" type="text" class="input-text" id="add-action-form-subject-1" value="Test subject">
                     <a href="#" class="add-action-form-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
 </svg>
@@ -1489,7 +1502,7 @@ Add new conditions</a>
                 </div>
                 <div class="add-action-form-input add-action-form-delete-active">
                     <label for="add-action-form-subject-2" class="add-action-form-subject">Subject <span class="add-action-form-subject-index">2</span>:</label>
-                    <input type="text" class="input-text" id="add-action-form-subject-2" value="Another test subject">
+                    <input data-textarea="textarea-newsletter" type="text" class="input-text" id="add-action-form-subject-2" value="Another test subject">
                     <a href="#" class="add-action-form-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
 </svg>
@@ -1515,7 +1528,7 @@ Add new conditions</a>
                 </div>
                 <div class="add-action-form-input add-action-form-delete-active">
                     <label for="add-action-form-subject-3" class="add-action-form-subject">Subject <span class="add-action-form-subject-index">3</span>:</label>
-                    <input type="text" class="input-text" id="add-action-form-subject-3" value="One more test subject">
+                    <input data-textarea="textarea-newsletter" type="text" class="input-text" id="add-action-form-subject-3" value="One more test subject">
                     <a href="#" class="add-action-form-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
 </svg>

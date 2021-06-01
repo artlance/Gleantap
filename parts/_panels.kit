@@ -260,6 +260,19 @@
                 <!-- /.ongoing-day-list -->
             </div>
             <!-- /.ongoing-day -->
+            <div class="ongoing-day-select">
+                <select class="multi-select" multiple>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">test long option 0</option>
+                    <option value="8">test long option 1</option>
+                    <option value="9">test long option 2</option>
+                </select>
+            </div>
             <label for="ongoing-time" class="ongoing-label">What time to send</label>
             <div class="ongoing-time">
                 <div class="ongoing-time-col">
@@ -541,7 +554,7 @@
             <template id="add-action-subject">
                 <div class="add-action-form-input add-action-form-delete-active">
                     <label for="add-action-form-subject-1" class="add-action-form-subject">Subject <span class="add-action-form-subject-index"></span>:</label>
-                    <input type="text" class="input-text" id="add-action-form-subject-1" value="">
+                    <input data-textarea="textarea-newsletter" type="text" class="input-text" id="add-action-form-subject-1" value="">
                     <a href="#" class="add-action-form-delete"><!-- @import "../images/delete.svg" --></a>
                     <a href="#" class="add-action-form-add hidden"><!-- @import "../images/add.svg" --></a>
                     <a href="#" class="add-action-form-info add-action-form-info-red"><!-- @import "../images/info.svg" --></a>
@@ -550,21 +563,21 @@
             <div class="add-action-form-input-pull">
                 <div class="add-action-form-input">
                     <label for="add-action-form-subject-1" class="add-action-form-subject">Subject <span class="add-action-form-subject-index">1</span>:</label>
-                    <input type="text" class="input-text" id="add-action-form-subject-1" value="Test subject">
+                    <input data-textarea="textarea-newsletter" type="text" class="input-text" id="add-action-form-subject-1" value="Test subject">
                     <a href="#" class="add-action-form-delete"><!-- @import "../images/delete.svg" --></a>
                     <a href="#" class="add-action-form-add hidden"><!-- @import "../images/add.svg" --></a>
                     <a href="#" class="add-action-form-info add-action-form-info-red"><!-- @import "../images/info.svg" --></a>
                 </div>
                 <div class="add-action-form-input add-action-form-delete-active">
                     <label for="add-action-form-subject-2" class="add-action-form-subject">Subject <span class="add-action-form-subject-index">2</span>:</label>
-                    <input type="text" class="input-text" id="add-action-form-subject-2" value="Another test subject">
+                    <input data-textarea="textarea-newsletter" type="text" class="input-text" id="add-action-form-subject-2" value="Another test subject">
                     <a href="#" class="add-action-form-delete"><!-- @import "../images/delete.svg" --></a>
                     <a href="#" class="add-action-form-add hidden"><!-- @import "../images/add.svg" --></a>
                     <a href="#" class="add-action-form-info add-action-form-info-red"><!-- @import "../images/info.svg" --></a>
                 </div>
                 <div class="add-action-form-input add-action-form-delete-active">
                     <label for="add-action-form-subject-3" class="add-action-form-subject">Subject <span class="add-action-form-subject-index">3</span>:</label>
-                    <input type="text" class="input-text" id="add-action-form-subject-3" value="One more test subject">
+                    <input data-textarea="textarea-newsletter" type="text" class="input-text" id="add-action-form-subject-3" value="One more test subject">
                     <a href="#" class="add-action-form-delete"><!-- @import "../images/delete.svg" --></a>
                     <a href="#" class="add-action-form-add hidden"><!-- @import "../images/add.svg" --></a>
                     <a href="#" class="add-action-form-info add-action-form-info-red"><!-- @import "../images/info.svg" --></a>
