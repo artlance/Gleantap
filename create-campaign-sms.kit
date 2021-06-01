@@ -1,0 +1,1717 @@
+<!-- $site-title = 01.01.03.Template - Campaigns -->
+<!-- $menu-conversations = active opened -->
+<!-- @import "parts/_head.kit" -->
+    <main class="main-site">
+        <!-- @import "parts/_sidebar.kit" -->
+        <section class="messaging">
+            <div class="messaging-chats chats cmp-chats" id="cmp-chats">
+                <div class="chats-head">
+                    <ul class="chats-head-tags cmp-chats-head-tags">
+                        <li class="chats-head-tag selected">Campaigns</li>
+                        <li class="chats-head-tag">Groups</li>
+                        <li class="chats-head-tag">Contacts</li>
+                    </ul>
+                    <input type="text" class="chats-head-input" placeholder="Search message..">
+                    <button class="square-button square-button--empty">
+                        <!-- @import "images/filter.svg" -->
+                    </button>
+                    <div class="cmp-chats-header-title">
+                        <span class="cmp-chats-header-name checklist-title">campaigns</span>
+                        <select class="cmp-chats-header-select">
+                            <option value="">Current</option>
+                        </select>
+                    </div>
+                </div>
+                <ul class="chats-list cmp-chats-list">
+                    <li class="chats-item cmp-chats-item selected favorite">
+                        <div class="chats-item-content">
+                            <span class="chats-item-title">First test campaign</span>
+                            <div class="chats-item-tag">
+                                <span class="chats-item-tag-dot" style="background-color: #FFBF4B;"></span>
+                                SMS
+                            </div>
+                            <span class="chats-item-text cmp-chats-item-labels">
+                                <span class="cmp-chats-item-label">Campaign type</span>
+                                <span class="cmp-chats-item-label">Outgoing</span>
+                            </span>
+                        </div>
+                        <div class="chats-item-info cmp-chats-item-info">
+                            <span class="chats-item-time cmp-chats-item-date">
+                                03.29.2020
+                            </span>
+                            <!-- @import "images/star.svg" -->
+                        </div>
+                    </li>
+                    <li class="chats-item cmp-chats-item">
+                        <div class="chats-item-content">
+                            <span class="chats-item-title">Christmas campaign</span>
+                            <div class="chats-item-tag">
+                                <span class="chats-item-tag-dot" style="background-color: #F3535E;"></span>
+                                Email
+                            </div>
+                            <span class="cpm-chats-item-count cpm-chats-item-count-in-tags">1</span>
+                            <span class="chats-item-text cmp-chats-item-labels">
+                                <span class="cmp-chats-item-label">Campaign type</span>
+                                <span class="cmp-chats-item-label">Outgoing</span>
+                            </span>
+                        </div>
+                        <div class="chats-item-info cmp-chats-item-info">
+                            <span class="chats-item-time cmp-chats-item-date">
+                                03.29.2020
+                            </span>
+                            <!-- @import "images/star.svg" -->
+                        </div>
+                    </li>
+                    <li class="chats-item cmp-chats-item">
+                        <div class="chats-item-content">
+                            <span class="chats-item-title">Black friday 2020</span>
+                            <div class="chats-item-tag">
+                                <span class="chats-item-tag-dot" style="background-color: #3C68EC;"></span>
+                                Messenger
+                            </div>
+                            <span class="chats-item-text cmp-chats-item-labels">
+                                <span class="cmp-chats-item-label">Campaign type</span>
+                                <span class="cmp-chats-item-label">Outgoing</span>
+                            </span>
+                        </div>
+                        <div class="chats-item-info cmp-chats-item-info">
+                            <span class="chats-item-time cmp-chats-item-date">
+                                03.29.2020
+                            </span>
+                            <!-- @import "images/star.svg" -->
+                        </div>
+                    </li>
+                    <li class="chats-item cmp-chats-item">
+                        <div class="chats-item-content">
+                            <span class="chats-item-title">New user campaign</span>
+                            <div class="chats-item-tag">
+                                <span class="chats-item-tag-dot" style="background-color: #FFBF4B;"></span>
+                                SMS
+                            </div>
+                            <span class="chats-item-text cmp-chats-item-labels">
+                                <span class="cmp-chats-item-label">Campaign type</span>
+                                <span class="cmp-chats-item-label">Outgoing</span>
+                            </span>
+                        </div>
+                        <div class="chats-item-info cmp-chats-item-info">
+                            <span class="chats-item-time cmp-chats-item-date">
+                                03.29.2020
+                            </span>
+                            <!-- @import "images/star.svg" -->
+                        </div>
+                    </li>
+                </ul>
+                <div class="chats-footer cmp-chats-footer">
+                    <button class="leads-header-blue-button blue-button chats-footer-button" id="cmp-chats-create-campaign-toggle">
+                        <!-- @import "images/compose.svg" -->
+                        <span class="blue-button-title">Create new campaign</span>
+                    </button>
+                </div>
+                <div class="chats-create-campaign" id="cmp-chats-create-campaign">
+                    <div class="chat-header cmp-chat-header cmp-campaign-info-header cmp-chats-create-campaign">
+                        <div class="cmp-chat-header-info">
+                            <div class="cmp-chat-header-title">
+                                <div class="cmp-chat-header-name cmp-campaign-info-title">Create new campaign</div>
+                            </div>
+                        </div>
+                        <div class="cmp-chat-header-menu">
+                            <button class="cmp-close-view cmp-menu-button" id="cmp-close-create-campaign">
+                                <!-- @import "images/close-view.svg" -->
+                            </button>
+                        </div>
+                        <ul class="chat-header-tabs cmp-chats-create-campaign-tabs">
+                            <li class="chat-header-tab cmp-chats-create-campaign-tab email">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#F3535E"></path>
+                                </svg>
+                                Email
+                            </li>
+                            <li class="chat-header-tab cmp-chats-create-campaign-tab sms current">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                                SMS
+                            </li>
+                            <li class="chat-header-tab cmp-chats-create-campaign-tab facebook">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#3C68EC"></path>
+                                </svg>
+                                Facebook
+                            </li>
+                        </ul>
+                        <div class="cmp-chats-create-campaign-buttons">
+                            <button class="blue-button chat-send cmp-chats-creare-campaign-button" id="cmp-create-from-scratch-toggle">
+                                <!-- @import "images/cmp-scratch.svg" -->
+                                <span class="blue-button-title">From Scratch</span>
+                            </button>
+                            <button class="blue-button pipeline-column-button cmp-campaign-info-export cmp-chats-creare-campaign-button" id="cmp-create-from-template-toggle">
+                                <!-- @import "images/cmp-template.svg" -->
+                                <span class="blue-button-title">From Template</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="messaging-chat chat cmp-chat" id="cmp-chat">
+                <div class="chat-header cmp-chat-header">
+                    <div class="cmp-chat-header-info">
+                        <div class="cmp-chat-header-title">
+                            <button class="cmp-close-view cmp-menu-button cmp-close-create-from-template" id="cmp-close-chat">
+                                <!-- @import "images/back-black.svg" -->
+                            </button>
+                            <div class="cmp-chat-header-name">First test campaign</div>
+                            <span class="chat-header-status profile-header-status cmp-chat-header-status" style="background-color:#FFBF4B"></span>
+                        </div>
+                        <div class="cmp-chat-header-counters">
+                            <span class="cmp-chat-header-counter">
+                                <!-- @import "images/cmp-mail.svg" -->
+                                Sent 129
+                            </span>
+                            <span class="cmp-chat-header-counter">
+                                <!-- @import "images/cmp-eye.svg" -->
+                                Opened 73
+                            </span>
+                            <span class="cmp-chat-header-counter">
+                                <!-- @import "images/cmp-done.svg" -->
+                                Clicked 36
+                            </span>
+                        </div>
+                    </div>
+                    <div class="cmp-chat-header-menu">
+                        <button class="cmp-close-view cmp-menu-button">
+                            <!-- @import "images/cmp-thunder.svg" -->
+                        </button>
+                        <button class="cmp-close-view cmp-menu-button" id="cmp-chat-menu-toggle">
+                            <!-- @import "images/cmp-menu.svg" -->
+                        </button>
+                        <ul class="cmp-chat-header-menu-list">
+                            <li>
+                                <!-- @import "images/edit.svg" -->
+                                Edit
+                            </li>
+                            <li>
+                                <!-- @import "images/cmp-copy.svg" -->
+                                Clone
+                            </li>
+                            <li>
+                                <!-- @import "images/trash-red.svg" -->
+                                Delete
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="chat-body cmp-chat-body cmp-empty-chat-body">
+                    <div class="cmp-empty-chat-message">
+                        <!-- @import "images/note.svg" -->
+                        <span class="cmp-empty-chat-message-title">No campaign history</span>
+                        <span class="cmp-empty-chat-message-text">Send your first email to launch a campaign</span>
+                    </div>
+                </div>
+                <form class="chat-footer cmp-chat-footer">
+                    <div class="cmp-footer-top">
+                        <div class="chat-footer-tags cmp-chat-footer-tags">
+                            <div class="chat-footer-tag cmp-chat-footer-tag groups-footer-select" id="groups-footer-select">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B" />
+                                </svg>
+                                <select class="chat-footer-tag-select-replace cmp-chat-footer-select select">
+                                    <option value="">(510) 945 1277</option>
+                                </select>
+                                <ul class="groups-footer-list">
+                                    <li class="groups-footer-list-item">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B" />
+                                        </svg>
+                                        (510) 987 4567
+                                    </li>
+                                    <li class="groups-footer-list-item selected">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#F3535E" />
+                                        </svg>
+                                        support@mail.com
+                                    </li>
+                                    <li class="groups-footer-list-item">
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#3C68EC" />
+                                        </svg>
+                                        @facebook-id
+                                    </li>
+                                    <div class="groups-footer-list-bottom">
+                                        <button class="cmp-footer-skyblue-button groups-footer-list-button">Cancel</button>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="cmp-footer-skyblue-buttons">
+                            <button class="cmp-footer-skyblue-button" id="show-email-create-1">Preview</button>
+                            <button class="cmp-footer-skyblue-button" id="cmp-test" data-id="cmp-test-popup">Test</button>
+                        </div>
+                    </div>
+                    <div class="cmp-footer-center">
+                        <input data-textarea="textarea-1" type="text" class="text-input popup-right-input chat-input cmp-chat-input" placeholder="Enter your message"/>
+                        <div class="cpm-chat-footer-note" id="open-suggestions">
+                            <!-- @import "images/unread-note-red.svg" -->
+                        </div>
+                        <div class="files-pull" style="display: block;">
+                            <template class="files-pull-template">
+                                <div class="files-pull-list-item">
+                                    <a href="#" class="files-pull-list-item-remove"><!-- @import "images/close.svg" --></a>
+                                    <div class="files-pull-list-item-icon"><!-- @import "images/file.svg" --></div>
+                                    <div class="files-pull-list-item-name"></div>
+                                    <div class="files-pull-list-item-size"></div>
+                                </div>
+                            </template>
+                            <div class="files-pull-list" data-pull-list="file-1">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-footer-buttons">
+                        <div class="chat-footer-left-buttons">
+                            <div class="chat-footer-left-button-wrap drop">
+                                <button class="chat-footer-left-button drop-toggle">
+                                    <!-- @import "images/smile.svg" -->
+                                </button>
+                                <div class="emotions-panel emotions-panel-top drop-block">
+                                    <ul class="emotions-list" data-emotions-textarea="textarea-1">
+                                        <li><button>😀</button></li>
+                                        <li><button>😃</button></li>
+                                        <li><button>😄</button></li>
+                                        <li><button>😁</button></li>
+                                        <li><button>😆</button></li>
+                                        <li><button>😅</button></li>
+                                        <li><button>😂</button></li>
+                                        <li><button>🤣</button></li>
+                                        <li><button>😀</button></li>
+                                        <li><button>😃</button></li>
+                                        <li><button>😄</button></li>
+                                        <li><button>😁</button></li>
+                                        <li><button>😆</button></li>
+                                        <li><button>😅</button></li>
+                                        <li><button>😂</button></li>
+                                        <li><button>🤣</button></li>
+                                        <li><button>😀</button></li>
+                                        <li><button>😃</button></li>
+                                        <li><button>😄</button></li>
+                                        <li><button>😁</button></li>
+                                        <li><button>😆</button></li>
+                                        <li><button>😅</button></li>
+                                        <li><button>😂</button></li>
+                                        <li><button>🤣</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="chat-footer-left-button-wrap">
+                                <div class="chat-footer-left-button">
+                                    <input type="file" name="file-1" class="file-custom" data-pull="file-1" id="file-1" multiple>
+                                    <label for="file-1" class="add-action-form-option add-action-form-option-file"><!-- @import "images/goal-9.svg" --></label>
+                                </div>
+                            </div>
+                            <div class="chat-footer-left-button-wrap">
+                                <button class="chat-footer-left-button">
+                                    <!-- @import "images/tablet.svg" -->
+                                </button>
+                            </div>
+                            <div class="chat-footer-left-button-wrap">
+                                <button class="chat-footer-left-button">
+                                    <!-- @import "images/brackets.svg" -->
+                                </button>
+                            </div>
+                            <div class="chat-footer-left-button-wrap">
+                                <button class="chat-footer-left-button">
+                                    <!-- @import "images/pen.svg" -->
+                                </button>
+                            </div>
+                            <div class="chat-footer-left-button-wrap">
+                                <button class="chat-footer-left-button newsletter-mail-button">
+                                    <!-- @import "images/newsletter-mail.svg" -->
+                                    <!-- @import "images/newsletter-mail-mobile.svg" -->
+                                </button>
+                            </div>
+                        </div>
+                        <div class="chat-footer-right-buttons">
+                            <div class="chat-footer-specific drop">
+                                <button class="chat-footer-latest chat-footer-left-button drop-toggle">
+                                    <!-- @import "images/clock.svg" -->
+                                </button>
+                                <div class="chat-footer-specific-block drop-block">
+                                    <div class="datepicker"></div>
+                                    <div class="create-campaign-specific-title">Send message at</div>
+                                    <div class="create-campaign-specific-row">
+                                        <div class="create-campaign-specific-time-small">
+                                            <select class="select select-time">
+                                                <option>00</option>
+                                            </select>
+                                        </div>
+                                        <div class="create-campaign-specific-time-small">
+                                            <select class="select select-time">
+                                                <option>00</option>
+                                            </select>
+                                        </div>
+                                        <div class="create-campaign-specific-period">
+                                            <select class="select">
+                                                <option>AM</option>
+                                                <option>PM</option>
+                                            </select>
+                                        </div>
+                                        <div class="create-campaign-specific-date">
+                                            <input type="text" class="input-text" placeholder="mm-dd-yyyy" readonly>
+                                        </div>
+                                    </div>
+                                    <!-- /.create-campaign-specific-row -->
+                                </div>
+                                <!-- /.chat-footer-specific-block -->
+                            </div>
+                            <!-- /.chat-footer-specific -->
+                            <button type="submit" class="chat-send blue-button popup-right-blue-button chat-send" id="cmp-send" data-id="cmp-send-popup">
+                                <!-- @import "images/chat-send.svg" -->
+                                <span class="blue-button-title">Send</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="cmp-suggestions" id="suggestions">
+                    <div class="cmp-suggestions-header">
+                        <span class="cmp-suggestions-title">Suggestions</span>
+                        <span class="cmp-suggestions-score">
+                            Overall score:
+                            <b>63</b>
+                        </span>
+                    </div>
+                    <button class="cmp-close-view cmp-menu-button cmp-suggestions-close" id="cmp-close-suggestions">
+                        <!-- @import "images/close-view.svg" -->
+                    </button>
+                    <ul class="cmp-suggestions-list">
+                        <li class="cmp-suggestions-item">
+                            <span class="cmp-suggestions-score cmp-suggestions-item-title">
+                                Subject length <b>5</b>
+                            </span>
+                            <div class="cmp-suggestions-item-line">
+                                <div class="cmp-suggestions-item-line-inner" style="background:#99DC13;width:30%"></div>
+                                <div class="cmp-suggestions-item-line-frame" style="width:20%;left:20%"></div>
+                            </div>
+                        </li>
+                        <li class="cmp-suggestions-item">
+                            <span class="cmp-suggestions-score cmp-suggestions-item-title">
+                                Word count <b>73</b>
+                            </span>
+                            <div class="cmp-suggestions-item-line">
+                                <div class="cmp-suggestions-item-line-inner" style="background:#99DC13;width:45%"></div>
+                                <div class="cmp-suggestions-item-line-frame" style="width:20%;left:30%"></div>
+                            </div>
+                        </li>
+                        <li class="cmp-suggestions-item">
+                            <span class="cmp-suggestions-score cmp-suggestions-item-title">
+                                Question count <b>3</b>
+                            </span>
+                            <div class="cmp-suggestions-item-line">
+                                <div class="cmp-suggestions-item-line-inner" style="background:#FFBF4B;width:45%"></div>
+                                <div class="cmp-suggestions-item-line-frame" style="width:10%;left:15%"></div>
+                            </div>
+                        </li>
+                        <li class="cmp-suggestions-item">
+                            <span class="cmp-suggestions-score cmp-suggestions-item-title">
+                                Reading level <b>43</b>
+                            </span>
+                            <div class="cmp-suggestions-item-line">
+                                <div class="cmp-suggestions-item-line-inner" style="background:#FFBF4B;width:20%"></div>
+                                <div class="cmp-suggestions-item-line-frame" style="width:20%;left:40%"></div>
+                            </div>
+                        </li>
+                        <li class="cmp-suggestions-item">
+                            <span class="cmp-suggestions-score cmp-suggestions-item-title">
+                                Positivity <b>42</b>
+                            </span>
+                            <div class="cmp-suggestions-item-line">
+                                <div class="cmp-suggestions-item-line-inner" style="background:#F3535E;width:30%"></div>
+                                <div class="cmp-suggestions-item-line-frame" style="width:30%;left:40%"></div>
+                            </div>
+                        </li>
+                        <li class="cmp-suggestions-item">
+                            <span class="cmp-suggestions-score cmp-suggestions-item-title">
+                                Spam word count <b>2</b>
+                            </span>
+                            <div class="cmp-suggestions-item-line">
+                                <div class="cmp-suggestions-item-line-inner" style="background:#FFBF4B;width:15%"></div>
+                                <div class="cmp-suggestions-item-line-frame" style="width:10%;left:0%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="messaging-chat chat cmp-chat cmp-comments" id="cmp-comments">
+                <div class="cmp-comments-wrap">
+                    <div class="chat-header cmp-chat-header">
+                        <div class="cmp-chat-header-info">
+                            <div class="cmp-chat-header-title">
+                                <div class="cmp-chat-header-name">Thread</div>
+                            </div>
+                            <div class="cmp-chat-header-counters">
+                                <span class="cmp-chat-header-counter">
+                                   Christopher Walker
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cmp-chat-header-menu">
+                            <button class="cmp-close-view cmp-menu-button" id="cmp-close-comments">
+                                <!-- @import "images/close-view.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat-body cmp-chat-body cmp-comments-body">
+                        <span class="popup-right-separate chat-body-separate cmp-comments-separate">Yesterday</span>
+                        <div class="chat-message cmp-chat-message">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                            <div class="notes-list-item chat-message-content cmp-chat-message-content">
+                                <span class="notes-list-item-title chat-message-title">You</span>
+                                <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                                <span class="notes-list-item-text chat-message-text cmp-chat-message-text cmp-comment-text">
+                                    Hi this is some reference for your works today Arina.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="chat-message cmp-chat-message">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                            <div class="notes-list-item chat-message-content cmp-chat-message-content">
+                                <span class="notes-list-item-title chat-message-title">Christopher Walker</span>
+                                <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                                <span class="notes-list-item-text chat-message-text cmp-chat-message-text cmp-comment-text">
+                                    Test email text, very long text that talks about this campaign, its advantages
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="chat-footer cmp-comments-footer">
+                        <div class="cmp-footer-center">
+                            <input type="text" class="text-input popup-right-input chat-input cmp-chat-input" placeholder="Reply..." />
+                            <div class="cpm-chat-footer-note">
+                                <!-- @import "images/cmp-comment-send.svg" -->
+                            </div>
+                        </div>
+                        <div class="chat-footer-buttons">
+                            <div class="chat-footer-left-buttons">
+                                <button class="chat-footer-left-button">
+                                    <!-- @import "images/smile.svg" -->
+                                </button>
+                                <button class="chat-footer-left-button">
+                                    <!-- @import "images/chat-file.svg" -->
+                                </button>
+                                <button class="chat-footer-left-button">
+                                    <!-- @import "images/tablet.svg" -->
+                                </button>
+                                <button class="chat-footer-left-button">
+                                    <!-- @import "images/brackets.svg" -->
+                                </button>
+                                <button class="chat-footer-left-button">
+                                    <!-- @import "images/pen.svg" -->
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="cmp-email-view cmp-create-campaign-email-view cmp-create-campaign-sms-view" id="email-view-1">
+                <div class="cmp-email-view-header">
+                    <div class="cmp-email-view-text">
+                        <span class="cmp-email-view-title">SMS preview</span>
+                    </div>
+                    <button class="cmp-close-view" id="close-email-1">
+                        <!-- @import "images/close-view.svg" -->
+                    </button>
+                </div>
+                <div class="cmp-email-view-body">
+                    <div class="cmp-email-view-content">
+                        <img src="upload/sms-view.png" alt="" class="cmp-email-view-attachment">
+                    </div>
+                </div>
+            </div>
+            <div class="messaging-chat chat cmp-campaing-info" id="cmp-campaign-info">
+                <div class="chat-header cmp-chat-header cmp-campaign-info-header">
+                    <div class="cmp-chat-header-info">
+                        <div class="cmp-chat-header-title">
+                            <div class="cmp-chat-header-name cmp-campaign-info-title">First test campaign</div>
+                        </div>
+                    </div>
+                    <div class="cmp-chat-header-menu">
+                        <button class="cmp-close-view cmp-menu-button" id="cmp-close-campaign-info">
+                            <!-- @import "images/close-view.svg" -->
+                        </button>
+                    </div>
+                </div>
+                <div class="cmp-campaign-info-body">
+                    <ul class="cmp-campaign-info-tiles">
+                        <li class="cmp-campaign-info-tile">
+                            <!-- @import "images/cmp-people.svg" -->
+                            <span class="cmp-campaign-info-tile-count">174</span>
+                            <span class="cmp-campaign-info-tile-title">Audience</span>
+                        </li>
+                        <li class="cmp-campaign-info-tile">
+                            <!-- @import "images/cmp-group.svg" -->
+                            <span class="cmp-campaign-info-tile-count">174</span>
+                            <span class="cmp-campaign-info-tile-title">Delivered</span>
+                        </li>
+                        <li class="cmp-campaign-info-tile">
+                            <!-- @import "images/cmp-opened.svg" -->
+                            <span class="cmp-campaign-info-tile-count">107</span>
+                            <span class="cmp-campaign-info-tile-title">Opened</span>
+                        </li>
+                        <li class="cmp-campaign-info-tile">
+                            <!-- @import "images/cmp-clicked.svg" -->
+                            <span class="cmp-campaign-info-tile-count">50</span>
+                            <span class="cmp-campaign-info-tile-title">Clicked</span>
+                        </li>
+                        <li class="cmp-campaign-info-tile">
+                            <!-- @import "images/cmp-bounced.svg" -->
+                            <span class="cmp-campaign-info-tile-count">3</span>
+                            <span class="cmp-campaign-info-tile-title">Bounced</span>
+                        </li>
+                        <li class="cmp-campaign-info-tile">
+                            <!-- @import "images/cmp-unsubscribe.svg" -->
+                            <span class="cmp-campaign-info-tile-count">2</span>
+                            <span class="cmp-campaign-info-tile-title">Unsubscribe</span>
+                        </li>
+                        <li class="cmp-campaign-info-tile">
+                            <!-- @import "images/cmp-complaints.svg" -->
+                            <span class="cmp-campaign-info-tile-count">0</span>
+                            <span class="cmp-campaign-info-tile-title">Complaints</span>
+                        </li>
+                    </ul>
+                    <div class="cmp-campaign-info-content">
+                        <div class="cmp-campaign-info-content-header">
+                            <span class="cmp-campaign-info-content-title">Target audience</span>
+                            <div class="cmp-campaign-info-content-selects">
+                                <span class="cmp-campaign-info-content-label">Show</span>
+                                <select class="select cmp-campaign-info-select">
+                                    <option value="">10</option>
+                                </select>
+                                <select class="select cmp-campaign-info-select">
+                                    <option value="">Success</option>
+                                    <option value="">Unsuccess</option>
+                                </select>
+                                <button class="blue-button pipeline-column-button cmp-campaign-info-export">
+                                    <span class="blue-button-title">Export CSV</span>
+                                </button>
+                            </div>
+                        </div>
+                        <section class="leads-table cmp-campaign-info-table">
+                            <div class="leads-table-row leads-table-header cmp-campaign-info-table-header cmp-campaign-table-row">
+                                <div class="leads-table-td">
+                                    <span class="leads-table-title cmp-campaign-info-td-title">Number</span>
+                                    <div class="lead-table-sort sort cmp-campagin-info-sort">
+                                        <button class="sort-button sort-button cmp-campaign-info-sort-button"></button>
+                                        <button class="sort-button sort-button sort-button--down cmp-campaign-info-sort-button"></button>
+                                    </div>
+                                </div>
+                                <div class="leads-table-td">
+                                    <span class="leads-table-title cmp-campaign-info-td-title">Name</span>
+                                    <div class="lead-table-sort sort cmp-campagin-info-sort">
+                                        <button class="sort-button sort-button cmp-campaign-info-sort-button"></button>
+                                        <button class="sort-button sort-button sort-button--down cmp-campaign-info-sort-button"></button>
+                                    </div>
+                                </div>
+                                <div class="leads-table-td">
+                                    <span class="leads-table-title cmp-campaign-info-td-title">Email</span>
+                                    <div class="lead-table-sort sort cmp-campagin-info-sort">
+                                        <button class="sort-button sort-button cmp-campaign-info-sort-button"></button>
+                                        <button class="sort-button sort-button sort-button--down cmp-campaign-info-sort-button"></button>
+                                    </div>
+                                </div>
+                                <div class="leads-table-td">
+                                    <span class="leads-table-title cmp-campaign-info-td-title">Status</span>
+                                    <div class="lead-table-sort sort cmp-campagin-info-sort">
+                                        <button class="sort-button sort-button cmp-campaign-info-sort-button"></button>
+                                        <button class="sort-button sort-button sort-button--down cmp-campaign-info-sort-button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leads-table-body cmp-campaign-table-body">
+                                <div class="leads-table-row cmp-campaign-table-row">
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-number">1</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-name">Isaac Mulbah</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-mail">imulbah@gmail.com</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-status">bounced</span>
+                                    </div>
+                                </div>
+                                <div class="leads-table-row cmp-campaign-table-row">
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-number">2</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-name">Ruona Phido</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-mail">info@s4ltraining.com</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-status">bounced</span>
+                                    </div>
+                                </div>
+                                <div class="leads-table-row cmp-campaign-table-row">
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-number">3</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-name">Mallory Levinsky</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-mail">mallory@y2yoga.com</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-status">opened</span>
+                                    </div>
+                                </div>
+                                <div class="leads-table-row cmp-campaign-table-row">
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-number">4</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-name">Rusty Bridges</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-mail">rbridges@trufusion.com</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-status">opened</span>
+                                    </div>
+                                </div>
+                                <div class="leads-table-row cmp-campaign-table-row">
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-number">5</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-name">Daniela Nero</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-mail">aryafitness.ct@gmail.com</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-status">delivered</span>
+                                    </div>
+                                </div>
+                                <div class="leads-table-row cmp-campaign-table-row">
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-number">6</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-name">Isaac Mulbah</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-mail">info@gmail.com</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-status">delivered</span>
+                                    </div>
+                                </div>
+                                <div class="leads-table-row cmp-campaign-table-row">
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-number">7</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-name">Ruona Phido</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-mail">mallory@gmail.com</span>
+                                    </div>
+                                    <div class="leads-table-td">
+                                        <span class="cmp-campaign-info-status">delivered</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="cmp-campaign-info-pagination-label">Showing 1 to 10 of 181 entries</span>
+                            <div class="cmp-campaign-info-pagination">
+                                <button class="cmp-campaign-info-pagination-item">
+                                    <!-- @import "images/cmp-pagi-left.svg" -->
+                                </button>
+                                <a href="#" class="cmp-campaign-info-pagination-item current">1</a>
+                                <a href="#" class="cmp-campaign-info-pagination-item">2</a>
+                                <a href="#" class="cmp-campaign-info-pagination-item">3</a>
+                                <a href="#" class="cmp-campaign-info-pagination-item">4</a>
+                                <a href="#" class="cmp-campaign-info-pagination-item">5</a>
+                                <a href="#" class="cmp-campaign-info-pagination-item">...</a>
+                                <a href="#" class="cmp-campaign-info-pagination-item">19</a>
+                                <button class="cmp-campaign-info-pagination-item">
+                                    <!-- @import "images/cmp-pagi-right.svg" -->
+                                </button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <div class="messaging-chat chat cmp-campaing-info" id="cmp-create-from-template">
+                <div class="chat-header cmp-chat-header cmp-campaign-info-header cmp-create-from-template-header">
+                    <div class="cmp-chat-header-info cmp-create-from-template-info">
+                        <button class="cmp-close-view cmp-menu-button cmp-close-create-from-template" id="cmp-close-create-from-template">
+                            <!-- @import "images/close-view.svg" -->
+                        </button>
+                        <div class="cmp-chat-header-title">
+                            <div class="cmp-chat-header-name cmp-campaign-info-title">Select template</div>
+                        </div>
+                    </div>
+                    <div class="cmp-chat-header-menu cmp-from-template-menu">
+                        <input type="text" class="chats-head-input cmp-from-template-search" placeholder="Search...">
+                        <button class="square-button square-button--empty">
+                            <!-- @import "images/filter.svg" -->
+                        </button>
+                    </div>
+                </div>
+                <ul class="cmp-from-template-body">
+                    <li class="cmp-from-template-item cmp-from-template-item-sms">
+                        <div class="cmp-from-template-item-content">
+                            <span class="cmp-from-template-item-title">
+                                Prescription Reminder
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                            </span>
+                            <span class="cmp-from-template-item-text">Hi [Name] we want to [Time]</span>
+                        </div>
+                        <a href="#" class="ztooltip" title="&lt;img src=&quot;upload/email-mobile.png&quot; &gt;">
+                            <!-- @import "images/cmp-eye.svg" -->
+                        </a>
+                    </li>
+                    <li class="cmp-from-template-item cmp-from-template-item-sms">
+                        <div class="cmp-from-template-item-content">
+                            <span class="cmp-from-template-item-title">
+                                Prescription Reminder
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                            </span>
+                            <span class="cmp-from-template-item-text">Hi [Name] we want to [Time]</span>
+                        </div>
+                        <a href="#" class="ztooltip" title="&lt;img src=&quot;upload/email-mobile.png&quot; &gt;">
+                            <!-- @import "images/cmp-eye.svg" -->
+                        </a>
+                    </li>
+                    <li class="cmp-from-template-item cmp-from-template-item-sms">
+                        <div class="cmp-from-template-item-content">
+                            <span class="cmp-from-template-item-title">
+                                Prescription Reminder
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                            </span>
+                            <span class="cmp-from-template-item-text">Hi [Name] we want to [Time]</span>
+                        </div>
+                        <a href="#" class="ztooltip" title="&lt;img src=&quot;upload/email-mobile.png&quot; &gt;">
+                            <!-- @import "images/cmp-eye.svg" -->
+                        </a>
+                    </li>
+                    <li class="cmp-from-template-item cmp-from-template-item-sms">
+                        <div class="cmp-from-template-item-content">
+                            <span class="cmp-from-template-item-title">
+                                Prescription Reminder
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                            </span>
+                            <span class="cmp-from-template-item-text">Hi [Name] we want to [Time]</span>
+                        </div>
+                        <a href="#" class="ztooltip" title="&lt;img src=&quot;upload/email-mobile.png&quot; &gt;">
+                            <!-- @import "images/cmp-eye.svg" -->
+                        </a>
+                    </li>
+                    <li class="cmp-from-template-item cmp-from-template-item-sms">
+                        <div class="cmp-from-template-item-content">
+                            <span class="cmp-from-template-item-title">
+                                Prescription Reminder
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                            </span>
+                            <span class="cmp-from-template-item-text">Hi [Name] we want to [Time]</span>
+                        </div>
+                        <a href="#" class="ztooltip" title="&lt;img src=&quot;upload/email-mobile.png&quot; &gt;">
+                            <!-- @import "images/cmp-eye.svg" -->
+                        </a>
+                    </li>
+                    <li class="cmp-from-template-item cmp-from-template-item-sms">
+                        <div class="cmp-from-template-item-content">
+                            <span class="cmp-from-template-item-title">
+                                Prescription Reminder
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                            </span>
+                            <span class="cmp-from-template-item-text">Hi [Name] we want to [Time]</span>
+                        </div>
+                        <a href="#" class="ztooltip" title="&lt;img src=&quot;upload/email-mobile.png&quot; &gt;">
+                            <!-- @import "images/cmp-eye.svg" -->
+                        </a>
+                    </li>
+                    <li class="cmp-from-template-item cmp-from-template-item-sms">
+                        <div class="cmp-from-template-item-content">
+                            <span class="cmp-from-template-item-title">
+                                Prescription Reminder
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                            </span>
+                            <span class="cmp-from-template-item-text">Hi [Name] we want to [Time]</span>
+                        </div>
+                        <a href="#" class="ztooltip" title="&lt;img src=&quot;upload/email-mobile.png&quot; &gt;">
+                            <!-- @import "images/cmp-eye.svg" -->
+                        </a>
+                    </li>
+                    <li class="cmp-from-template-item cmp-from-template-item-sms">
+                        <div class="cmp-from-template-item-content">
+                            <span class="cmp-from-template-item-title">
+                                Prescription Reminder
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                            </span>
+                            <span class="cmp-from-template-item-text">Hi [Name] we want to [Time]</span>
+                        </div>
+                        <a href="#" class="ztooltip" title="&lt;img src=&quot;upload/email-mobile.png&quot; &gt;">
+                            <!-- @import "images/cmp-eye.svg" -->
+                        </a>
+                    </li>
+                    <li class="cmp-from-template-item cmp-from-template-item-sms">
+                        <div class="cmp-from-template-item-content">
+                            <span class="cmp-from-template-item-title">
+                                Prescription Reminder
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                            </span>
+                            <span class="cmp-from-template-item-text">Hi [Name] we want to [Time]</span>
+                        </div>
+                        <a href="#" class="ztooltip" title="&lt;img src=&quot;upload/email-mobile.png&quot; &gt;">
+                            <!-- @import "images/cmp-eye.svg" -->
+                        </a>
+                    </li>
+                    <li class="cmp-from-template-item cmp-from-template-item-sms">
+                        <div class="cmp-from-template-item-content">
+                            <span class="cmp-from-template-item-title">
+                                Prescription Reminder
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                            </span>
+                            <span class="cmp-from-template-item-text">Hi [Name] we want to [Time]</span>
+                        </div>
+                        <a href="#" class="ztooltip" title="&lt;img src=&quot;upload/email-mobile.png&quot; &gt;">
+                            <!-- @import "images/cmp-eye.svg" -->
+                        </a>
+                    </li>
+                    <li class="cmp-from-template-item cmp-from-template-item-sms">
+                        <div class="cmp-from-template-item-content">
+                            <span class="cmp-from-template-item-title">
+                                Prescription Reminder
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                            </span>
+                            <span class="cmp-from-template-item-text">Hi [Name] we want to [Time]</span>
+                        </div>
+                        <a href="#" class="ztooltip" title="&lt;img src=&quot;upload/email-mobile.png&quot; &gt;">
+                            <!-- @import "images/cmp-eye.svg" -->
+                        </a>
+                    </li>
+                    <li class="cmp-from-template-item cmp-from-template-item-sms">
+                        <div class="cmp-from-template-item-content">
+                            <span class="cmp-from-template-item-title">
+                                Prescription Reminder
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                            </span>
+                            <span class="cmp-from-template-item-text">Hi [Name] we want to [Time]</span>
+                        </div>
+                        <a href="#" class="ztooltip" title="&lt;img src=&quot;upload/email-mobile.png&quot; &gt;">
+                            <!-- @import "images/cmp-eye.svg" -->
+                        </a>
+                    </li>
+                    <li class="cmp-from-template-item cmp-from-template-item-sms">
+                        <div class="cmp-from-template-item-content">
+                            <span class="cmp-from-template-item-title">
+                                Prescription Reminder
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                                </svg>
+                            </span>
+                            <span class="cmp-from-template-item-text">Hi [Name] we want to [Time]</span>
+                        </div>
+                        <a href="#" class="ztooltip" title="&lt;img src=&quot;upload/email-mobile.png&quot; &gt;">
+                            <!-- @import "images/cmp-eye.svg" -->
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="messaging-chat chat cmp-campaing-info" id="cmp-create-from-scratch">
+                <div class="chat-header cmp-chat-header cmp-create-from-scratch-header">
+                    <div class="cmp-chat-header-info cmp-create-from-template-info cmp-create-from-scratch-info">
+                        <button class="cmp-close-view cmp-menu-button cmp-close-create-from-template" data-id="cmp-close-create-from-scratch">
+                            <!-- @import "images/back-black.svg" -->
+                        </button>
+                        <div class="cmp-chat-header-title">
+                            <div class="cmp-create-from-scratch-title">New SMS campaign</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cmp-create-from-scratch-body">
+                    <div class="create-campaign-step active">
+                        <div class="create-campaign-step-caption">
+                            <div class="create-campaign-step-number">1</div>
+                            <div class="create-campaign-step-title">Campaign name &amp;&nbsp;goal</div>
+                        </div>
+                        <!-- /.create-campaign-step-caption -->
+                        <div class="create-campaign-step-content">
+                            <div class="create-campaign-step-subtitle">Enter campaign name, goal/objective and other settings</div>
+                            <div class="create-campaign-name">
+                                <input type="text" class="input-text" placeholder="Enter campaign name...">
+                            </div>
+                            <div class="create-campaign-goal drop">
+                                <a href="#" class="create-campaign-goal-toggle drop-toggle">Select campaign goal/objective</a>
+                                <div class="create-campaign-goal-block drop-block">
+                                    <div class="create-campaign-goal-list">
+                                        <div class="create-campaign-goal-radio">
+                                            <input type="radio" id="create-campaign-goal-1" name="create-campaign-goal">
+                                            <label for="create-campaign-goal-1" class="create-campaign-goal-item">
+                                                <span class="create-campaign-goal-icon"><!-- @import "images/goal-1.svg" --></span>
+                                                <span class="create-campaign-goal-title">Web form submitted</span>
+                                            </label>
+                                        </div>
+                                        <div class="create-campaign-goal-radio">
+                                            <input type="radio" id="create-campaign-goal-2" name="create-campaign-goal">
+                                            <label for="create-campaign-goal-2" class="create-campaign-goal-item">
+                                                <span class="create-campaign-goal-icon"><!-- @import "images/goal-2.svg" --></span>
+                                                <span class="create-campaign-goal-title">Landing page</span>
+                                            </label>
+                                        </div>
+                                        <div class="create-campaign-goal-radio">
+                                            <input type="radio" id="create-campaign-goal-3" name="create-campaign-goal">
+                                            <label for="create-campaign-goal-3" class="create-campaign-goal-item">
+                                                <span class="create-campaign-goal-icon"><!-- @import "images/goal-3.svg" --></span>
+                                                <span class="create-campaign-goal-title">Tag applied</span>
+                                            </label>
+                                        </div>
+                                        <div class="create-campaign-goal-radio">
+                                            <input type="radio" id="create-campaign-goal-4" name="create-campaign-goal">
+                                            <label for="create-campaign-goal-4" class="create-campaign-goal-item">
+                                                <span class="create-campaign-goal-icon"><!-- @import "images/goal-4.svg" --></span>
+                                                <span class="create-campaign-goal-title">Email link clicked</span>
+                                            </label>
+                                        </div>
+                                        <div class="create-campaign-goal-radio">
+                                            <input type="radio" id="create-campaign-goal-5" name="create-campaign-goal">
+                                            <label for="create-campaign-goal-5" class="create-campaign-goal-item">
+                                                <span class="create-campaign-goal-icon"><!-- @import "images/goal-5.svg" --></span>
+                                                <span class="create-campaign-goal-title">Email opened</span>
+                                            </label>
+                                        </div>
+                                        <div class="create-campaign-goal-radio">
+                                            <input type="radio" id="create-campaign-goal-6" name="create-campaign-goal">
+                                            <label for="create-campaign-goal-6" class="create-campaign-goal-item">
+                                                <span class="create-campaign-goal-icon"><!-- @import "images/goal-6.svg" --></span>
+                                                <span class="create-campaign-goal-title">Product purchased</span>
+                                            </label>
+                                        </div>
+                                        <div class="create-campaign-goal-radio">
+                                            <input type="radio" id="create-campaign-goal-7" name="create-campaign-goal">
+                                            <label for="create-campaign-goal-7" class="create-campaign-goal-item">
+                                                <span class="create-campaign-goal-icon"><!-- @import "images/goal-7.svg" --></span>
+                                                <span class="create-campaign-goal-title">Falled purchase</span>
+                                            </label>
+                                        </div>
+                                        <div class="create-campaign-goal-radio">
+                                            <input type="radio" id="create-campaign-goal-8" name="create-campaign-goal">
+                                            <label for="create-campaign-goal-8" class="create-campaign-goal-item">
+                                                <span class="create-campaign-goal-icon"><!-- @import "images/goal-8.svg" --></span>
+                                                <span class="create-campaign-goal-title">Quote status</span>
+                                            </label>
+                                        </div>
+                                        <div class="create-campaign-goal-radio">
+                                            <input type="radio" id="create-campaign-goal-9" name="create-campaign-goal">
+                                            <label for="create-campaign-goal-9" class="create-campaign-goal-item">
+                                                <span class="create-campaign-goal-icon"><!-- @import "images/goal-9.svg" --></span>
+                                                <span class="create-campaign-goal-title">Web form submitted</span>
+                                            </label>
+                                        </div>
+                                        <div class="create-campaign-goal-radio">
+                                            <input type="radio" id="create-campaign-goal-10" name="create-campaign-goal">
+                                            <label for="create-campaign-goal-10" class="create-campaign-goal-item">
+                                                <span class="create-campaign-goal-icon"><!-- @import "images/goal-10.svg" --></span>
+                                                <span class="create-campaign-goal-title">Landing page</span>
+                                            </label>
+                                        </div>
+                                        <div class="create-campaign-goal-radio">
+                                            <input type="radio" id="create-campaign-goal-11" name="create-campaign-goal">
+                                            <label for="create-campaign-goal-11" class="create-campaign-goal-item">
+                                                <span class="create-campaign-goal-icon"><!-- @import "images/goal-11.svg" --></span>
+                                                <span class="create-campaign-goal-title">Tag applied</span>
+                                            </label>
+                                        </div>
+                                        <div class="create-campaign-goal-radio">
+                                            <input type="radio" id="create-campaign-goal-12" name="create-campaign-goal">
+                                            <label for="create-campaign-goal-12" class="create-campaign-goal-item">
+                                                <span class="create-campaign-goal-icon"><!-- @import "images/goal-3.svg" --></span>
+                                                <span class="create-campaign-goal-title">Tag applied</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- /.create-campaign-goal-list -->
+                                </div>
+                                <!-- /.create-campaign-goal-block -->
+                            </div>
+                            <!-- /.create-campaign-goal -->
+                            <div class="create-campaign-tags">
+                                <div class="create-campaign-tags-title">Tags:</div>
+                                <div class="create-campaign-tags-pull">
+                                    <div class="create-campaign-tags-item">
+                                        <div class="create-campaign-tag">
+                                            Automation type
+                                            <a href="#" class="create-campaign-tag-delete"><!-- @import "images/close.svg" --></a>
+                                        </div>
+                                    </div>
+                                    <div class="create-campaign-tags-item">
+                                        <div class="create-campaign-tag">
+                                            Another tag
+                                            <a href="#" class="create-campaign-tag-delete"><!-- @import "images/close.svg" --></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.create-campaign-tags-pull -->
+                                <div class="create-campaign-tags-new">
+                                    <input type="text" class="create-campaign-tags-new-text" placeholder="Enter tag name...">
+                                </div>
+                            </div>
+                            <!-- /.create-campaign-tags -->
+                        </div>
+                        <!-- /.create-campaign-step-content -->
+                    </div>
+                    <!-- /.create-campaign-step -->
+                    <div class="create-campaign-step">
+                        <div class="create-campaign-step-caption">
+                            <div class="create-campaign-step-number">2</div>
+                            <div class="create-campaign-step-title">Segmentation</div>
+                        </div>
+                        <!-- /.create-campaign-step-caption -->
+                        <div class="create-campaign-step-content">
+
+                            <div class="cmp-create-from-scratch-item-tags">
+                                <span class="cmp-create-from-scratch-item-tags-title cmp-create-from-scratch-item-tags-title-step-2">Selected</span>
+                                <span class="cmp-create-from-scratch-item-tag">
+                                    New clients
+                                    <!-- @import "images/close.svg" -->
+                                </span>
+                                <span class="cmp-create-from-scratch-item-tag">
+                                    All users in your city
+                                    <!-- @import "images/close.svg" -->
+                                </span>
+                                <span class="cmp-create-from-scratch-item-tag">
+                                    Segmentation name
+                                    <!-- @import "images/close.svg" -->
+                                </span>
+                            </div>
+                            <div class="cmp-create-from-scratch-item-controls">
+                                <div class="profile-top-tabs cmp-create-from-scrath-item-controls-tabs">
+                                    <button class="profile-top-tab selected cmp-create-from-scrath-item-controls-tab" data-id="cmp-step-2-segments">
+                                        <!-- @import "images/people-outline.svg" -->
+                                        <span class="profile-top-tab-text">Segments</span>
+                                    </button>
+                                    <button class="profile-top-tab cmp-create-from-scrath-item-controls-tab" data-id="cmp-step-2-contacts">
+                                        <!-- @import "images/person-outline.svg" -->
+                                        <span class="profile-top-tab-text">Contacts</span>
+                                    </button>
+                                </div>
+                                <div class="cmp-create-from-scrath-item-controls-right">
+                                    <input type="text" class="chats-head-input cmp-create-from-scrath-item-controls-input" placeholder="Search...">
+                                    <button class="cmp-create-from-scratch-button skyblue cmp-create-from-scrath-item-controls-button" id="create-new-segment-toggle">
+                                        <!-- @import "images/plus_1.svg" -->
+                                        <span>Create new</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="cmp-create-from-scratch-item-segments-wrap">
+                                <div class="cmp-create-from-scratch-item-segments" id="cmp-step-2-segments">
+                                    <div class="cmp-create-from-scratch-item-segments-item">
+                                        <div class="cmp-create-from-scratch-item-segments-header">
+                                            <span class="cmp-create-from-scratch-item-tags-title">Suggested segments</span>
+                                            <!-- @import "images/toggle.svg" -->
+                                        </div>
+                                        <div class="cmp-create-from-scratch-item-segments-list">
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status done">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">Size: 25</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">Size: 25</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">Size: 25</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">Size: 25</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">Size: 25</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">Size: 25</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cmp-create-from-scratch-item-segments-item">
+                                        <div class="cmp-create-from-scratch-item-segments-header">
+                                            <span class="cmp-create-from-scratch-item-tags-title">All segments</span>
+                                            <!-- @import "images/toggle.svg" -->
+                                        </div>
+                                        <div class="cmp-create-from-scratch-item-segments-list">
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status done">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">Size: 25</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">Size: 25</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">Size: 25</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">Size: 25</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">Size: 25</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">Size: 25</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cmp-create-from-scratch-item-segments" style="display: none;" id="cmp-step-2-contacts">
+                                    <div class="cmp-create-from-scratch-item-segments-item">
+                                        <div class="cmp-create-from-scratch-item-segments-header">
+                                            <span class="cmp-create-from-scratch-item-tags-title">Most contacted</span>
+                                            <!-- @import "images/toggle.svg" -->
+                                        </div>
+                                        <div class="cmp-create-from-scratch-item-segments-list">
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status done">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cmp-create-from-scratch-item-segments-item">
+                                        <div class="cmp-create-from-scratch-item-segments-header">
+                                            <span class="cmp-create-from-scratch-item-tags-title">All contacts</span>
+                                            <!-- @import "images/toggle.svg" -->
+                                        </div>
+                                        <div class="cmp-create-from-scratch-item-segments-list">
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmp-create-from-scratch-item-segments-list-item">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-status">
+                                                    <!-- @import "images/done.svg" -->
+                                                </div>
+                                                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                                                <div class="cmp-create-from-scratch-item-segments-list-item-content">
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-title">Active new clietns</span>
+                                                    <span class="cmp-create-from-scratch-item-segments-list-item-info">test@gmail.com</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.create-campaign-step-content -->
+                    </div>
+                    <!-- /.create-campaign-step -->
+                </div>
+                <div class="cmp-create-from-scratch-footer current" id="cmp-create-from-scratch-step-1-footer">
+                    <button class="cmp-create-from-scratch-button skyblue" data-id="cmp-close-create-from-scratch">Cancel</button>
+                    <button class="cmp-create-from-scratch-button next" id="cmp-create-from-scratch-to-step-2">
+                        Next step
+                        <span class="cmp-create-from-scratch-button-icon">
+                            <!-- @import "images/back-black.svg" -->
+                        </span>
+                    </button>
+                </div>
+                <div class="cmp-create-from-scratch-footer" id="cmp-create-from-scratch-step-2-footer">
+                    <button class="cmp-create-from-scratch-button skyblue" id="cmp-create-from-scratch-to-step-1">Back</button>
+                    <button class="cmp-create-from-scratch-button next">Create campaign</button>
+                </div>
+            </div>
+            <div class="messaging-chat chat cmp-chat cmp-comments create-new-segment" id="create-new-segment">
+                <div class="cmp-comments-wrap">
+                    <div class="chat-header cmp-chat-header">
+                        <div class="cmp-chat-header-info">
+                            <div class="cmp-chat-header-title">
+                                <div class="cmp-chat-header-name">New segmentation</div>
+                            </div>
+                        </div>
+                        <div class="cmp-chat-header-menu">
+                            <button class="cmp-close-view cmp-menu-button" id="create-new-segment-close">
+                                <!-- @import "images/close-view.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat-body cmp-chat-body cmp-comments-body create-new-segment-body">
+                        <div class="new-segmentation">
+                            <div class="new-segmentation-name">
+                                <label class="new-segmentation-label" for="new-segmentation-name">Segment Name</label>
+                                <input type="text" class="input-text" id="new-segmentation-name" placeholder="Enter Segment Name">
+                            </div>
+                            <div class="new-segmentation-type">
+                                <div class="new-segmentation-label">Type</div>
+                                <div class="new-segmentation-type-list">
+                                    <div class="new-segmentation-type-item">
+                                        <div class="radio">
+                                            <input type="radio" id="new-segmentation-type-static" name="new-segmentation-type" checked>
+                                            <label for="new-segmentation-type-static">Static</label>
+                                        </div>
+                                    </div>
+                                    <div class="new-segmentation-type-item">
+                                        <div class="radio">
+                                            <input type="radio" id="new-segmentation-type-dynamic" name="new-segmentation-type">
+                                            <label for="new-segmentation-type-dynamic">Dynamic</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.new-segmentation-type -->
+                            <div class="new-segmentation-tags">
+                                <input type="text" class="input-text new-segmentation-tags-input" placeholder="Enter the tags here">
+                                <div class="new-segmentation-tags-pull"></div>
+                            </div>
+                            <div class="new-segmentation-title">Criteria <strong>Segments User*</strong></div>
+                            <div class="new-segmentation-conditions">
+                                <div class="new-segmentation-conditions-title">All contacts matching these conditions</div>
+                                <div class="new-segmentation-conditions-item">
+                                    <div class="new-segmentation-conditions-col">
+                                        <select class="select">
+                                            <option>Check-In</option>
+                                        </select>
+                                    </div>
+                                    <div class="new-segmentation-conditions-col">
+                                        <select class="select">
+                                            <option>Equal To</option>
+                                        </select>
+                                    </div>
+                                    <div class="new-segmentation-conditions-col">
+                                        <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                                    </div>
+                                    <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                                        <a href="#" class="new-segmentation-conditions-delete">
+                                            <span class="new-segmentation-conditions-delete-icon"><!-- @import "images/delete.svg" --></span>
+                                            <span class="new-segmentation-conditions-delete-text">Delete</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /.new-segmentation-conditions-item -->
+                                <div class="new-segmentation-conditions-sep"></div>
+                                <div class="new-segmentation-conditions-item">
+                                    <div class="new-segmentation-conditions-col">
+                                        <select class="select">
+                                            <option>Check-In</option>
+                                        </select>
+                                    </div>
+                                    <div class="new-segmentation-conditions-col">
+                                        <select class="select">
+                                            <option>Equal To</option>
+                                        </select>
+                                    </div>
+                                    <div class="new-segmentation-conditions-col">
+                                        <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                                    </div>
+                                    <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                                        <a href="#" class="new-segmentation-conditions-delete">
+                                            <span class="new-segmentation-conditions-delete-icon"><!-- @import "images/delete.svg" --></span>
+                                            <span class="new-segmentation-conditions-delete-text">Delete</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /.new-segmentation-conditions-item -->
+                                <a href="#" class="new-segmentation-conditions-add"><!-- @import "images/add.svg" -->Add new conditions</a>
+                            </div>
+                            <!-- /.new-segmentation-conditions -->
+                            <div class="new-segmentation-conditions-type">
+                                <ul>
+                                    <li class="active"><a href="#">Include</a></li>
+                                    <li><a href="#">Exclude</a></li>
+                                </ul>
+                            </div>
+                            <!-- /.new-segmentation-conditions-type -->
+                            <div class="new-segmentation-conditions">
+                                <div class="new-segmentation-conditions-title">Excludes all contacts that match these conditions </div>
+                                <div class="new-segmentation-conditions-item">
+                                    <div class="new-segmentation-conditions-col">
+                                        <select class="select">
+                                            <option>Check-In</option>
+                                        </select>
+                                    </div>
+                                    <div class="new-segmentation-conditions-col">
+                                        <select class="select">
+                                            <option>Equal To</option>
+                                        </select>
+                                    </div>
+                                    <div class="new-segmentation-conditions-col">
+                                        <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                                    </div>
+                                    <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                                        <a href="#" class="new-segmentation-conditions-delete">
+                                            <span class="new-segmentation-conditions-delete-icon"><!-- @import "images/delete.svg" --></span>
+                                            <span class="new-segmentation-conditions-delete-text">Delete</span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- /.new-segmentation-conditions-item -->
+                                <a href="#" class="new-segmentation-conditions-add"><!-- @import "images/add.svg" -->Add new conditions</a>
+                            </div>
+                            <!-- /.new-segmentation-conditions -->
+                            <template id="segmentation-group">
+                                <div class="new-segmentation-conditions-type">
+                                    <ul>
+                                        <li class="active"><a href="#">Include</a></li>
+                                        <li><a href="#">Exclude</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.new-segmentation-conditions-type -->
+                                <div class="new-segmentation-conditions">
+                                    <div class="new-segmentation-conditions-title">Excludes all contacts that match these conditions </div>
+                                    <div class="new-segmentation-conditions-item">
+                                        <div class="new-segmentation-conditions-col">
+                                            <select class="select">
+                                                <option>Check-In</option>
+                                            </select>
+                                        </div>
+                                        <div class="new-segmentation-conditions-col">
+                                            <select class="select">
+                                                <option>Equal To</option>
+                                            </select>
+                                        </div>
+                                        <div class="new-segmentation-conditions-col">
+                                            <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                                        </div>
+                                        <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                                            <a href="#" class="new-segmentation-conditions-delete">
+                                                <span class="new-segmentation-conditions-delete-icon"><!-- @import "images/delete.svg" --></span>
+                                                <span class="new-segmentation-conditions-delete-text">Delete</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- /.new-segmentation-conditions-item -->
+                                    <a href="#" class="new-segmentation-conditions-add"><!-- @import "images/add.svg" -->Add new conditions</a>
+                                </div>
+                                <!-- /.new-segmentation-conditions -->
+                            </template>
+                            <div class="new-segmentation-add-group">
+                                <button class="button button-secondary">
+                                    <span class="button-icon"><!-- @import "images/plus.svg" --></span>
+                                    Add New Group
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.new-segmentation -->
+                    </div>
+                    <form class="chat-footer cmp-comments-footer create-new-segment-footer">
+                        <button class="blue-button create-new-segment-submit" id="create-new-segment-submit">
+                            <!-- @import "images/save-segment.svg" -->
+                            Save
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- /.main-site -->
+    <div class="popup remove-popup" id="cmp-send-popup">
+        <div class="popup-center cmp-send-popup">
+            <div class="popup-right-header">
+                <span class="popup-center-title">Are you sure you want to send this message?</span>
+            </div>
+            <div class="cmp-send-popup-text">
+                Please make sure that all options and fields are filled in correctly.
+            </div>
+            <div class="cmp-send-popup-buttons">
+                <button class="cmp-footer-skyblue-button" id="cmp-send-cancel">Cancel</button>
+                <button type="submit" class="chat-send blue-button popup-right-blue-button chat-send cmp-chat-send-blue" id="cmp-send-confirm">
+                    <!-- @import "images/chat-send.svg" -->
+                    <span class="blue-button-title">Send</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="popup remove-popup" id="cmp-test-popup">
+        <div class="popup-center cmp-send-popup">
+            <div class="popup-right-header">
+                <span class="popup-center-title" style="width:100%">Test</span>
+            </div>
+            <div class="cmp-send-popup-text" style="margin-bottom: 10px;">
+                Enter the phone number to which you want to send the test message.
+            </div>
+            <input type="text" class="text-input popup-right-input chat-input cmp-chat-input" placeholder="(XXX) XXX XX XX"/>
+            <div class="cmp-send-popup-buttons">
+                <button class="cmp-footer-skyblue-button" id="cmp-test-cancel">Cancel</button>
+                <button type="submit" class="chat-send blue-button popup-right-blue-button chat-send cmp-chat-send-blue" id="cmp-test-confirm">
+                    <!-- @import "images/chat-send.svg" -->
+                    <span class="blue-button-title">Send</span>
+                </button>
+            </div>
+        </div>
+    </div>
+<!-- @import "parts/_foot.kit" -->

@@ -1,0 +1,915 @@
+<!-- $site-title = Template - Tasks -->
+<!-- $menu-pipeline = active opened -->
+<!-- @import "parts/_head.kit" -->
+<main class="main-site leads">
+    <!-- @import "parts/_sidebar.kit" -->
+    <div class="content-site pipeline-content">
+        <h1 class="leads-title">Pipeline</h1>
+        <section class="leads-header">
+            <input id="pipeline-header-input" type="text" class="leads-header-input text-input tasks pipeline-search" placeholder="Find a pipeline..." />
+            <button id="pipeline-header-button" class="square-button square-button--empty tasks-empty-button pipeline-filters-mobile" id="filters-toggle-mobile" data-id="filters">
+                <!-- @import "images/filter.svg" -->
+            </button>
+            <input id="leads-header-input" type="text" class="leads-header-input text-input hidden" placeholder="Find a lead..." />
+            <div id="leads-header-buttons" class="leads-header-buttons square-buttons hidden">
+                <button class="square-buttons-button square-button" data-id="merge-leads" id="merge-leads-toggle" disabled>
+                    <!-- @import "images/merge.svg" -->
+                    <span class="square-button-help">Merge lead</span>
+                </button>
+                <button style="display: none;" class="square-buttons-button square-button" data-id="add-note" id="toggle-add-note">
+                    <!-- @import "images/pencil.svg" -->
+                    <span class="square-button-help">Add a note about call</span>
+                </button>
+                <button class="square-buttons-button square-button" data-id="add-task" id="toggle-add-task" disabled>
+                    <!-- @import "images/arrows.svg" -->
+                    <span class="square-button-help">Full screen something</span>
+                </button>
+
+                <button style="display: none;" class="square-buttons-button square-button" data-id="chat-popup" id="chat-toggle">
+                    <!-- @import "images/trash.svg" -->
+                    <span class="square-button-help">Remove lead</span>
+                </button>
+            </div>
+            <div class="leads-header-right pipeline-header-right">
+                <button class="square-button square-button--empty tasks-empty-button pipeline-filters" id="filters-toggle" data-id="filters">
+                    <!-- @import "images/filter.svg" -->
+                </button>
+                <div class="automation">
+                    <button class="square-button square-button--empty tasks-empty-button automate-button" id="automation-toggle">
+                        <!-- @import "images/thunder.svg" -->
+                        <span class="empty-button-title">Automate stages</span>
+                        <div class="sidebar-navigation-number red empty-button-number">4</div>
+                    </button>
+                    <div class="automation-popup" id="automation-popup">
+                        <div class="popup-right-header automation-header">
+                            <span class="popup-right-title automation-title">Automate stages</span>
+                            <button class="notes-list-close popup-right-close" id="close-automation"></button>
+                        </div>
+                        <ul class="automation-list">
+                            <li class="automation-item" data-item-id="1">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 1</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                        <!-- @import "images/edit-automation.svg" -->
+                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                        <!-- @import "images/remove-automation.svg" -->
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="2">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 2</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                        <!-- @import "images/edit-automation.svg" -->
+                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                        <!-- @import "images/remove-automation.svg" -->
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="3">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 3</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                        <!-- @import "images/edit-automation.svg" -->
+                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                        <!-- @import "images/remove-automation.svg" -->
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="4">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 4</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                        <!-- @import "images/edit-automation.svg" -->
+                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                        <!-- @import "images/remove-automation.svg" -->
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="5">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 5</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                        <!-- @import "images/edit-automation.svg" -->
+                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                        <!-- @import "images/remove-automation.svg" -->
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="6">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 6</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                        <!-- @import "images/edit-automation.svg" -->
+                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                        <!-- @import "images/remove-automation.svg" -->
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="7">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 7</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                        <!-- @import "images/edit-automation.svg" -->
+                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                        <!-- @import "images/remove-automation.svg" -->
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="8">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 8</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                        <!-- @import "images/edit-automation.svg" -->
+                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                        <!-- @import "images/remove-automation.svg" -->
+                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class=" blue-button automation-submit" id="new-automation-toggle" data-id="new-automation">
+                            <!-- @import "images/plus_1.svg" -->
+                            <span class="blue-button-title">New automation</span>
+                        </button>
+                    </div>
+                </div>
+                <span class="square-button square-button--empty pipeline-views-toggles">
+                    <button class="pipeline-views-toggle selected" id="pipeline-leads-columns-toggle">
+                        <!-- @import "images/pipeline-tiles.svg" -->
+                    </button>
+                    <button class="pipeline-views-toggle" id="pipeline-leads-rows-toggle">
+                        <!-- @import "images/pipeline-lines.svg" -->
+                    </button>
+                </span>
+                <button class="leads-header-blue-button blue-button add-a-column-button" id="add-column-toggle" data-id="add-column">
+                    <!-- @import "images/plus_1.svg" -->
+                    <span class="blue-button-title">Add a column</span>
+                </button>
+                <button class="leads-header-blue-button blue-button hidden" id="add-new-lead-toggle" data-id="add-new-lead">
+                    <!-- @import "images/plus_1.svg" -->
+                    <span class="blue-button-title">Add a new lead</span>
+                </button>
+            </div>
+        </section>
+        <section class="pipeline-columns" id="pipeline-leads-columns">
+            <div class="pipeline-column">
+                <div class="pipeline-column-header">
+                    <span class="pipeline-column-color" style="background-color: #F3535E;"></span>
+                    <span class="pipeline-column-title">New leads</span>
+                    <span class="pipeline-column-number">10</span>
+                    <button class="pipeline-column-menu"></button>
+                    <div class="task-snooze-popup pipeline-column-actions">
+                        <button class="pipeline-column-action pipeline-column-edit">
+                            <!-- @import "images/edit-automation.svg" -->
+                            Edit
+                        </button>
+                        <button class="pipeline-column-action pipeline-column-edit">
+                            <!-- @import "images/trash-red.svg" -->
+                            Remove
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column-body">
+                    <ul class="pipeline-column-list" >
+                        <li class="pipeline-column-empty-item">
+                            <!-- @import "images/upload-file-1.svg" -->
+                            Drop lead here
+                        </li>
+                        <li class="pipeline-column-item" data-id="1">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+                                    <!-- @import "images/note.svg" -->
+                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+                                    <!-- @import "images/tasks.svg" -->
+                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pipeline-column-item" data-id="2">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+                                    <!-- @import "images/note.svg" -->
+                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+                                    <!-- @import "images/tasks.svg" -->
+                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pipeline-column-item" data-id="3">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+                                    <!-- @import "images/note.svg" -->
+                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+                                    <!-- @import "images/tasks.svg" -->
+                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pipeline-column-item" data-id="4">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+                                    <!-- @import "images/note.svg" -->
+                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+                                    <!-- @import "images/tasks.svg" -->
+                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pipeline-column-item" data-id="5">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+                                    <!-- @import "images/note.svg" -->
+                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+                                    <!-- @import "images/tasks.svg" -->
+                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+                        <!-- @import "images/plus_1.svg" -->
+                        <span class="blue-button-title">Add a lead</span>
+                    </button>
+                </div>
+            </div>
+            <div class="pipeline-column">
+                <div class="pipeline-column-header">
+                    <span class="pipeline-column-color" style="background-color: #FFBF4B;"></span>
+                    <span class="pipeline-column-title">Qualified leads</span>
+                    <span class="pipeline-column-number">2</span>
+                    <button class="pipeline-column-menu"></button>
+                    <div class="task-snooze-popup pipeline-column-actions">
+                        <button class="pipeline-column-action pipeline-column-edit">
+                            <!-- @import "images/edit-automation.svg" -->
+                            Edit
+                        </button>
+                        <button class="pipeline-column-action pipeline-column-edit">
+                            <!-- @import "images/trash-red.svg" -->
+                            Remove
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column-body">
+                    <ul class="pipeline-column-list" >
+                        <li class="pipeline-column-empty-item">
+                            <!-- @import "images/upload-file-1.svg" -->
+                            Drop lead here
+                        </li>
+                        <li class="pipeline-column-item" data-id="6">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+                                    <!-- @import "images/note.svg" -->
+                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+                                    <!-- @import "images/tasks.svg" -->
+                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pipeline-column-item" data-id="7">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+                                    <!-- @import "images/note.svg" -->
+                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+                                    <!-- @import "images/tasks.svg" -->
+                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+                        <!-- @import "images/plus_1.svg" -->
+                        <span class="blue-button-title">Add a lead</span>
+                    </button>
+                </div>
+            </div>
+            <div class="pipeline-column">
+                <div class="pipeline-column-header">
+                    <span class="pipeline-column-color" style="background-color: #99DC13;"></span>
+                    <span class="pipeline-column-title">Quote sent</span>
+                    <span class="pipeline-column-number">0</span>
+                    <button class="pipeline-column-menu"></button>
+                    <div class="task-snooze-popup pipeline-column-actions">
+                        <button class="pipeline-column-action pipeline-column-edit">
+                            <!-- @import "images/edit-automation.svg" -->
+                            Edit
+                        </button>
+                        <button class="pipeline-column-action pipeline-column-edit">
+                            <!-- @import "images/trash-red.svg" -->
+                            Remove
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column-body">
+                    <ul class="pipeline-column-list" >
+                        <li class="pipeline-column-empty-item">
+                            <!-- @import "images/upload-file-1.svg" -->
+                            Drop lead here
+                        </li>
+                    </ul>
+                    <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+                        <!-- @import "images/plus_1.svg" -->
+                        <span class="blue-button-title">Add a lead</span>
+                    </button>
+                </div>
+            </div>
+            <div class="pipeline-column">
+                <div class="pipeline-column-header">
+                    <span class="pipeline-column-color" style="background-color: #B7BABF;"></span>
+                    <span class="pipeline-column-title">Negative leads</span>
+                    <span class="pipeline-column-number">2</span>
+                    <button class="pipeline-column-menu"></button>
+                    <div class="task-snooze-popup pipeline-column-actions">
+                        <button class="pipeline-column-action pipeline-column-edit">
+                            <!-- @import "images/edit-automation.svg" -->
+                            Edit
+                        </button>
+                        <button class="pipeline-column-action pipeline-column-edit">
+                            <!-- @import "images/trash-red.svg" -->
+                            Remove
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column-body">
+                    <ul class="pipeline-column-list" >
+                        <li class="pipeline-column-empty-item">
+                            <!-- @import "images/upload-file-1.svg" -->
+                            Drop lead here
+                        </li>
+                    </ul>
+                    <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+                        <!-- @import "images/plus_1.svg" -->
+                        <span class="blue-button-title">Add a lead</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="leads-table" id="pipeline-leads-rows">
+            <div class="leads-table-row leads-table-header">
+                <div class="leads-table-td">
+                    <label class="lead-table-check custom-checkbox">
+                        <input type="checkbox" class="custom-checkbox-hiden" />
+                        <span class="custom-checkbox-check"></span>
+                    </label>
+                </div>
+                <div class="leads-table-td">
+                    <span class="leads-table-title">lead name</span>
+                    <div class="lead-table-sort sort">
+                        <button class="sort-button sort-button"></button>
+                        <button class="sort-button sort-button sort-button--down"></button>
+                    </div>
+                </div>
+                <div class="leads-table-td">
+                    <span class="leads-table-title" id="contact-title">contact</span>
+                    <div class="lead-table-sort sort">
+                        <button class="sort-button sort-button"></button>
+                        <button class="sort-button sort-button sort-button--down"></button>
+                    </div>
+                </div>
+                <div class="leads-table-td">
+                    <span class="leads-table-title">stages</span>
+                    <div class="lead-table-sort sort">
+                        <button class="sort-button sort-button"></button>
+                        <button class="sort-button sort-button sort-button--down"></button>
+                    </div>
+                </div>
+                <div class="leads-table-td">
+                    <span class="leads-table-title">value</span>
+                    <div class="lead-table-sort sort">
+                        <button class="sort-button sort-button"></button>
+                        <button class="sort-button sort-button sort-button--down"></button>
+                    </div>
+                </div>
+                <div class="leads-table-td">
+                </div>
+            </div>
+            <div class="leads-table-body">
+                <div class="leads-table-row" data-id="1">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Qualify</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 0.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="2">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Pitch</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 250.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="3">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Qualify</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 10.99</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="4">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Pitch</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 199.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">UI Kit for Mobile apps</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="5">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Qualify</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 0.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="6">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Pitch</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 250.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="7">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Qualify</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 10.99</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-right-file uploaded" id="add-lead-success">
+                    <label class="label" for="upload-csv-lead">
+                        <!-- @import "images/uploaded-file.svg" -->
+                        <span class="title">New lead added successfully</span>
+                        <button id="undo-new-lead">Undo</button>
+                    </label>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<div class="popup" id="add-new-lead-pipeline">
+    <div class="popup-right">
+        <div class="popup-right-header">
+            <span class="popup-right-title">Add a lead</span>
+            <button class="notes-list-close popup-right-close" id="close-add-new-lead-pipeline"></button>
+        </div>
+        <span class="checklist-title add-lead-pipeline-title">find a lead you want to add</span>
+        <input type="text" class="leads-header-input text-input tasks pipeline-search" placeholder="Lead name..." />
+        <div class="pipeline-lead-search-result">
+            <div class="lead-item-card">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar lead-item-card-avatar">
+                <div class="lead-item-card-text">
+                    <div class="lead-item-card-name">Andrew Vynarchyk</div>
+                    <div class="lead-item-card-value">$ 2.00</div>
+                </div>
+                <div class="lead-item-card-qualify">
+                    <span class="leads-table-text">Qualify</span>
+                    <div class="leads-table-qualify qualify">
+                        <span class="qualify-label"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="lead-item-card">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar lead-item-card-avatar">
+                <div class="lead-item-card-text">
+                    <div class="lead-item-card-name">Andrew Vynarchyk</div>
+                    <div class="lead-item-card-value">$ 2.00</div>
+                </div>
+                <div class="lead-item-card-qualify">
+                    <span class="leads-table-text">Qualify</span>
+                    <div class="leads-table-qualify qualify">
+                        <span class="qualify-label"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pipeline-lead-search-result">
+            <div class="lead-item-card chosen-lead-item-card">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar lead-item-card-avatar">
+                <div class="lead-item-card-text">
+                    <div class="lead-item-card-name">John Doe</div>
+                    <div class="lead-item-card-value">$ 2.00</div>
+                </div>
+                <div class="lead-item-card-qualify">
+                    <span class="leads-table-text">Qualify</span>
+                    <div class="leads-table-qualify qualify">
+                        <span class="qualify-label"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                    </div>
+                </div>
+                <button class="notes-list-close popup-right-close chat-header-close" ></button>
+            </div>
+        </div>
+        <div class="add-lead-pipeline-buttons">
+            <button class="blue-button pipeline-column-button" disabled>
+                <!-- @import "images/plus_1.svg" -->
+                <span class="blue-button-title">Add a leads</span>
+            </button>
+            <span class="popup-right-separate">or</span>
+            <button class="blue-button pipeline-column-button" id="add-lead-manualy-toggle">
+                <span class="blue-button-title">Add lead manualy</span>
+            </button>
+        </div>
+    </div>
+    <div class="popup-right" id="add-lead-manualy">
+        <div class="popup-right-header">
+            <span class="popup-right-title">
+                <button id="back-add-lead-manualy"></button>
+                Add a lead manualy
+            </span>
+            <button class="notes-list-close popup-right-close" id="close-add-lead-manualy"></button>
+        </div>
+        <form action="" class="popup-right-form" id="submit-add-lead-manualy">
+            <input type="text" class="text-input popup-right-input" placeholder="Lead name">
+            <select class="select popup-right-select">
+                <option>Select Stage</option>
+            </select>
+            <select class="select popup-right-select">
+                <option>Select Contact</option>
+            </select>
+            <input type="text" class="text-input popup-right-input" placeholder="Lead value (USD)">
+            <textarea class="text-input popup-right-input popup-right-textarea" cols="30" rows="4" placeholder="Notes"></textarea>
+            <button type="submit" class="blue-button popup-right-blue-button">
+                <!-- @import "images/plus_1.svg" -->
+                <span class="blue-button-title">Add a new lead</span>
+            </button>
+        </form>
+    </div>
+</div>
+<!-- @import "parts/_crm-popups.kit" -->
+<!-- /.main-site -->
+<!-- @import "parts/_foot.kit" -->

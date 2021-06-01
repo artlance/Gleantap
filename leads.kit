@@ -1,0 +1,365 @@
+<!-- $site-title = Template - Leads -->
+<!-- @import "parts/_head.kit" -->
+<main class="main-site leads">
+    <!-- @import "parts/_sidebar-crm.kit" -->
+    <div class="content-site">
+        <h1 class="leads-title">Leads</h1>
+        <section class="leads-header">
+            <input type="text" class="leads-header-input text-input" placeholder="Find a lead..." />
+            <div class="leads-header-buttons square-buttons">
+                <button class="square-buttons-button square-button" data-id="merge-leads" id="merge-leads-toggle">
+                    <!-- @import "images/merge.svg" -->
+                    <span class="square-button-help">Merge lead</span>
+                </button>
+                <button style="display: none;" class="square-buttons-button square-button" data-id="add-note" id="toggle-add-note">
+                    <!-- @import "images/pencil.svg" -->
+                    <span class="square-button-help">Add a note about call</span>
+                </button>
+                <button class="square-buttons-button square-button" data-id="add-task" id="toggle-add-task">
+                    <!-- @import "images/arrows.svg" -->
+                    <span class="square-button-help">Full screen something</span>
+                </button>
+                
+                <button style="display: none;" class="square-buttons-button square-button" data-id="chat-popup" id="chat-toggle">
+                    <!-- @import "images/trash.svg" -->
+                    <span class="square-button-help">Remove lead</span>
+                </button>
+            </div>
+            <div class="leads-header-right">
+                <button class="square-button square-button--empty" id="filters-toggle" data-id="filters">
+                    <!-- @import "images/filter.svg" -->
+                    <span class="square-button-label">1</span>
+                </button>
+                <button class="leads-header-blue-button blue-button" id="add-new-lead-toggle" data-id="add-new-lead">
+                    <!-- @import "images/plus_1.svg" -->
+                    <span class="blue-button-title">Add a new lead</span>
+                </button>
+            </div>
+        </section>
+        <section class="leads-table">
+            <div class="leads-table-row leads-table-header">
+                <div class="leads-table-td">
+                    <label class="lead-table-check custom-checkbox">
+                        <input type="checkbox" class="custom-checkbox-hiden" />
+                        <span class="custom-checkbox-check"></span>
+                    </label>
+                </div>
+                <div class="leads-table-td">
+                    <span class="leads-table-title">lead name</span>
+                    <div class="lead-table-sort sort">
+                        <button class="sort-button sort-button"></button>
+                        <button class="sort-button sort-button sort-button--down"></button>
+                    </div>
+                </div>
+                <div class="leads-table-td">
+                    <span class="leads-table-title" id="contact-title">contact</span>
+                    <div class="lead-table-sort sort">
+                        <button class="sort-button sort-button"></button>
+                        <button class="sort-button sort-button sort-button--down"></button>
+                    </div>
+                </div>
+                <div class="leads-table-td">
+                    <span class="leads-table-title">stages</span>
+                    <div class="lead-table-sort sort">
+                        <button class="sort-button sort-button"></button>
+                        <button class="sort-button sort-button sort-button--down"></button>
+                    </div>
+                </div>
+                <div class="leads-table-td">
+                    <span class="leads-table-title">value</span>
+                    <div class="lead-table-sort sort">
+                        <button class="sort-button sort-button"></button>
+                        <button class="sort-button sort-button sort-button--down"></button>
+                    </div>
+                </div>
+                <div class="leads-table-td">
+                </div>
+            </div>
+            <div class="leads-table-body">
+                <div class="leads-table-row" data-id="1">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Qualify</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 0.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="2">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Pitch</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 250.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="3">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Qualify</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 10.99</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="4">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Pitch</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 199.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">UI Kit for Mobile apps</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="5">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Qualify</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 0.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="6">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Pitch</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 250.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="7">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Qualify</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 10.99</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
+                        <!-- @import "parts/notes-list.kit" -->
+                        <div class="lead-buttons">
+                            <!-- @import "images/note.svg" -->
+                            <button class="edit-current-lead lead-button" data-id="add-note">
+                                <!-- @import "images/edit-automation.svg" -->
+                            </button>
+                            <button class="remove-current-lead lead-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-right-file uploaded" id="add-lead-success">
+                    <label class="label" for="upload-csv-lead">
+                        <!-- @import "images/uploaded-file.svg" -->
+                        <span class="title">New lead added successfully</span>
+                        <button id="undo-new-lead">Undo</button>
+                    </label>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<!-- @import "parts/_crm-popups.kit" -->
+<!-- /.main-site -->
+<!-- @import "parts/_foot.kit" -->

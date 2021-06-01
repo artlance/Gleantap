@@ -1,0 +1,1577 @@
+<div class="popup" id="add-task-on-page">
+    <div class="popup-right">
+        <div class="popup-right-header">
+            <span class="popup-center-title">Add a task</span>
+            <button class="notes-list-close popup-right-close" id="close-add-task-on-page"></button>
+        </div>
+        <form action="" class="popup-right-form popup-center-form add-task-form">
+            <input type="text" class="text-input popup-right-input" placeholder="Title" />
+            <div class="popup-center-dates">
+                <input type="date" placeholder="Due to" />
+                <select class="select popup-right-select">
+                    <option>Assigned to</option>
+                </select>
+            </div>
+            <select class="select popup-right-select">
+                <option>Contact person</option>
+            </select>
+            <select class="select popup-right-select">
+                <option>Type of task</option>
+            </select>
+            <textarea class="text-input popup-right-input popup-right-textarea popup-center-textarea" cols="30" rows="4" placeholder="Description"></textarea>
+            <div class="popup-center-attachment">
+                <span class="checklist-title popup-center-attachment-title">Attachment</span>
+            </div>
+            <div class="popup-center-file">
+                <label class="label" for="upload-file-task-on-page">
+                    <!-- @import "../images/upload-file-1.svg" -->
+                    <!-- @import "../images/uploaded-file.svg" -->
+                    <span class="title">+ Upload from your device</span>
+                    <ul class="files-list">
+                        <li class="files-list-item">
+                            <div class="files-list-item-icon">
+                                <img src="upload/template-5.png" />
+                            </div>
+                            <div class="files-list-item-text">
+                                image.png
+                                <button class="files-list-item-remove"></button>
+                            </div>
+                        </li>
+                        <li class="files-list-item">
+                            <div class="files-list-item-icon">
+                                <svg fill="none" viewBox="0 0 18 18">
+                                    <defs />
+                                    <path fill="#FFBF4B" d="M14.8 17.3H3.2a2.5 2.5 0 01-2.5-2.5V1.5a.8.8 0 01.8-.8h11.7a.8.8 0 01.8.8v8.3c0 1 .7 1.7 1.7 1.7.9 0 1.6.7 1.6 1.7v1.6a2.5 2.5 0 01-2.5 2.5zm0-4.1c-.4 0-.8.3-.8.8v.8a.8.8 0 001.7 0V14c0-.5-.4-.8-.9-.8zm-10-8.4a.8.8 0 000 1.7h5a.8.8 0 100-1.7h-5zm0 3.4a.8.8 0 000 1.6h5a.8.8 0 100-1.6h-5zm0 3.3a.8.8 0 000 1.7h2.5a.8.8 0 100-1.7H4.8z" />
+                                </svg>
+                            </div>
+                            <div class="files-list-item-text">
+                                docs.pdf
+                                <button class="files-list-item-remove"></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <input type="file" name="csv" id="upload-file-task-on-page" />
+                </label>
+            </div>
+            <button type="submit" class="blue-button popup-right-blue-button add-task-submit add-task-on-page-submit">
+                <!-- @import "../images/plus_1.svg" -->
+                <span class="blue-button-title">Add a task</span>
+            </button>
+        </form>
+    </div>
+</div>
+<div class="popup" id="edit-task-on-page">
+    <div class="popup-right">
+        <div class="popup-right-header">
+            <span class="popup-center-title">Task view</span>
+            <button class="notes-list-close popup-right-close" id="close-edit-task-on-page"></button>
+        </div>
+        <form action="" class="popup-right-form popup-center-form add-task-form">
+            <div class="task-view-buttons">
+                <button class="task-view-buttons-watch square-button square-button--empty">
+                    <!-- @import "../images/watch.svg" -->
+                </button>
+                <button class="task-view-buttons-trash square-button">
+                    <!-- @import "../images/trash-red.svg" -->
+                </button>
+                <button class="task-view-buttons-done square-button">
+                    <!-- @import "../images/done.svg" --> 
+                    <span class="blue-button-title">Mark as Done</span>
+                </button>
+            </div>
+            <input type="text" class="text-input popup-right-input" placeholder="Title" />
+            <div class="popup-center-dates">
+                <input type="date" placeholder="Due to" />
+                <select class="select popup-right-select">
+                    <option>Assigned to</option>
+                </select>
+            </div>
+            <select class="select popup-right-select">
+                <option>Contact person</option>
+            </select>
+            <select class="select popup-right-select">
+                <option>Type of task</option>
+            </select>
+            <textarea class="text-input popup-right-input popup-right-textarea popup-center-textarea" cols="30" rows="4" placeholder="Description"></textarea>
+            <div class="popup-center-attachment">
+                <span class="checklist-title popup-center-attachment-title">Attachment</span>
+            </div>
+            <div class="popup-center-file show-list">
+                <label class="label" for="upload-file-task-on-page">
+                    <!-- @import "../images/upload-file-1.svg" -->
+                    <!-- @import "../images/uploaded-file.svg" -->
+                    <span class="title">+ Upload from your device</span>
+                    <ul class="files-list">
+                        <li class="files-list-item">
+                            <div class="files-list-item-icon">
+                                <img src="upload/template-5.png" />
+                            </div>
+                            <div class="files-list-item-text">
+                                image.png
+                                <button class="files-list-item-remove"></button>
+                            </div>
+                        </li>
+                        <li class="files-list-item">
+                            <div class="files-list-item-icon">
+                                <svg fill="none" viewBox="0 0 18 18">
+                                    <defs />
+                                    <path fill="#FFBF4B" d="M14.8 17.3H3.2a2.5 2.5 0 01-2.5-2.5V1.5a.8.8 0 01.8-.8h11.7a.8.8 0 01.8.8v8.3c0 1 .7 1.7 1.7 1.7.9 0 1.6.7 1.6 1.7v1.6a2.5 2.5 0 01-2.5 2.5zm0-4.1c-.4 0-.8.3-.8.8v.8a.8.8 0 001.7 0V14c0-.5-.4-.8-.9-.8zm-10-8.4a.8.8 0 000 1.7h5a.8.8 0 100-1.7h-5zm0 3.4a.8.8 0 000 1.6h5a.8.8 0 100-1.6h-5zm0 3.3a.8.8 0 000 1.7h2.5a.8.8 0 100-1.7H4.8z" />
+                                </svg>
+                            </div>
+                            <div class="files-list-item-text">
+                                docs.pdf
+                                <button class="files-list-item-remove"></button>
+                            </div>
+                        </li>
+                    </ul>
+                    <input type="file" name="csv" id="upload-file-task-on-page" />
+                </label>
+            </div>
+            <button type="submit" class="blue-button popup-right-blue-button add-task-submit edit-task-on-page-submit">
+                <span class="blue-button-title">Save</span>
+            </button>
+        </form>
+    </div>
+</div>
+<div class="popup" id="edit-automation">
+    <div class="popup-right">
+        <div class="popup-right-header">
+            <span class="popup-center-title">Edit</span>
+            <button class="notes-list-close popup-right-close" id="close-edit-automation"></button>
+        </div>
+        <form action="" class="popup-right-form popup-center-form add-task-form">
+            <input type="text" class="text-input popup-right-input new-automation-input" placeholder="Automation name">
+            <div class="popup-center-checklist automation-execute">
+                <span class="checklist-title">execute</span>
+                <div class="automation-radios">
+                    <label class="automation-radio">
+                        <input type="radio" name="execute" class="automation-radio-hiden" checked>
+                        <span class="automation-radio-visible"></span>
+                        <span class="automation-radio-title">One time</span>
+                    </label>
+                    <label class="automation-radio">
+                        <input type="radio" name="execute" class="automation-radio-hiden">
+                        <span class="automation-radio-visible"></span>
+                        <span class="automation-radio-title">On going</span>
+                    </label>
+                </div>
+            </div>
+            <select class="select popup-right-select automation-select">
+                <option>Select a triger</option>
+            </select>
+            <select class="select popup-right-select automation-select">
+                <option>Select a stage</option>
+            </select>
+            <select class="select popup-right-select automation-select">
+                <option>Select an action</option>
+            </select>
+            <button type="submit" class="blue-button automation-edit-submit">
+                <!-- @import "../images/plus_1.svg" -->
+                <span class="blue-button-title">Save</span>
+            </button>
+        </form>
+    </div>
+</div>
+<div class="popup" id="new-automation">
+    <div class="popup-right">
+        <div class="popup-right-header">
+            <span class="popup-center-title">New automation</span>
+            <button class="notes-list-close popup-right-close" id="close-new-automation"></button>
+        </div>
+        <form action="" class="popup-right-form popup-center-form add-task-form">
+            <input type="text" class="text-input popup-right-input new-automation-input" placeholder="Automation name">
+            <div class="popup-center-checklist automation-execute">
+                <span class="checklist-title">execute</span>
+                <div class="automation-radios">
+                    <label class="automation-radio">
+                        <input type="radio" name="execute" class="automation-radio-hiden" checked>
+                        <span class="automation-radio-visible"></span>
+                        <span class="automation-radio-title">One time</span>
+                    </label>
+                    <label class="automation-radio">
+                        <input type="radio" name="execute" class="automation-radio-hiden">
+                        <span class="automation-radio-visible"></span>
+                        <span class="automation-radio-title">On going</span>
+                    </label>
+                </div>
+            </div>
+            <select class="select popup-right-select automation-select">
+                <option>Select a triger</option>
+            </select>
+            <select class="select popup-right-select automation-select">
+                <option>Select a stage</option>
+            </select>
+            <select class="select popup-right-select automation-select">
+                <option>Select an action</option>
+            </select>
+            <button type="submit" class="blue-button automation-new-submit">
+                <!-- @import "../images/plus_1.svg" -->
+                <span class="blue-button-title">Create new automation</span>
+            </button>
+        </form>
+    </div>
+</div>
+<div class="popup remove-popup" id="remove-automation">
+    <div class="popup-center">
+        <div class="popup-right-header">
+            <span class="popup-center-title">Are you sure you want to delete?</span>
+        </div>
+        <div class="remove-automation-buttons">
+            <button class="blue-button popup-right-blue-button popup-center-submit" id="remove-automation-submit">
+                <span class="blue-button-title">Yes</span>
+            </button>
+            <button class="blue-button popup-right-blue-button popup-center-submit" id="close-remove-automation">
+                <span class="blue-button-title">No</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="popup remove-popup" id="remove-task">
+    <div class="popup-center">
+        <div class="popup-right-header">
+            <span class="popup-center-title">Are you sure you want to delete?</span>
+        </div>
+        <div class="remove-automation-buttons">
+            <button class="blue-button popup-right-blue-button popup-center-submit" id="remove-task-submit">
+                <span class="blue-button-title">Yes</span>
+            </button>
+            <button class="blue-button popup-right-blue-button popup-center-submit" id="close-remove-task">
+                <span class="blue-button-title">No</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="popup remove-popup" id="remove-lead">
+    <div class="popup-center">
+        <div class="popup-right-header">
+            <span class="popup-center-title">Are you sure you want to delete?</span>
+        </div>
+        <div class="remove-automation-buttons">
+            <button class="blue-button popup-right-blue-button popup-center-submit" id="remove-lead-submit">
+                <span class="blue-button-title">Yes</span>
+            </button>
+            <button class="blue-button popup-right-blue-button popup-center-submit" id="close-remove-lead">
+                <span class="blue-button-title">No</span>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="popup" id="add-column">
+    <div class="popup-center">
+        <div class="popup-right-header">
+            <span class="popup-center-title">Add a column</span>
+            <button class="notes-list-close popup-right-close" id="close-add-column"></button>
+        </div>
+        <form action="" class="popup-right-form popup-center-form merge-leads-form add-column-form">
+            <input type="text" class="text-input popup-right-input" placeholder="Title">
+            <button type="submit" class="blue-button popup-right-blue-button add-column-submit">
+                <!-- @import "../images/plus_1.svg" -->
+                <!-- @import "../images/uploaded-file.svg" -->
+                <span class="blue-button-title">Add a column</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="popup show-profile" id="chat-popup">
+    <div class="popup-right chat" id="chat">
+        <div class="chat-header">
+            <div class="chat-header-user">
+                <!-- @import "../images/back-arrow.svg" -->
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                <span class="leads-table-text leads-table-text--bold chat-header-name">Arina Sanchez</span>
+                <span class="chat-header-status online"></span>
+            </div>
+            <ul class="chat-header-tabs">
+                <li class="chat-header-tab current all">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#99DC13" />
+                    </svg>
+                    All
+                </li>
+                <li class="chat-header-tab sms">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B" />
+                    </svg>
+                    SMS
+                </li>
+                <li class="chat-header-tab email">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#F3535E" />
+                    </svg>
+                    Email
+                </li>
+                <li class="chat-header-tab facebook">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#3C68EC" />
+                    </svg>
+                    Facebook
+                </li>
+            </ul>
+            <button class="notes-list-close popup-right-close chat-header-close" id="close-chat"></button>
+        </div>
+        <div class="chat-body">
+            <div class="chat-message">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                <div class="notes-list-item chat-message-content">
+                    <span class="notes-list-item-title chat-message-title">Christopher Walker</span>
+                    <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                    <span class="notes-list-item-text chat-message-text">
+                        Hi this is some reference for your works today Arina. www.linkinhere.com
+                    </span>
+                    <div class="chat-message-buttons">
+                        <button class="chat-message-comment chat-message-button">
+                            <!-- @import "../images/comment.svg" -->
+                            7 comments
+                        </button>
+                        <button class="chat-message-reply chat-message-button">
+                            <!-- @import "../images/reply.svg" -->
+                            Reply
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-message">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                <div class="notes-list-item chat-message-content">
+                    <span class="notes-list-item-title chat-message-title">Christopher Walker</span>
+                    <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                    <span class="notes-list-item-text chat-message-text">
+                        Hi this is some reference for your works today Arina. www.linkinhere.com
+                    </span>
+                    <div class="chat-message-buttons">
+                        <button class="chat-message-comment chat-message-button">
+                            <!-- @import "../images/comment.svg" -->
+                            7 comments
+                        </button>
+                        <button class="chat-message-reply chat-message-button">
+                            <!-- @import "../images/reply.svg" -->
+                            Reply
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <span class="popup-right-separate chat-body-separate">Today</span>
+            <div class="chat-message">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                <div class="notes-list-item chat-message-content">
+                    <span class="notes-list-item-title chat-message-title">Christopher Walker</span>
+                    <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                    <span class="notes-list-item-text chat-message-text">
+                        Hi this is some reference for your works today Arina. www.linkinhere.com
+                    </span>
+                    <div class="chat-message-buttons">
+                        <button class="chat-message-comment chat-message-button">
+                            <!-- @import "../images/comment.svg" -->
+                            7 comments
+                        </button>
+                        <button class="chat-message-reply chat-message-button">
+                            <!-- @import "../images/reply.svg" -->
+                            Reply
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-message">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                <div class="notes-list-item chat-message-content">
+                    <span class="notes-list-item-title chat-message-title">Christopher Walker</span>
+                    <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                    <span class="notes-list-item-text chat-message-text">
+                        Hi this is some reference for your works today Arina. www.linkinhere.com
+                    </span>
+                    <div class="chat-message-buttons">
+                        <button class="chat-message-comment chat-message-button">
+                            <!-- @import "../images/comment.svg" -->
+                            7 comments
+                        </button>
+                        <button class="chat-message-reply chat-message-button">
+                            <!-- @import "../images/reply.svg" -->
+                            Reply
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <span class="popup-right-separate chat-body-separate">Yesterday</span>
+            <div class="chat-message">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                <div class="notes-list-item chat-message-content">
+                    <span class="notes-list-item-title chat-message-title">Christopher Walker</span>
+                    <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                    <span class="notes-list-item-text chat-message-text">
+                        Hi this is some reference for your works today Arina. www.linkinhere.com
+                    </span>
+                    <div class="chat-message-buttons">
+                        <button class="chat-message-comment chat-message-button">
+                            <!-- @import "../images/comment.svg" -->
+                            7 comments
+                        </button>
+                        <button class="chat-message-reply chat-message-button">
+                            <!-- @import "../images/reply.svg" -->
+                            Reply
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-message">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                <div class="notes-list-item chat-message-content">
+                    <span class="notes-list-item-title chat-message-title">Christopher Walker</span>
+                    <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                    <span class="notes-list-item-text chat-message-text">
+                        Hi this is some reference for your works today Arina. www.linkinhere.com
+                    </span>
+                    <div class="chat-message-buttons">
+                        <button class="chat-message-comment chat-message-button">
+                            <!-- @import "../images/comment.svg" -->
+                            7 comments
+                        </button>
+                        <button class="chat-message-reply chat-message-button">
+                            <!-- @import "../images/reply.svg" -->
+                            Reply
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <span class="popup-right-separate chat-body-separate">Two days ago</span>
+            <div class="chat-message">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                <div class="notes-list-item chat-message-content">
+                    <span class="notes-list-item-title chat-message-title">Christopher Walker</span>
+                    <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                    <span class="notes-list-item-text chat-message-text">
+                        Hi this is some reference for your works today Arina. www.linkinhere.com
+                    </span>
+                    <div class="chat-message-buttons">
+                        <button class="chat-message-comment chat-message-button">
+                            <!-- @import "../images/comment.svg" -->
+                            7 comments
+                        </button>
+                        <button class="chat-message-reply chat-message-button">
+                            <!-- @import "../images/reply.svg" -->
+                            Reply
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-message">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                <div class="notes-list-item chat-message-content">
+                    <span class="notes-list-item-title chat-message-title">Christopher Walker</span>
+                    <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                    <span class="notes-list-item-text chat-message-text">
+                        Hi this is some reference for your works today Arina. www.linkinhere.com
+                    </span>
+                    <div class="chat-message-buttons">
+                        <button class="chat-message-comment chat-message-button">
+                            <!-- @import "../images/comment.svg" -->
+                            7 comments
+                        </button>
+                        <button class="chat-message-reply chat-message-button">
+                            <!-- @import "../images/reply.svg" -->
+                            Reply
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <span class="popup-right-separate chat-body-separate">Four Days Ago</span>
+        </div>
+        <form class="chat-footer">
+            <ul class="chat-footer-tags">
+                <label class="chat-footer-tag">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#F3535E" />
+                    </svg>
+                    <select class="chat-footer-tag-select-replace select">
+                        <option value="">support@mail.com</option>
+                    </select>
+                </label>
+            </ul>
+            <input type="text" class="text-input popup-right-input chat-input" placeholder="Enter your message" />
+            <div class="chat-footer-buttons">
+                <div class="chat-footer-left-buttons">
+                    <button class="chat-footer-left-button">
+                        <!-- @import "../images/smile.svg" -->
+                    </button>
+                    <button class="chat-footer-left-button">
+                        <!-- @import "../images/chat-file.svg" -->
+                    </button>
+                    <button class="chat-footer-left-button">
+                        <!-- @import "../images/tablet.svg" -->
+                    </button>
+                    <button class="chat-footer-left-button">
+                        <!-- @import "../images/brackets.svg" -->
+                    </button>
+                    <button class="chat-footer-left-button">
+                        <!-- @import "../images/pen.svg" -->
+                    </button>
+                </div>
+                <div class="chat-footer-right-buttons">
+                    <button class="chat-footer-latest chat-footer-left-button">
+                        <!-- @import "../images/clock.svg" -->
+                    </button>
+                    <button type="submit" class="chat-send blue-button popup-right-blue-button chat-send">
+                        <!-- @import "../images/chat-send.svg" -->
+                        <span class="blue-button-title">Send</span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="popup-right profile d-none" id="profile" style="transform: none;">
+        <div class="profile-header">
+            <div class="profile-header-user">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                <span class="leads-table-text leads-table-text--bold chat-header-name profile-header-name">
+                    Arina Sanchez
+                    <br />
+                    <span class="profile-header-mail">yourmail@mail.com</span>
+                </span>
+                <span class="chat-header-status profile-header-status online"></span>
+            </div>
+            <div class="profile-header-buttons">
+                <button class="profile-header-edit" id="profile-edit">
+                    <!-- @import "../images/edit-profile.svg" -->
+                </button>
+                <button class="notes-list-close popup-right-close profile-header-close" id="close-profile"></button>
+            </div>
+        </div>
+        <div class="profile-top">
+            <span class="profile-top-label">free plan</span>
+            <div class="profile-top-buttons">
+                <button class="profile-top-button">
+                    <!-- @import "../images/phone.svg" -->
+                </button>
+                <button class="profile-top-button">
+                    <!-- @import "../images/mail.svg" -->
+                </button>
+                <button class="profile-top-button">
+                    <!-- @import "../images/note.svg" -->
+                </button>
+                <button class="profile-top-button">
+                    <!-- @import "../images/facebook.svg" -->
+                </button>
+            </div>
+            <div class="profile-top-tabs">
+                <button class="profile-top-tab selected" data-id="profile-details">
+                    <!-- @import "../images/leads.svg" -->
+                    <span class="profile-top-tab-text">Profile</span>
+                </button>
+                <button class="profile-top-tab" data-id="profile-activities">
+                    <!-- @import "../images/bell.svg" -->
+                    <span class="profile-top-tab-text">Activities</span>
+                </button>
+            </div>
+        </div>
+        <div class="profile-body">
+            <div class="profile-details profile-body-item" id="profile-details">
+                <div class="profile-details-item">
+                    <span class="profile-details-item-title">Details</span>
+                    <select class="select popup-right-select profile-details-select">
+                        <option>Select stage</option>
+                    </select>
+                    <input type="text" placeholder="Value" name=""  value="$2" class="text-input profile-details-input" />
+                    <select class="select popup-right-select profile-details-select">
+                        <option>Select source</option>
+                    </select>
+                </div>
+                <div class="profile-details-item">
+                    <span class="profile-details-item-title">Personal Info</span>
+                    <input type="text" name=""  placeholder="First Name" value="Arina" class="text-input profile-details-input short" />
+                    <input type="text" name=""  placeholder="Last Name" class="text-input profile-details-input short" />
+                    <input type="email" name=""  placeholder="Email Address" class="text-input profile-details-input" />
+                    <input type="email" name=""  placeholder="Phone number" class="text-input profile-details-input phone" />
+                </div>
+                <div class="profile-details-item">
+                    <span class="profile-details-item-title">Organization</span>
+                    <input type="text" placeholder="Company" name=""  class="text-input profile-details-input" />
+                    <textarea class="text-input popup-right-input popup-right-textarea popup-center-textarea profile-details-textarea" cols="30" rows="4" placeholder="Address"></textarea>
+                </div>
+            </div>
+            <div class="profile-activities profile-body-item" id="profile-activities" style="display: none;">
+                <div class="profile-activities-header">
+                    <span class="profile-details-item-title">Activity</span>
+                    <select class="select profile-activities-select">
+                        <option value="All">Type: All</option>
+                        <option value="SMS">SMS</option>
+                        <option value="Tasks">Tasks</option>
+                        <option value="Meeting">Meeting</option>
+                        <option value="Call">Call</option>
+                    </select>
+                </div>
+                <div class="profile-activities-body">
+                    <div class="profile-activities-item">
+                        <div class="profile-activities-item-header">
+                            <!-- @import "../images/activities-sms.svg" -->
+                            <span class="profile-activities-item-type">SMS</span>
+                            <span class="profile-activities-item-time">5 min ago</span>
+                        </div>
+                        <span class="profile-activities-item-title">Shubham Sethi</span>
+                        <div class="profile-activities-item-bottom">
+                            <span class="profile-activities-item-description">Lorem ipsum dolor sit amet.</span>
+                        </div>
+                    </div>
+                    <div class="profile-activities-item">
+                        <div class="profile-activities-item-header">
+                            <!-- @import "../images/activities-task.svg" -->
+                            <span class="profile-activities-item-type">Tasks</span>
+                            <span class="profile-activities-item-time">5 min ago</span>
+                        </div>
+                        <span class="profile-activities-item-title">Task 001</span>
+                        <div class="profile-activities-item-bottom">
+                            <span class="profile-activities-item-description">Due to: <span class="black">12 Jan 2021</span></span>
+                            <span class="profile-activities-item-sep"></span>
+                            <div class="profile-activities-item-avatars">
+                                <img src="upload/avatar.jpg" class="profile-activities-item-avatar">
+                                <img src="upload/avatar.jpg" class="profile-activities-item-avatar">
+                                <span class="profile-activities-item-add-avatar">2+</span>
+                            </div>
+                            <div class="profile-activities-item-progress">
+                                <div class="profile-activities-item-progressbar">
+                                    <div class="profile-activities-item-progressbar-done" style="width:50%"></div>
+                                </div>
+                                50%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-activities-item">
+                        <div class="profile-activities-item-header">
+                            <!-- @import "../images/activities-meeting.svg" -->
+                            <span class="profile-activities-item-type">Meeting</span>
+                            <span class="profile-activities-item-time">5 min ago</span>
+                        </div>
+                        <span class="profile-activities-item-title">Meeting w/ Client</span>
+                        <div class="profile-activities-item-bottom">
+                            <span class="profile-activities-item-description">Today at: <span class="black">9 - 10 PM</span></span>
+                            <span class="profile-activities-item-sep"></span>
+                            <span class="profile-activities-item-description blue">
+                                <!-- @import "../images/geo.svg" -->
+                                Get direction
+                            </span>
+                        </div>
+                    </div>
+                    <div class="profile-activities-item">
+                        <div class="profile-activities-item-header">
+                            <!-- @import "../images/activities-call.svg" -->
+                            <span class="profile-activities-item-type">Call</span>
+                            <span class="profile-activities-item-time">5 min ago</span>
+                        </div>
+                        <span class="profile-activities-item-title">Call about something</span>
+                        <div class="profile-activities-item-bottom">
+                            <span class="profile-activities-item-description">Today at: <span class="black">9 - 10 PM</span></span>
+                            <span class="profile-activities-item-sep"></span>
+                            <span class="profile-activities-item-description blue">
+                                Phone Number
+                            </span>
+                            <span class="profile-activities-item-sep"></span>
+                            <span class="profile-activities-item-description blue">
+                               Via Skype
+                            </span>
+                        </div>
+                    </div>
+                    <div class="profile-activities-day">
+                        Yesterday
+                    </div>
+                    <div class="profile-activities-item">
+                        <div class="profile-activities-item-header">
+                            <!-- @import "../images/activities-sms.svg" -->
+                            <span class="profile-activities-item-type">SMS</span>
+                            <span class="profile-activities-item-time">5 min ago</span>
+                        </div>
+                        <span class="profile-activities-item-title">Shubham Sethi</span>
+                        <div class="profile-activities-item-bottom">
+                            <span class="profile-activities-item-description">Lorem ipsum dolor sit amet.</span>
+                        </div>
+                    </div>
+                    <div class="profile-activities-item">
+                        <div class="profile-activities-item-header">
+                            <!-- @import "../images/activities-task.svg" -->
+                            <span class="profile-activities-item-type">Tasks</span>
+                            <span class="profile-activities-item-time">5 min ago</span>
+                        </div>
+                        <span class="profile-activities-item-title">Task 001</span>
+                        <div class="profile-activities-item-bottom">
+                            <span class="profile-activities-item-description">Due to: <span class="black">12 Jan 2021</span></span>
+                            <span class="profile-activities-item-sep"></span>
+                            <div class="profile-activities-item-avatars">
+                                <img src="upload/avatar.jpg" class="profile-activities-item-avatar">
+                                <img src="upload/avatar.jpg" class="profile-activities-item-avatar">
+                                <span class="profile-activities-item-add-avatar">2+</span>
+                            </div>
+                            <div class="profile-activities-item-progress">
+                                <div class="profile-activities-item-progressbar">
+                                    <div class="profile-activities-item-progressbar-done" style="width:50%"></div>
+                                </div>
+                                50%
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile-activities-item">
+                        <div class="profile-activities-item-header">
+                            <!-- @import "../images/activities-meeting.svg" -->
+                            <span class="profile-activities-item-type">Meeting</span>
+                            <span class="profile-activities-item-time">5 min ago</span>
+                        </div>
+                        <span class="profile-activities-item-title">Meeting w/ Client</span>
+                        <div class="profile-activities-item-bottom">
+                            <span class="profile-activities-item-description">Today at: <span class="black">9 - 10 PM</span></span>
+                            <span class="profile-activities-item-sep"></span>
+                            <span class="profile-activities-item-description blue">
+                                <!-- @import "../images/geo.svg" -->
+                                Get direction
+                            </span>
+                        </div>
+                    </div>
+                    <div class="profile-activities-item">
+                        <div class="profile-activities-item-header">
+                            <!-- @import "../images/activities-call.svg" -->
+                            <span class="profile-activities-item-type">Call</span>
+                            <span class="profile-activities-item-time">5 min ago</span>
+                        </div>
+                        <span class="profile-activities-item-title">Call about something</span>
+                        <div class="profile-activities-item-bottom">
+                            <span class="profile-activities-item-description">Today at: <span class="black">9 - 10 PM</span></span>
+                            <span class="profile-activities-item-sep"></span>
+                            <span class="profile-activities-item-description blue">
+                                Phone Number
+                            </span>
+                            <span class="profile-activities-item-sep"></span>
+                            <span class="profile-activities-item-description blue">
+                               Via Skype
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup" id="add-note">
+    <div class="popup-center">
+        <div class="popup-right-header">
+            <span class="popup-center-title">Add a note about the call</span>
+            <button class="notes-list-close popup-right-close" id="close-add-note"></button>
+        </div>
+        <form action="" class="popup-right-form popup-center-form">
+            <select class="select popup-center-select">
+                <option>Select Stage</option>
+            </select>
+            <input type="hidden" name="lead-id" value="1">
+            <textarea class="text-input popup-right-input popup-right-textarea popup-center-textarea" cols="30" rows="4" placeholder="Notes"></textarea>
+            <button type="submit" class="blue-button popup-right-blue-button popup-center-submit">
+                <span class="blue-button-title">Done</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="popup" id="merge-leads">
+    <div class="popup-center">
+        <div class="popup-right-header">
+            <span class="popup-center-title">Merge lead</span>
+            <button class="notes-list-close popup-right-close" id="close-merge-leads"></button>
+        </div>
+        <form action="" class="popup-right-form popup-center-form merge-leads-form">
+            <div class="lead-item-card">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar lead-item-card-avatar">
+                <div class="lead-item-card-text">
+                    <div class="lead-item-card-name">Andrew Vynarchyk</div>
+                    <div class="lead-item-card-value">$ 2.00</div>
+                </div>
+                <div class="lead-item-card-qualify">
+                    <span class="leads-table-text">Qualify</span>
+                    <div class="leads-table-qualify qualify">
+                        <span class="qualify-label"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="merge-leads-form-search">
+                <span class="checklist-title lead-search-title">lead to merge with</span>
+                <input type="text" class="leads-header-input text-input lead-search-input" placeholder="Find a lead..." id="search-lead-merge">
+                <div class="lead-search-result">
+                    <div class="lead-item-card">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar lead-item-card-avatar">
+                        <div class="lead-item-card-text">
+                            <div class="lead-item-card-name">Andrew Vynarchyk</div>
+                            <div class="lead-item-card-value">$ 2.00</div>
+                        </div>
+                        <div class="lead-item-card-qualify">
+                            <span class="leads-table-text">Qualify</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lead-item-card">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar lead-item-card-avatar">
+                        <div class="lead-item-card-text">
+                            <div class="lead-item-card-name">Andrew Vynarchyk</div>
+                            <div class="lead-item-card-value">$ 2.00</div>
+                        </div>
+                        <div class="lead-item-card-qualify">
+                            <span class="leads-table-text">Qualify</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lead-item-card">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar lead-item-card-avatar">
+                        <div class="lead-item-card-text">
+                            <div class="lead-item-card-name">Andrew Vynarchyk</div>
+                            <div class="lead-item-card-value">$ 2.00</div>
+                        </div>
+                        <div class="lead-item-card-qualify">
+                            <span class="leads-table-text">Qualify</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lead-item-card found-lead">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar">
+                    <div class="lead-item-card-text">
+                        <div class="lead-item-card-name">Andrew Vynarchyk</div>
+                        <div class="lead-item-card-value">$ 2.00</div>
+                    </div>
+                    <div class="lead-item-card-qualify">
+                        <span class="leads-table-text">Qualify</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="blue-button popup-right-blue-button merge-leads-submit" disabled>
+                <!-- @import "../images/plus_1.svg" -->
+                <!-- @import "../images/uploaded-file.svg" -->
+                <span class="blue-button-title">Merge leads</span>
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="popup" id="filters">
+    <form class="popup-right">
+        <div class="popup-right-header">
+            <span class="popup-right-title">Filters</span>
+            <button class="notes-list-close popup-right-close" id="close-filters"></button>
+        </div>
+        <div class="popup-right-middle-selects">
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">Leads</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">Leads</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">Leads</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">Leads</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">Leads</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">Leads</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <form action="" class="popup-right-form" id="submit-add-new-lead">
+            <div class="popup-right-file">
+                <label class="label" for="upload-csv-lead">
+                    <span class="title">Import CSV file</span>
+                    <input type="file" name="csv" id="upload-csv-lead">
+                </label>
+            </div>
+            <span class="popup-right-separate">or</span>
+            <input type="text" class="text-input popup-right-input" placeholder="Lead name">
+            <select class="select popup-right-select">
+                <option>Select Stage</option>
+            </select>
+            <select class="select popup-right-select">
+                <option>Select Contact</option>
+            </select>
+            <input type="text" class="text-input popup-right-input" placeholder="Lead value (USD)">
+            <textarea class="text-input popup-right-input popup-right-textarea" cols="30" rows="4" placeholder="Notes"></textarea>
+            <button type="submit" class="blue-button popup-right-blue-button">
+                <span class="blue-button-title">Add a new lead</span>
+            </button>
+        </form> -->
+        <div class="popup-right-bottom">
+            <button class="blue-button blue-button--light popup-right-blue-button">
+                <span class="blue-button-title">Cancel</span>
+            </button>
+            <button type="submit" class="blue-button popup-right-blue-button">
+                <span class="blue-button-title">Apply</span>
+            </button>
+        </div>
+    </form>
+</div>
+
+<div class="popup" id="add-new-lead">
+    <div class="popup-right">
+        <div class="popup-right-header">
+            <span class="popup-right-title">Add a new lead</span>
+            <button class="notes-list-close popup-right-close" id="close-add-new-lead"></button>
+        </div>
+        <form action="" class="popup-right-form" id="submit-add-new-lead">
+            <div class="popup-right-file">
+                <label class="label" for="upload-csv-lead">
+                    <!-- @import "../images/upload-file.svg" -->
+                    <!-- @import "../images/uploaded-file.svg" -->
+                    <span class="title">Import CSV file</span>
+                    <input type="file" name="csv" id="upload-csv-lead">
+                </label>
+            </div>
+            <span class="popup-right-separate">or</span>
+            <input type="text" class="text-input popup-right-input" placeholder="Lead name">
+            <select class="select popup-right-select">
+                <option>Select Stage</option>
+            </select>
+            <select class="select popup-right-select">
+                <option>Select Contact</option>
+            </select>
+            <input type="text" class="text-input popup-right-input" placeholder="Lead value (USD)">
+            <textarea class="text-input popup-right-input popup-right-textarea" cols="30" rows="4" placeholder="Notes"></textarea>
+            <button type="submit" class="blue-button popup-right-blue-button">
+                <!-- @import "../images/plus_1.svg" -->
+                <span class="blue-button-title">Add a new lead</span>
+            </button>
+        </form>
+    </div>
+</div>
+<div class="popup" id="add-task">
+    <div class="popup-center">
+        <div class="popup-right-header">
+            <span class="popup-center-title">Add a task</span>
+            <button class="notes-list-close popup-right-close" id="close-add-task"></button>
+        </div>
+        <form action="" class="popup-right-form popup-center-form add-task-form">
+            <input type="text" class="text-input popup-right-input" placeholder="Title">
+            <div class="popup-center-dates">
+                <input type="date" placeholder="Due to">
+                <select class="select popup-right-select">
+                    <option>Assigned to</option>
+                </select>
+            </div>
+            <select class="select popup-right-select">
+                <option>Contact person</option>
+            </select>
+            <select class="select popup-right-select">
+                <option>Type of task</option>
+            </select>
+            <textarea class="text-input popup-right-input popup-right-textarea popup-center-textarea" cols="30" rows="4" placeholder="Description"></textarea>
+            <div class="popup-center-checklist checklist">
+                <span class="checklist-title">Checklist</span>
+                <ul class="checklist-list">
+                    <li class="checklist-item">
+                        <label class="lead-table-check custom-checkbox checklist-check">
+                            <input type="checkbox" class="checklist-check-hiden">
+                            <span class="checklist-text">Task 001</span>
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </li>
+                    <li class="checklist-item">
+                        <label class="lead-table-check custom-checkbox checklist-check">
+                            <input type="checkbox" class="checklist-check-hiden">
+                            <span class="checklist-text">Task 002</span>
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </li>
+                    <li class="checklist-item">
+                        <label class="lead-table-check custom-checkbox checklist-check">
+                            <input type="checkbox" class="checklist-check-hiden">
+                            <span class="checklist-text">Task 003</span>
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="popup-center-attachment">
+                <span class="checklist-title popup-center-attachment-title">Attachment</span>
+            </div>
+            <div class="popup-center-file">
+                <label class="label" for="upload-file-task">
+                    <!-- @import "../images/upload-file-1.svg" -->
+                    <!-- @import "../images/uploaded-file.svg" -->
+                    <span class="title">+ Upload from your device</span>
+                    <input type="file" name="csv" id="upload-file-task">
+                </label>
+            </div>
+            <button type="submit" class="blue-button popup-right-blue-button add-task-submit">
+                <!-- @import "../images/plus_1.svg" -->
+                <span class="blue-button-title">Add a task</span>
+            </button>
+        </form>
+    </div>
+</div>

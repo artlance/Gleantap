@@ -1,0 +1,1395 @@
+<!-- $site-title = Groups -->
+<!-- @import "parts/_head.kit" -->
+    <main class="main-site">
+        <!-- @import "parts/_sidebar-cmp.kit" -->
+        <section class="messaging">
+            <div class="messaging-chats chats cmp-chats groups-chats" id="groups-chats">
+                <div class="chats-head">
+                    <ul class="chats-head-tags cmp-chats-head-tags">
+                        <li class="chats-head-tag chats-head-tag--push">Campaigns</li>
+                        <li class="chats-head-tag selected">Groups</li>
+                        <li class="chats-head-tag">Contacts</li>
+                    </ul>
+                    <input type="text" class="chats-head-input" placeholder="Search...">
+                    <button class="square-button square-button--empty" id="groups-filter-open">
+                        <!-- @import "images/filter.svg" -->
+                    </button>
+                    <div class="cmp-chats-header-title">
+                        <span class="cmp-chats-header-name checklist-title">
+                            groups
+                            <i>23</i>
+                        </span>
+                        <select class="cmp-chats-header-select">
+                            <option value="">All groups</option>
+                        </select>
+                    </div>
+                </div>
+                <ul class="chats-list cmp-chats-list">
+                    <li class="chats-item cmp-chats-item groups-chats-item selected favorite">
+                        <div class="chats-item-content">
+                            <span class="chats-item-title groups-item-title">Group name</span>
+                            <span class="chats-item-text cmp-chats-item-labels">
+                                <span class="cmp-chats-item-label">Group type</span>
+                                <span class="cmp-chats-item-label">Other tag</span>
+                            </span>
+                        </div>
+                        <div class="chats-item-info cmp-chats-item-info">
+                            <span class="chats-item-time cmp-chats-item-date">
+                                03.29.2020
+                            </span>
+                            <!-- @import "images/star.svg" -->
+                        </div>
+                    </li>
+                    <li class="chats-item cmp-chats-item groups-chats-item">
+                        <div class="chats-item-content">
+                            <span class="chats-item-title groups-item-title"><b>Christmas group</b></span>
+                            <span class="cpm-chats-item-count cpm-chats-item-count-in-tags">1</span>
+                            <span class="chats-item-text cmp-chats-item-labels">
+                                <span class="cmp-chats-item-label">Group type</span>
+                                <span class="cmp-chats-item-label">Other tag</span>
+                            </span>
+                        </div>
+                        <div class="chats-item-info cmp-chats-item-info">
+                            <span class="chats-item-time cmp-chats-item-date">
+                                03.29.2020
+                            </span>
+                            <!-- @import "images/star.svg" -->
+                        </div>
+                    </li>
+                    <li class="chats-item cmp-chats-item groups-chats-item">
+                        <div class="chats-item-content">
+                            <span class="chats-item-title groups-item-title">Test group</span>
+                            <span class="chats-item-text cmp-chats-item-labels">
+                                <span class="cmp-chats-item-label">Group type</span>
+                                <span class="cmp-chats-item-label">Other tag</span>
+                            </span>
+                        </div>
+                        <div class="chats-item-info cmp-chats-item-info">
+                            <span class="chats-item-time cmp-chats-item-date">
+                                03.29.2020
+                            </span>
+                            <!-- @import "images/star.svg" -->
+                        </div>
+                    </li>
+                    <li class="chats-item cmp-chats-item groups-chats-item">
+                        <div class="chats-item-content">
+                            <span class="chats-item-title groups-item-title">Group name</span>
+                            <span class="chats-item-text cmp-chats-item-labels">
+                                <span class="cmp-chats-item-label">Group type</span>
+                                <span class="cmp-chats-item-label">Other tag</span>
+                            </span>
+                        </div>
+                        <div class="chats-item-info cmp-chats-item-info">
+                            <span class="chats-item-time cmp-chats-item-date">
+                                03.29.2020
+                            </span>
+                            <!-- @import "images/star.svg" -->
+                        </div>
+                    </li>
+                </ul>
+                <div class="chats-footer cmp-chats-footer groups-footer">
+                    <button class="leads-header-blue-button blue-button chats-footer-button" id="create-new-group-toggle">
+                        <!-- @import "images/compose.svg" -->
+                        <span class="blue-button-title">Create new group</span>
+                    </button>
+                </div>
+            </div>
+            <div class="messaging-chats chats cmp-chats groups-chats groups-filter" id="groups-filter">
+                <div class="groups-filter-header">
+                    <button class="groups-filter-header-button" id="groups-filter-close">
+                        <!-- @import "images/back-arrow.svg" -->
+                    </button>
+                    <span class="groups-filter-header-title">Filter</span>
+                </div>
+                <div class="groups-filter-body">
+                    <div class="groups-create-customer-section">
+                        <span class="cmp-create-from-scratch-item-tags-title groups-audience-body-title">Keywords</span>
+                        <div class="groups-create-customer-inputs">
+                            <input type="text" class="groups-create-customer-input" placeholder="Type your keywords...">
+                        </div>
+                    </div>
+                    <div class="groups-create-customer-section">
+                        <span class="cmp-create-from-scratch-item-tags-title groups-audience-body-title">Campaign type</span>
+                        <div class="groups-create-customer-inputs">
+                            <select class="select groups-create-customer-select">
+                                <option value="">Campaigns type 1</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="groups-create-customer-section">
+                        <span class="cmp-create-from-scratch-item-tags-title groups-audience-body-title">Choose segment</span>
+                        <div class="groups-create-customer-inputs">
+                            <label class="groups-filter-check">
+                                <span>Segment 01</span>
+                                <input type="radio" name="segment">
+                                <!-- @import "images/check.svg" -->
+                            </label>
+                            <label class="groups-filter-check">
+                                <span>Segment 02</span>
+                                <input type="radio"  name="segment">
+                                <!-- @import "images/check.svg" -->
+                            </label>
+                            <label class="groups-filter-check">
+                                <span>Segment 03</span>
+                                <input type="radio" checked="checked" name="segment">
+                                <!-- @import "images/check.svg" -->
+                            </label>
+                        </div>
+                    </div>
+                    <div class="groups-create-customer-section">
+                        <span class="cmp-create-from-scratch-item-tags-title groups-audience-body-title">status</span>
+                        <div class="groups-create-customer-inputs">
+                            <span class="groups-filter-status">Clicked</span>
+                            <span class="groups-filter-status disabled">Unread</span>
+                            <span class="groups-filter-status">Responded</span>
+                        </div>
+                    </div>
+                    <div class="groups-create-customer-section">
+                        <span class="cmp-create-from-scratch-item-tags-title groups-audience-body-title">Sort by</span>
+                        <div class="groups-create-customer-inputs">
+                            <select class="select groups-create-customer-select">
+                                <option value="">Newest Campaigns</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="groups-create-customer-section">
+                        <span class="cmp-create-from-scratch-item-tags-title groups-audience-body-title">Creaters by</span>
+                        <div class="groups-create-customer-inputs groups-filter-creaters">
+                            <img src="upload/avatar.jpg" alt="">
+                            <select class="select groups-create-customer-select">
+                                <option value="">Matilda Evans</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="chats-footer cmp-chats-footer groups-footer groups-filter-footer">
+                    <button class="leads-header-blue-button blue-button chats-footer-button" id="create-new-group-toggle">
+                        <span class="blue-button-title">APPLY FILTER</span>
+                    </button>
+                </div>
+            </div>
+            <div class="messaging-chat chat cmp-chat" id="groups-chat">
+            <div class="chat-header cmp-chat-header groups-header">
+                <div class="cmp-chat-header-info groups-header-info" id="groups-audience-toggle">
+                    <div class="groups-header-back" id="groups-header-back">
+                    <!-- @import "images/back-arrow.svg" -->
+                    </div>
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar">
+                    <div class="groups-header-info-wrap">
+                    <div class="cmp-chat-header-title">
+                        <div class="cmp-chat-header-name">Group name (20)</div>
+                    </div>
+                    <div class="cmp-chat-header-counters">
+                        <span class="cmp-chat-header-counter">
+                        <span class="groups-counter-circle" style="background-color: #F3535E;"></span>
+                        Email 129
+                        </span>
+                        <span class="cmp-chat-header-counter">
+                        <span class="groups-counter-circle" style="background-color: #FFBF4B;"></span>
+                            SMS 73
+                        </span>
+                        <span class="cmp-chat-header-counter">
+                        <span class="groups-counter-circle" style="background-color: #3C68EC"></span>
+                            Messenger 36
+                        </span>
+                    </div>
+                    </div>
+                </div>
+                <div class="cmp-chat-header-menu groups-header-menu">
+                    <ul class="chat-header-tabs groups-header-tabs" id="groups-tabs">
+                    <li class="chat-header-tab all">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#99DC13"></path>
+                        </svg>
+                        All
+                    </li>
+                    <li class="chat-header-tab sms">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"></path>
+                        </svg>
+                        SMS
+                    </li>
+                    <li class="chat-header-tab email current">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#F3535E"></path>
+                        </svg>
+                        Email
+                    </li>
+                    <li class="chat-header-tab facebook">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#3C68EC"></path>
+                        </svg>
+                        Facebook
+                    </li>
+                </ul>
+                <a href="charts.html" class="cmp-close-view cmp-menu-button groups-header-button groups-header-button--first">
+                    <!-- @import "images/cmp-thunder.svg" -->
+                </a>
+                <button class="cmp-close-view cmp-menu-button groups-header-button" id="cmp-chat-menu-toggle">
+                    <!-- @import "images/cmp-menu.svg" -->
+                </button>
+                <ul class="cmp-chat-header-menu-list">
+                    <li>
+                        <!-- @import "images/edit.svg" -->
+                        Edit
+                    </li>
+                    <li>
+                        <!-- @import "images/cmp-copy.svg" -->
+                        Clone
+                    </li>
+                    <li>
+                        <!-- @import "images/trash-red.svg" -->
+                        Delete
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <div class="chat-body cmp-chat-body">
+                <div class="chat-message cmp-chat-message">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                    <span class="all-avatar-label" style="background-color: #FFBF4B;">SMS</span>
+                    <div class="notes-list-item chat-message-content cmp-chat-message-content">
+                        <span class="notes-list-item-title chat-message-title">Christopher Walker</span>
+                        <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                        <span class="notes-list-item-text chat-message-text cmp-chat-message-text">
+                            Hi Arina. Welcome to the team!
+                        </span>
+                        <div class="chat-message-buttons">
+                            <button class="chat-message-comment chat-message-button cmp-comments-toggle">
+                                <!-- @import "images/comment.svg" -->
+                                7 comments
+                            </button>
+                            <button class="chat-message-comment cmp-chat-message-copy chat-message-button">
+                                <!-- @import "images/cmp-copy.svg" -->
+                                Copy
+                            </button>
+                            <button class="chat-message-comment cmp-chat-message-unread chat-message-button">
+                                <!-- @import "images/cmp-mail.svg" -->
+                                Mark as unread
+                            </button>
+                            <button class="chat-message-reply chat-message-button">
+                                <!-- @import "images/reply.svg" -->
+                                Reply
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <span class="popup-right-separate chat-body-separate">Today</span>
+                <div class="chat-message cmp-chat-message">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                    <span class="all-avatar-label" style="background-color: #F3535E;">Email</span>
+                    <div class="notes-list-item chat-message-content cmp-chat-message-content">
+                        <span class="notes-list-item-title chat-message-title">Christopher Walker</span>
+                        <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                        <span class="notes-list-item-text chat-message-text cmp-chat-message-text">
+                            Hi this is some reference for your works today Arina. www.linkinhere.com
+                        </span>
+                        <div class="chat-message-buttons">
+                            <button class="chat-message-comment chat-message-button cmp-comments-toggle">
+                                <!-- @import "images/comment.svg" -->
+                                7 comments
+                            </button>
+                            <button class="chat-message-comment cmp-chat-message-copy chat-message-button">
+                                <!-- @import "images/cmp-copy.svg" -->
+                                Copy
+                            </button>
+                            <button class="chat-message-comment cmp-chat-message-unread chat-message-button">
+                                <!-- @import "images/cmp-mail.svg" -->
+                                Mark as unread
+                            </button>
+                            <button class="chat-message-reply chat-message-button">
+                                <!-- @import "images/reply.svg" -->
+                                Reply
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-message cmp-chat-message">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                    <span class="all-avatar-label" style="background-color: #3C68EC;">FB</span>
+                    <div class="notes-list-item chat-message-content cmp-chat-message-content">
+                        <span class="notes-list-item-title chat-message-title">Christopher Walker</span>
+                        <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                        <span class="notes-list-item-text chat-message-text cmp-chat-message-text">
+                            Hi Arina. Welcome to the team!
+                        </span>
+                        <div class="chat-message-buttons">
+                            <button class="chat-message-comment chat-message-button cmp-comments-toggle">
+                                <!-- @import "images/comment.svg" -->
+                                7 comments
+                            </button>
+                            <button class="chat-message-comment cmp-chat-message-copy chat-message-button">
+                                <!-- @import "images/cmp-copy.svg" -->
+                                Copy
+                            </button>
+                            <button class="chat-message-comment cmp-chat-message-unread chat-message-button">
+                                <!-- @import "images/cmp-mail.svg" -->
+                                Mark as unread
+                            </button>
+                            <button class="chat-message-reply chat-message-button">
+                                <!-- @import "images/reply.svg" -->
+                                Reply
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-message cmp-chat-message">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar chat-header-avatar" />
+                    <span class="all-avatar-label" style="background-color: #FFBF4B;">SMS</span>
+                    <div class="notes-list-item chat-message-content cmp-chat-message-content">
+                    <span class="notes-list-item-title chat-message-title">Christopher Walker</span>
+                    <span class="notes-list-item-date chat-message-date">8:25 PM</span>
+                    <span class="notes-list-item-text chat-message-text cmp-chat-message-text">
+                        Hi Arina. Welcome to the team!
+                    </span>
+                    <div class="chat-message-buttons">
+                        <button class="chat-message-comment chat-message-button cmp-comments-toggle">
+                        <!-- @import "images/comment.svg" -->
+                        7 comments
+                        </button>
+                        <button class="chat-message-comment cmp-chat-message-copy chat-message-button">
+                        <!-- @import "images/cmp-copy.svg" -->
+                        Copy
+                        </button>
+                        <button class="chat-message-comment cmp-chat-message-unread chat-message-button">
+                        <!-- @import "images/cmp-mail.svg" -->
+                        Mark as unread
+                        </button>
+                        <button class="chat-message-reply chat-message-button">
+                        <!-- @import "images/reply.svg" -->
+                        Reply
+                        </button>
+                    </div>
+                    </div>
+                </div>
+                <span class="popup-right-separate chat-body-separate">Yesterday</span>
+            </div>
+            <form class="chat-footer cmp-chat-footer">
+                <ul class="chat-footer-tags cmp-chat-footer-tags">
+                    <div class="chat-footer-tag cmp-chat-footer-tag groups-footer-select" id="groups-footer-select">
+                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#F3535E" />
+                        </svg>
+                        <select class="chat-footer-tag-select-replace cmp-chat-footer-select select">
+                            <option value="">support@mail.com</option>
+                        </select>
+                        <ul class="groups-footer-list">
+                            <li class="groups-footer-list-item">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B" />
+                                </svg>
+                                (510) 945 1277
+                            </li>
+                            <li class="groups-footer-list-item">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B" />
+                                </svg>
+                                (510) 987 4567
+                            </li>
+                            <li class="groups-footer-list-item selected">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#F3535E" />
+                                </svg>
+                                support@mail.com
+                            </li>
+                            <li class="groups-footer-list-item">
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#3C68EC" />
+                                </svg>
+                                @facebook-id
+                            </li>
+                            <div class="groups-footer-list-bottom">
+                                <button class="cmp-footer-skyblue-button groups-footer-list-button">Cancel</button>
+                            </div>
+                        </ul>
+                    </div>
+                </ul>
+                <div class="cmp-footer-center">
+                    <input data-textarea="textarea-1" type="text" class="text-input popup-right-input chat-input cmp-chat-input" placeholder="Enter your message" />
+                    <div class="cpm-chat-footer-note">
+                        <!-- @import "images/unread-note.svg" -->
+                    </div>
+                    <div class="files-pull" style="display: block;">
+                        <template class="files-pull-template">
+                            <div class="files-pull-list-item">
+                                <a href="#" class="files-pull-list-item-remove"><!-- @import "images/close.svg" --></a>
+                                <div class="files-pull-list-item-icon"><!-- @import "images/file.svg" --></div>
+                                <div class="files-pull-list-item-name"></div>
+                                <div class="files-pull-list-item-size"></div>
+                            </div>
+                        </template>
+                        <div class="files-pull-list" data-pull-list="file-1">
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-footer-buttons">
+                    <div class="chat-footer-left-buttons">
+                        <div class="chat-footer-left-button-wrap drop">
+                            <button class="chat-footer-left-button drop-toggle">
+                                <!-- @import "images/smile.svg" -->
+                            </button>
+                            <div class="emotions-panel emotions-panel-top drop-block">
+                                <ul class="emotions-list" data-emotions-textarea="textarea-1">
+                                    <li><button>😀</button></li>
+                                    <li><button>😃</button></li>
+                                    <li><button>😄</button></li>
+                                    <li><button>😁</button></li>
+                                    <li><button>😆</button></li>
+                                    <li><button>😅</button></li>
+                                    <li><button>😂</button></li>
+                                    <li><button>🤣</button></li>
+                                    <li><button>😀</button></li>
+                                    <li><button>😃</button></li>
+                                    <li><button>😄</button></li>
+                                    <li><button>😁</button></li>
+                                    <li><button>😆</button></li>
+                                    <li><button>😅</button></li>
+                                    <li><button>😂</button></li>
+                                    <li><button>🤣</button></li>
+                                    <li><button>😀</button></li>
+                                    <li><button>😃</button></li>
+                                    <li><button>😄</button></li>
+                                    <li><button>😁</button></li>
+                                    <li><button>😆</button></li>
+                                    <li><button>😅</button></li>
+                                    <li><button>😂</button></li>
+                                    <li><button>🤣</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="chat-footer-left-button-wrap">
+                            <div class="chat-footer-left-button">
+                                <input type="file" name="file-1" class="file-custom" data-pull="file-1" id="file-1" multiple>
+                                <label for="file-1" class="add-action-form-option add-action-form-option-file"><!-- @import "images/goal-9.svg" --></label>
+                            </div>
+                        </div>
+                        <div class="chat-footer-left-button-wrap">
+                            <button class="chat-footer-left-button">
+                                <!-- @import "images/tablet.svg" -->
+                            </button>
+                        </div>
+                        <div class="chat-footer-left-button-wrap">
+                            <button class="chat-footer-left-button">
+                                <!-- @import "images/brackets.svg" -->
+                            </button>
+                        </div>
+                        <div class="chat-footer-left-button-wrap">
+                            <button class="chat-footer-left-button">
+                                <!-- @import "images/pen.svg" -->
+                            </button>
+                        </div>
+                        <div class="chat-footer-left-button-wrap">
+                            <button class="chat-footer-left-button newsletter-mail-button">
+                                <!-- @import "images/newsletter-mail.svg" -->
+                                <!-- @import "images/newsletter-mail-mobile.svg" -->
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat-footer-right-buttons">
+                        <div class="chat-footer-specific drop groups-footer-drop">
+                            <button class="chat-footer-latest chat-footer-left-button drop-toggle">
+                                <!-- @import "images/clock.svg" -->
+                            </button>
+                            <div class="chat-footer-specific-block drop-block">
+                                <div class="datepicker"></div>
+                                <div class="create-campaign-specific-title">Send message at</div>
+                                <div class="create-campaign-specific-row">
+                                    <div class="create-campaign-specific-time-small">
+                                        <select class="select select-time">
+                                            <option>00</option>
+                                        </select>
+                                    </div>
+                                    <div class="create-campaign-specific-time-small">
+                                        <select class="select select-time">
+                                            <option>00</option>
+                                        </select>
+                                    </div>
+                                    <div class="create-campaign-specific-period">
+                                        <select class="select">
+                                            <option>AM</option>
+                                            <option>PM</option>
+                                        </select>
+                                    </div>
+                                    <div class="create-campaign-specific-date">
+                                        <input type="text" class="input-text" placeholder="mm-dd-yyyy" readonly>
+                                    </div>
+                                </div>
+                                <!-- /.create-campaign-specific-row -->
+                            </div>
+                            <!-- /.chat-footer-specific-block -->
+                        </div>
+                        <!-- /.chat-footer-specific -->
+                        <button type="submit" class="chat-send blue-button popup-right-blue-button chat-send" id="groups-send-toggle">
+                            <!-- @import "images/chat-send.svg" -->
+                            <span class="blue-button-title">Send</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            </div>
+            <div class="messaging-chat chat cmp-chat cmp-comments groups-audience" id="groups-audience">
+                <div class="cmp-comments-wrap">
+                    <div class="chat-header cmp-chat-header groups-audience-header">
+                        <div class="cmp-chat-header-info">
+                            <div class="cmp-chat-header-title">
+                                <div class="cmp-chat-header-name groups-audience-title">Audience</div>
+                            </div>
+                        </div>
+                        <div class="cmp-chat-header-menu">
+                            <button class="cmp-close-view cmp-menu-button groups-audience-close" id="groups-audience-close">
+                                <!-- @import "images/close-view.svg" -->
+                            </button>
+                        </div>
+                        <input type="text" class="chats-head-input groups-audience-search" placeholder="Search...">
+                        <button class="blue-button pipeline-column-button groups-audience-header-button" id="groups-add-customer-open">
+                            <!-- @import "images/plus_1.svg" -->
+                            <span class="blue-button-title">Add new</span>
+                        </button>
+                        <button class="blue-button pipeline-column-button groups-audience-header-button" id="groups-add-csv-open">
+                            <span class="blue-button-title">Import CSV</span>
+                        </button>
+                    </div>
+                    <div class="chat-body cmp-chat-body cmp-comments-body groups-audience-body">
+                        <span class="cmp-create-from-scratch-item-tags-title groups-audience-body-title">Customers <i>44</i></span>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item deleted">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item deleted">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item deleted">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item deleted">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item deleted">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item deleted">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item deleted">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item deleted">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                        <div class="chat-message groups-audience-item deleted">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-audience-item-button">
+                                <!-- @import "images/trash-red.svg" -->
+                            </button>
+                            <span class="groups-audience-item-label">Deleted</span>
+                        </div>
+                    </div>
+                    <div class="chat-footer cmp-comments-footer">
+                        <button class="leads-header-blue-button blue-button chats-footer-button">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="messaging-chat chat cmp-chat cmp-comments groups-audience" id="groups-add-customer">
+                <div class="cmp-comments-wrap">
+                    <div class="chat-header cmp-chat-header groups-audience-header">
+                        <div class="cmp-chat-header-info groups-add-customer-header">
+                            <button class="cmp-close-view cmp-menu-button" id="groups-add-customer-close">
+                                <!-- @import "images/back-arrow.svg" -->
+                            </button>
+                            <div class="cmp-chat-header-title">
+                                <div class="cmp-chat-header-name groups-audience-title">Add customer</div>
+                            </div>
+                        </div>
+                        <input type="text" class="chats-head-input groups-audience-search" placeholder="Search...">
+                        <button class="blue-button pipeline-column-button groups-audience-header-button groups-add-customer-header-button" id="groups-create-customer-open">
+                            <!-- @import "images/add-customer.svg" -->
+                            <span class="blue-button-title">Create new</span>
+                        </button>
+                    </div>
+                    <div class="chat-body cmp-chat-body cmp-comments-body groups-audience-body">
+                        <span class="cmp-create-from-scratch-item-tags-title groups-audience-body-title">Most contacted</span>
+                        <div class="chat-message groups-audience-item groups-add-customer-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-add-customer-item-button">
+                                + Add
+                            </button>
+                        </div>
+                        <div class="chat-message groups-audience-item groups-add-customer-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-add-customer-item-button">
+                                + Add
+                            </button>
+                        </div>
+                        <div class="chat-message groups-audience-item groups-add-customer-item added">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-add-customer-item-button">
+                                Added
+                            </button>
+                        </div>
+                        <div class="chat-message groups-audience-item groups-add-customer-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-add-customer-item-button">
+                                + Add
+                            </button>
+                        </div>
+                        <div class="groups-add-customer-slice">
+                            <span class="cmp-create-from-scratch-item-tags-title groups-audience-body-title">All contacts <i>424</i></span>
+                            <select class="groups-add-customer-select">
+                                <option value="">Sort by</option>
+                            </select>
+                        </div>
+                        <div class="chat-message groups-audience-item groups-add-customer-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-add-customer-item-button">
+                                + Add
+                            </button>
+                        </div>
+                        <div class="chat-message groups-audience-item groups-add-customer-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-add-customer-item-button">
+                                + Add
+                            </button>
+                        </div>
+                        <div class="chat-message groups-audience-item groups-add-customer-item added">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-add-customer-item-button">
+                                Added
+                            </button>
+                        </div>
+                        <div class="chat-message groups-audience-item groups-add-customer-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-add-customer-item-button">
+                                + Add
+                            </button>
+                        </div>
+                        <div class="chat-message groups-audience-item groups-add-customer-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-add-customer-item-button">
+                                + Add
+                            </button>
+                        </div>
+                        <div class="chat-message groups-audience-item groups-add-customer-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-add-customer-item-button">
+                                + Add
+                            </button>
+                        </div>
+                        <div class="chat-message groups-audience-item groups-add-customer-item added">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-add-customer-item-button">
+                                Added
+                            </button>
+                        </div>
+                        <div class="chat-message groups-audience-item groups-add-customer-item">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                            <div class="notes-list-item chat-message-content groups-audience-item-content">
+                                <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                                <span class="notes-list-item-date chat-message-date">mail@example.com</span>
+                            </div>
+                            <button class="chat-footer-left-button groups-add-customer-item-button">
+                                + Add
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chat-footer cmp-comments-footer">
+                        <button class="leads-header-blue-button blue-button chats-footer-button">
+                            Save
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="messaging-chat chat cmp-chat cmp-comments groups-audience" id="groups-create-customer">
+                <div class="cmp-comments-wrap">
+                    <div class="chat-header cmp-chat-header groups-audience-header">
+                        <div class="cmp-chat-header-info groups-add-customer-header">
+                            <button class="cmp-close-view cmp-menu-button" id="groups-create-customer-close">
+                                <!-- @import "images/back-arrow.svg" -->
+                            </button>
+                            <div class="cmp-chat-header-title">
+                                <div class="cmp-chat-header-name groups-audience-title">Create new customer</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-body cmp-chat-body cmp-comments-body groups-audience-body groups-create-customer-body">
+                        <div class="groups-create-customer-avatar">
+                            <img src="/upload/avatar.jpg" alt="" class="groups-create-customer-avatar-image">
+                            <div class="groups-create-customer-avatar-content">
+                                <label for="groups-create-customer-avatar" class="groups-create-customer-avatar-input">
+                                    Upload pict
+                                    <input id="groups-create-customer-avatar" type="file">
+                                </label>
+                                <button class="groups-create-customer-avatar-button">Delete</button>
+                                <span class="groups-create-customer-avatar-info">500x500px - Max 1MB</span>
+                            </div>
+                        </div>
+                        <div class="groups-create-customer-sections">
+                            <div class="groups-create-customer-section">
+                                <span class="cmp-create-from-scratch-item-tags-title groups-audience-body-title">PERSONAL INFO</span>
+                                <div class="groups-create-customer-inputs">
+                                    <input type="text" class="groups-create-customer-input half" placeholder="First Name">
+                                    <input type="text" class="groups-create-customer-input half" placeholder="Last Name">
+                                    <input type="text" class="groups-create-customer-input" placeholder="Email address">
+                                    <input type="text" class="groups-create-customer-input phone" placeholder="Phone number">
+                                    <textarea class="groups-create-customer-input groups-create-customer-textarea" cols="30" rows="4" placeholder="Address"></textarea>
+                                    <select class="select groups-create-customer-select">
+                                        <option value="">State</option>
+                                    </select>
+                                    <input type="text" class="groups-create-customer-input two" placeholder="City">
+                                    <input type="text" class="groups-create-customer-input three" placeholder="ZIP">
+                                </div>
+                            </div>
+                            <div class="groups-create-customer-section">
+                                <span class="cmp-create-from-scratch-item-tags-title groups-audience-body-title">Contacts & social media</span>
+                                <div class="groups-create-customer-inputs">
+                                    <div class="groups-create-customer-social">
+                                        <span>Facebook</span>
+                                        <button>
+                                            <!-- @import "images/plus.svg" -->
+                                        </button>
+                                    </div>
+                                    <div class="groups-create-customer-social-input">
+                                        <input type="text" placeholder="Your Facebook URL">
+                                        <button class="groups-create-customer-avatar-input">Connect</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="groups-create-customer-section">
+                                <span class="cmp-create-from-scratch-item-tags-title groups-audience-body-title">Time Zone</span>
+                                <div class="groups-create-customer-inputs">
+                                    <div class="groups-create-customer-social">
+                                        <span>Time Zone</span>
+                                        <button class="groups-create-customer-social-timezone">
+                                            <span>GMT +8</span>
+                                            <!-- @import "images/timezone.svg" -->
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-footer cmp-comments-footer">
+                        <button class="leads-header-blue-button blue-button chats-footer-button">
+                            Save customer
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="messaging-chat chat cmp-chat cmp-comments groups-audience" id="groups-add-csv">
+                <div class="cmp-comments-wrap">
+                    <div class="chat-header cmp-chat-header groups-audience-header">
+                        <div class="cmp-chat-header-info groups-add-customer-header">
+                            <button class="cmp-close-view cmp-menu-button" id="groups-add-csv-close">
+                                <!-- @import "images/back-arrow.svg" -->
+                            </button>
+                            <div class="cmp-chat-header-title">
+                                <div class="cmp-chat-header-name groups-audience-title">Import CSV</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chat-body cmp-chat-body cmp-comments-body groups-audience-body">
+                        <label for="groups-add-csv-input" class="groups-add-csv-input">
+                            <!-- @import "images/upload-icon.svg" -->
+                            Drag and drop file here or click...
+                            <input type="file" id="groups-add-csv-input">
+                        </label>
+                        <span class="groups-add-csv-text">Please select columns as they appear in your CSV file</span>
+                        <div class="groups-add-csv-column">
+                            <span>Column 1</span>
+                            <select name="" id="" class="select">
+                                <option value="">Ignore</option>
+                            </select>
+                        </div>
+                        <div class="groups-add-csv-column">
+                            <span>Column 2</span>
+                            <select name="" id="" class="select">
+                                <option value="">Ignore</option>
+                            </select>
+                        </div>
+                        <div class="groups-add-csv-uploaded">
+                            <span class="groups-add-csv-uploaded-title">Uploaded CSV File Data</span>
+                            <span class="groups-add-csv-uploaded-item">Username; Identifier;First name;Last name</span>
+                            <span class="groups-add-csv-uploaded-item">booker12;9012;Rachel;Booker</span>
+                            <span class="groups-add-csv-uploaded-item">grey07;2070;Laura;Grey</span>
+                        </div>
+                    </div>
+                    <div class="chat-footer cmp-comments-footer">
+                        <button class="leads-header-blue-button blue-button chats-footer-button">
+                            Continue
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="create-new-group" id="create-new-group">
+            <div class="chat-header create-new-group-header">
+                <div class="cmp-chat-header-info cmp-create-from-template-info cmp-create-from-scratch-info">
+                    <div class="cmp-chat-header-title">
+                        <div class="cmp-create-from-scratch-title">New group</div>
+                    </div>
+                </div>
+                <button class="cmp-close-view cmp-menu-button create-new-group-close" data-id="close-new-group">
+                    <!-- @import "images/close-view.svg" -->
+                </button>
+            </div>
+            <div class="cmp-create-from-scratch-body create-new-group-body">
+                <div class="cmp-create-from-scratch-item create-new-group--first-item">
+                    <div class="create-new-group-item-section">
+                        <span class="cmp-create-from-scratch-item-tags-title cmp-create-from-scratch-item-tags-title-step-2">Segment Name</span>
+                        <input type="text" class="input-text" placeholder="Enter Segment Name">
+                    </div>
+                    <div class="create-new-group-item-section">
+                        <span class="cmp-create-from-scratch-item-tags-title cmp-create-from-scratch-item-tags-title-step-2">Type</span>
+                        <div class="create-new-segment-radios">
+                            <label class="create-new-segment-radio">
+                                <input type="radio" name="type" checked="">
+                                <i>
+                                    <!-- @import "images/cmp-done.svg" -->
+                                </i>
+                                <span>Static</span>
+                            </label>
+                            <label class="create-new-segment-radio">
+                                <input type="radio" name="type">
+                                <i>
+                                    <!-- @import "images/cmp-done.svg" -->
+                                </i>
+                                <span>Dynamic</span>
+                            </label>
+                        </div>
+                        <input type="text" class="input-text" placeholder="Enter the tags here">
+                    </div>
+                </div>
+                <div class="cmp-create-from-scratch-item create-new-group--second-item create-new-group-corner">
+                    <div class="create-new-group-corner-item">
+                        <span class="create-new-group-corner-title">Total Size</span>
+                        <span class="create-new-group-corner-value">20</span>
+                    </div>
+                    <div class="create-new-group-corner-item create-new-group-corner-item--half">
+                        <span class="create-new-group-corner-title">Emails</span>
+                        <a href="#" class="create-new-group-corner-link">20 emails</a>
+                    </div>
+                    <div class="create-new-group-corner-item create-new-group-corner-item--half">
+                        <span class="create-new-group-corner-title">Phone</span>
+                        <span class="create-new-group-corner-value">20</span>
+                    </div>
+                    <div class="create-new-group-corner-item">
+                        <span class="create-new-group-corner-title">Facebook</span>
+                        <a href="#" class="create-new-group-corner-link">www.namewebsite.com</a>
+                    </div>
+                    <div class="create-new-group-corner-item">
+                        <button class="cmp-footer-skyblue-button create-new-group-skyblue">Calculate</button>
+                    </div>
+                </div>
+                <div class="cmp-criteria create-new-group-criteria">
+                    <div class="create-new-group-title">
+                        <span class="cmp-create-from-scratch-title" style="padding-right: 7px;">Criteria</span>
+                        <span class="cmp-create-from-scratch-item-tags-title">Segments user*</span>
+                    </div>
+                    <div class="cmp-criteria-item">
+                        <span class="cmp-criteria-item-title create-new-group-criteria-title">All contacts matching these conditions</span>
+                        <div class="cmp-criteria-item-row create-new-group-criteria-row">
+                            <select class="select create-new-group-criteria-item">
+                                <option value="">Check-In</option>
+                            </select>
+                            <select class="select create-new-group-criteria-item">
+                                <option value="">Equal To</option>
+                            </select>
+                            <input type="text" class="input-text create-new-group-criteria-item" placeholder="YY-MM-DD">
+                            <button class="chat-footer-left-button cmp-criteria-item-row-delete">
+                                <!-- @import "images/trash-red.svg" -->
+                                <span>Delete</span>
+                            </button>
+                        </div>
+                        <div class="cmp-criteria-item-row create-new-group-criteria-row">
+                            <select class="select create-new-group-criteria-item">
+                                <option value="">Check-In</option>
+                            </select>
+                            <select class="select create-new-group-criteria-item">
+                                <option value="">Check-In</option>
+                            </select>
+                            <select class="select create-new-group-criteria-item">
+                                <option value="">Check-In</option>
+                            </select>
+                            <select class="select create-new-group-criteria-item">
+                                <option value="">Check-In</option>
+                            </select>
+                            <select class="select create-new-group-criteria-item">
+                                <option value="">Check-In</option>
+                            </select>
+                            <select class="select create-new-group-criteria-item">
+                                <option value="">Check-In</option>
+                            </select>
+                            <button class="chat-footer-left-button cmp-criteria-item-row-delete">
+                                <!-- @import "images/trash-red.svg" -->
+                                <span>Delete</span>
+                            </button>
+                        </div>
+                        <button class="chat-footer-left-button cmp-criteria-add-condition create-new-group-criteria-cond">
+                            <!-- @import "images/cmp-info-plus.svg" -->
+                            Add new condintions
+                        </button>
+                    </div>
+                    <div class="cmp-criteria-step create-new-group-criteria-step">
+                        <div class="profile-top-tabs cmp-criteria-step-tabs create-new-group-criteria-step-tabs">
+                            <button class="profile-top-tab selected" data-id="profile-details">
+                                <span class="profile-top-tab-text">Include</span>
+                            </button>
+                            <button class="profile-top-tab" data-id="profile-activities">
+                                <span class="profile-top-tab-text">Exclude</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cmp-criteria-item">
+                        <span class="cmp-criteria-item-title create-new-group-criteria-title">Excludes all contacts that match these conditions</span>
+                        <div class="cmp-criteria-item-row create-new-group-criteria-row">
+                            <select class="select create-new-group-criteria-item">
+                                <option value="">Check-In</option>
+                            </select>
+                            <select class="select create-new-group-criteria-item">
+                                <option value="">Equal To</option>
+                            </select>
+                            <select class="select create-new-group-criteria-item">
+                                <option value="">Equal To</option>
+                            </select>
+                            <select class="select create-new-group-criteria-item">
+                                <option value="">Equal To</option>
+                            </select>
+                            <select class="select create-new-group-criteria-item">
+                                <option value="">Equal To</option>
+                            </select>
+                            <button class="chat-footer-left-button cmp-criteria-item-row-delete">
+                                <!-- @import "images/trash-red.svg" -->
+                                <span>Delete</span>
+                            </button>
+                        </div>
+                        <button class="chat-footer-left-button cmp-criteria-add-condition create-new-group-criteria-cond">
+                            <!-- @import "images/cmp-info-plus.svg" -->
+                            Add new condintions
+                        </button>
+                    </div>
+                    <button class="cmp-create-from-scratch-button skyblue cmp-criteria-add-group create-new-group-add-group">
+                        <!-- @import "images/plus_1.svg" -->
+                        Add New Group
+                    </button>
+                </div>
+            </div>
+            <div class="cmp-create-from-scratch-footer current create-new-group-footer">
+                <button class="cmp-create-from-scratch-button skyblue" data-id="close-new-group">Cancel</button>
+                <button class="cmp-create-from-scratch-button next" data-id="close-new-group">
+                    Create group
+                </button>
+            </div>
+            </div>
+        </section>
+    </main>
+    <div class="popup remove-popup" id="send-groups">
+        <div class="popup-center cmp-send-popup">
+            <div class="popup-right-header">
+                <span class="popup-center-title">Invalid users</span>
+            </div>
+            <div class="groups-send-list">
+                <div class="chat-message groups-audience-item groups-add-customer-item">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                    <div class="notes-list-item chat-message-content groups-audience-item-content">
+                        <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                        <span class="notes-list-item-date chat-message-date">missed email</span>
+                    </div>
+                </div>
+                <div class="chat-message groups-audience-item groups-add-customer-item">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                    <div class="notes-list-item chat-message-content groups-audience-item-content">
+                        <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                        <span class="notes-list-item-date chat-message-date">missed email</span>
+                    </div>
+                </div>
+                <div class="chat-message groups-audience-item groups-add-customer-item">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                    <div class="notes-list-item chat-message-content groups-audience-item-content">
+                        <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                        <span class="notes-list-item-date chat-message-date">missed email</span>
+                    </div>
+                </div>
+                <div class="chat-message groups-audience-item groups-add-customer-item">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                    <div class="notes-list-item chat-message-content groups-audience-item-content">
+                        <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                        <span class="notes-list-item-date chat-message-date">missed email</span>
+                    </div>
+                </div>
+                <div class="chat-message groups-audience-item groups-add-customer-item">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                    <div class="notes-list-item chat-message-content groups-audience-item-content">
+                        <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                        <span class="notes-list-item-date chat-message-date">missed email</span>
+                    </div>
+                </div>
+                <div class="chat-message groups-audience-item groups-add-customer-item">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                    <div class="notes-list-item chat-message-content groups-audience-item-content">
+                        <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                        <span class="notes-list-item-date chat-message-date">missed email</span>
+                    </div>
+                </div>
+                <div class="chat-message groups-audience-item groups-add-customer-item">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                    <div class="notes-list-item chat-message-content groups-audience-item-content">
+                        <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                        <span class="notes-list-item-date chat-message-date">missed email</span>
+                    </div>
+                </div>
+                <div class="chat-message groups-audience-item groups-add-customer-item">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                    <div class="notes-list-item chat-message-content groups-audience-item-content">
+                        <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                        <span class="notes-list-item-date chat-message-date">missed email</span>
+                    </div>
+                </div>
+                <div class="chat-message groups-audience-item groups-add-customer-item">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                    <div class="notes-list-item chat-message-content groups-audience-item-content">
+                        <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                        <span class="notes-list-item-date chat-message-date">missed email</span>
+                    </div>
+                </div>
+                <div class="chat-message groups-audience-item groups-add-customer-item">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                    <div class="notes-list-item chat-message-content groups-audience-item-content">
+                        <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                        <span class="notes-list-item-date chat-message-date">missed email</span>
+                    </div>
+                </div>
+                <div class="chat-message groups-audience-item groups-add-customer-item">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                    <div class="notes-list-item chat-message-content groups-audience-item-content">
+                        <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                        <span class="notes-list-item-date chat-message-date">missed email</span>
+                    </div>
+                </div>
+                <div class="chat-message groups-audience-item groups-add-customer-item">
+                    <img src="upload/avatar.jpg" alt="" class="leads-table-avatar groups-audience-item-avatar">
+                    <div class="notes-list-item chat-message-content groups-audience-item-content">
+                        <span class="notes-list-item-title chat-message-title groups-audience-item-title">Arina Sanchez</span>
+                        <span class="notes-list-item-date chat-message-date">missed email</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cmp-send-popup-buttons">
+                <button class="cmp-footer-skyblue-button" id="cmp-send-cancel">Cancel</button>
+                <button type="submit" class="chat-send blue-button popup-right-blue-button chat-send cmp-chat-send-blue" id="cmp-send-confirm">
+                    <!-- @import "images/chat-send.svg" -->
+                    <span class="blue-button-title">Send</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- /.main-site -->
+<!-- @import "parts/_foot.kit" -->

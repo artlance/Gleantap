@@ -1,0 +1,854 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>02.02.01.Segmentation - Campaigns</title>
+    <meta name="description" content="description">
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+</head>
+<body class="no-js">
+    <main class="main-site">
+<header class="sidebar-site-mobile">
+    <div class="sidebar-header">
+        <div class="sidebar-header-navigation">
+            <button class="navigation-toggle-mobile"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.625 3.5H18.375V5.25H2.625V3.5ZM2.625 9.625H18.375V11.375H2.625V9.625ZM18.375 15.75H2.625V17.5H18.375V15.75Z" fill="white"/>
+</svg>
+</button>
+        </div>
+        <a href="#" class="sidebar-header-logo">
+            <span class="sidebar-header-logo-icon"><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.05" width="27" height="27" rx="7" fill="#1C2538"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.4115 7.235C17.3316 6.41167 15.8681 6 14.0208 6C12.6875 6 11.4896 6.29833 10.4271 6.895C9.36458 7.49167 8.52778 8.34833 7.91667 9.465C7.30556 10.5817 7 11.9267 7 13.5C7 14.7 7.18056 15.765 7.54167 16.695C7.90278 17.625 8.40451 18.41 9.04688 19.05C9.68924 19.69 10.4358 20.175 11.2865 20.505C12.1372 20.835 13.0486 21 14.0208 21C15.4605 21 16.6985 20.7048 17.735 20.1145L16.1701 18.3389L16.1719 18.3325L16.0588 18.384C15.514 18.6209 14.8867 18.7362 14.1771 18.73C13.1701 18.7167 12.3316 18.4933 11.6615 18.06C10.9913 17.6267 10.4896 17.0217 10.1562 16.245C9.82292 15.4683 9.65625 14.5533 9.65625 13.5C9.65625 12.4467 9.82465 11.5267 10.1615 10.74C10.4983 9.95333 11 9.34333 11.6667 8.91C12.3333 8.47667 13.1701 8.26667 14.1771 8.28L14.3012 8.28133C15.2454 8.30169 16.0269 8.55625 16.6458 9.045C17.2888 9.55271 17.7528 10.2305 18.0378 11.0785L20.2569 9.65816C20.1491 9.40104 20.0281 9.15644 19.894 8.92439C19.5086 8.25785 19.0144 7.69472 18.4115 7.235ZM20.9583 13.15H14.4884L13.331 15.04H18.2917L18.2684 15.1844C18.1377 15.9472 17.9024 16.5874 17.5625 17.105L17.4939 17.2058L19.1315 19.0396C19.5362 18.6228 19.8795 18.1479 20.1615 17.615C20.7205 16.5583 21 15.35 21 13.99C21 13.95 20.9965 13.8267 20.9896 13.62L20.9837 13.4744C20.9794 13.3835 20.9742 13.3052 20.9681 13.2394L20.9583 13.15Z" fill="white"/>
+</svg>
+</span>
+            <span class="sidebar-header-logo-text">Campaigns</span>
+        </a>
+    </div>
+    <!-- /.sidebar-header -->
+</header>
+<aside class="sidebar-site">
+    <div class="sidebar-top">
+        <div class="sidebar-header">
+            <div class="sidebar-header-navigation">
+                <button id="toggle-sidebar"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.625 3.5H18.375V5.25H2.625V3.5ZM2.625 9.625H18.375V11.375H2.625V9.625ZM18.375 15.75H2.625V17.5H18.375V15.75Z" fill="white"/>
+</svg>
+</button>
+            </div>
+            <a href="#" class="sidebar-header-logo">
+                <span class="sidebar-header-logo-icon"><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.05" width="27" height="27" rx="7" fill="#1C2538"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.4115 7.235C17.3316 6.41167 15.8681 6 14.0208 6C12.6875 6 11.4896 6.29833 10.4271 6.895C9.36458 7.49167 8.52778 8.34833 7.91667 9.465C7.30556 10.5817 7 11.9267 7 13.5C7 14.7 7.18056 15.765 7.54167 16.695C7.90278 17.625 8.40451 18.41 9.04688 19.05C9.68924 19.69 10.4358 20.175 11.2865 20.505C12.1372 20.835 13.0486 21 14.0208 21C15.4605 21 16.6985 20.7048 17.735 20.1145L16.1701 18.3389L16.1719 18.3325L16.0588 18.384C15.514 18.6209 14.8867 18.7362 14.1771 18.73C13.1701 18.7167 12.3316 18.4933 11.6615 18.06C10.9913 17.6267 10.4896 17.0217 10.1562 16.245C9.82292 15.4683 9.65625 14.5533 9.65625 13.5C9.65625 12.4467 9.82465 11.5267 10.1615 10.74C10.4983 9.95333 11 9.34333 11.6667 8.91C12.3333 8.47667 13.1701 8.26667 14.1771 8.28L14.3012 8.28133C15.2454 8.30169 16.0269 8.55625 16.6458 9.045C17.2888 9.55271 17.7528 10.2305 18.0378 11.0785L20.2569 9.65816C20.1491 9.40104 20.0281 9.15644 19.894 8.92439C19.5086 8.25785 19.0144 7.69472 18.4115 7.235ZM20.9583 13.15H14.4884L13.331 15.04H18.2917L18.2684 15.1844C18.1377 15.9472 17.9024 16.5874 17.5625 17.105L17.4939 17.2058L19.1315 19.0396C19.5362 18.6228 19.8795 18.1479 20.1615 17.615C20.7205 16.5583 21 15.35 21 13.99C21 13.95 20.9965 13.8267 20.9896 13.62L20.9837 13.4744C20.9794 13.3835 20.9742 13.3052 20.9681 13.2394L20.9583 13.15Z" fill="white"/>
+</svg>
+</span>
+                <span class="sidebar-header-logo-text">Campaigns</span>
+            </a>
+        </div>
+        <!-- /.sidebar-header -->
+        <div class="sidebar-autor">
+            <a href="#" class="sidebar-autor-link">
+                <span class="sidebar-autor-image">
+                    <img src="upload/avatar.jpg" alt="">
+                </span>
+                <span class="sidebar-autor-content">
+                    <span class="sidebar-autor-name">Wilhelm Dowall</span>
+                    <span class="sidebar-autor-phone">(463) 929-6027</span>
+                </span>
+                <span class="sidebar-autor-drop"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.99999 3.78145L8.29999 0.481445L9.24266 1.42411L4.99999 5.66678L0.757324 1.42411L1.69999 0.481445L4.99999 3.78145Z" fill="white"/>
+</svg>
+</span>
+            </a>
+        </div>
+        <ul class="sidebar-navigation">
+            <li class="">
+                <a href="#">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.3333 21.25C20.8396 21.25 21.25 20.8396 21.25 20.3333V10.6992C21.2502 10.4161 21.1196 10.1488 20.8962 9.97501L13.5628 4.27151C13.2318 4.01399 12.7682 4.01399 12.4372 4.27151L5.10383 9.97501C4.8804 10.1488 4.7498 10.4161 4.75 10.6992V20.3333C4.75 20.8396 5.16041 21.25 5.66667 21.25H20.3333ZM12.0833 19.4167V13.9167H13.9167V19.4167H12.0833Z" fill="white"/>
+</svg>
+</span>
+                    Dashboard
+                </a>
+            </li>
+            <li class="">
+                <a href="create-campaign.html">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.83325 10.2445C3.83228 8.78602 4.4116 7.38707 5.44342 6.35629C6.47524 5.3255 7.87477 4.74757 9.33325 4.75001H16.6666C19.7035 4.75001 22.1666 7.22042 22.1666 10.2445V21.25H9.33325C6.29634 21.25 3.83325 18.7796 3.83325 15.7555V10.2445ZM14.8333 12.0833V13.9167H16.6666V12.0833H14.8333ZM9.33325 13.9167V12.0833H11.1666V13.9167H9.33325Z" fill="white"/>
+</svg>
+</span>
+                    Conversations
+                    <span class="sidebar-navigation-drop"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.99999 3.78145L8.29999 0.481445L9.24266 1.42411L4.99999 5.66678L0.757324 1.42411L1.69999 0.481445L4.99999 3.78145Z" fill="white"/>
+</svg>
+</span>
+                    <div class="sidebar-navigation-number">21</div>
+                </a>
+                <ul>
+                    <li><a href="#">Templates</a></li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="automations.html">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.3359 6.81261L19.1584 5.63428L15.9167 8.87511L17.9792 10.9376L15.9167 13.0001L17.9792 15.0634L15.9167 17.1251L19.1576 20.3668L20.3359 19.1884L18.2734 17.1259L20.3359 15.0634L18.2734 13.0001L20.3359 10.9376L18.2734 8.87511L20.3359 6.81261ZM13.8334 6.37928C13.8333 6.28327 13.8 6.19025 13.7392 6.11594V6.11511C13.6692 6.02953 13.568 5.97529 13.458 5.96435C13.348 5.95341 13.2381 5.98666 13.1526 6.05678L8.74091 9.66678H5.50008C5.03984 9.66678 4.66675 10.0399 4.66675 10.5001V15.5001C4.66675 15.9603 5.03984 16.3334 5.50008 16.3334L8.74175 16.3326L13.1526 19.9434C13.2772 20.0456 13.4495 20.0668 13.5951 19.9978C13.7407 19.9288 13.8335 19.7821 13.8334 19.6209V6.37928Z" fill="white"/>
+</svg>
+</span>
+                    Automations
+                    <span class="sidebar-navigation-drop"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.99999 3.78145L8.29999 0.481445L9.24266 1.42411L4.99999 5.66678L0.757324 1.42411L1.69999 0.481445L4.99999 3.78145Z" fill="white"/>
+</svg>
+</span>
+                    <div class="sidebar-navigation-number">34</div>
+                </a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            Chatbot
+                            <div class="sidebar-navigation-number red">5</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="pipeline.html">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M21.3334 5.5H4.66675V7.16667H21.3334V5.5ZM13.8334 20.5V22.1667H12.1667V20.5H5.50008C5.03984 20.5 4.66675 20.1269 4.66675 19.6667V8H21.3334V19.6667C21.3334 20.1269 20.9603 20.5 20.5001 20.5H13.8334ZM9.66675 11.3333C8.28604 11.3333 7.16675 12.4526 7.16675 13.8333C7.16675 15.214 8.28604 16.3333 9.66675 16.3333C11.0475 16.3333 12.1667 15.214 12.1667 13.8333H9.66675V11.3333ZM13.8334 13V11.3333H18.8334V13H13.8334ZM13.8334 14.6667V16.3333H18.8334V14.6667H13.8334Z" fill="white"/>
+</svg>
+</span>
+                    Pipeline
+                </a>
+            </li>
+            <li class="">
+                <a href="reports.html">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.8334 21.3334H7.16675C5.78604 21.3334 4.66675 20.2141 4.66675 18.8334V5.50008C4.66675 5.03984 5.03984 4.66675 5.50008 4.66675H17.1667C17.627 4.66675 18.0001 5.03984 18.0001 5.50008V15.5001H21.3334V18.8334C21.3334 20.2141 20.2141 21.3334 18.8334 21.3334ZM18.0001 17.1667V18.8334C18.0001 19.2937 18.3732 19.6667 18.8334 19.6667C19.2937 19.6667 19.6667 19.2937 19.6667 18.8334V17.1667H18.0001ZM8.00008 10.5001V8.83341H14.6667V10.5001H8.00008ZM8.00008 12.1667V13.8334H14.6667V12.1667H8.00008ZM8.00008 17.1667V15.5001H12.1667V17.1667H8.00008Z" fill="white"/>
+</svg>
+</span>
+                    Reports
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.sidebar-top -->
+    <div class="sidebar-bottom">
+        <ul class="sidebar-navigation">
+            <li>
+                <a href="#">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.7588 15.8862L19.1389 14.2573V10.2435C19.1604 8.75308 18.642 7.30515 17.6793 6.1671C16.7166 5.02905 15.3746 4.27775 13.9012 4.05192C13.0461 3.93931 12.1768 4.01036 11.3513 4.26033C10.5258 4.5103 9.76311 4.93344 9.11412 5.50152C8.46513 6.0696 7.94475 6.76956 7.58771 7.55469C7.23066 8.33982 7.04517 9.19206 7.04359 10.0546V14.2573L5.42369 15.8862C5.22022 16.0931 5.08224 16.3553 5.02699 16.6402C4.97175 16.925 5.0017 17.2199 5.1131 17.4878C5.2245 17.7557 5.4124 17.9849 5.65331 18.1466C5.89423 18.3083 6.17747 18.3954 6.46763 18.3971H9.49145V18.703C9.53348 19.6167 9.93598 20.4764 10.6107 21.0938C11.2855 21.7112 12.1775 22.0359 13.0912 21.9968C14.005 22.0359 14.897 21.7112 15.5717 21.0938C16.2465 20.4764 16.649 19.6167 16.691 18.703V18.3971H19.7148C20.005 18.3954 20.2882 18.3083 20.5291 18.1466C20.7701 17.9849 20.958 17.7557 21.0694 17.4878C21.1808 17.2199 21.2107 16.925 21.1555 16.6402C21.1002 16.3553 20.9622 16.0931 20.7588 15.8862ZM14.8911 18.703C14.8412 19.1359 14.6262 19.5328 14.2909 19.8111C13.9556 20.0894 13.5259 20.2276 13.0912 20.197C12.6566 20.2276 12.2268 20.0894 11.8915 19.8111C11.5562 19.5328 11.3412 19.1359 11.2913 18.703V18.3971H14.8911V18.703Z" fill="white"/>
+</svg>
+</span>
+                    Notifications
+                    <div class="sidebar-navigation-number">3</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.1364 4.28882C8.93621 4.68389 7.83076 5.32308 6.88959 6.16615V6.16707C7.2953 7.20405 7.20691 8.36932 6.64942 9.33324C6.09309 10.299 5.12703 10.9587 4.025 11.1253C3.76771 12.3621 3.76771 13.6386 4.025 14.8754C5.12686 15.0418 6.09288 15.7011 6.64942 16.6666C7.2072 17.6307 7.2956 18.7964 6.88959 19.8337C7.83084 20.6764 8.93629 21.3153 10.1364 21.7101C10.8316 20.8391 11.8857 20.3323 13.0001 20.3332C14.1143 20.3321 15.1684 20.8386 15.8638 21.7092C17.0639 21.3143 18.1693 20.6755 19.1106 19.8327C18.7046 18.7955 18.793 17.6298 19.3508 16.6657C19.931 15.6619 20.9118 15.0367 21.9752 14.8736C22.2323 13.6371 22.2323 12.3609 21.9752 11.1244C20.8731 10.9578 19.9071 10.2981 19.3508 9.33232C18.7933 8.3684 18.7049 7.20313 19.1106 6.16615C18.1694 5.32308 17.064 4.68389 15.8638 4.28882C15.1686 5.15976 14.1145 5.66656 13.0001 5.66565C11.8857 5.66656 10.8316 5.15976 10.1364 4.28882ZM15.7659 12.9959C15.7637 13.9827 15.233 14.8927 14.3751 15.3805C13.061 16.1276 11.3902 15.674 10.6343 14.3649C9.87848 13.0558 10.321 11.382 11.6251 10.6175C12.4764 10.1184 13.5299 10.1137 14.3856 10.6052C15.2413 11.0968 15.768 12.0091 15.7659 12.9959Z" fill="white"/>
+</svg>
+</span>
+                    Settings
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.33341 13.0001H8.83341C9.75389 13.0001 10.5001 13.7463 10.5001 14.6667V18.8334C10.5001 19.7539 9.75389 20.5001 8.83341 20.5001H6.33341C5.41294 20.5001 4.66675 19.7539 4.66675 18.8334V13.0001C4.66675 8.39758 8.39758 4.66675 13.0001 4.66675C17.6026 4.66675 21.3334 8.39758 21.3334 13.0001V18.8334C21.3334 19.7539 20.5872 20.5001 19.6667 20.5001H17.1667C16.2463 20.5001 15.5001 19.7539 15.5001 18.8334V14.6667C15.5001 13.7463 16.2463 13.0001 17.1667 13.0001H19.6667C19.6667 9.31818 16.682 6.33341 13.0001 6.33341C9.31818 6.33341 6.33341 9.31818 6.33341 13.0001Z" fill="white"/>
+</svg>
+</span>
+                    Help center
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.sidebar-bottom -->
+</aside>        <div class="content-site content-site-overflow">
+            <div class="create-campaign">
+                <div class="create-campaign-step completed">
+                    <div class="create-campaign-step-caption">
+                        <div class="create-campaign-step-number">1</div>
+                        <div class="create-campaign-step-title">Campaign name &amp;&nbsp;goal</div>
+                    </div>
+                    <!-- /.create-campaign-step-caption -->
+                    <div class="create-campaign-step-content">
+                        <div class="create-campaign-step-subtitle">Enter campaign name, goal/objective and other settings</div>
+                        <div class="create-campaign-name">
+                            <input type="text" class="input-text" placeholder="Enter campaign name...">
+                        </div>
+                        <div class="create-campaign-goal drop">
+                            <a href="#" class="create-campaign-goal-toggle drop-toggle">Select campaign goal/objective</a>
+                            <div class="create-campaign-goal-block drop-block">
+                                <div class="create-campaign-goal-list">
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-1" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-1" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM17 12H13V7H11V14H17V12Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                            <span class="create-campaign-goal-title">Web form submitted</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-2" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-2" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 15V19H20V15H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V15H4Z" fill="#B7BABF" class="svg-fill"/>
+<path d="M4 9V5H20V9H22V4C22 3.44772 21.5523 3 21 3H3C2.44772 3 2 3.44772 2 4V9H4Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                            <span class="create-campaign-goal-title">Landing page</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-3" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-3" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#B7BABF" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#B7BABF" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                            <span class="create-campaign-goal-title">Tag applied</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-4" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-4" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 9L11 9L11 7L13 7L13 9ZM13 17L11 17L11 11L13 11L13 17ZM12.01 22C17.53 22 22 17.52 22 12C22 6.48 17.53 2 12.01 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12.01 22ZM12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                            <span class="create-campaign-goal-title">Email link clicked</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-5" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-5" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.314 20.899L18.031 16.617C19.3082 15.0237 20.0029 13.042 20 11C20 6.032 15.968 2 11 2C6.032 2 2 6.032 2 11C2 15.968 6.032 20 11 20C13.042 20.0029 15.0237 19.3082 16.617 18.031L20.899 22.314L22.314 20.899ZM18 11C18.0029 12.8204 17.2941 14.5699 16.025 15.875L15.875 16.025C14.5699 17.2941 12.8204 18.0029 11 18C7.132 18 4 14.867 4 11C4 7.132 7.132 4 11 4C14.867 4 18 7.132 18 11Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                            <span class="create-campaign-goal-title">Email opened</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-6" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-6" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18 10L17 9.001L18.003 7.997C19.002 6.996 20 4.997 21 2C6.31105 2 4.08854 15.4254 3.06361 21.6166C3.0419 21.7477 3.02074 21.8756 3 22H4.998C5.664 18.667 7.331 16.834 10 16.5C14 16 17 13 18 10ZM6.334 15.819C6.51 15.236 6.707 14.66 6.94 14.036H6.939C8.995 8.51 12.42 5.085 18.013 4.218C17.5 5.362 17.015 6.156 16.585 6.586L15.585 7.587L14.172 9.002L15.628 10.457C14.498 12.542 12.265 14.201 9.752 14.515C8.435 14.68 7.294 15.122 6.334 15.819Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                            <span class="create-campaign-goal-title">Product purchased</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-7" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-7" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM17 9.5C17 10.33 16.33 11 15.5 11C14.67 11 14 10.33 14 9.5C14 8.67 14.67 8 15.5 8C16.33 8 17 8.67 17 9.5ZM8.5 11C9.33 11 10 10.33 10 9.5C10 8.67 9.33 8 8.5 8C7.67 8 7 8.67 7 9.5C7 10.33 7.67 11 8.5 11ZM17.11 14C16.31 16.04 14.33 17.5 12 17.5C9.67 17.5 7.69 16.04 6.89 14H17.11Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                            <span class="create-campaign-goal-title">Falled purchase</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-8" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-8" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 6V8H21V6H3ZM10 18H14V16H10V18ZM18 13H6V11H18V13Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                            <span class="create-campaign-goal-title">Quote status</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-9" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-9" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.828 7.75689L9.17196 13.4139C8.912 13.665 8.80775 14.0368 8.89926 14.3864C8.99078 14.736 9.26382 15.0091 9.61345 15.1006C9.96308 15.1921 10.3349 15.0878 10.586 14.8279L16.243 9.17189C17.4146 8.00022 17.4146 6.10056 16.243 4.92889C15.0713 3.75722 13.1716 3.75722 12 4.92889L6.34296 10.5859C5.05321 11.8435 4.53968 13.6978 4.99869 15.4397C5.45771 17.1817 6.81828 18.5421 8.56032 19.0008C10.3023 19.4596 12.1565 18.9458 13.414 17.6559L19.071 11.9999L20.485 13.4139L14.828 19.0709C13.0595 20.8394 10.4819 21.53 8.06613 20.8827C5.65036 20.2354 3.76344 18.3485 3.11613 15.9327C2.46883 13.5169 3.15949 10.9394 4.92796 9.17089L10.586 3.51489C12.5479 1.62003 15.6664 1.64713 17.5951 3.5758C19.5237 5.50446 19.5508 8.62299 17.656 10.5849L12 16.2439C11.2418 17.0018 10.137 17.2977 9.1015 17.0202C8.06605 16.7426 7.25734 15.9337 6.98 14.8982C6.70267 13.8626 6.99884 12.7578 7.75696 11.9999L13.414 6.34289L14.828 7.75689Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                            <span class="create-campaign-goal-title">Web form submitted</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-10" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-10" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 4V2H17V4H20.007C20.555 4 21 4.445 21 4.993V21.007C20.9994 21.5552 20.5552 21.9994 20.007 22H3.993C3.44481 21.9994 3.00055 21.5552 3 21.007V4.993C3 4.445 3.445 4 3.993 4H7ZM7 6H5V20H19V6H17V8H7V6ZM9 6V4H15V6H9Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                            <span class="create-campaign-goal-title">Landing page</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-11" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-11" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 2V4H2V6H4V21C4 21.5523 4.44772 22 5 22H19C19.5523 22 20 21.5523 20 21V6H22V4H17V2H7ZM6 20V6H18V20H6ZM9 9H11V17H9V9ZM15 9H13V17H15V9Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                            <span class="create-campaign-goal-title">Tag applied</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-12" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-12" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#B7BABF" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#B7BABF" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                            <span class="create-campaign-goal-title">Tag applied</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- /.create-campaign-goal-list -->
+                            </div>
+                            <!-- /.create-campaign-goal-block -->
+                        </div>
+                        <!-- /.create-campaign-goal -->
+                        <div class="create-campaign-tags">
+                            <div class="create-campaign-tags-title">Tags:</div>
+                            <div class="create-campaign-tags-pull">
+                                <div class="create-campaign-tags-item">
+                                    <div class="create-campaign-tag">
+                                        Automation type
+                                        <a href="#" class="create-campaign-tag-delete"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</a>
+                                    </div>
+                                </div>
+                                <div class="create-campaign-tags-item">
+                                    <div class="create-campaign-tag">
+                                        Another tag
+                                        <a href="#" class="create-campaign-tag-delete"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.create-campaign-tags-pull -->
+                            <div class="create-campaign-tags-new">
+                                <input type="text" class="create-campaign-tags-new-text" placeholder="Enter tag name...">
+                            </div>
+                        </div>
+                        <!-- /.create-campaign-tags -->
+                    </div>
+                    <!-- /.create-campaign-step-content -->
+                </div>
+                <!-- /.create-campaign-step -->
+                <div class="create-campaign-step active">
+                    <div class="create-campaign-step-caption">
+                        <div class="create-campaign-step-number">2</div>
+                        <div class="create-campaign-step-title">Segmentation</div>
+                    </div>
+                    <!-- /.create-campaign-step-caption -->
+                    <div class="create-campaign-step-content">
+                        <div class="create-campaign-step-subtitle">We have prepared pre-created segmentation settings for you.</div>
+                        <div class="create-campaign-segmentation tab">
+                            <div class="create-campaign-segmentation-caption">
+                                <div class="create-campaign-segmentation-tabs">
+                                    <ul class="tabs">
+                                        <li class="active"><a href="#">Suggested segments</a></li>
+                                        <li><a href="#">All segments</a></li>
+                                    </ul>
+                                </div>
+                                <div class="create-campaign-segmentation-options">
+                                    <div class="create-campaign-segmentation-options-inner">
+                                        <div class="create-campaign-segmentation-search">
+                                            <input type="text" class="input-text create-campaign-segmentation-search-text" placeholder="Search...">
+                                            <button class="create-campaign-segmentation-search-button"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.595 17.4159L15.0258 13.8476C16.0901 12.5199 16.669 10.8684 16.6666 9.16675C16.6666 5.02675 13.3066 1.66675 9.16663 1.66675C5.02663 1.66675 1.66663 5.02675 1.66663 9.16675C1.66663 13.3067 5.02663 16.6667 9.16663 16.6667C10.8683 16.6692 12.5197 16.0903 13.8475 15.0259L17.4158 18.5951L18.595 17.4159ZM15 9.16675C15.0023 10.6838 14.4117 12.1417 13.3541 13.2292L13.2291 13.3542C12.1415 14.4118 10.6837 15.0025 9.16663 15.0001C5.94329 15.0001 3.33329 12.3892 3.33329 9.16675C3.33329 5.94341 5.94329 3.33341 9.16663 3.33341C12.3891 3.33341 15 5.94341 15 9.16675Z" fill="#1C2538"/>
+</svg>
+</button>
+                                        </div>
+                                        <div class="create-campaign-segmentation-option">
+                                            <a href="#new-segmentation" class="button button-secondary panel-toggle">Create new</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.create-campaign-segmentation-options -->
+                            </div>
+                            <!-- /.create-campaign-segmentation-caption -->
+                            <div class="box visible">
+                                <div class="create-campaign-segmentation-list">
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-1" name="create-campaign-segmentation-1" checked>
+                                        <label for="create-campaign-segmentation-1" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-2" name="create-campaign-segmentation-2">
+                                        <label for="create-campaign-segmentation-2" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-3" name="create-campaign-segmentation-3">
+                                        <label for="create-campaign-segmentation-3" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-4" name="create-campaign-segmentation-4">
+                                        <label for="create-campaign-segmentation-4" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-5" name="create-campaign-segmentation-5">
+                                        <label for="create-campaign-segmentation-5" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-6" name="create-campaign-segmentation-6">
+                                        <label for="create-campaign-segmentation-6" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-7" name="create-campaign-segmentation-7">
+                                        <label for="create-campaign-segmentation-7" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-8" name="create-campaign-segmentation-8">
+                                        <label for="create-campaign-segmentation-8" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-9" name="create-campaign-segmentation-9">
+                                        <label for="create-campaign-segmentation-9" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-10" name="create-campaign-segmentation-10">
+                                        <label for="create-campaign-segmentation-10" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-11" name="create-campaign-segmentation-11">
+                                        <label for="create-campaign-segmentation-11" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-12" name="create-campaign-segmentation-12">
+                                        <label for="create-campaign-segmentation-12" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                </div>
+                                <!-- /.create-campaign-segmentation-list -->
+                            </div>
+                            <!-- /.box -->
+                            <div class="box">
+                                <div class="create-campaign-segmentation-list">
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-1" name="create-campaign-segmentation-all-1" checked>
+                                        <label for="create-campaign-segmentation-all-1" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-2" name="create-campaign-segmentation-all-2">
+                                        <label for="create-campaign-segmentation-all-2" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-3" name="create-campaign-segmentation-all-3">
+                                        <label for="create-campaign-segmentation-all-3" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-4" name="create-campaign-segmentation-all-4">
+                                        <label for="create-campaign-segmentation-all-4" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-5" name="create-campaign-segmentation-all-5">
+                                        <label for="create-campaign-segmentation-all-5" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-6" name="create-campaign-segmentation-all-6">
+                                        <label for="create-campaign-segmentation-all-6" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-7" name="create-campaign-segmentation-all-7">
+                                        <label for="create-campaign-segmentation-all-7" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-8" name="create-campaign-segmentation-all-8">
+                                        <label for="create-campaign-segmentation-all-8" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-9" name="create-campaign-segmentation-all-9">
+                                        <label for="create-campaign-segmentation-all-9" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-10" name="create-campaign-segmentation-all-10">
+                                        <label for="create-campaign-segmentation-all-10" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-11" name="create-campaign-segmentation-all-11">
+                                        <label for="create-campaign-segmentation-all-11" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-12" name="create-campaign-segmentation-all-12">
+                                        <label for="create-campaign-segmentation-all-12" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                </div>
+                                <!-- /.create-campaign-segmentation-list -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!-- /.create-campaign-segmentation -->
+                    </div>
+                    <!-- /.create-campaign-step-content -->
+                </div>
+                <!-- /.create-campaign-step -->
+                <div class="create-campaign-step">
+                    <div class="create-campaign-step-caption">
+                        <div class="create-campaign-step-number">3</div>
+                        <div class="create-campaign-step-title">Automations</div>
+                    </div>
+                    <!-- /.create-campaign-step-caption -->
+                </div>
+                <!-- /.create-campaign-step -->
+            </div>
+            <!-- /.create-campaign -->
+        </div>
+        <footer class="footer-site">
+            <div class="create-campaign-options">
+                <div class="create-campaign-option">
+                    <div class="create-campaign-option-back">
+                        <a href="#" class="button button-secondary">Back</a>
+                    </div>
+                </div>
+                <div class="create-campaign-option">
+                    <div class="create-campaign-option-next">
+                        <a href="#" class="button">
+                            Next step
+                            <span class="button-icon"><svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.36682 5.05244H1.92029V5.94737H7.36682L4.96662 8.34756L5.59934 8.98028L9.07971 5.4999L5.59934 2.01953L4.96662 2.65225L7.36682 5.05244Z" fill="#3C68EC"/>
+</svg>
+</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.create-campaign-options -->
+        </footer>
+        <div class="panel-mask"></div>
+        <div class="panel" data-panel="new-segmentation">
+            <button class="panel-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</button>
+            <div class="panel-top">
+                <div class="new-segmentation-caption">New segmentation</div>
+            </div>
+            <!-- /.panel-top -->
+            <div class="panel-content">
+                <div class="new-segmentation">
+                    <div class="new-segmentation-name">
+                        <label class="new-segmentation-label" for="new-segmentation-name">Segment Name</label>
+                        <input type="text" class="input-text" id="new-segmentation-name" placeholder="Enter Segment Name">
+                    </div>
+                    <div class="new-segmentation-type">
+                        <div class="new-segmentation-label">Type</div>
+                        <div class="new-segmentation-type-list">
+                            <div class="new-segmentation-type-item">
+                                <div class="radio">
+                                    <input type="radio" id="new-segmentation-type-static" name="new-segmentation-type" checked>
+                                    <label for="new-segmentation-type-static">Static</label>
+                                </div>
+                            </div>
+                            <div class="new-segmentation-type-item">
+                                <div class="radio">
+                                    <input type="radio" id="new-segmentation-type-dynamic" name="new-segmentation-type">
+                                    <label for="new-segmentation-type-dynamic">Dynamic</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.new-segmentation-type -->
+                    <div class="new-segmentation-tags">
+                        <input type="text" class="input-text new-segmentation-tags-input" placeholder="Enter the tags here">
+                        <div class="new-segmentation-tags-pull"></div>
+                    </div>
+                    <div class="new-segmentation-title">Criteria <strong>Segments User*</strong></div>
+                    <div class="new-segmentation-conditions">
+                        <div class="new-segmentation-conditions-title">All contacts matching these conditions</div>
+                        <div class="new-segmentation-conditions-item">
+                            <div class="new-segmentation-conditions-col">
+                                <select class="select">
+                                    <option>Check-In</option>
+                                </select>
+                            </div>
+                            <div class="new-segmentation-conditions-col">
+                                <select class="select">
+                                    <option>Equal To</option>
+                                </select>
+                            </div>
+                            <div class="new-segmentation-conditions-col">
+                                <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                            </div>
+                            <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                                <a href="#" class="new-segmentation-conditions-delete">
+                                    <span class="new-segmentation-conditions-delete-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                    <span class="new-segmentation-conditions-delete-text">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.new-segmentation-conditions-item -->
+                        <div class="new-segmentation-conditions-sep"></div>
+                        <div class="new-segmentation-conditions-item">
+                            <div class="new-segmentation-conditions-col">
+                                <select class="select">
+                                    <option>Check-In</option>
+                                </select>
+                            </div>
+                            <div class="new-segmentation-conditions-col">
+                                <select class="select">
+                                    <option>Equal To</option>
+                                </select>
+                            </div>
+                            <div class="new-segmentation-conditions-col">
+                                <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                            </div>
+                            <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                                <a href="#" class="new-segmentation-conditions-delete">
+                                    <span class="new-segmentation-conditions-delete-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                    <span class="new-segmentation-conditions-delete-text">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.new-segmentation-conditions-item -->
+                        <a href="#" class="new-segmentation-conditions-add"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+Add new conditions</a>
+                    </div>
+                    <!-- /.new-segmentation-conditions -->
+                    <div class="new-segmentation-conditions-type">
+                        <ul>
+                            <li class="active"><a href="#">Include</a></li>
+                            <li><a href="#">Exclude</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.new-segmentation-conditions-type -->
+                    <div class="new-segmentation-conditions">
+                        <div class="new-segmentation-conditions-title">Excludes all contacts that match these conditions </div>
+                        <div class="new-segmentation-conditions-item">
+                            <div class="new-segmentation-conditions-col">
+                                <select class="select">
+                                    <option>Check-In</option>
+                                </select>
+                            </div>
+                            <div class="new-segmentation-conditions-col">
+                                <select class="select">
+                                    <option>Equal To</option>
+                                </select>
+                            </div>
+                            <div class="new-segmentation-conditions-col">
+                                <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                            </div>
+                            <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                                <a href="#" class="new-segmentation-conditions-delete">
+                                    <span class="new-segmentation-conditions-delete-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                    <span class="new-segmentation-conditions-delete-text">Delete</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.new-segmentation-conditions-item -->
+                        <a href="#" class="new-segmentation-conditions-add"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+Add new conditions</a>
+                    </div>
+                    <!-- /.new-segmentation-conditions -->
+                    <template id="segmentation-group">
+                        <div class="new-segmentation-conditions-type">
+                            <ul>
+                                <li class="active"><a href="#">Include</a></li>
+                                <li><a href="#">Exclude</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.new-segmentation-conditions-type -->
+                        <div class="new-segmentation-conditions">
+                            <div class="new-segmentation-conditions-title">Excludes all contacts that match these conditions </div>
+                            <div class="new-segmentation-conditions-item">
+                                <div class="new-segmentation-conditions-col">
+                                    <select class="select">
+                                        <option>Check-In</option>
+                                    </select>
+                                </div>
+                                <div class="new-segmentation-conditions-col">
+                                    <select class="select">
+                                        <option>Equal To</option>
+                                    </select>
+                                </div>
+                                <div class="new-segmentation-conditions-col">
+                                    <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                                </div>
+                                <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                                    <a href="#" class="new-segmentation-conditions-delete">
+                                        <span class="new-segmentation-conditions-delete-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                        <span class="new-segmentation-conditions-delete-text">Delete</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- /.new-segmentation-conditions-item -->
+                            <a href="#" class="new-segmentation-conditions-add"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+Add new conditions</a>
+                        </div>
+                        <!-- /.new-segmentation-conditions -->
+                    </template>
+                    <div class="new-segmentation-add-group">
+                        <button class="button button-secondary">
+                            <span class="button-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="white" class="svg-fill"/>
+</svg>
+</span>
+                            Add New Group
+                        </button>
+                    </div>
+                </div>
+                <!-- /.new-segmentation -->
+            </div>
+            <!-- /.panel-content -->
+            <div class="panel-bottom">
+                <div class="new-segmentation-save">
+                    <button class="button">
+                        <span class="button-icon"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 13.1667H12.6667V5.052L11.448 3.83333H10.6667V6.5H4.66667V3.83333H3.33333V13.1667H4V8.5H12V13.1667ZM2.66667 2.5H12L13.8047 4.30467C13.9297 4.42966 14 4.5992 14 4.776V13.8333C14 14.0101 13.9298 14.1797 13.8047 14.3047C13.6797 14.4298 13.5101 14.5 13.3333 14.5H2.66667C2.48986 14.5 2.32029 14.4298 2.19526 14.3047C2.07024 14.1797 2 14.0101 2 13.8333V3.16667C2 2.98986 2.07024 2.82029 2.19526 2.69526C2.32029 2.57024 2.48986 2.5 2.66667 2.5ZM5.33333 9.83333V13.1667H10.6667V9.83333H5.33333Z" fill="white"/>
+</svg>
+</span>
+                        Save
+                    </button>
+                </div>
+            </div>
+            <!-- /.panel-bottom -->
+        </div>
+        <!-- /.panel -->
+    </main>
+    <!-- /.main-site -->
+    <script src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/migrate.js"></script>
+    <script src="js/library.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

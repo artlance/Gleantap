@@ -1,0 +1,783 @@
+<div class="panel-mask"></div>
+<div class="panel" data-panel="new-segmentation">
+    <button class="panel-close"><!-- @import "../images/close.svg" --></button>
+    <div class="panel-top">
+        <div class="new-segmentation-caption">New segmentation</div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <div class="new-segmentation">
+            <div class="new-segmentation-name">
+                <label class="new-segmentation-label" for="new-segmentation-name">Segment Name</label>
+                <input type="text" class="input-text" id="new-segmentation-name" placeholder="Enter Segment Name">
+            </div>
+            <div class="new-segmentation-type">
+                <div class="new-segmentation-label">Type</div>
+                <div class="new-segmentation-type-list">
+                    <div class="new-segmentation-type-item">
+                        <div class="radio">
+                            <input type="radio" id="new-segmentation-type-static" name="new-segmentation-type" checked>
+                            <label for="new-segmentation-type-static">Static</label>
+                        </div>
+                    </div>
+                    <div class="new-segmentation-type-item">
+                        <div class="radio">
+                            <input type="radio" id="new-segmentation-type-dynamic" name="new-segmentation-type">
+                            <label for="new-segmentation-type-dynamic">Dynamic</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.new-segmentation-type -->
+            <div class="new-segmentation-tags">
+                <input type="text" class="input-text new-segmentation-tags-input" placeholder="Enter the tags here">
+                <div class="new-segmentation-tags-pull"></div>
+            </div>
+            <div class="new-segmentation-title">Criteria <strong>Segments User*</strong></div>
+            <div class="new-segmentation-conditions">
+                <div class="new-segmentation-conditions-title">All contacts matching these conditions</div>
+                <div class="new-segmentation-conditions-item">
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Check-In</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Equal To</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                        <a href="#" class="new-segmentation-conditions-delete">
+                            <span class="new-segmentation-conditions-delete-icon"><!-- @import "../images/delete.svg" --></span>
+                            <span class="new-segmentation-conditions-delete-text">Delete</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.new-segmentation-conditions-item -->
+                <div class="new-segmentation-conditions-sep"></div>
+                <div class="new-segmentation-conditions-item">
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Check-In</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Equal To</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                        <a href="#" class="new-segmentation-conditions-delete">
+                            <span class="new-segmentation-conditions-delete-icon"><!-- @import "../images/delete.svg" --></span>
+                            <span class="new-segmentation-conditions-delete-text">Delete</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.new-segmentation-conditions-item -->
+                <a href="#" class="new-segmentation-conditions-add"><!-- @import "../images/add.svg" -->Add new conditions</a>
+            </div>
+            <!-- /.new-segmentation-conditions -->
+            <div class="new-segmentation-conditions-type">
+                <ul>
+                    <li class="active"><a href="#">Include</a></li>
+                    <li><a href="#">Exclude</a></li>
+                </ul>
+            </div>
+            <!-- /.new-segmentation-conditions-type -->
+            <div class="new-segmentation-conditions">
+                <div class="new-segmentation-conditions-title">Excludes all contacts that match these conditions </div>
+                <div class="new-segmentation-conditions-item">
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Check-In</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Equal To</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                        <a href="#" class="new-segmentation-conditions-delete">
+                            <span class="new-segmentation-conditions-delete-icon"><!-- @import "../images/delete.svg" --></span>
+                            <span class="new-segmentation-conditions-delete-text">Delete</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.new-segmentation-conditions-item -->
+                <a href="#" class="new-segmentation-conditions-add"><!-- @import "../images/add.svg" -->Add new conditions</a>
+            </div>
+            <!-- /.new-segmentation-conditions -->
+            <template id="segmentation-group">
+                <div class="new-segmentation-conditions-type">
+                    <ul>
+                        <li class="active"><a href="#">Include</a></li>
+                        <li><a href="#">Exclude</a></li>
+                    </ul>
+                </div>
+                <!-- /.new-segmentation-conditions-type -->
+                <div class="new-segmentation-conditions">
+                    <div class="new-segmentation-conditions-title">Excludes all contacts that match these conditions </div>
+                    <div class="new-segmentation-conditions-item">
+                        <div class="new-segmentation-conditions-col">
+                            <select class="select">
+                                <option>Check-In</option>
+                            </select>
+                        </div>
+                        <div class="new-segmentation-conditions-col">
+                            <select class="select">
+                                <option>Equal To</option>
+                            </select>
+                        </div>
+                        <div class="new-segmentation-conditions-col">
+                            <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                        </div>
+                        <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                            <a href="#" class="new-segmentation-conditions-delete">
+                                <span class="new-segmentation-conditions-delete-icon"><!-- @import "../images/delete.svg" --></span>
+                                <span class="new-segmentation-conditions-delete-text">Delete</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.new-segmentation-conditions-item -->
+                    <a href="#" class="new-segmentation-conditions-add"><!-- @import "../images/add.svg" -->Add new conditions</a>
+                </div>
+                <!-- /.new-segmentation-conditions -->
+            </template>
+            <div class="new-segmentation-add-group">
+                <button class="button button-secondary">
+                    <span class="button-icon"><!-- @import "../images/plus.svg" --></span>
+                    Add New Group
+                </button>
+            </div>
+        </div>
+        <!-- /.new-segmentation -->
+    </div>
+    <!-- /.panel-content -->
+    <div class="panel-bottom">
+        <div class="new-segmentation-save">
+            <button class="button">
+                <span class="button-icon"><!-- @import "../images/save.svg" --></span>
+                Save
+            </button>
+        </div>
+    </div>
+    <!-- /.panel-bottom -->
+</div>
+<!-- /.panel -->
+<div class="panel panel-w2" data-panel="ongoing">
+    <button class="panel-close"><!-- @import "../images/close.svg" --></button>
+    <div class="panel-top">
+        <div class="ongoing-caption">Ongoing</div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <div class="ongoing">
+            <label for="ongoing-start-date" class="ongoing-label">Starting on</label>
+            <div class="ongoing-row">
+                <div class="ongoing-col">
+                    <input type="text" class="input-text input-datepicker" value="Oct 20, 2020" id="ongoing-start-date">
+                </div>
+                <div class="ongoing-col">
+                    <select class="select select-time">
+                        <option>00:00</option>
+                        <option>00:30</option>
+                    </select>
+                </div>
+                <div class="ongoing-col">
+                    <select class="select">
+                        <option>AM</option>
+                        <option>PM</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <label for="ongoing-end-date" class="ongoing-label">Ending on</label>
+            <div class="ongoing-row">
+                <div class="ongoing-col">
+                    <input type="text" class="input-text input-datepicker" id="ongoing-end-date">
+                </div>
+                <div class="ongoing-col">
+                    <select class="select select-time">
+                        <option>00:00</option>
+                        <option>00:30</option>
+                    </select>
+                </div>
+                <div class="ongoing-col">
+                    <select class="select">
+                        <option>AM</option>
+                        <option>PM</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-note">You can leave out the end date and then your email will continue to be sent until you turn it off</div>
+            <div class="ongoing-label">What day to send</div>
+            <div class="ongoing-day">
+                <select class="select">
+                    <option>Specific day of week</option>
+                </select>
+                <div class="ongoing-day-list">
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-1" name="ongoing-day-1" checked>
+                        <label for="ongoing-day-1">Mo</label>
+                    </div>
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-2" name="ongoing-day-2">
+                        <label for="ongoing-day-2">Tu</label>
+                    </div>
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-3" name="ongoing-day-3">
+                        <label for="ongoing-day-3">We</label>
+                    </div>
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-4" name="ongoing-day-4" checked>
+                        <label for="ongoing-day-4">Th</label>
+                    </div>
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-5" name="ongoing-day-5">
+                        <label for="ongoing-day-5">Fr</label>
+                    </div>
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-6" name="ongoing-day-6">
+                        <label for="ongoing-day-6">Sa</label>
+                    </div>
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-7" name="ongoing-day-7">
+                        <label for="ongoing-day-7">Su</label>
+                    </div>
+                </div>
+                <!-- /.ongoing-day-list -->
+            </div>
+            <!-- /.ongoing-day -->
+            <label for="ongoing-time" class="ongoing-label">What time to send</label>
+            <div class="ongoing-time">
+                <div class="ongoing-time-col">
+                    <select class="select select-time">
+                        <option>00:00</option>
+                        <option>00:30</option>
+                    </select>
+                </div>
+                <div class="ongoing-time-col">
+                    <select class="select">
+                        <option>AM</option>
+                        <option>PM</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /.ongoing-time -->
+            <div class="ongoing-check">
+                <div class="checkbox">
+                    <input type="checkbox" name="ongoing-check-1" id="ongoing-check-1" checked>
+                    <label for="ongoing-check-1">Send time optimization</label>
+                </div>
+            </div>
+        </div>
+        <!-- /.ongoing -->
+    </div>
+    <!-- /.panel-content -->
+    <div class="panel-bottom">
+        <div class="ongoing-options">
+            <div class="ongoing-option"><a href="#" class="button button-secondary panel-cancel">Cancel</a></div>
+            <div class="ongoing-option"><a href="#" class="button">Schedule send</a></div>
+        </div>
+        <!-- /.ongoing-options -->
+    </div>
+    <!-- /.panel-bottom -->
+</div>
+<!-- /.panel -->
+<div class="panel panel-w3" data-panel="add-action">
+    <button class="panel-close"><!-- @import "../images/close.svg" --></button>
+    <div class="panel-top">
+        <div class="add-action-caption">Add action</div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <div class="add-action tab">
+            <div class="add-action-title">What action do you want to add?</div>
+            <ul class="add-action-tabs tabs">
+                <li class="active"><a href="#">Email</a></li>
+                <li><a href="#">SMS</a></li>
+                <li><a href="#">Messenger</a></li>
+                <li><a href="#">Other action</a></li>
+            </ul>
+            <div class="box visible">
+                <div class="add-action-templates-overflow">
+                    <div class="add-action-templates">
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-1.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-2.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-3.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-4.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-5.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-6.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-7.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-2.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                    </div>
+                    <!-- /.add-action-templates -->
+                </div>
+                <div class="add-action-button">
+                    <a href="#email-content" class="button button-secondary panel-toggle">
+                        <span class="button-icon"><!-- @import "../images/plus.svg" --></span>
+                        Design from scratch
+                    </a>
+                </div>
+            </div>
+            <!-- /.box -->
+            <div class="box"></div>
+            <!-- /.box -->
+            <div class="box"></div>
+            <!-- /.box -->
+            <div class="box">
+                <div class="add-action-other">
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><!-- @import "../images/goal-2.svg" --></span>
+                            <span class="add-action-item-title">Add to stage</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#whatsapp-message" class="add-action-item panel-toggle">
+                            <span class="add-action-item-icon"><!-- @import "../images/whatsapp.svg" --></span>
+                            <span class="add-action-item-title">Send message to WhatsApp</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><!-- @import "../images/goal-4.svg" --></span>
+                            <span class="add-action-item-title">Add a tag</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><!-- @import "../images/goal-5.svg" --></span>
+                            <span class="add-action-item-title">Assign to someone</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><!-- @import "../images/goal-6.svg" --></span>
+                            <span class="add-action-item-title">Move to stage</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><!-- @import "../images/goal-7.svg" --></span>
+                            <span class="add-action-item-title">Update status</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><!-- @import "../images/goal-8.svg" --></span>
+                            <span class="add-action-item-title">Add a task</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><!-- @import "../images/goal-9.svg" --></span>
+                            <span class="add-action-item-title">Notification</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><!-- @import "../images/goal-10.svg" --></span>
+                            <span class="add-action-item-title">Add attribute</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><!-- @import "../images/goal-11.svg" --></span>
+                            <span class="add-action-item-title">Update attribute</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                </div>
+                <!-- /.add-action-other -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.add-action -->
+    </div>
+    <!-- /.panel-content -->
+</div>
+<!-- /.panel -->
+<div class="panel panel-inner panel-w3" data-panel="whatsapp-message">
+    <button class="panel-inner-close"><!-- @import "../images/close.svg" --></button>
+    <div class="panel-top">
+        <div class="add-action-caption">Send message to WhatsApp</div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <div class="add-action-form">
+            <div class="add-action-form-row">
+                <label for="add-action-form-phone" class="add-action-form-phone-label">From:</label>
+                <input type="tel" class="input-text mask-phone add-action-form-phone" id="add-action-form-phone" placeholder="(510) 945 1277">
+            </div>
+            <div class="add-action-form-row">
+                <textarea class="textarea" placeholder="Enter your message"></textarea>
+                <a href="#" class="add-action-form-info"><!-- @import "../images/info.svg" --></a>
+            </div>
+            <div class="add-action-form-options">
+                <div class="add-action-form-options-item">
+                    <a href="#" class="add-action-form-option"><!-- @import "../images/emoticon.svg" --></a>
+                </div>
+                <div class="add-action-form-options-item">
+                    <a href="#" class="add-action-form-option"><!-- @import "../images/goal-9.svg" --></a>
+                </div>
+            </div>
+            <!-- /.add-action-form-options -->
+        </div>
+        <!-- /.add-action-form -->
+    </div>
+    <!-- /.panel-content -->
+    <div class="panel-bottom">
+        <div class="add-action-options">
+            <div class="add-action-option"><a href="#" class="button button-secondary panel-inner-cancel">Cancel</a></div>
+            <div class="add-action-option"><a href="#" class="button">Add action</a></div>
+        </div>
+        <!-- /.add-action-options -->
+    </div>
+    <!-- /.panel-bottom -->
+</div>
+<!-- /.panel -->
+<div class="panel panel-inner panel-w4-i" data-panel="form-newsletter-email">
+    <div class="form-newsletter-email-img">
+        <img src="upload/email2.jpg" alt="">
+    </div>
+</div>
+<!-- /.panel -->
+<div class="panel panel-inner panel-w4" data-panel="email-content">
+    <button class="panel-inner-close"><!-- @import "../images/close.svg" --></button>
+    <div class="panel-top">
+        <div class="add-action-caption">Email content</div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <div class="add-action-form">
+            <div class="add-action-title">Here you can customize your email content.</div>
+            <div class="add-action-form-caption">
+                <div class="add-action-form-email">
+                    <label for="add-action-form-email" class="add-action-form-email-label"><!-- @import "../images/support.svg" --></label>
+                    <select class="select" name="add-action-form-email" id="add-action-form-email">
+                        <option>support@mail.com</option>
+                    </select>
+                </div>
+                <div class="add-action-form-preview"><a href="#form-preview" class="button button-secondary panel-toggle">Preview</a></div>
+            </div>
+            <template id="add-action-subject">
+                <div class="add-action-form-input add-action-form-delete-active">
+                    <label for="add-action-form-subject-1" class="add-action-form-subject">Subject <span class="add-action-form-subject-index"></span>:</label>
+                    <input type="text" class="input-text" id="add-action-form-subject-1" value="">
+                    <a href="#" class="add-action-form-delete"><!-- @import "../images/delete.svg" --></a>
+                    <a href="#" class="add-action-form-add hidden"><!-- @import "../images/add.svg" --></a>
+                    <a href="#" class="add-action-form-info add-action-form-info-red"><!-- @import "../images/info.svg" --></a>
+                </div>
+            </template>
+            <div class="add-action-form-input-pull">
+                <div class="add-action-form-input">
+                    <label for="add-action-form-subject-1" class="add-action-form-subject">Subject <span class="add-action-form-subject-index">1</span>:</label>
+                    <input type="text" class="input-text" id="add-action-form-subject-1" value="Test subject">
+                    <a href="#" class="add-action-form-delete"><!-- @import "../images/delete.svg" --></a>
+                    <a href="#" class="add-action-form-add hidden"><!-- @import "../images/add.svg" --></a>
+                    <a href="#" class="add-action-form-info add-action-form-info-red"><!-- @import "../images/info.svg" --></a>
+                </div>
+                <div class="add-action-form-input add-action-form-delete-active">
+                    <label for="add-action-form-subject-2" class="add-action-form-subject">Subject <span class="add-action-form-subject-index">2</span>:</label>
+                    <input type="text" class="input-text" id="add-action-form-subject-2" value="Another test subject">
+                    <a href="#" class="add-action-form-delete"><!-- @import "../images/delete.svg" --></a>
+                    <a href="#" class="add-action-form-add hidden"><!-- @import "../images/add.svg" --></a>
+                    <a href="#" class="add-action-form-info add-action-form-info-red"><!-- @import "../images/info.svg" --></a>
+                </div>
+                <div class="add-action-form-input add-action-form-delete-active">
+                    <label for="add-action-form-subject-3" class="add-action-form-subject">Subject <span class="add-action-form-subject-index">3</span>:</label>
+                    <input type="text" class="input-text" id="add-action-form-subject-3" value="One more test subject">
+                    <a href="#" class="add-action-form-delete"><!-- @import "../images/delete.svg" --></a>
+                    <a href="#" class="add-action-form-add hidden"><!-- @import "../images/add.svg" --></a>
+                    <a href="#" class="add-action-form-info add-action-form-info-red"><!-- @import "../images/info.svg" --></a>
+                </div>
+            </div>
+            <div class="add-action-form-row">
+                <textarea data-textarea="textarea-newsletter" class="textarea" placeholder="Enter your message"></textarea>
+                <a href="#" class="add-action-form-info add-action-form-info-gray"><!-- @import "../images/info.svg" --></a>
+            </div>
+            <div class="files-pull" style="display: block;">
+                <template class="files-pull-template">
+                    <div class="files-pull-list-item">
+                        <a href="#" class="files-pull-list-item-remove"><!-- @import "../images/close.svg" --></a>
+                        <div class="files-pull-list-item-icon"><!-- @import "../images/file.svg" --></div>
+                        <div class="files-pull-list-item-name"></div>
+                        <div class="files-pull-list-item-size"></div>
+                    </div>
+                </template>
+                <div class="files-pull-list" data-pull-list="file-1">
+                </div>
+            </div>
+            <div class="add-action-form-options">
+                <div class="add-action-form-options-item drop">
+                    <a href="#" class="add-action-form-option drop-toggle"><!-- @import "../images/emoticon.svg" --></a>
+                    <div class="emotions-panel drop-block">
+                        <ul class="emotions-list" data-emotions-textarea="textarea-newsletter">
+                            <li><button>😀</button></li>
+                            <li><button>😃</button></li>
+                            <li><button>😄</button></li>
+                            <li><button>😁</button></li>
+                            <li><button>😆</button></li>
+                            <li><button>😅</button></li>
+                            <li><button>😂</button></li>
+                            <li><button>🤣</button></li>
+                            <li><button>😀</button></li>
+                            <li><button>😃</button></li>
+                            <li><button>😄</button></li>
+                            <li><button>😁</button></li>
+                            <li><button>😆</button></li>
+                            <li><button>😅</button></li>
+                            <li><button>😂</button></li>
+                            <li><button>🤣</button></li>
+                            <li><button>😀</button></li>
+                            <li><button>😃</button></li>
+                            <li><button>😄</button></li>
+                            <li><button>😁</button></li>
+                            <li><button>😆</button></li>
+                            <li><button>😅</button></li>
+                            <li><button>😂</button></li>
+                            <li><button>🤣</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="add-action-form-options-item">
+                    <input type="file" name="file-1" class="file-custom" data-pull="file-1" id="file-1" multiple>
+                    <label for="file-1" class="add-action-form-option add-action-form-option-file"><!-- @import "../images/goal-9.svg" --></label>
+                </div>
+                <div class="add-action-form-options-item">
+                    <a href="#" class="add-action-form-option"><!-- @import "../images/goal-10.svg" --></a>
+                </div>
+                <div class="add-action-form-options-item">
+                    <a href="#" class="add-action-form-option"><!-- @import "../images/space.svg" --></a>
+                </div>
+                <div class="add-action-form-options-item">
+                    <a href="#" class="add-action-form-option active"><!-- @import "../images/goal-6.svg" --></a>
+                </div>
+                <div class="add-action-form-options-item">
+                    <a href="#" class="add-action-form-option"><!-- @import "../images/email.svg" --></a>
+                </div>
+            </div>
+            <!-- /.add-action-form-options -->
+            <div class="add-action-form-newsletter">
+                <div class="pill">
+                    <input type="checkbox" name="add-action-check-1" id="add-action-check-1">
+                    <label for="add-action-check-1">Newsletter email</label>
+                </div>
+            </div>
+            <div class="add-action-newsletter-email">
+                <div class="newsletter-design-tabs">
+                    <ul class="toggle-active">
+                        <li class="active">
+                            <a href="#" class="newsletter-design-tabs-link">
+                                <span class="newsletter-design-tabs-icon"><!-- @import "../images/newsletter-content.svg" --></span>
+                                <span class="newsletter-design-tabs-title">Content</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="newsletter-design-tabs-link">
+                                <span class="newsletter-design-tabs-icon"><!-- @import "../images/newsletter-rows.svg" --></span>
+                                <span class="newsletter-design-tabs-title">Rows</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="newsletter-design-tabs-link">
+                                <span class="newsletter-design-tabs-icon"><!-- @import "../images/newsletter-settings.svg" --></span>
+                                <span class="newsletter-design-tabs-title">Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.newsletter-design-tabs -->
+                <div class="newsletter-design-content">
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><!-- @import "../images/newsletter-text.svg" --></span>
+                            <span class="newsletter-design-item-title">Text</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><!-- @import "../images/newsletter-image.svg" --></span>
+                            <span class="newsletter-design-item-title">Image</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><!-- @import "../images/newsletter-button.svg" --></span>
+                            <span class="newsletter-design-item-title">Button</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><!-- @import "../images/newsletter-minus.svg" --></span>
+                            <span class="newsletter-design-item-title">Divider</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><!-- @import "../images/newsletter-plus.svg" --></span>
+                            <span class="newsletter-design-item-title">Social</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><!-- @import "../images/newsletter-html.svg" --></span>
+                            <span class="newsletter-design-item-title">HTML</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><!-- @import "../images/newsletter-video.svg" --></span>
+                            <span class="newsletter-design-item-title">Video</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><!-- @import "../images/newsletter-icons.svg" --></span>
+                            <span class="newsletter-design-item-title">Icons</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><!-- @import "../images/newsletter-menu.svg" --></span>
+                            <span class="newsletter-design-item-title">Menu</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.newsletter-design-content -->
+            </div>
+            <!-- /.add-action-newsletter-email -->
+        </div>
+        <!-- /.add-action-form -->
+    </div>
+    <!-- /.panel-content -->
+    <div class="panel-bottom">
+        <div class="add-action-options">
+            <div class="add-action-option"><a href="#" class="button button-secondary panel-inner-cancel">Cancel</a></div>
+            <div class="add-action-option"><a href="#" class="button">Add email</a></div>
+        </div>
+        <!-- /.add-action-options -->
+    </div>
+    <!-- /.panel-bottom -->
+</div>
+<!-- /.panel -->
+<div class="panel panel-inner tab panel-w4" data-panel="form-preview">
+    <button class="panel-inner-close"><!-- @import "../images/close.svg" --></button>
+    <div class="panel-top panel-top-flex">
+        <div class="add-action-caption">Email Preview</div>
+        <div class="panel-top-navigation">
+            <div class="newsletter-design-tabs">
+                <ul class="tabs">
+                    <li class="active">
+                        <a href="#" class="newsletter-design-tabs-link">
+                            <span class="newsletter-design-tabs-icon"><!-- @import "../images/desktop.svg" --></span>
+                            <span class="newsletter-design-tabs-title">Desktop</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="newsletter-design-tabs-link">
+                            <span class="newsletter-design-tabs-icon"><!-- @import "../images/smartphone-2.svg" --></span>
+                            <span class="newsletter-design-tabs-title">Smartphone</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.newsletter-design-tabs -->
+        </div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <div class="newsletter-preview-screen">
+            <div class="box visible">
+                <img src="upload/email.jpg" alt="">
+            </div>
+            <div class="box">
+                <div class="mobile-phone">
+                    <div class="mobile-phone-inner">
+                        <img src="upload/email.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.panel-content -->
+</div>
+<!-- /.panel -->

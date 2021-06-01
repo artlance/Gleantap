@@ -1,0 +1,1860 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <title>02.03.01.Automations - Campaigns</title>
+    <meta name="description" content="description">
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+</head>
+<body class="no-js">
+    <main class="main-site">
+<header class="sidebar-site-mobile">
+    <div class="sidebar-header">
+        <div class="sidebar-header-navigation">
+            <button class="navigation-toggle-mobile"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.625 3.5H18.375V5.25H2.625V3.5ZM2.625 9.625H18.375V11.375H2.625V9.625ZM18.375 15.75H2.625V17.5H18.375V15.75Z" fill="white"/>
+</svg>
+</button>
+        </div>
+        <a href="#" class="sidebar-header-logo">
+            <span class="sidebar-header-logo-icon"><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.05" width="27" height="27" rx="7" fill="#1C2538"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.4115 7.235C17.3316 6.41167 15.8681 6 14.0208 6C12.6875 6 11.4896 6.29833 10.4271 6.895C9.36458 7.49167 8.52778 8.34833 7.91667 9.465C7.30556 10.5817 7 11.9267 7 13.5C7 14.7 7.18056 15.765 7.54167 16.695C7.90278 17.625 8.40451 18.41 9.04688 19.05C9.68924 19.69 10.4358 20.175 11.2865 20.505C12.1372 20.835 13.0486 21 14.0208 21C15.4605 21 16.6985 20.7048 17.735 20.1145L16.1701 18.3389L16.1719 18.3325L16.0588 18.384C15.514 18.6209 14.8867 18.7362 14.1771 18.73C13.1701 18.7167 12.3316 18.4933 11.6615 18.06C10.9913 17.6267 10.4896 17.0217 10.1562 16.245C9.82292 15.4683 9.65625 14.5533 9.65625 13.5C9.65625 12.4467 9.82465 11.5267 10.1615 10.74C10.4983 9.95333 11 9.34333 11.6667 8.91C12.3333 8.47667 13.1701 8.26667 14.1771 8.28L14.3012 8.28133C15.2454 8.30169 16.0269 8.55625 16.6458 9.045C17.2888 9.55271 17.7528 10.2305 18.0378 11.0785L20.2569 9.65816C20.1491 9.40104 20.0281 9.15644 19.894 8.92439C19.5086 8.25785 19.0144 7.69472 18.4115 7.235ZM20.9583 13.15H14.4884L13.331 15.04H18.2917L18.2684 15.1844C18.1377 15.9472 17.9024 16.5874 17.5625 17.105L17.4939 17.2058L19.1315 19.0396C19.5362 18.6228 19.8795 18.1479 20.1615 17.615C20.7205 16.5583 21 15.35 21 13.99C21 13.95 20.9965 13.8267 20.9896 13.62L20.9837 13.4744C20.9794 13.3835 20.9742 13.3052 20.9681 13.2394L20.9583 13.15Z" fill="white"/>
+</svg>
+</span>
+            <span class="sidebar-header-logo-text">Campaigns</span>
+        </a>
+    </div>
+    <!-- /.sidebar-header -->
+</header>
+<aside class="sidebar-site">
+    <div class="sidebar-top">
+        <div class="sidebar-header">
+            <div class="sidebar-header-navigation">
+                <button id="toggle-sidebar"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.625 3.5H18.375V5.25H2.625V3.5ZM2.625 9.625H18.375V11.375H2.625V9.625ZM18.375 15.75H2.625V17.5H18.375V15.75Z" fill="white"/>
+</svg>
+</button>
+            </div>
+            <a href="#" class="sidebar-header-logo">
+                <span class="sidebar-header-logo-icon"><svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect opacity="0.05" width="27" height="27" rx="7" fill="#1C2538"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.4115 7.235C17.3316 6.41167 15.8681 6 14.0208 6C12.6875 6 11.4896 6.29833 10.4271 6.895C9.36458 7.49167 8.52778 8.34833 7.91667 9.465C7.30556 10.5817 7 11.9267 7 13.5C7 14.7 7.18056 15.765 7.54167 16.695C7.90278 17.625 8.40451 18.41 9.04688 19.05C9.68924 19.69 10.4358 20.175 11.2865 20.505C12.1372 20.835 13.0486 21 14.0208 21C15.4605 21 16.6985 20.7048 17.735 20.1145L16.1701 18.3389L16.1719 18.3325L16.0588 18.384C15.514 18.6209 14.8867 18.7362 14.1771 18.73C13.1701 18.7167 12.3316 18.4933 11.6615 18.06C10.9913 17.6267 10.4896 17.0217 10.1562 16.245C9.82292 15.4683 9.65625 14.5533 9.65625 13.5C9.65625 12.4467 9.82465 11.5267 10.1615 10.74C10.4983 9.95333 11 9.34333 11.6667 8.91C12.3333 8.47667 13.1701 8.26667 14.1771 8.28L14.3012 8.28133C15.2454 8.30169 16.0269 8.55625 16.6458 9.045C17.2888 9.55271 17.7528 10.2305 18.0378 11.0785L20.2569 9.65816C20.1491 9.40104 20.0281 9.15644 19.894 8.92439C19.5086 8.25785 19.0144 7.69472 18.4115 7.235ZM20.9583 13.15H14.4884L13.331 15.04H18.2917L18.2684 15.1844C18.1377 15.9472 17.9024 16.5874 17.5625 17.105L17.4939 17.2058L19.1315 19.0396C19.5362 18.6228 19.8795 18.1479 20.1615 17.615C20.7205 16.5583 21 15.35 21 13.99C21 13.95 20.9965 13.8267 20.9896 13.62L20.9837 13.4744C20.9794 13.3835 20.9742 13.3052 20.9681 13.2394L20.9583 13.15Z" fill="white"/>
+</svg>
+</span>
+                <span class="sidebar-header-logo-text">Campaigns</span>
+            </a>
+        </div>
+        <!-- /.sidebar-header -->
+        <div class="sidebar-autor">
+            <a href="#" class="sidebar-autor-link">
+                <span class="sidebar-autor-image">
+                    <img src="upload/avatar.jpg" alt="">
+                </span>
+                <span class="sidebar-autor-content">
+                    <span class="sidebar-autor-name">Wilhelm Dowall</span>
+                    <span class="sidebar-autor-phone">(463) 929-6027</span>
+                </span>
+                <span class="sidebar-autor-drop"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.99999 3.78145L8.29999 0.481445L9.24266 1.42411L4.99999 5.66678L0.757324 1.42411L1.69999 0.481445L4.99999 3.78145Z" fill="white"/>
+</svg>
+</span>
+            </a>
+        </div>
+        <ul class="sidebar-navigation">
+            <li class="">
+                <a href="#">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.3333 21.25C20.8396 21.25 21.25 20.8396 21.25 20.3333V10.6992C21.2502 10.4161 21.1196 10.1488 20.8962 9.97501L13.5628 4.27151C13.2318 4.01399 12.7682 4.01399 12.4372 4.27151L5.10383 9.97501C4.8804 10.1488 4.7498 10.4161 4.75 10.6992V20.3333C4.75 20.8396 5.16041 21.25 5.66667 21.25H20.3333ZM12.0833 19.4167V13.9167H13.9167V19.4167H12.0833Z" fill="white"/>
+</svg>
+</span>
+                    Dashboard
+                </a>
+            </li>
+            <li class="">
+                <a href="create-campaign.html">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.83325 10.2445C3.83228 8.78602 4.4116 7.38707 5.44342 6.35629C6.47524 5.3255 7.87477 4.74757 9.33325 4.75001H16.6666C19.7035 4.75001 22.1666 7.22042 22.1666 10.2445V21.25H9.33325C6.29634 21.25 3.83325 18.7796 3.83325 15.7555V10.2445ZM14.8333 12.0833V13.9167H16.6666V12.0833H14.8333ZM9.33325 13.9167V12.0833H11.1666V13.9167H9.33325Z" fill="white"/>
+</svg>
+</span>
+                    Conversations
+                    <span class="sidebar-navigation-drop"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.99999 3.78145L8.29999 0.481445L9.24266 1.42411L4.99999 5.66678L0.757324 1.42411L1.69999 0.481445L4.99999 3.78145Z" fill="white"/>
+</svg>
+</span>
+                    <div class="sidebar-navigation-number">21</div>
+                </a>
+                <ul>
+                    <li><a href="#">Templates</a></li>
+                </ul>
+            </li>
+            <li class="active opened">
+                <a href="automations.html">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.3359 6.81261L19.1584 5.63428L15.9167 8.87511L17.9792 10.9376L15.9167 13.0001L17.9792 15.0634L15.9167 17.1251L19.1576 20.3668L20.3359 19.1884L18.2734 17.1259L20.3359 15.0634L18.2734 13.0001L20.3359 10.9376L18.2734 8.87511L20.3359 6.81261ZM13.8334 6.37928C13.8333 6.28327 13.8 6.19025 13.7392 6.11594V6.11511C13.6692 6.02953 13.568 5.97529 13.458 5.96435C13.348 5.95341 13.2381 5.98666 13.1526 6.05678L8.74091 9.66678H5.50008C5.03984 9.66678 4.66675 10.0399 4.66675 10.5001V15.5001C4.66675 15.9603 5.03984 16.3334 5.50008 16.3334L8.74175 16.3326L13.1526 19.9434C13.2772 20.0456 13.4495 20.0668 13.5951 19.9978C13.7407 19.9288 13.8335 19.7821 13.8334 19.6209V6.37928Z" fill="white"/>
+</svg>
+</span>
+                    Automations
+                    <span class="sidebar-navigation-drop"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.99999 3.78145L8.29999 0.481445L9.24266 1.42411L4.99999 5.66678L0.757324 1.42411L1.69999 0.481445L4.99999 3.78145Z" fill="white"/>
+</svg>
+</span>
+                    <div class="sidebar-navigation-number">34</div>
+                </a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            Chatbot
+                            <div class="sidebar-navigation-number red">5</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a href="pipeline.html">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M21.3334 5.5H4.66675V7.16667H21.3334V5.5ZM13.8334 20.5V22.1667H12.1667V20.5H5.50008C5.03984 20.5 4.66675 20.1269 4.66675 19.6667V8H21.3334V19.6667C21.3334 20.1269 20.9603 20.5 20.5001 20.5H13.8334ZM9.66675 11.3333C8.28604 11.3333 7.16675 12.4526 7.16675 13.8333C7.16675 15.214 8.28604 16.3333 9.66675 16.3333C11.0475 16.3333 12.1667 15.214 12.1667 13.8333H9.66675V11.3333ZM13.8334 13V11.3333H18.8334V13H13.8334ZM13.8334 14.6667V16.3333H18.8334V14.6667H13.8334Z" fill="white"/>
+</svg>
+</span>
+                    Pipeline
+                </a>
+            </li>
+            <li class="">
+                <a href="reports.html">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.8334 21.3334H7.16675C5.78604 21.3334 4.66675 20.2141 4.66675 18.8334V5.50008C4.66675 5.03984 5.03984 4.66675 5.50008 4.66675H17.1667C17.627 4.66675 18.0001 5.03984 18.0001 5.50008V15.5001H21.3334V18.8334C21.3334 20.2141 20.2141 21.3334 18.8334 21.3334ZM18.0001 17.1667V18.8334C18.0001 19.2937 18.3732 19.6667 18.8334 19.6667C19.2937 19.6667 19.6667 19.2937 19.6667 18.8334V17.1667H18.0001ZM8.00008 10.5001V8.83341H14.6667V10.5001H8.00008ZM8.00008 12.1667V13.8334H14.6667V12.1667H8.00008ZM8.00008 17.1667V15.5001H12.1667V17.1667H8.00008Z" fill="white"/>
+</svg>
+</span>
+                    Reports
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.sidebar-top -->
+    <div class="sidebar-bottom">
+        <ul class="sidebar-navigation">
+            <li>
+                <a href="#">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.7588 15.8862L19.1389 14.2573V10.2435C19.1604 8.75308 18.642 7.30515 17.6793 6.1671C16.7166 5.02905 15.3746 4.27775 13.9012 4.05192C13.0461 3.93931 12.1768 4.01036 11.3513 4.26033C10.5258 4.5103 9.76311 4.93344 9.11412 5.50152C8.46513 6.0696 7.94475 6.76956 7.58771 7.55469C7.23066 8.33982 7.04517 9.19206 7.04359 10.0546V14.2573L5.42369 15.8862C5.22022 16.0931 5.08224 16.3553 5.02699 16.6402C4.97175 16.925 5.0017 17.2199 5.1131 17.4878C5.2245 17.7557 5.4124 17.9849 5.65331 18.1466C5.89423 18.3083 6.17747 18.3954 6.46763 18.3971H9.49145V18.703C9.53348 19.6167 9.93598 20.4764 10.6107 21.0938C11.2855 21.7112 12.1775 22.0359 13.0912 21.9968C14.005 22.0359 14.897 21.7112 15.5717 21.0938C16.2465 20.4764 16.649 19.6167 16.691 18.703V18.3971H19.7148C20.005 18.3954 20.2882 18.3083 20.5291 18.1466C20.7701 17.9849 20.958 17.7557 21.0694 17.4878C21.1808 17.2199 21.2107 16.925 21.1555 16.6402C21.1002 16.3553 20.9622 16.0931 20.7588 15.8862ZM14.8911 18.703C14.8412 19.1359 14.6262 19.5328 14.2909 19.8111C13.9556 20.0894 13.5259 20.2276 13.0912 20.197C12.6566 20.2276 12.2268 20.0894 11.8915 19.8111C11.5562 19.5328 11.3412 19.1359 11.2913 18.703V18.3971H14.8911V18.703Z" fill="white"/>
+</svg>
+</span>
+                    Notifications
+                    <div class="sidebar-navigation-number">3</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.1364 4.28882C8.93621 4.68389 7.83076 5.32308 6.88959 6.16615V6.16707C7.2953 7.20405 7.20691 8.36932 6.64942 9.33324C6.09309 10.299 5.12703 10.9587 4.025 11.1253C3.76771 12.3621 3.76771 13.6386 4.025 14.8754C5.12686 15.0418 6.09288 15.7011 6.64942 16.6666C7.2072 17.6307 7.2956 18.7964 6.88959 19.8337C7.83084 20.6764 8.93629 21.3153 10.1364 21.7101C10.8316 20.8391 11.8857 20.3323 13.0001 20.3332C14.1143 20.3321 15.1684 20.8386 15.8638 21.7092C17.0639 21.3143 18.1693 20.6755 19.1106 19.8327C18.7046 18.7955 18.793 17.6298 19.3508 16.6657C19.931 15.6619 20.9118 15.0367 21.9752 14.8736C22.2323 13.6371 22.2323 12.3609 21.9752 11.1244C20.8731 10.9578 19.9071 10.2981 19.3508 9.33232C18.7933 8.3684 18.7049 7.20313 19.1106 6.16615C18.1694 5.32308 17.064 4.68389 15.8638 4.28882C15.1686 5.15976 14.1145 5.66656 13.0001 5.66565C11.8857 5.66656 10.8316 5.15976 10.1364 4.28882ZM15.7659 12.9959C15.7637 13.9827 15.233 14.8927 14.3751 15.3805C13.061 16.1276 11.3902 15.674 10.6343 14.3649C9.87848 13.0558 10.321 11.382 11.6251 10.6175C12.4764 10.1184 13.5299 10.1137 14.3856 10.6052C15.2413 11.0968 15.768 12.0091 15.7659 12.9959Z" fill="white"/>
+</svg>
+</span>
+                    Settings
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.33341 13.0001H8.83341C9.75389 13.0001 10.5001 13.7463 10.5001 14.6667V18.8334C10.5001 19.7539 9.75389 20.5001 8.83341 20.5001H6.33341C5.41294 20.5001 4.66675 19.7539 4.66675 18.8334V13.0001C4.66675 8.39758 8.39758 4.66675 13.0001 4.66675C17.6026 4.66675 21.3334 8.39758 21.3334 13.0001V18.8334C21.3334 19.7539 20.5872 20.5001 19.6667 20.5001H17.1667C16.2463 20.5001 15.5001 19.7539 15.5001 18.8334V14.6667C15.5001 13.7463 16.2463 13.0001 17.1667 13.0001H19.6667C19.6667 9.31818 16.682 6.33341 13.0001 6.33341C9.31818 6.33341 6.33341 9.31818 6.33341 13.0001Z" fill="white"/>
+</svg>
+</span>
+                    Help center
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.sidebar-bottom -->
+</aside>        <div class="content-site content-site-overflow">
+            <div class="create-campaign">
+                <div class="create-campaign-step completed">
+                    <div class="create-campaign-step-caption">
+                        <div class="create-campaign-step-number">1</div>
+                        <div class="create-campaign-step-title">Campaign name &amp;&nbsp;goal</div>
+                    </div>
+                    <!-- /.create-campaign-step-caption -->
+                    <div class="create-campaign-step-content">
+                        <div class="create-campaign-step-subtitle">Enter campaign name, goal/objective and other settings</div>
+                        <div class="create-campaign-name">
+                            <input type="text" class="input-text" placeholder="Enter campaign name...">
+                        </div>
+                        <div class="create-campaign-goal drop">
+                            <a href="#" class="create-campaign-goal-toggle drop-toggle">Select campaign goal/objective</a>
+                            <div class="create-campaign-goal-block drop-block">
+                                <div class="create-campaign-goal-list">
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-1" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-1" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><i class="far fa-clock"></i></span>
+                                            <span class="create-campaign-goal-title">Web form submitted</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-2" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-2" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><i class="far fa-brackets"></i></span>
+                                            <span class="create-campaign-goal-title">Landing page</span>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-3" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-3" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><i class="far fa-plus-square"></i></span>
+                                            <span class="create-campaign-goal-title">Tag applied</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-4" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-4" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><i class="far fa-info-circle"></i></span>
+                                            <span class="create-campaign-goal-title">Email link clicked</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-5" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-5" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><i class="far fa-search"></i></span>
+                                            <span class="create-campaign-goal-title">Email opened</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-6" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-6" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><i class="far fa-feather"></i></span>
+                                            <span class="create-campaign-goal-title">Product purchased</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-7" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-7" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><i class="far fa-smile"></i></span>
+                                            <span class="create-campaign-goal-title">Falled purchase</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-8" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-8" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><i class="far fa-signal"></i></span>
+                                            <span class="create-campaign-goal-title">Quote status</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-9" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-9" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><i class="far fa-paperclip"></i></span>
+                                            <span class="create-campaign-goal-title">Web form submitted</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-10" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-10" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><i class="far fa-sticky-note"></i></span>
+                                            <span class="create-campaign-goal-title">Landing page</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-11" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-11" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><i class="far fa-trash-alt"></i></span>
+                                            <span class="create-campaign-goal-title">Tag applied</span>
+                                        </label>
+                                    </div>
+                                    <div class="create-campaign-goal-radio">
+                                        <input type="radio" id="create-campaign-goal-12" name="create-campaign-goal">
+                                        <label for="create-campaign-goal-12" class="create-campaign-goal-item">
+                                            <span class="create-campaign-goal-icon"><i class="far fa-plus-square"></i></span>
+                                            <span class="create-campaign-goal-title">Tag applied</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- /.create-campaign-goal-list -->
+                            </div>
+                            <!-- /.create-campaign-goal-block -->
+                        </div>
+                        <!-- /.create-campaign-goal -->
+                        <div class="create-campaign-tags">
+                            <div class="create-campaign-tags-title">Tags:</div>
+                            <div class="create-campaign-tags-pull">
+                                <div class="create-campaign-tags-item">
+                                    <div class="create-campaign-tag">
+                                        Automation type
+                                        <a href="#" class="create-campaign-tag-delete"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</a>
+                                    </div>
+                                </div>
+                                <div class="create-campaign-tags-item">
+                                    <div class="create-campaign-tag">
+                                        Another tag
+                                        <a href="#" class="create-campaign-tag-delete"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.create-campaign-tags-pull -->
+                            <div class="create-campaign-tags-new">
+                                <input type="text" class="create-campaign-tags-new-text" placeholder="Enter tag name...">
+                            </div>
+                        </div>
+                        <!-- /.create-campaign-tags -->
+                    </div>
+                    <!-- /.create-campaign-step-content -->
+                </div>
+                <!-- /.create-campaign-step -->
+                <div class="create-campaign-step completed">
+                    <div class="create-campaign-step-caption">
+                        <div class="create-campaign-step-number">2</div>
+                        <div class="create-campaign-step-title">Segmentation</div>
+                    </div>
+                    <!-- /.create-campaign-step-caption -->
+                    <div class="create-campaign-step-content">
+                        <div class="create-campaign-step-subtitle">We have prepared pre-created segmentation settings for you.</div>
+                        <div class="create-campaign-segmentation tab">
+                            <div class="create-campaign-segmentation-caption">
+                                <div class="create-campaign-segmentation-tabs">
+                                    <ul class="tabs">
+                                        <li class="active"><a href="#">Suggested segments</a></li>
+                                        <li><a href="#">All segments</a></li>
+                                    </ul>
+                                </div>
+                                <div class="create-campaign-segmentation-options">
+                                    <div class="create-campaign-segmentation-options-inner">
+                                        <div class="create-campaign-segmentation-search">
+                                            <input type="text" class="input-text create-campaign-segmentation-search-text" placeholder="Search...">
+                                            <button class="create-campaign-segmentation-search-button"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.595 17.4159L15.0258 13.8476C16.0901 12.5199 16.669 10.8684 16.6666 9.16675C16.6666 5.02675 13.3066 1.66675 9.16663 1.66675C5.02663 1.66675 1.66663 5.02675 1.66663 9.16675C1.66663 13.3067 5.02663 16.6667 9.16663 16.6667C10.8683 16.6692 12.5197 16.0903 13.8475 15.0259L17.4158 18.5951L18.595 17.4159ZM15 9.16675C15.0023 10.6838 14.4117 12.1417 13.3541 13.2292L13.2291 13.3542C12.1415 14.4118 10.6837 15.0025 9.16663 15.0001C5.94329 15.0001 3.33329 12.3892 3.33329 9.16675C3.33329 5.94341 5.94329 3.33341 9.16663 3.33341C12.3891 3.33341 15 5.94341 15 9.16675Z" fill="#1C2538"/>
+</svg>
+</button>
+                                        </div>
+                                        <div class="create-campaign-segmentation-option">
+                                            <a href="#new-segmentation" class="button button-secondary panel-toggle">Create new</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.create-campaign-segmentation-options -->
+                            </div>
+                            <!-- /.create-campaign-segmentation-caption -->
+                            <div class="box visible">
+                                <div class="create-campaign-segmentation-list">
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-1" name="create-campaign-segmentation-1" checked>
+                                        <label for="create-campaign-segmentation-1" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-2" name="create-campaign-segmentation-2">
+                                        <label for="create-campaign-segmentation-2" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-3" name="create-campaign-segmentation-3">
+                                        <label for="create-campaign-segmentation-3" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-4" name="create-campaign-segmentation-4">
+                                        <label for="create-campaign-segmentation-4" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-5" name="create-campaign-segmentation-5">
+                                        <label for="create-campaign-segmentation-5" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-6" name="create-campaign-segmentation-6">
+                                        <label for="create-campaign-segmentation-6" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-7" name="create-campaign-segmentation-7">
+                                        <label for="create-campaign-segmentation-7" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-8" name="create-campaign-segmentation-8">
+                                        <label for="create-campaign-segmentation-8" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-9" name="create-campaign-segmentation-9">
+                                        <label for="create-campaign-segmentation-9" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-10" name="create-campaign-segmentation-10">
+                                        <label for="create-campaign-segmentation-10" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-11" name="create-campaign-segmentation-11">
+                                        <label for="create-campaign-segmentation-11" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-12" name="create-campaign-segmentation-12">
+                                        <label for="create-campaign-segmentation-12" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                </div>
+                                <!-- /.create-campaign-segmentation-list -->
+                            </div>
+                            <!-- /.box -->
+                            <div class="box">
+                                <div class="create-campaign-segmentation-list">
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-1" name="create-campaign-segmentation-all-1" checked>
+                                        <label for="create-campaign-segmentation-all-1" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-2" name="create-campaign-segmentation-all-2">
+                                        <label for="create-campaign-segmentation-all-2" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-3" name="create-campaign-segmentation-all-3">
+                                        <label for="create-campaign-segmentation-all-3" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-4" name="create-campaign-segmentation-all-4">
+                                        <label for="create-campaign-segmentation-all-4" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-5" name="create-campaign-segmentation-all-5">
+                                        <label for="create-campaign-segmentation-all-5" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-6" name="create-campaign-segmentation-all-6">
+                                        <label for="create-campaign-segmentation-all-6" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-7" name="create-campaign-segmentation-all-7">
+                                        <label for="create-campaign-segmentation-all-7" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-8" name="create-campaign-segmentation-all-8">
+                                        <label for="create-campaign-segmentation-all-8" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-9" name="create-campaign-segmentation-all-9">
+                                        <label for="create-campaign-segmentation-all-9" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-10" name="create-campaign-segmentation-all-10">
+                                        <label for="create-campaign-segmentation-all-10" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-11" name="create-campaign-segmentation-all-11">
+                                        <label for="create-campaign-segmentation-all-11" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="create-campaign-segmentation-all-12" name="create-campaign-segmentation-all-12">
+                                        <label for="create-campaign-segmentation-all-12" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                </div>
+                                <!-- /.create-campaign-segmentation-list -->
+                            </div>
+                            <!-- /.box -->
+                        </div>
+                        <!-- /.create-campaign-segmentation -->
+                    </div>
+                    <!-- /.create-campaign-step-content -->
+                </div>
+                <!-- /.create-campaign-step -->
+                <div class="create-campaign-step active">
+                    <div class="create-campaign-step-caption">
+                        <div class="create-campaign-step-number">3</div>
+                        <div class="create-campaign-step-title">Automations</div>
+                    </div>
+                    <!-- /.create-campaign-step-caption -->
+                    <div class="create-campaign-step-content">
+                        <div class="create-campaign-step-subtitle">Here you can automate your campaign</div>
+                    </div>
+                    <!-- /.create-campaign-step-content -->
+                </div>
+                <!-- /.create-campaign-step -->
+                <div class="create-campaign-automations">
+                    <div class="create-campaign-automations-caption">
+                        <div class="create-campaign-automations-title">All users in your city</div>
+                        <div class="create-campaign-automations-subtitle">Size: 25</div>
+                        <div class="create-campaign-automations-more">
+                            <a href="#" class="create-campaign-automations-more-toggle"><svg width="4" height="16" viewBox="0 0 4 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 4C3.1 4 4 3.1 4 2C4 0.9 3.1 0 2 0C0.9 0 0 0.9 0 2C0 3.1 0.9 4 2 4ZM2 6C0.9 6 0 6.9 0 8C0 9.1 0.9 10 2 10C3.1 10 4 9.1 4 8C4 6.9 3.1 6 2 6ZM2 12C0.9 12 0 12.9 0 14C0 15.1 0.9 16 2 16C3.1 16 4 15.1 4 14C4 12.9 3.1 12 2 12Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+</a>
+                        </div>
+                    </div>
+                    <!-- /.create-campaign-automations-caption -->
+
+                    <div class="panzoom-parent">
+                        <div class="panzoom">
+                            <div class="create-campaign-automations-content">
+                                <div class="create-campaign-automations-add">
+                                    <a href="#" class="create-campaign-automations-add-button zoom-change-height"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="white" class="svg-fill"/>
+</svg>
+</a>
+                                    <div class="create-campaign-automations-add-block">
+                                        <div class="create-campaign-automations-add-list">
+                                            <div class="create-campaign-automations-add-item">
+                                                <a href="#add-action" class="create-campaign-automations-add-action panel-toggle zoom-change-height">
+                                                    <span class="create-campaign-automations-add-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.59 7.58L10 14.17L6.41 10.59L5 12L10 17L18 9L16.59 7.58ZM12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                                    <span class="create-campaign-automations-add-text">Action</span>
+                                                </a>
+                                            </div>
+                                            <!-- /.create-campaign-automations-add-item -->
+                                            <div class="create-campaign-automations-add-item">
+                                                <a href="#" class="create-campaign-automations-add-delay zoom-change-height">
+                                                    <span class="create-campaign-automations-add-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 1H9V3H15V1ZM11 14H13V8H11V14ZM19.03 7.39L20.45 5.97C20.02 5.46 19.55 4.98 19.04 4.56L17.62 5.98C16.07 4.74 14.12 4 12 4C7.03 4 3 8.03 3 13C3 17.97 7.02 22 12 22C16.98 22 21 17.97 21 13C21 10.88 20.26 8.93 19.03 7.39ZM12 20C8.13 20 5 16.87 5 13C5 9.13 8.13 6 12 6C15.87 6 19 9.13 19 13C19 16.87 15.87 20 12 20Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                                    <span class="create-campaign-automations-add-text">Delay</span>
+                                                </a>
+                                            </div>
+                                            <!-- /.create-campaign-automations-add-item -->
+                                            <div class="create-campaign-automations-add-item">
+                                                <a href="#" class="create-campaign-automations-add-condition zoom-change-height">
+                                                    <span class="create-campaign-automations-add-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 17V19H9V17H3ZM3 5V7H13V5H3ZM13 21V19H21V17H13V15H11V21H13ZM7 9V11H3V13H7V15H9V9H7ZM21 13V11H11V13H21ZM15 9H17V7H21V5H17V3H15V9Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                                    <span class="create-campaign-automations-add-text">Condition</span>
+                                                </a>
+                                            </div>
+                                            <!-- /.create-campaign-automations-add-item -->
+                                        </div>
+                                        <!-- /.create-campaign-automations-add-list -->
+                                    </div>
+                                    <!-- /.create-campaign-automations-add-block -->
+                                    <div class="create-campaign-automations-delay">
+                                        <div class="create-campaign-automations-delay-title">Delay</div>
+                                        <div class="create-campaign-specific-row">
+                                            <div class="create-campaign-specific-row-n">
+                                                <select class="select">
+                                                    <option>Specific date and time</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <!-- /.create-campaign-specific-period -->
+                                        <div class="create-campaign-specific-title">Send message at</div>
+                                        <div class="create-campaign-specific-row create-campaign-specific-row-m">
+                                            <div class="create-campaign-specific-time-small">
+                                                <select class="select select-time">
+                                                    <option>07</option>
+                                                </select>
+                                            </div>
+                                            <div class="create-campaign-specific-time-small">
+                                                <select class="select select-time">
+                                                    <option>00</option>
+                                                </select>
+                                            </div>
+                                            <div class="create-campaign-specific-period">
+                                                <select class="select">
+                                                    <option>AM</option>
+                                                    <option>PM</option>
+                                                </select>
+                                            </div>
+                                            <div class="create-campaign-specific-date1">
+                                                <input type="text" class="input-text input-datepicker" placeholder="mm-dd-yyyy">
+                                            </div>
+                                        </div>
+                                        <!-- /.create-campaign-specific-row -->
+                                        <div class="create-campaign-automations-delay-options">
+                                            <div class="create-campaign-automations-delay-option">
+                                                <a href="#" class="button button-secondary create-campaign-automations-delay-cancel">Cancel</a>
+                                            </div>
+                                            <div class="create-campaign-automations-delay-option">
+                                                <a href="#" class="button">Add delay</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.create-campaign-automations-delay -->
+                                    <div class="create-campaign-automations-condition">
+                                        <div class="create-campaign-automations-condition-title">Condition</div>
+                                        <div class="create-campaign-automations-condition-content">
+                                            <div class="create-campaign-automations-condition-row">
+                                                <select class="select">
+                                                    <option>Select condition</option>
+                                                </select>
+                                            </div>
+                                            <div class="create-campaign-automations-condition-row">
+                                                <select class="select">
+                                                    <option>Is equal to</option>
+                                                </select>
+                                            </div>
+                                            <div class="create-campaign-automations-condition-row">
+                                                <select class="select">
+                                                    <option>Select value</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="create-campaign-automations-condition-options">
+                                            <div class="create-campaign-automations-condition-option">
+                                                <a href="#" class="button button-secondary create-campaign-automations-condition-cancel">Cancel</a>
+                                            </div>
+                                            <div class="create-campaign-automations-condition-option">
+                                                <a href="#" class="button">Add condition</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /.create-campaign-automations-condition -->
+                                </div>
+                                <!-- /.create-campaign-automations-add -->
+                            </div>
+                            <!-- /.create-campaign-automations-content -->
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.create-campaign-automations -->
+            </div>
+            <!-- /.create-campaign -->
+        </div>
+        <footer class="footer-site">
+            <div class="create-campaign-zoom">
+                <a href="#" class="create-campaign-zoom-plus zoom-in"></a>
+                <a href="#" class="create-campaign-zoom-minus zoom-out"></a>
+            </div>
+            <!-- /.create-campaign-zoom -->
+            <div class="create-campaign-options create-campaign-options-other">
+                <div class="create-campaign-option">
+                    <div class="create-campaign-option-back">
+                        <a href="#" class="button button-secondary">Back</a>
+                    </div>
+                </div>
+                <div class="create-campaign-option">
+                    <div class="create-campaign-option-save">
+                        <a class="create-campaign-option-save-button" href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 20"><defs/><path fill="#1C2538" fill-rule="evenodd" d="M4 2V0h10v2h3c.6 0 1 .4 1 1v16c0 .6-.4 1-1 1H1a1 1 0 01-1-1V3c0-.6.4-1 1-1h3zm0 2H2v14h14V4h-2v2H4V4zm2 0V2h6v2H6z" clip-rule="evenodd"/></svg> Save as Template</a>
+                    </div>
+                    <div class="create-campaign-option-time drop">
+                        <a href="#" class="create-campaign-option-time-toggle drop-toggle">
+<svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 22.5C6.477 22.5 2 18.023 2 12.5C2 6.977 6.477 2.5 12 2.5C17.523 2.5 22 6.977 22 12.5C22 18.023 17.523 22.5 12 22.5ZM12 20.5C16.4183 20.5 20 16.9183 20 12.5C20 8.08172 16.4183 4.5 12 4.5C7.58172 4.5 4 8.08172 4 12.5C4 16.9183 7.58172 20.5 12 20.5ZM17 12.5H13V7.5H11V14.5H17V12.5Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+                            <span class="create-campaign-option-time-toggle-arrow"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.99999 3.78145L8.29999 0.481445L9.24266 1.42411L4.99999 5.66678L0.757324 1.42411L1.69999 0.481445L4.99999 3.78145Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                        </a>
+                        <div class="create-campaign-option-time-block drop-block">
+                            <div class="create-campaign-option-time-menu">
+                                <a href="#" class="create-campaign-option-specific">Specific date &amp; time</a>
+                                <a href="#ongoing" class="create-campaign-option-ongoing panel-toggle">Ongoing</a>
+                            </div>
+                            <div class="create-campaign-specific">
+                                <div class="datepicker"></div>
+                                <div class="create-campaign-specific-title">Send message at</div>
+                                <div class="create-campaign-specific-row">
+                                    <div class="create-campaign-specific-time">
+                                        <select class="select select-time">
+                                            <option>00:00</option>
+                                            <option>00:30</option>
+                                        </select>
+                                    </div>
+                                    <div class="create-campaign-specific-period">
+                                        <select class="select">
+                                            <option>AM</option>
+                                            <option>PM</option>
+                                        </select>
+                                    </div>
+                                    <div class="create-campaign-specific-date">
+                                        <input type="text" class="input-text" placeholder="mm-dd-yyyy" readonly>
+                                    </div>
+                                </div>
+                                <!-- /.create-campaign-specific-row -->
+                            </div>
+                            <!-- /.create-campaign-specific -->
+                        </div>
+                        <!-- /.create-campaign-option-time-block -->
+                    </div>
+                    <!-- /.create-campaign-option-time -->
+                    <div class="create-campaign-option-send">
+                        <a href="#" class="button disabled">
+                            <span class="button-icon"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.33998 14.5L15.3333 8.5L1.33998 2.5L1.33331 7.16667L11.3333 8.5L1.33331 9.83333L1.33998 14.5Z" fill="white"/>
+</svg>
+</span>
+                            Send
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- /.create-campaign-options -->
+        </footer>
+    </main>
+    <!-- /.main-site -->
+<div class="panel-mask"></div>
+<div class="panel" data-panel="new-segmentation">
+    <button class="panel-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</button>
+    <div class="panel-top">
+        <div class="new-segmentation-caption">New segmentation</div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <div class="new-segmentation">
+            <div class="new-segmentation-name">
+                <label class="new-segmentation-label" for="new-segmentation-name">Segment Name</label>
+                <input type="text" class="input-text" id="new-segmentation-name" placeholder="Enter Segment Name">
+            </div>
+            <div class="new-segmentation-type">
+                <div class="new-segmentation-label">Type</div>
+                <div class="new-segmentation-type-list">
+                    <div class="new-segmentation-type-item">
+                        <div class="radio">
+                            <input type="radio" id="new-segmentation-type-static" name="new-segmentation-type" checked>
+                            <label for="new-segmentation-type-static">Static</label>
+                        </div>
+                    </div>
+                    <div class="new-segmentation-type-item">
+                        <div class="radio">
+                            <input type="radio" id="new-segmentation-type-dynamic" name="new-segmentation-type">
+                            <label for="new-segmentation-type-dynamic">Dynamic</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.new-segmentation-type -->
+            <div class="new-segmentation-tags">
+                <input type="text" class="input-text new-segmentation-tags-input" placeholder="Enter the tags here">
+                <div class="new-segmentation-tags-pull"></div>
+            </div>
+            <div class="new-segmentation-title">Criteria <strong>Segments User*</strong></div>
+            <div class="new-segmentation-conditions">
+                <div class="new-segmentation-conditions-title">All contacts matching these conditions</div>
+                <div class="new-segmentation-conditions-item">
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Check-In</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Equal To</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                        <a href="#" class="new-segmentation-conditions-delete">
+                            <span class="new-segmentation-conditions-delete-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="new-segmentation-conditions-delete-text">Delete</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.new-segmentation-conditions-item -->
+                <div class="new-segmentation-conditions-sep"></div>
+                <div class="new-segmentation-conditions-item">
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Check-In</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Equal To</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                        <a href="#" class="new-segmentation-conditions-delete">
+                            <span class="new-segmentation-conditions-delete-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="new-segmentation-conditions-delete-text">Delete</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.new-segmentation-conditions-item -->
+                <a href="#" class="new-segmentation-conditions-add"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+Add new conditions</a>
+            </div>
+            <!-- /.new-segmentation-conditions -->
+            <div class="new-segmentation-conditions-type">
+                <ul>
+                    <li class="active"><a href="#">Include</a></li>
+                    <li><a href="#">Exclude</a></li>
+                </ul>
+            </div>
+            <!-- /.new-segmentation-conditions-type -->
+            <div class="new-segmentation-conditions">
+                <div class="new-segmentation-conditions-title">Excludes all contacts that match these conditions </div>
+                <div class="new-segmentation-conditions-item">
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Check-In</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Equal To</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                        <a href="#" class="new-segmentation-conditions-delete">
+                            <span class="new-segmentation-conditions-delete-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="new-segmentation-conditions-delete-text">Delete</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.new-segmentation-conditions-item -->
+                <a href="#" class="new-segmentation-conditions-add"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+Add new conditions</a>
+            </div>
+            <!-- /.new-segmentation-conditions -->
+            <template id="segmentation-group">
+                <div class="new-segmentation-conditions-type">
+                    <ul>
+                        <li class="active"><a href="#">Include</a></li>
+                        <li><a href="#">Exclude</a></li>
+                    </ul>
+                </div>
+                <!-- /.new-segmentation-conditions-type -->
+                <div class="new-segmentation-conditions">
+                    <div class="new-segmentation-conditions-title">Excludes all contacts that match these conditions </div>
+                    <div class="new-segmentation-conditions-item">
+                        <div class="new-segmentation-conditions-col">
+                            <select class="select">
+                                <option>Check-In</option>
+                            </select>
+                        </div>
+                        <div class="new-segmentation-conditions-col">
+                            <select class="select">
+                                <option>Equal To</option>
+                            </select>
+                        </div>
+                        <div class="new-segmentation-conditions-col">
+                            <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                        </div>
+                        <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                            <a href="#" class="new-segmentation-conditions-delete">
+                                <span class="new-segmentation-conditions-delete-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                <span class="new-segmentation-conditions-delete-text">Delete</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.new-segmentation-conditions-item -->
+                    <a href="#" class="new-segmentation-conditions-add"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+Add new conditions</a>
+                </div>
+                <!-- /.new-segmentation-conditions -->
+            </template>
+            <div class="new-segmentation-add-group">
+                <button class="button button-secondary">
+                    <span class="button-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="white" class="svg-fill"/>
+</svg>
+</span>
+                    Add New Group
+                </button>
+            </div>
+        </div>
+        <!-- /.new-segmentation -->
+    </div>
+    <!-- /.panel-content -->
+    <div class="panel-bottom">
+        <div class="new-segmentation-save">
+            <button class="button">
+                <span class="button-icon"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 13.1667H12.6667V5.052L11.448 3.83333H10.6667V6.5H4.66667V3.83333H3.33333V13.1667H4V8.5H12V13.1667ZM2.66667 2.5H12L13.8047 4.30467C13.9297 4.42966 14 4.5992 14 4.776V13.8333C14 14.0101 13.9298 14.1797 13.8047 14.3047C13.6797 14.4298 13.5101 14.5 13.3333 14.5H2.66667C2.48986 14.5 2.32029 14.4298 2.19526 14.3047C2.07024 14.1797 2 14.0101 2 13.8333V3.16667C2 2.98986 2.07024 2.82029 2.19526 2.69526C2.32029 2.57024 2.48986 2.5 2.66667 2.5ZM5.33333 9.83333V13.1667H10.6667V9.83333H5.33333Z" fill="white"/>
+</svg>
+</span>
+                Save
+            </button>
+        </div>
+    </div>
+    <!-- /.panel-bottom -->
+</div>
+<!-- /.panel -->
+<div class="panel panel-w2" data-panel="ongoing">
+    <button class="panel-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</button>
+    <div class="panel-top">
+        <div class="ongoing-caption">Ongoing</div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <div class="ongoing">
+            <label for="ongoing-start-date" class="ongoing-label">Starting on</label>
+            <div class="ongoing-row">
+                <div class="ongoing-col">
+                    <input type="text" class="input-text input-datepicker" value="Oct 20, 2020" id="ongoing-start-date">
+                </div>
+                <div class="ongoing-col">
+                    <select class="select select-time">
+                        <option>00:00</option>
+                        <option>00:30</option>
+                    </select>
+                </div>
+                <div class="ongoing-col">
+                    <select class="select">
+                        <option>AM</option>
+                        <option>PM</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <label for="ongoing-end-date" class="ongoing-label">Ending on</label>
+            <div class="ongoing-row">
+                <div class="ongoing-col">
+                    <input type="text" class="input-text input-datepicker" id="ongoing-end-date">
+                </div>
+                <div class="ongoing-col">
+                    <select class="select select-time">
+                        <option>00:00</option>
+                        <option>00:30</option>
+                    </select>
+                </div>
+                <div class="ongoing-col">
+                    <select class="select">
+                        <option>AM</option>
+                        <option>PM</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-note">You can leave out the end date and then your email will continue to be sent until you turn it off</div>
+            <div class="ongoing-label">What day to send</div>
+            <div class="ongoing-day">
+                <select class="select">
+                    <option>Specific day of week</option>
+                </select>
+                <div class="ongoing-day-list">
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-1" name="ongoing-day-1" checked>
+                        <label for="ongoing-day-1">Mo</label>
+                    </div>
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-2" name="ongoing-day-2">
+                        <label for="ongoing-day-2">Tu</label>
+                    </div>
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-3" name="ongoing-day-3">
+                        <label for="ongoing-day-3">We</label>
+                    </div>
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-4" name="ongoing-day-4" checked>
+                        <label for="ongoing-day-4">Th</label>
+                    </div>
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-5" name="ongoing-day-5">
+                        <label for="ongoing-day-5">Fr</label>
+                    </div>
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-6" name="ongoing-day-6">
+                        <label for="ongoing-day-6">Sa</label>
+                    </div>
+                    <div class="ongoing-day-item">
+                        <input type="checkbox" id="ongoing-day-7" name="ongoing-day-7">
+                        <label for="ongoing-day-7">Su</label>
+                    </div>
+                </div>
+                <!-- /.ongoing-day-list -->
+            </div>
+            <!-- /.ongoing-day -->
+            <label for="ongoing-time" class="ongoing-label">What time to send</label>
+            <div class="ongoing-time">
+                <div class="ongoing-time-col">
+                    <select class="select select-time">
+                        <option>00:00</option>
+                        <option>00:30</option>
+                    </select>
+                </div>
+                <div class="ongoing-time-col">
+                    <select class="select">
+                        <option>AM</option>
+                        <option>PM</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /.ongoing-time -->
+            <div class="ongoing-check">
+                <div class="checkbox">
+                    <input type="checkbox" name="ongoing-check-1" id="ongoing-check-1" checked>
+                    <label for="ongoing-check-1">Send time optimization</label>
+                </div>
+            </div>
+        </div>
+        <!-- /.ongoing -->
+    </div>
+    <!-- /.panel-content -->
+    <div class="panel-bottom">
+        <div class="ongoing-options">
+            <div class="ongoing-option"><a href="#" class="button button-secondary panel-cancel">Cancel</a></div>
+            <div class="ongoing-option"><a href="#" class="button">Schedule send</a></div>
+        </div>
+        <!-- /.ongoing-options -->
+    </div>
+    <!-- /.panel-bottom -->
+</div>
+<!-- /.panel -->
+<div class="panel panel-w3" data-panel="add-action">
+    <button class="panel-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</button>
+    <div class="panel-top">
+        <div class="add-action-caption">Add action</div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <div class="add-action tab">
+            <div class="add-action-title">What action do you want to add?</div>
+            <ul class="add-action-tabs tabs">
+                <li class="active"><a href="#">Email</a></li>
+                <li><a href="#">SMS</a></li>
+                <li><a href="#">Messenger</a></li>
+                <li><a href="#">Other action</a></li>
+            </ul>
+            <div class="box visible">
+                <div class="add-action-templates-overflow">
+                    <div class="add-action-templates">
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-1.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-2.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-3.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-4.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-5.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-6.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-7.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                        <div class="add-action-template">
+                            <div class="add-action-template-preview">
+                                <div class="add-action-template-img"><img src="upload/template-2.png" alt=""></div>
+                                <div class="add-action-template-title">Template name</div>
+                                <a href="#" class="add-action-template-visibility"></a>
+                            </div>
+                        </div>
+                        <!-- /.add-action-template -->
+                    </div>
+                    <!-- /.add-action-templates -->
+                </div>
+                <div class="add-action-button">
+                    <a href="#email-content" class="button button-secondary panel-toggle">
+                        <span class="button-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="white" class="svg-fill"/>
+</svg>
+</span>
+                        Design from scratch
+                    </a>
+                </div>
+            </div>
+            <!-- /.box -->
+            <div class="box"></div>
+            <!-- /.box -->
+            <div class="box"></div>
+            <!-- /.box -->
+            <div class="box">
+                <div class="add-action-other">
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 15V19H20V15H22V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V15H4Z" fill="#B7BABF" class="svg-fill"/>
+<path d="M4 9V5H20V9H22V4C22 3.44772 21.5523 3 21 3H3C2.44772 3 2 3.44772 2 4V9H4Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="add-action-item-title">Add to stage</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#whatsapp-message" class="add-action-item panel-toggle">
+                            <span class="add-action-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M17.498 14.382C17.197 14.232 15.731 13.515 15.458 13.416C15.185 13.315 14.985 13.266 14.785 13.566C14.588 13.861 14.014 14.53 13.841 14.728C13.666 14.923 13.492 14.938 13.195 14.803C12.895 14.653 11.932 14.338 10.792 13.318C9.904 12.523 9.308 11.548 9.132 11.248C8.958 10.948 9.113 10.783 9.262 10.633C9.398 10.498 9.563 10.288 9.713 10.11C9.859 9.929 9.907 9.809 10.01 9.614C10.11 9.404 10.059 9.239 9.985 9.09C9.91 8.94 9.313 7.47 9.063 6.884C8.823 6.3 8.576 6.374 8.391 6.374C8.219 6.359 8.02 6.359 7.82 6.359C7.62 6.359 7.297 6.433 7.023 6.718C6.75 7.018 5.978 7.738 5.978 9.193C5.978 10.648 7.048 12.058 7.197 12.268C7.346 12.463 9.302 15.463 12.297 16.753C13.011 17.053 13.567 17.233 14.001 17.382C14.715 17.609 15.366 17.577 15.881 17.503C16.455 17.412 17.648 16.782 17.897 16.077C18.152 15.372 18.152 14.787 18.077 14.652C18.003 14.517 17.807 14.442 17.507 14.307L17.498 14.382ZM12.061 21.75H12.045C10.275 21.75 8.521 21.27 6.99 20.37L6.63 20.156L2.88 21.131L3.885 17.486L3.646 17.111C2.656 15.535 2.13 13.72 2.13 11.851C2.13 6.406 6.585 1.966 12.072 1.966C14.726 1.966 17.217 3.001 19.093 4.876C20.968 6.735 22.002 9.226 22.002 11.866C21.998 17.31 17.542 21.751 12.067 21.751L12.061 21.75ZM20.52 3.449C18.24 1.245 15.24 0 12.045 0C5.463 0 0.104 5.334 0.101 11.893C0.101 13.989 0.65 16.033 1.696 17.838L0 24L6.335 22.348C8.081 23.291 10.045 23.792 12.045 23.795H12.051C18.636 23.795 23.997 18.459 24 11.899C24 8.723 22.76 5.734 20.505 3.488" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="add-action-item-title">Send message to WhatsApp</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13 9L11 9L11 7L13 7L13 9ZM13 17L11 17L11 11L13 11L13 17ZM12.01 22C17.53 22 22 17.52 22 12C22 6.48 17.53 2 12.01 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12.01 22ZM12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="add-action-item-title">Add a tag</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22.314 20.899L18.031 16.617C19.3082 15.0237 20.0029 13.042 20 11C20 6.032 15.968 2 11 2C6.032 2 2 6.032 2 11C2 15.968 6.032 20 11 20C13.042 20.0029 15.0237 19.3082 16.617 18.031L20.899 22.314L22.314 20.899ZM18 11C18.0029 12.8204 17.2941 14.5699 16.025 15.875L15.875 16.025C14.5699 17.2941 12.8204 18.0029 11 18C7.132 18 4 14.867 4 11C4 7.132 7.132 4 11 4C14.867 4 18 7.132 18 11Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="add-action-item-title">Assign to someone</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18 10L17 9.001L18.003 7.997C19.002 6.996 20 4.997 21 2C6.31105 2 4.08854 15.4254 3.06361 21.6166C3.0419 21.7477 3.02074 21.8756 3 22H4.998C5.664 18.667 7.331 16.834 10 16.5C14 16 17 13 18 10ZM6.334 15.819C6.51 15.236 6.707 14.66 6.94 14.036H6.939C8.995 8.51 12.42 5.085 18.013 4.218C17.5 5.362 17.015 6.156 16.585 6.586L15.585 7.587L14.172 9.002L15.628 10.457C14.498 12.542 12.265 14.201 9.752 14.515C8.435 14.68 7.294 15.122 6.334 15.819Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="add-action-item-title">Move to stage</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM17 9.5C17 10.33 16.33 11 15.5 11C14.67 11 14 10.33 14 9.5C14 8.67 14.67 8 15.5 8C16.33 8 17 8.67 17 9.5ZM8.5 11C9.33 11 10 10.33 10 9.5C10 8.67 9.33 8 8.5 8C7.67 8 7 8.67 7 9.5C7 10.33 7.67 11 8.5 11ZM17.11 14C16.31 16.04 14.33 17.5 12 17.5C9.67 17.5 7.69 16.04 6.89 14H17.11Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="add-action-item-title">Update status</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 6V8H21V6H3ZM10 18H14V16H10V18ZM18 13H6V11H18V13Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="add-action-item-title">Add a task</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.828 7.75689L9.17196 13.4139C8.912 13.665 8.80775 14.0368 8.89926 14.3864C8.99078 14.736 9.26382 15.0091 9.61345 15.1006C9.96308 15.1921 10.3349 15.0878 10.586 14.8279L16.243 9.17189C17.4146 8.00022 17.4146 6.10056 16.243 4.92889C15.0713 3.75722 13.1716 3.75722 12 4.92889L6.34296 10.5859C5.05321 11.8435 4.53968 13.6978 4.99869 15.4397C5.45771 17.1817 6.81828 18.5421 8.56032 19.0008C10.3023 19.4596 12.1565 18.9458 13.414 17.6559L19.071 11.9999L20.485 13.4139L14.828 19.0709C13.0595 20.8394 10.4819 21.53 8.06613 20.8827C5.65036 20.2354 3.76344 18.3485 3.11613 15.9327C2.46883 13.5169 3.15949 10.9394 4.92796 9.17089L10.586 3.51489C12.5479 1.62003 15.6664 1.64713 17.5951 3.5758C19.5237 5.50446 19.5508 8.62299 17.656 10.5849L12 16.2439C11.2418 17.0018 10.137 17.2977 9.1015 17.0202C8.06605 16.7426 7.25734 15.9337 6.98 14.8982C6.70267 13.8626 6.99884 12.7578 7.75696 11.9999L13.414 6.34289L14.828 7.75689Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="add-action-item-title">Notification</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 4V2H17V4H20.007C20.555 4 21 4.445 21 4.993V21.007C20.9994 21.5552 20.5552 21.9994 20.007 22H3.993C3.44481 21.9994 3.00055 21.5552 3 21.007V4.993C3 4.445 3.445 4 3.993 4H7ZM7 6H5V20H19V6H17V8H7V6ZM9 6V4H15V6H9Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="add-action-item-title">Add attribute</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                    <div class="add-action-other-item">
+                        <a href="#" class="add-action-item">
+                            <span class="add-action-item-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 2V4H2V6H4V21C4 21.5523 4.44772 22 5 22H19C19.5523 22 20 21.5523 20 21V6H22V4H17V2H7ZM6 20V6H18V20H6ZM9 9H11V17H9V9ZM15 9H13V17H15V9Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="add-action-item-title">Update attribute</span>
+                        </a>
+                    </div>
+                    <!-- /.add-action-other-item -->
+                </div>
+                <!-- /.add-action-other -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.add-action -->
+    </div>
+    <!-- /.panel-content -->
+</div>
+<!-- /.panel -->
+<div class="panel panel-inner panel-w3" data-panel="whatsapp-message">
+    <button class="panel-inner-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</button>
+    <div class="panel-top">
+        <div class="add-action-caption">Send message to WhatsApp</div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <div class="add-action-form">
+            <div class="add-action-form-row">
+                <label for="add-action-form-phone" class="add-action-form-phone-label">From:</label>
+                <input type="tel" class="input-text mask-phone add-action-form-phone" id="add-action-form-phone" placeholder="(510) 945 1277">
+            </div>
+            <div class="add-action-form-row">
+                <textarea class="textarea" placeholder="Enter your message"></textarea>
+                <a href="#" class="add-action-form-info"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>info</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="info" fill-rule="nonzero">
+            <path d="M1.99999864,8.99401 C1.99947,8.20621 2.15435,7.42605 2.45577,6.69819 C2.75718,5.97034 3.19921,5.30909 3.75655,4.75231 C4.31388,4.19553 4.97558,3.75416 5.70373,3.45348 C6.43189,3.15279 7.21221,2.99869 7.99999864,3.00000159 L15.9999986,3.00000159 C19.313,3.00000159 21.9999986,5.69501 21.9999986,8.99401 L21.9999986,21.0000016 L7.99999864,21.0000016 C4.687,21.0000016 1.99999864,18.305 1.99999864,15.006 L1.99999864,8.99401 Z M19.999998,18.9999974 L19.999998,8.99401 C19.9974,7.93451 19.5749,6.91925 18.8251,6.17063 C18.0754,5.42201 17.0595,5.00106 15.999998,4.9999974 L7.99999797,4.9999974 C7.47485,4.99869 6.9546,5.10106 6.4691,5.30123 C5.98359,5.50141 5.54238,5.79546 5.17076,6.16652 C4.79914,6.53758 4.50443,6.97835 4.30353,7.46356 C4.10262,7.94876 3.99947,8.46886 3.99999797,8.99401 L3.99999797,15.006 C4.00265,16.0655 4.42511,17.0808 5.17486,17.8294 C5.9246,18.578 6.9405,18.999 7.99999797,18.9999974 L19.999998,18.9999974 Z M14,11 L16,11 L16,13 L14,13 L14,11 Z M8,11 L10,11 L10,13 L8,13 L8,11 Z" id="Shape" fill="#1C2538"></path>
+            <circle id="Oval" fill="#99DC13" class="svg-fill" cx="4" cy="4" r="4"></circle>
+        </g>
+    </g>
+</svg></a>
+            </div>
+            <div class="add-action-form-options">
+                <div class="add-action-form-options-item">
+                    <a href="#" class="add-action-form-option"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM17 9.5C17 10.33 16.33 11 15.5 11C14.67 11 14 10.33 14 9.5C14 8.67 14.67 8 15.5 8C16.33 8 17 8.67 17 9.5ZM8.5 11C9.33 11 10 10.33 10 9.5C10 8.67 9.33 8 8.5 8C7.67 8 7 8.67 7 9.5C7 10.33 7.67 11 8.5 11ZM17.11 14C16.31 16.04 14.33 17.5 12 17.5C9.67 17.5 7.69 16.04 6.89 14H17.11Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+</a>
+                </div>
+                <div class="add-action-form-options-item">
+                    <a href="#" class="add-action-form-option"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.828 7.75689L9.17196 13.4139C8.912 13.665 8.80775 14.0368 8.89926 14.3864C8.99078 14.736 9.26382 15.0091 9.61345 15.1006C9.96308 15.1921 10.3349 15.0878 10.586 14.8279L16.243 9.17189C17.4146 8.00022 17.4146 6.10056 16.243 4.92889C15.0713 3.75722 13.1716 3.75722 12 4.92889L6.34296 10.5859C5.05321 11.8435 4.53968 13.6978 4.99869 15.4397C5.45771 17.1817 6.81828 18.5421 8.56032 19.0008C10.3023 19.4596 12.1565 18.9458 13.414 17.6559L19.071 11.9999L20.485 13.4139L14.828 19.0709C13.0595 20.8394 10.4819 21.53 8.06613 20.8827C5.65036 20.2354 3.76344 18.3485 3.11613 15.9327C2.46883 13.5169 3.15949 10.9394 4.92796 9.17089L10.586 3.51489C12.5479 1.62003 15.6664 1.64713 17.5951 3.5758C19.5237 5.50446 19.5508 8.62299 17.656 10.5849L12 16.2439C11.2418 17.0018 10.137 17.2977 9.1015 17.0202C8.06605 16.7426 7.25734 15.9337 6.98 14.8982C6.70267 13.8626 6.99884 12.7578 7.75696 11.9999L13.414 6.34289L14.828 7.75689Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</a>
+                </div>
+            </div>
+            <!-- /.add-action-form-options -->
+        </div>
+        <!-- /.add-action-form -->
+    </div>
+    <!-- /.panel-content -->
+    <div class="panel-bottom">
+        <div class="add-action-options">
+            <div class="add-action-option"><a href="#" class="button button-secondary panel-inner-cancel">Cancel</a></div>
+            <div class="add-action-option"><a href="#" class="button">Add action</a></div>
+        </div>
+        <!-- /.add-action-options -->
+    </div>
+    <!-- /.panel-bottom -->
+</div>
+<!-- /.panel -->
+<div class="panel panel-inner panel-w4-i" data-panel="form-newsletter-email">
+    <div class="form-newsletter-email-img">
+        <img src="upload/email2.jpg" alt="">
+    </div>
+</div>
+<!-- /.panel -->
+<div class="panel panel-inner panel-w4" data-panel="email-content">
+    <button class="panel-inner-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</button>
+    <div class="panel-top">
+        <div class="add-action-caption">Email content</div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <div class="add-action-form">
+            <div class="add-action-title">Here you can customize your email content.</div>
+            <div class="add-action-form-caption">
+                <div class="add-action-form-email">
+                    <label for="add-action-form-email" class="add-action-form-email-label"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#F3535E" class="svg-fill"/>
+</svg>
+</label>
+                    <select class="select" name="add-action-form-email" id="add-action-form-email">
+                        <option>support@mail.com</option>
+                    </select>
+                </div>
+                <div class="add-action-form-preview"><a href="#form-preview" class="button button-secondary panel-toggle">Preview</a></div>
+            </div>
+            <template id="add-action-subject">
+                <div class="add-action-form-input add-action-form-delete-active">
+                    <label for="add-action-form-subject-1" class="add-action-form-subject">Subject <span class="add-action-form-subject-index"></span>:</label>
+                    <input type="text" class="input-text" id="add-action-form-subject-1" value="">
+                    <a href="#" class="add-action-form-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</a>
+                    <a href="#" class="add-action-form-add hidden"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+</a>
+                    <a href="#" class="add-action-form-info add-action-form-info-red"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>info</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="info" fill-rule="nonzero">
+            <path d="M1.99999864,8.99401 C1.99947,8.20621 2.15435,7.42605 2.45577,6.69819 C2.75718,5.97034 3.19921,5.30909 3.75655,4.75231 C4.31388,4.19553 4.97558,3.75416 5.70373,3.45348 C6.43189,3.15279 7.21221,2.99869 7.99999864,3.00000159 L15.9999986,3.00000159 C19.313,3.00000159 21.9999986,5.69501 21.9999986,8.99401 L21.9999986,21.0000016 L7.99999864,21.0000016 C4.687,21.0000016 1.99999864,18.305 1.99999864,15.006 L1.99999864,8.99401 Z M19.999998,18.9999974 L19.999998,8.99401 C19.9974,7.93451 19.5749,6.91925 18.8251,6.17063 C18.0754,5.42201 17.0595,5.00106 15.999998,4.9999974 L7.99999797,4.9999974 C7.47485,4.99869 6.9546,5.10106 6.4691,5.30123 C5.98359,5.50141 5.54238,5.79546 5.17076,6.16652 C4.79914,6.53758 4.50443,6.97835 4.30353,7.46356 C4.10262,7.94876 3.99947,8.46886 3.99999797,8.99401 L3.99999797,15.006 C4.00265,16.0655 4.42511,17.0808 5.17486,17.8294 C5.9246,18.578 6.9405,18.999 7.99999797,18.9999974 L19.999998,18.9999974 Z M14,11 L16,11 L16,13 L14,13 L14,11 Z M8,11 L10,11 L10,13 L8,13 L8,11 Z" id="Shape" fill="#1C2538"></path>
+            <circle id="Oval" fill="#99DC13" class="svg-fill" cx="4" cy="4" r="4"></circle>
+        </g>
+    </g>
+</svg></a>
+                </div>
+            </template>
+            <div class="add-action-form-input-pull">
+                <div class="add-action-form-input">
+                    <label for="add-action-form-subject-1" class="add-action-form-subject">Subject <span class="add-action-form-subject-index">1</span>:</label>
+                    <input type="text" class="input-text" id="add-action-form-subject-1" value="Test subject">
+                    <a href="#" class="add-action-form-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</a>
+                    <a href="#" class="add-action-form-add hidden"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+</a>
+                    <a href="#" class="add-action-form-info add-action-form-info-red"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>info</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="info" fill-rule="nonzero">
+            <path d="M1.99999864,8.99401 C1.99947,8.20621 2.15435,7.42605 2.45577,6.69819 C2.75718,5.97034 3.19921,5.30909 3.75655,4.75231 C4.31388,4.19553 4.97558,3.75416 5.70373,3.45348 C6.43189,3.15279 7.21221,2.99869 7.99999864,3.00000159 L15.9999986,3.00000159 C19.313,3.00000159 21.9999986,5.69501 21.9999986,8.99401 L21.9999986,21.0000016 L7.99999864,21.0000016 C4.687,21.0000016 1.99999864,18.305 1.99999864,15.006 L1.99999864,8.99401 Z M19.999998,18.9999974 L19.999998,8.99401 C19.9974,7.93451 19.5749,6.91925 18.8251,6.17063 C18.0754,5.42201 17.0595,5.00106 15.999998,4.9999974 L7.99999797,4.9999974 C7.47485,4.99869 6.9546,5.10106 6.4691,5.30123 C5.98359,5.50141 5.54238,5.79546 5.17076,6.16652 C4.79914,6.53758 4.50443,6.97835 4.30353,7.46356 C4.10262,7.94876 3.99947,8.46886 3.99999797,8.99401 L3.99999797,15.006 C4.00265,16.0655 4.42511,17.0808 5.17486,17.8294 C5.9246,18.578 6.9405,18.999 7.99999797,18.9999974 L19.999998,18.9999974 Z M14,11 L16,11 L16,13 L14,13 L14,11 Z M8,11 L10,11 L10,13 L8,13 L8,11 Z" id="Shape" fill="#1C2538"></path>
+            <circle id="Oval" fill="#99DC13" class="svg-fill" cx="4" cy="4" r="4"></circle>
+        </g>
+    </g>
+</svg></a>
+                </div>
+                <div class="add-action-form-input add-action-form-delete-active">
+                    <label for="add-action-form-subject-2" class="add-action-form-subject">Subject <span class="add-action-form-subject-index">2</span>:</label>
+                    <input type="text" class="input-text" id="add-action-form-subject-2" value="Another test subject">
+                    <a href="#" class="add-action-form-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</a>
+                    <a href="#" class="add-action-form-add hidden"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+</a>
+                    <a href="#" class="add-action-form-info add-action-form-info-red"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>info</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="info" fill-rule="nonzero">
+            <path d="M1.99999864,8.99401 C1.99947,8.20621 2.15435,7.42605 2.45577,6.69819 C2.75718,5.97034 3.19921,5.30909 3.75655,4.75231 C4.31388,4.19553 4.97558,3.75416 5.70373,3.45348 C6.43189,3.15279 7.21221,2.99869 7.99999864,3.00000159 L15.9999986,3.00000159 C19.313,3.00000159 21.9999986,5.69501 21.9999986,8.99401 L21.9999986,21.0000016 L7.99999864,21.0000016 C4.687,21.0000016 1.99999864,18.305 1.99999864,15.006 L1.99999864,8.99401 Z M19.999998,18.9999974 L19.999998,8.99401 C19.9974,7.93451 19.5749,6.91925 18.8251,6.17063 C18.0754,5.42201 17.0595,5.00106 15.999998,4.9999974 L7.99999797,4.9999974 C7.47485,4.99869 6.9546,5.10106 6.4691,5.30123 C5.98359,5.50141 5.54238,5.79546 5.17076,6.16652 C4.79914,6.53758 4.50443,6.97835 4.30353,7.46356 C4.10262,7.94876 3.99947,8.46886 3.99999797,8.99401 L3.99999797,15.006 C4.00265,16.0655 4.42511,17.0808 5.17486,17.8294 C5.9246,18.578 6.9405,18.999 7.99999797,18.9999974 L19.999998,18.9999974 Z M14,11 L16,11 L16,13 L14,13 L14,11 Z M8,11 L10,11 L10,13 L8,13 L8,11 Z" id="Shape" fill="#1C2538"></path>
+            <circle id="Oval" fill="#99DC13" class="svg-fill" cx="4" cy="4" r="4"></circle>
+        </g>
+    </g>
+</svg></a>
+                </div>
+                <div class="add-action-form-input add-action-form-delete-active">
+                    <label for="add-action-form-subject-3" class="add-action-form-subject">Subject <span class="add-action-form-subject-index">3</span>:</label>
+                    <input type="text" class="input-text" id="add-action-form-subject-3" value="One more test subject">
+                    <a href="#" class="add-action-form-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</a>
+                    <a href="#" class="add-action-form-add hidden"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+</a>
+                    <a href="#" class="add-action-form-info add-action-form-info-red"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>info</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="info" fill-rule="nonzero">
+            <path d="M1.99999864,8.99401 C1.99947,8.20621 2.15435,7.42605 2.45577,6.69819 C2.75718,5.97034 3.19921,5.30909 3.75655,4.75231 C4.31388,4.19553 4.97558,3.75416 5.70373,3.45348 C6.43189,3.15279 7.21221,2.99869 7.99999864,3.00000159 L15.9999986,3.00000159 C19.313,3.00000159 21.9999986,5.69501 21.9999986,8.99401 L21.9999986,21.0000016 L7.99999864,21.0000016 C4.687,21.0000016 1.99999864,18.305 1.99999864,15.006 L1.99999864,8.99401 Z M19.999998,18.9999974 L19.999998,8.99401 C19.9974,7.93451 19.5749,6.91925 18.8251,6.17063 C18.0754,5.42201 17.0595,5.00106 15.999998,4.9999974 L7.99999797,4.9999974 C7.47485,4.99869 6.9546,5.10106 6.4691,5.30123 C5.98359,5.50141 5.54238,5.79546 5.17076,6.16652 C4.79914,6.53758 4.50443,6.97835 4.30353,7.46356 C4.10262,7.94876 3.99947,8.46886 3.99999797,8.99401 L3.99999797,15.006 C4.00265,16.0655 4.42511,17.0808 5.17486,17.8294 C5.9246,18.578 6.9405,18.999 7.99999797,18.9999974 L19.999998,18.9999974 Z M14,11 L16,11 L16,13 L14,13 L14,11 Z M8,11 L10,11 L10,13 L8,13 L8,11 Z" id="Shape" fill="#1C2538"></path>
+            <circle id="Oval" fill="#99DC13" class="svg-fill" cx="4" cy="4" r="4"></circle>
+        </g>
+    </g>
+</svg></a>
+                </div>
+            </div>
+            <div class="add-action-form-row">
+                <textarea data-textarea="textarea-newsletter" class="textarea" placeholder="Enter your message"></textarea>
+                <a href="#" class="add-action-form-info add-action-form-info-gray"><?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="21px" viewBox="0 0 22 21" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>info</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="info" fill-rule="nonzero">
+            <path d="M1.99999864,8.99401 C1.99947,8.20621 2.15435,7.42605 2.45577,6.69819 C2.75718,5.97034 3.19921,5.30909 3.75655,4.75231 C4.31388,4.19553 4.97558,3.75416 5.70373,3.45348 C6.43189,3.15279 7.21221,2.99869 7.99999864,3.00000159 L15.9999986,3.00000159 C19.313,3.00000159 21.9999986,5.69501 21.9999986,8.99401 L21.9999986,21.0000016 L7.99999864,21.0000016 C4.687,21.0000016 1.99999864,18.305 1.99999864,15.006 L1.99999864,8.99401 Z M19.999998,18.9999974 L19.999998,8.99401 C19.9974,7.93451 19.5749,6.91925 18.8251,6.17063 C18.0754,5.42201 17.0595,5.00106 15.999998,4.9999974 L7.99999797,4.9999974 C7.47485,4.99869 6.9546,5.10106 6.4691,5.30123 C5.98359,5.50141 5.54238,5.79546 5.17076,6.16652 C4.79914,6.53758 4.50443,6.97835 4.30353,7.46356 C4.10262,7.94876 3.99947,8.46886 3.99999797,8.99401 L3.99999797,15.006 C4.00265,16.0655 4.42511,17.0808 5.17486,17.8294 C5.9246,18.578 6.9405,18.999 7.99999797,18.9999974 L19.999998,18.9999974 Z M14,11 L16,11 L16,13 L14,13 L14,11 Z M8,11 L10,11 L10,13 L8,13 L8,11 Z" id="Shape" fill="#1C2538"></path>
+            <circle id="Oval" fill="#99DC13" class="svg-fill" cx="4" cy="4" r="4"></circle>
+        </g>
+    </g>
+</svg></a>
+            </div>
+            <div class="files-pull" style="display: block;">
+                <template class="files-pull-template">
+                    <div class="files-pull-list-item">
+                        <a href="#" class="files-pull-list-item-remove"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</a>
+                        <div class="files-pull-list-item-icon"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M13.16 6.05337L9.53334 2.05337C9.47101 1.98431 9.39492 1.92906 9.30995 1.89117C9.22499 1.85328 9.13303 1.83359 9.04001 1.83337H4.37334C4.15184 1.83073 3.93199 1.87175 3.72634 1.95408C3.52069 2.03641 3.33327 2.15844 3.17479 2.31321C3.01631 2.46798 2.88987 2.65245 2.80268 2.85608C2.7155 3.05972 2.66928 3.27854 2.66667 3.50004V13.5C2.66928 13.7215 2.7155 13.9404 2.80268 14.144C2.88987 14.3476 3.01631 14.5321 3.17479 14.6869C3.33327 14.8416 3.52069 14.9637 3.72634 15.046C3.93199 15.1283 4.15184 15.1693 4.37334 15.1667H11.6267C11.8482 15.1693 12.068 15.1283 12.2737 15.046C12.4793 14.9637 12.6667 14.8416 12.8252 14.6869C12.9837 14.5321 13.1101 14.3476 13.1973 14.144C13.2845 13.9404 13.3307 13.7215 13.3333 13.5V6.50004C13.3329 6.33481 13.2711 6.17564 13.16 6.05337ZM11.7667 6.50004H9.14C9.00257 6.4865 8.87594 6.41953 8.78741 6.31354C8.69888 6.20755 8.65552 6.07102 8.66667 5.93337V3.16671H8.74L11.7667 6.50004ZM11.6267 13.8334H4.37334C4.32692 13.8361 4.28043 13.8296 4.23652 13.8143C4.19262 13.799 4.15216 13.7752 4.11748 13.7442C4.0828 13.7132 4.05457 13.6757 4.03441 13.6338C4.01425 13.5919 4.00256 13.5465 4.00001 13.5V3.50004C4.00256 3.45361 4.01425 3.40815 4.03441 3.36625C4.05457 3.32435 4.0828 3.28684 4.11748 3.25588C4.15216 3.22491 4.19262 3.20109 4.23652 3.18579C4.28043 3.17049 4.32692 3.164 4.37334 3.16671H7.33334V5.93337C7.32258 6.42445 7.50651 6.89986 7.84498 7.25582C8.18346 7.61178 8.649 7.81941 9.14 7.83337H12V13.5C11.9975 13.5465 11.9858 13.5919 11.9656 13.6338C11.9454 13.6757 11.9172 13.7132 11.8825 13.7442C11.8478 13.7752 11.8074 13.799 11.7635 13.8143C11.7196 13.8296 11.6731 13.8361 11.6267 13.8334Z" fill="white"/>
+</svg>
+</div>
+                        <div class="files-pull-list-item-name"></div>
+                        <div class="files-pull-list-item-size"></div>
+                    </div>
+                </template>
+                <div class="files-pull-list" data-pull-list="file-1">
+                </div>
+            </div>
+            <div class="add-action-form-options">
+                <div class="add-action-form-options-item drop">
+                    <a href="#" class="add-action-form-option drop-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20ZM17 9.5C17 10.33 16.33 11 15.5 11C14.67 11 14 10.33 14 9.5C14 8.67 14.67 8 15.5 8C16.33 8 17 8.67 17 9.5ZM8.5 11C9.33 11 10 10.33 10 9.5C10 8.67 9.33 8 8.5 8C7.67 8 7 8.67 7 9.5C7 10.33 7.67 11 8.5 11ZM17.11 14C16.31 16.04 14.33 17.5 12 17.5C9.67 17.5 7.69 16.04 6.89 14H17.11Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+</a>
+                    <div class="emotions-panel drop-block">
+                        <ul class="emotions-list" data-emotions-textarea="textarea-newsletter">
+                            <li><button>😀</button></li>
+                            <li><button>😃</button></li>
+                            <li><button>😄</button></li>
+                            <li><button>😁</button></li>
+                            <li><button>😆</button></li>
+                            <li><button>😅</button></li>
+                            <li><button>😂</button></li>
+                            <li><button>🤣</button></li>
+                            <li><button>😀</button></li>
+                            <li><button>😃</button></li>
+                            <li><button>😄</button></li>
+                            <li><button>😁</button></li>
+                            <li><button>😆</button></li>
+                            <li><button>😅</button></li>
+                            <li><button>😂</button></li>
+                            <li><button>🤣</button></li>
+                            <li><button>😀</button></li>
+                            <li><button>😃</button></li>
+                            <li><button>😄</button></li>
+                            <li><button>😁</button></li>
+                            <li><button>😆</button></li>
+                            <li><button>😅</button></li>
+                            <li><button>😂</button></li>
+                            <li><button>🤣</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="add-action-form-options-item">
+                    <input type="file" name="file-1" class="file-custom" data-pull="file-1" id="file-1" multiple>
+                    <label for="file-1" class="add-action-form-option add-action-form-option-file"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M14.828 7.75689L9.17196 13.4139C8.912 13.665 8.80775 14.0368 8.89926 14.3864C8.99078 14.736 9.26382 15.0091 9.61345 15.1006C9.96308 15.1921 10.3349 15.0878 10.586 14.8279L16.243 9.17189C17.4146 8.00022 17.4146 6.10056 16.243 4.92889C15.0713 3.75722 13.1716 3.75722 12 4.92889L6.34296 10.5859C5.05321 11.8435 4.53968 13.6978 4.99869 15.4397C5.45771 17.1817 6.81828 18.5421 8.56032 19.0008C10.3023 19.4596 12.1565 18.9458 13.414 17.6559L19.071 11.9999L20.485 13.4139L14.828 19.0709C13.0595 20.8394 10.4819 21.53 8.06613 20.8827C5.65036 20.2354 3.76344 18.3485 3.11613 15.9327C2.46883 13.5169 3.15949 10.9394 4.92796 9.17089L10.586 3.51489C12.5479 1.62003 15.6664 1.64713 17.5951 3.5758C19.5237 5.50446 19.5508 8.62299 17.656 10.5849L12 16.2439C11.2418 17.0018 10.137 17.2977 9.1015 17.0202C8.06605 16.7426 7.25734 15.9337 6.98 14.8982C6.70267 13.8626 6.99884 12.7578 7.75696 11.9999L13.414 6.34289L14.828 7.75689Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</label>
+                </div>
+                <div class="add-action-form-options-item">
+                    <a href="#" class="add-action-form-option"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 4V2H17V4H20.007C20.555 4 21 4.445 21 4.993V21.007C20.9994 21.5552 20.5552 21.9994 20.007 22H3.993C3.44481 21.9994 3.00055 21.5552 3 21.007V4.993C3 4.445 3.445 4 3.993 4H7ZM7 6H5V20H19V6H17V8H7V6ZM9 6V4H15V6H9Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</a>
+                </div>
+                <div class="add-action-form-options-item">
+                    <a href="#" class="add-action-form-option"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 20H19V4H15V2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H15V20Z" fill="#1C2538" class="svg-fill"/>
+<path d="M9 20H5L5 4H9V2H4C3.44772 2 3 2.44772 3 3L3 21C3 21.5523 3.44772 22 4 22H9V20Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+</a>
+                </div>
+                <div class="add-action-form-options-item">
+                    <a href="#" class="add-action-form-option active"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18 10L17 9.001L18.003 7.997C19.002 6.996 20 4.997 21 2C6.31105 2 4.08854 15.4254 3.06361 21.6166C3.0419 21.7477 3.02074 21.8756 3 22H4.998C5.664 18.667 7.331 16.834 10 16.5C14 16 17 13 18 10ZM6.334 15.819C6.51 15.236 6.707 14.66 6.94 14.036H6.939C8.995 8.51 12.42 5.085 18.013 4.218C17.5 5.362 17.015 6.156 16.585 6.586L15.585 7.587L14.172 9.002L15.628 10.457C14.498 12.542 12.265 14.201 9.752 14.515C8.435 14.68 7.294 15.122 6.334 15.819Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</a>
+                </div>
+                <div class="add-action-form-options-item">
+                    <a href="#" class="add-action-form-option"><svg width="84" height="16" viewBox="0 0 84 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 0.5C1.34315 0.5 0 1.84315 0 3.5V12.5C0 14.1569 1.34314 15.5 3 15.5H81C82.6569 15.5 84 14.1569 84 12.5V3.5C84 1.84315 82.6569 0.5 81 0.5H3ZM29.0332 11.5H30.6836V4H29.0332V11.5ZM6.97266 6.2168L7.02637 6.83691C7.39095 6.3584 7.89388 6.11914 8.53516 6.11914C9.08529 6.11914 9.49544 6.28353 9.76562 6.6123C10.0391 6.94108 10.1807 7.43587 10.1904 8.09668V11.5H8.54004V8.16504C8.54004 7.89811 8.48633 7.7028 8.37891 7.5791C8.27148 7.45215 8.07617 7.38867 7.79297 7.38867C7.4707 7.38867 7.23145 7.51562 7.0752 7.76953V11.5H5.42969V6.2168H6.97266ZM13.6621 11.5977C12.8516 11.5977 12.1956 11.3568 11.6943 10.875C11.193 10.39 10.9424 9.76009 10.9424 8.98535V8.84863C10.9424 8.30827 11.0417 7.83138 11.2402 7.41797C11.4421 7.00456 11.735 6.68555 12.1191 6.46094C12.5033 6.23307 12.959 6.11914 13.4863 6.11914C14.2285 6.11914 14.8145 6.35026 15.2441 6.8125C15.6738 7.27148 15.8887 7.91276 15.8887 8.73633V9.37598H12.6172C12.6758 9.6722 12.8044 9.90495 13.0029 10.0742C13.2015 10.2435 13.4587 10.3281 13.7744 10.3281C14.2952 10.3281 14.7021 10.1458 14.9951 9.78125L15.7471 10.6699C15.542 10.9531 15.2507 11.1794 14.873 11.3486C14.4987 11.5146 14.0951 11.5977 13.6621 11.5977ZM13.4766 7.38867C12.9948 7.38867 12.7083 7.70768 12.6172 8.3457H14.2773V8.21875C14.2839 7.95508 14.2171 7.75163 14.0771 7.6084C13.9372 7.46191 13.737 7.38867 13.4766 7.38867ZM21.6504 6.2168L21.1182 9.33203L20.2881 6.2168H19.1406L18.3008 9.40527L17.7783 6.2168H16.2012L17.4463 11.5H18.8379L19.7168 8.36523L20.5908 11.5H21.9824L23.2275 6.2168H21.6504ZM26.5869 10.0156C26.5869 9.87565 26.5137 9.76335 26.3672 9.67871C26.2207 9.59408 25.9424 9.50618 25.5322 9.41504C25.1221 9.32389 24.7835 9.20508 24.5166 9.05859C24.2497 8.90885 24.0462 8.72819 23.9062 8.5166C23.7663 8.30501 23.6963 8.0625 23.6963 7.78906C23.6963 7.30404 23.8965 6.90527 24.2969 6.59277C24.6973 6.27702 25.2214 6.11914 25.8691 6.11914C26.5658 6.11914 27.1257 6.27702 27.5488 6.59277C27.972 6.90853 28.1836 7.32357 28.1836 7.83789H26.5332C26.5332 7.41471 26.3102 7.20312 25.8643 7.20312C25.6917 7.20312 25.5469 7.25195 25.4297 7.34961C25.3125 7.44401 25.2539 7.56283 25.2539 7.70605C25.2539 7.85254 25.3255 7.97135 25.4688 8.0625C25.612 8.15365 25.8398 8.22852 26.1523 8.28711C26.4681 8.3457 26.7448 8.41569 26.9824 8.49707C27.7767 8.77051 28.1738 9.26042 28.1738 9.9668C28.1738 10.4486 27.959 10.8408 27.5293 11.1436C27.1029 11.4463 26.5495 11.5977 25.8691 11.5977C25.4167 11.5977 25.013 11.5163 24.6582 11.3535C24.3034 11.1908 24.0267 10.9694 23.8281 10.6895C23.6296 10.4095 23.5303 10.1149 23.5303 9.80566H25.0684C25.0749 10.0498 25.1562 10.2288 25.3125 10.3428C25.4688 10.4535 25.6689 10.5088 25.9131 10.5088C26.1377 10.5088 26.3053 10.4632 26.416 10.3721C26.5299 10.2809 26.5869 10.1621 26.5869 10.0156ZM34.2578 11.5977C33.4473 11.5977 32.7913 11.3568 32.29 10.875C31.7887 10.39 31.5381 9.76009 31.5381 8.98535V8.84863C31.5381 8.30827 31.6374 7.83138 31.8359 7.41797C32.0378 7.00456 32.3307 6.68555 32.7148 6.46094C33.099 6.23307 33.5547 6.11914 34.082 6.11914C34.8242 6.11914 35.4102 6.35026 35.8398 6.8125C36.2695 7.27148 36.4844 7.91276 36.4844 8.73633V9.37598H33.2129C33.2715 9.6722 33.4001 9.90495 33.5986 10.0742C33.7972 10.2435 34.0544 10.3281 34.3701 10.3281C34.8909 10.3281 35.2979 10.1458 35.5908 9.78125L36.3428 10.6699C36.1377 10.9531 35.8464 11.1794 35.4688 11.3486C35.0944 11.5146 34.6908 11.5977 34.2578 11.5977ZM34.0723 7.38867C33.5905 7.38867 33.304 7.70768 33.2129 8.3457H34.873V8.21875C34.8796 7.95508 34.8128 7.75163 34.6729 7.6084C34.5329 7.46191 34.3327 7.38867 34.0723 7.38867ZM39.0674 6.2168V4.90332H37.4219V6.2168H36.748V7.35938H37.4219V9.98145C37.4219 10.5251 37.557 10.9303 37.8271 11.1973C38.0973 11.4642 38.5156 11.5977 39.082 11.5977C39.4043 11.5977 39.7135 11.5505 40.0098 11.4561V10.2793C39.8991 10.2988 39.7624 10.3086 39.5996 10.3086C39.388 10.3086 39.2464 10.2695 39.1748 10.1914C39.1032 10.1133 39.0674 9.97493 39.0674 9.77637V7.35938H39.9365V6.2168H39.0674ZM42.5049 4.90332V6.2168H43.374V7.35938H42.5049V9.77637C42.5049 9.97493 42.5407 10.1133 42.6123 10.1914C42.6839 10.2695 42.8255 10.3086 43.0371 10.3086C43.1999 10.3086 43.3366 10.2988 43.4473 10.2793V11.4561C43.151 11.5505 42.8418 11.5977 42.5195 11.5977C41.9531 11.5977 41.5348 11.4642 41.2646 11.1973C40.9945 10.9303 40.8594 10.5251 40.8594 9.98145V7.35938H40.1855V6.2168H40.8594V4.90332H42.5049ZM44.6143 10.875C45.1156 11.3568 45.7715 11.5977 46.582 11.5977C47.015 11.5977 47.4186 11.5146 47.793 11.3486C48.1706 11.1794 48.4619 10.9531 48.667 10.6699L47.915 9.78125C47.6221 10.1458 47.2152 10.3281 46.6943 10.3281C46.3786 10.3281 46.1214 10.2435 45.9229 10.0742C45.7243 9.90495 45.5957 9.6722 45.5371 9.37598H48.8086V8.73633C48.8086 7.91276 48.5938 7.27148 48.1641 6.8125C47.7344 6.35026 47.1484 6.11914 46.4062 6.11914C45.8789 6.11914 45.4232 6.23307 45.0391 6.46094C44.6549 6.68555 44.362 7.00456 44.1602 7.41797C43.9616 7.83138 43.8623 8.30827 43.8623 8.84863V8.98535C43.8623 9.76009 44.113 10.39 44.6143 10.875ZM45.5371 8.3457C45.6283 7.70768 45.9147 7.38867 46.3965 7.38867C46.6569 7.38867 46.8571 7.46191 46.9971 7.6084C47.137 7.75163 47.2038 7.95508 47.1973 8.21875V8.3457H45.5371ZM52.6709 7.70605L52.1289 7.66699C51.6113 7.66699 51.2793 7.82975 51.1328 8.15527V11.5H49.4873V6.2168H51.0303L51.084 6.89551C51.3607 6.37793 51.7464 6.11914 52.2412 6.11914C52.417 6.11914 52.57 6.13867 52.7002 6.17773L52.6709 7.70605ZM56.3428 10.875C56.8441 11.3568 57.5 11.5977 58.3105 11.5977C58.7435 11.5977 59.1471 11.5146 59.5215 11.3486C59.8991 11.1794 60.1904 10.9531 60.3955 10.6699L59.6436 9.78125C59.3506 10.1458 58.9437 10.3281 58.4229 10.3281C58.1071 10.3281 57.8499 10.2435 57.6514 10.0742C57.4528 9.90495 57.3242 9.6722 57.2656 9.37598H60.5371V8.73633C60.5371 7.91276 60.3223 7.27148 59.8926 6.8125C59.4629 6.35026 58.877 6.11914 58.1348 6.11914C57.6074 6.11914 57.1517 6.23307 56.7676 6.46094C56.3835 6.68555 56.0905 7.00456 55.8887 7.41797C55.6901 7.83138 55.5908 8.30827 55.5908 8.84863V8.98535C55.5908 9.76009 55.8415 10.39 56.3428 10.875ZM57.2656 8.3457C57.3568 7.70768 57.6432 7.38867 58.125 7.38867C58.3854 7.38867 58.5856 7.46191 58.7256 7.6084C58.8656 7.75163 58.9323 7.95508 58.9258 8.21875V8.3457H57.2656ZM62.7588 6.2168L62.8125 6.83691C63.1868 6.3584 63.6898 6.11914 64.3213 6.11914C64.9886 6.11914 65.4395 6.38444 65.6738 6.91504C66.0319 6.38444 66.5495 6.11914 67.2266 6.11914C68.2975 6.11914 68.8477 6.76693 68.877 8.0625V11.5H67.2266V8.16504C67.2266 7.89486 67.181 7.69792 67.0898 7.57422C66.9987 7.45052 66.8327 7.38867 66.5918 7.38867C66.2663 7.38867 66.0238 7.53353 65.8643 7.82324L65.8691 7.8916V11.5H64.2188V8.1748C64.2188 7.89811 64.1748 7.69792 64.0869 7.57422C63.999 7.45052 63.8314 7.38867 63.584 7.38867C63.2682 7.38867 63.0273 7.53353 62.8613 7.82324V11.5H61.2158V6.2168H62.7588ZM72.6367 11.0264C72.6823 11.2347 72.7344 11.3926 72.793 11.5H74.4385V11.417C74.2952 11.1598 74.2204 10.7887 74.2139 10.3037V7.96484C74.2041 7.39193 74.0039 6.94108 73.6133 6.6123C73.2227 6.28353 72.6904 6.11914 72.0166 6.11914C71.3428 6.11914 70.7878 6.27865 70.3516 6.59766C69.9186 6.91667 69.7021 7.33171 69.7021 7.84277H71.3477C71.3477 7.45866 71.543 7.2666 71.9336 7.2666C72.3535 7.2666 72.5635 7.50911 72.5635 7.99414V8.27246H72.0557C71.2484 8.27246 70.6331 8.41895 70.21 8.71191C69.7868 9.00488 69.5752 9.43783 69.5752 10.0107C69.5752 10.4665 69.7494 10.8457 70.0977 11.1484C70.446 11.4479 70.8691 11.5977 71.3672 11.5977C71.9108 11.5977 72.334 11.4072 72.6367 11.0264ZM72.2705 10.2939C72.137 10.3818 71.9678 10.4258 71.7627 10.4258C71.6064 10.4258 71.4779 10.3802 71.377 10.2891C71.276 10.1947 71.2256 10.0726 71.2256 9.92285C71.2256 9.40853 71.512 9.15137 72.085 9.15137H72.5635V9.99609C72.5049 10.1068 72.4072 10.2061 72.2705 10.2939ZM76.8652 11.5H75.2148V6.2168H76.8652V11.5ZM75.1172 4.85449C75.1172 4.62012 75.2018 4.42806 75.3711 4.27832C75.5404 4.12858 75.7601 4.05371 76.0303 4.05371C76.3005 4.05371 76.5202 4.12858 76.6895 4.27832C76.8587 4.42806 76.9434 4.62012 76.9434 4.85449C76.9434 5.08887 76.8587 5.28092 76.6895 5.43066C76.5202 5.5804 76.3005 5.65527 76.0303 5.65527C75.7601 5.65527 75.5404 5.5804 75.3711 5.43066C75.2018 5.28092 75.1172 5.08887 75.1172 4.85449ZM77.9688 11.5H79.6191V4H77.9688V11.5Z" fill="#1C2538" class="svg-fill"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect y="0.5" width="84" height="15" rx="3" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+</a>
+                </div>
+            </div>
+            <!-- /.add-action-form-options -->
+            <div class="add-action-form-newsletter">
+                <div class="pill">
+                    <input type="checkbox" name="add-action-check-1" id="add-action-check-1">
+                    <label for="add-action-check-1">Newsletter email</label>
+                </div>
+            </div>
+            <div class="add-action-newsletter-email">
+                <div class="newsletter-design-tabs">
+                    <ul class="toggle-active">
+                        <li class="active">
+                            <a href="#" class="newsletter-design-tabs-link">
+                                <span class="newsletter-design-tabs-icon"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.33337 2.49998C1.33337 2.13179 1.63185 1.83331 2.00004 1.83331H6.66671C7.0349 1.83331 7.33337 2.13179 7.33337 2.49998V7.16665C7.33337 7.53484 7.0349 7.83331 6.66671 7.83331H2.00004C1.63185 7.83331 1.33337 7.53484 1.33337 7.16665V2.49998ZM2.66671 3.16665V6.49998H6.00004V3.16665H2.66671Z" fill="#8A8B93" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66663 2.49998C8.66663 2.13179 8.9651 1.83331 9.33329 1.83331H14C14.3681 1.83331 14.6666 2.13179 14.6666 2.49998V7.16665C14.6666 7.53484 14.3681 7.83331 14 7.83331H9.33329C8.9651 7.83331 8.66663 7.53484 8.66663 7.16665V2.49998ZM9.99996 3.16665V6.49998H13.3333V3.16665H9.99996Z" fill="#8A8B93" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.66663 9.83335C8.66663 9.46516 8.9651 9.16669 9.33329 9.16669H14C14.3681 9.16669 14.6666 9.46516 14.6666 9.83335V14.5C14.6666 14.8682 14.3681 15.1667 14 15.1667H9.33329C8.9651 15.1667 8.66663 14.8682 8.66663 14.5V9.83335ZM9.99996 10.5V13.8334H13.3333V10.5H9.99996Z" fill="#8A8B93" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.33337 9.83335C1.33337 9.46516 1.63185 9.16669 2.00004 9.16669H6.66671C7.0349 9.16669 7.33337 9.46516 7.33337 9.83335V14.5C7.33337 14.8682 7.0349 15.1667 6.66671 15.1667H2.00004C1.63185 15.1667 1.33337 14.8682 1.33337 14.5V9.83335ZM2.66671 10.5V13.8334H6.00004V10.5H2.66671Z" fill="#8A8B93" class="svg-fill"/>
+</svg>
+</span>
+                                <span class="newsletter-design-tabs-title">Content</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="newsletter-design-tabs-link">
+                                <span class="newsletter-design-tabs-icon"><svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.16663 4.49998C5.16663 4.13179 5.4651 3.83331 5.83329 3.83331H14.5C14.8681 3.83331 15.1666 4.13179 15.1666 4.49998C15.1666 4.86817 14.8681 5.16665 14.5 5.16665H5.83329C5.4651 5.16665 5.16663 4.86817 5.16663 4.49998Z" fill="#8A8B93" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.16663 8.49998C5.16663 8.13179 5.4651 7.83331 5.83329 7.83331H14.5C14.8681 7.83331 15.1666 8.13179 15.1666 8.49998C15.1666 8.86817 14.8681 9.16665 14.5 9.16665H5.83329C5.4651 9.16665 5.16663 8.86817 5.16663 8.49998Z" fill="#8A8B93" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.16663 12.5C5.16663 12.1318 5.4651 11.8333 5.83329 11.8333H14.5C14.8681 11.8333 15.1666 12.1318 15.1666 12.5C15.1666 12.8682 14.8681 13.1666 14.5 13.1666H5.83329C5.4651 13.1666 5.16663 12.8682 5.16663 12.5Z" fill="#8A8B93" class="svg-fill"/>
+<path d="M3.16671 4.49998C3.16671 4.86817 2.86823 5.16665 2.50004 5.16665C2.13185 5.16665 1.83337 4.86817 1.83337 4.49998C1.83337 4.13179 2.13185 3.83331 2.50004 3.83331C2.86823 3.83331 3.16671 4.13179 3.16671 4.49998Z" fill="#8A8B93" class="svg-fill"/>
+<path d="M3.16671 8.49998C3.16671 8.86817 2.86823 9.16665 2.50004 9.16665C2.13185 9.16665 1.83337 8.86817 1.83337 8.49998C1.83337 8.13179 2.13185 7.83331 2.50004 7.83331C2.86823 7.83331 3.16671 8.13179 3.16671 8.49998Z" fill="#8A8B93" class="svg-fill"/>
+<path d="M3.16671 12.5C3.16671 12.8682 2.86823 13.1666 2.50004 13.1666C2.13185 13.1666 1.83337 12.8682 1.83337 12.5C1.83337 12.1318 2.13185 11.8333 2.50004 11.8333C2.86823 11.8333 3.16671 12.1318 3.16671 12.5Z" fill="#8A8B93" class="svg-fill"/>
+</svg>
+</span>
+                                <span class="newsletter-design-tabs-title">Rows</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="newsletter-design-tabs-link">
+                                <span class="newsletter-design-tabs-icon"><svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 11.8333V13.1667H6V11.8333H2ZM2 3.83333V5.16667H8.66667V3.83333H2ZM8.66667 14.5V13.1667H14V11.8333H8.66667V10.5H7.33333V14.5H8.66667ZM4.66667 6.5V7.83333H2V9.16667H4.66667V10.5H6V6.5H4.66667ZM14 9.16667V7.83333H7.33333V9.16667H14ZM10 6.5H11.3333V5.16667H14V3.83333H11.3333V2.5H10V6.5Z" fill="#8A8B93" class="svg-fill"/>
+</svg>
+</span>
+                                <span class="newsletter-design-tabs-title">Settings</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.newsletter-design-tabs -->
+                <div class="newsletter-design-content">
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.5 17V19H19.5V17H5.5ZM10 12.8H15L15.9 15H18L13.25 4H11.75L7 15H9.1L10 12.8ZM12.5 5.98L14.37 11H10.63L12.5 5.98Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="newsletter-design-item-title">Text</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.5 3H5.5C4.4 3 3.5 3.9 3.5 5V19C3.5 20.1 4.4 21 5.5 21H19.5C20.6 21 21.5 20.1 21.5 19V5C21.5 3.9 20.6 3 19.5 3ZM19.5 19H5.5V5H19.5V19ZM14.46 12.29L11.71 15.83L9.75 13.47L7 17H18L14.46 12.29Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="newsletter-design-item-title">Image</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M23.2071 3.29289C23.5976 3.68342 23.5976 4.31658 23.2071 4.70711L13.2071 14.7071C12.8166 15.0976 12.1834 15.0976 11.7929 14.7071L8.79289 11.7071C8.40237 11.3166 8.40237 10.6834 8.79289 10.2929C9.18342 9.90237 9.81658 9.90237 10.2071 10.2929L12.5 12.5858L21.7929 3.29289C22.1834 2.90237 22.8166 2.90237 23.2071 3.29289Z" fill="#B7BABF" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 4C5.23478 4 4.98043 4.10536 4.79289 4.29289C4.60536 4.48043 4.5 4.73478 4.5 5V19C4.5 19.2652 4.60536 19.5196 4.79289 19.7071C4.98043 19.8946 5.23478 20 5.5 20H19.5C19.7652 20 20.0196 19.8946 20.2071 19.7071C20.3946 19.5196 20.5 19.2652 20.5 19V12C20.5 11.4477 20.9477 11 21.5 11C22.0523 11 22.5 11.4477 22.5 12V19C22.5 19.7957 22.1839 20.5587 21.6213 21.1213C21.0587 21.6839 20.2957 22 19.5 22H5.5C4.70435 22 3.94129 21.6839 3.37868 21.1213C2.81607 20.5587 2.5 19.7957 2.5 19V5C2.5 4.20435 2.81607 3.44129 3.37868 2.87868C3.94129 2.31607 4.70435 2 5.5 2H16.5C17.0523 2 17.5 2.44772 17.5 3C17.5 3.55228 17.0523 4 16.5 4H5.5Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="newsletter-design-item-title">Button</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 4C4.94772 4 4.5 4.44772 4.5 5V19C4.5 19.5523 4.94772 20 5.5 20H19.5C20.0523 20 20.5 19.5523 20.5 19V5C20.5 4.44772 20.0523 4 19.5 4H5.5ZM2.5 5C2.5 3.34315 3.84315 2 5.5 2H19.5C21.1569 2 22.5 3.34315 22.5 5V19C22.5 20.6569 21.1569 22 19.5 22H5.5C3.84315 22 2.5 20.6569 2.5 19V5Z" fill="#B7BABF" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 12C7.5 11.4477 7.94772 11 8.5 11H16.5C17.0523 11 17.5 11.4477 17.5 12C17.5 12.5523 17.0523 13 16.5 13H8.5C7.94772 13 7.5 12.5523 7.5 12Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="newsletter-design-item-title">Divider</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 4C4.94772 4 4.5 4.44772 4.5 5V19C4.5 19.5523 4.94772 20 5.5 20H19.5C20.0523 20 20.5 19.5523 20.5 19V5C20.5 4.44772 20.0523 4 19.5 4H5.5ZM2.5 5C2.5 3.34315 3.84315 2 5.5 2H19.5C21.1569 2 22.5 3.34315 22.5 5V19C22.5 20.6569 21.1569 22 19.5 22H5.5C3.84315 22 2.5 20.6569 2.5 19V5Z" fill="#B7BABF" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 7C13.0523 7 13.5 7.44772 13.5 8V16C13.5 16.5523 13.0523 17 12.5 17C11.9477 17 11.5 16.5523 11.5 16V8C11.5 7.44772 11.9477 7 12.5 7Z" fill="#B7BABF" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 12C7.5 11.4477 7.94772 11 8.5 11H16.5C17.0523 11 17.5 11.4477 17.5 12C17.5 12.5523 17.0523 13 16.5 13H8.5C7.94772 13 7.5 12.5523 7.5 12Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="newsletter-design-item-title">Social</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.20711 5.29289C9.59763 5.68342 9.59763 6.31658 9.20711 6.70711L3.91421 12L9.20711 17.2929C9.59763 17.6834 9.59763 18.3166 9.20711 18.7071C8.81658 19.0976 8.18342 19.0976 7.79289 18.7071L1.79289 12.7071C1.40237 12.3166 1.40237 11.6834 1.79289 11.2929L7.79289 5.29289C8.18342 4.90237 8.81658 4.90237 9.20711 5.29289Z" fill="#B7BABF" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.7929 5.29289C16.1834 4.90237 16.8166 4.90237 17.2071 5.29289L23.2071 11.2929C23.5976 11.6834 23.5976 12.3166 23.2071 12.7071L17.2071 18.7071C16.8166 19.0976 16.1834 19.0976 15.7929 18.7071C15.4024 18.3166 15.4024 17.6834 15.7929 17.2929L21.0858 12L15.7929 6.70711C15.4024 6.31658 15.4024 5.68342 15.7929 5.29289Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="newsletter-design-item-title">HTML</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.5 4H17.33L15.5 2H9.5L7.67 4H4.5C3.4 4 2.5 4.9 2.5 6V18C2.5 19.1 3.4 20 4.5 20H20.5C21.6 20 22.5 19.1 22.5 18V6C22.5 4.9 21.6 4 20.5 4ZM20.5 18H4.5V6H8.55L9.14 5.35L10.38 4H14.62L15.86 5.35L16.45 6H20.5V18ZM12.5 7C9.74 7 7.5 9.24 7.5 12C7.5 14.76 9.74 17 12.5 17C15.26 17 17.5 14.76 17.5 12C17.5 9.24 15.26 7 12.5 7ZM12.5 15.2C10.73 15.2 9.3 13.77 9.3 12C9.3 10.23 10.73 8.8 12.5 8.8C14.27 8.8 15.7 10.23 15.7 12C15.7 13.77 14.27 15.2 12.5 15.2Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="newsletter-design-item-title">Video</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M22.5 9.24L15.31 8.62L12.5 2L9.69 8.63L2.5 9.24L7.96 13.97L6.32 21L12.5 17.27L18.68 21L17.05 13.97L22.5 9.24ZM12.5 15.4L8.74 17.67L9.74 13.39L6.42 10.51L10.8 10.13L12.5 6.1L14.21 10.14L18.59 10.52L15.27 13.4L16.27 17.68L12.5 15.4Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="newsletter-design-item-title">Icons</span>
+                        </a>
+                    </div>
+                    <div class="newsletter-design-item">
+                        <a href="#" class="newsletter-design-item-link">
+                            <span class="newsletter-design-item-icon"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 12C2.5 11.4477 2.94772 11 3.5 11H21.5C22.0523 11 22.5 11.4477 22.5 12C22.5 12.5523 22.0523 13 21.5 13H3.5C2.94772 13 2.5 12.5523 2.5 12Z" fill="#B7BABF" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 6C2.5 5.44772 2.94772 5 3.5 5H21.5C22.0523 5 22.5 5.44772 22.5 6C22.5 6.55228 22.0523 7 21.5 7H3.5C2.94772 7 2.5 6.55228 2.5 6Z" fill="#B7BABF" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 18C2.5 17.4477 2.94772 17 3.5 17H21.5C22.0523 17 22.5 17.4477 22.5 18C22.5 18.5523 22.0523 19 21.5 19H3.5C2.94772 19 2.5 18.5523 2.5 18Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="newsletter-design-item-title">Menu</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.newsletter-design-content -->
+            </div>
+            <!-- /.add-action-newsletter-email -->
+        </div>
+        <!-- /.add-action-form -->
+    </div>
+    <!-- /.panel-content -->
+    <div class="panel-bottom">
+        <div class="add-action-options">
+            <div class="add-action-option"><a href="#" class="button button-secondary panel-inner-cancel">Cancel</a></div>
+            <div class="add-action-option"><a href="#" class="button">Add email</a></div>
+        </div>
+        <!-- /.add-action-options -->
+    </div>
+    <!-- /.panel-bottom -->
+</div>
+<!-- /.panel -->
+<div class="panel panel-inner tab panel-w4" data-panel="form-preview">
+    <button class="panel-inner-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</button>
+    <div class="panel-top panel-top-flex">
+        <div class="add-action-caption">Email Preview</div>
+        <div class="panel-top-navigation">
+            <div class="newsletter-design-tabs">
+                <ul class="tabs">
+                    <li class="active">
+                        <a href="#" class="newsletter-design-tabs-link">
+                            <span class="newsletter-design-tabs-icon"><svg fill="none" width="16" height="17" viewBox="0 0 16 17"><defs/><path class="svg-fill" fill="#B7BABF" fill-rule="evenodd" d="M2.7 3.2c-.4 0-.7.3-.7.6v6.7c0 .4.3.7.7.7h10.6c.4 0 .7-.3.7-.7V3.8c0-.3-.3-.6-.7-.6H2.7zm-2 .6c0-1 .9-2 2-2h10.6a2 2 0 012 2v6.7a2 2 0 01-2 2H2.7a2 2 0 01-2-2V3.8zM4.7 14.5c0-.4.3-.7.6-.7h5.4a.7.7 0 010 1.4H5.3a.7.7 0 01-.6-.7z" clip-rule="evenodd"/><path class="svg-fill" fill="#B7BABF" fill-rule="evenodd" d="M8 11.2c.4 0 .7.3.7.6v2.7a.7.7 0 11-1.4 0v-2.7c0-.3.3-.6.7-.6z" clip-rule="evenodd"/></svg></span>
+                            <span class="newsletter-design-tabs-title">Desktop</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="newsletter-design-tabs-link">
+                            <span class="newsletter-design-tabs-icon"><svg width="16" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.333 3.167c0-.185.15-.334.334-.334h6.666c.184 0 .334.15.334.334v10.666c0 .184-.15.334-.334.334H4.667a.333.333 0 01-.334-.334V3.167zM4.667.833a2.333 2.333 0 00-2.334 2.334v10.666a2.333 2.333 0 002.334 2.334h6.666a2.333 2.333 0 002.334-2.334V3.167A2.333 2.333 0 0011.333.833H4.667zm3 11a.333.333 0 11.666 0 .333.333 0 01-.666 0zm1 0a.667.667 0 11-1.334 0 .667.667 0 011.334 0z" fill="#B7BABF" class="svg-fill" /><defs><clipPath id="clip0"><path fill="#fff" transform="translate(0 .5)" d="M0 0h16v16H0z"/></clipPath></defs></svg></span>
+                            <span class="newsletter-design-tabs-title">Smartphone</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.newsletter-design-tabs -->
+        </div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <div class="newsletter-preview-screen">
+            <div class="box visible">
+                <img src="upload/email.jpg" alt="">
+            </div>
+            <div class="box">
+                <div class="mobile-phone">
+                    <div class="mobile-phone-inner">
+                        <img src="upload/email.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.panel-content -->
+</div>
+<!-- /.panel -->    <script src="js/jquery.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/migrate.js"></script>
+    <script src="js/library.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+/* grid */
+.main-site {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-left: 240px;
+}
+.container {
+    max-width: 1200px;
+}
+.svg-fill {
+    transition: fill $d $f;
+    will-change: fill;
+}
+.svg-stroke {
+    transition: stroke $d $f;
+    will-change: stroke;
+}
+@media (min-width: 991.99px) {
+    .main-site {
+        &.sidebar-collapse {
+            padding-left: 66px;
+        }
+    }
+}
+@media (max-width: 991.98px) {
+    .main-site {
+        padding-top: 70px;
+        padding-left: 0;
+    }
+}
