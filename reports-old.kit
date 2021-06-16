@@ -1,0 +1,602 @@
+<!-- $site-title = 03.01.01.Reports - Campaigns -->
+<!-- $menu-reports = active opened -->
+<!-- @import "parts/_head.kit" -->
+    <main class="main-site">
+        <!-- @import "parts/_sidebar.kit" -->
+        <div class="content-site">
+            <div class="reports">
+                <div class="reports-header">
+                    <div class="reports-header-info">
+                        <div class="reports-header-title">
+                            <a href="#" class="reports-header-title-back"><!-- @import "images/arrow-left.svg" --></a>
+                            First test campaign
+                        </div>
+                        <div class="reports-header-description">Here you can see reports on how your campaign is performing</div>
+                    </div>
+                    <!-- /.reports-header-info -->
+                    <div class="reports-header-options">
+                        <a href="#" class="reports-header-back">
+                            <span class="reports-header-back-icon"><!-- @import "images/back.svg" --></span>
+                            Back to campaigns list
+                        </a>
+                        <button class="button button-secondary reports-header-edit">
+                            <span class="button-icon"><!-- @import "images/edit.svg" --></span>
+                            Edit campaign
+                        </button>
+                    </div>
+                    <!-- /.reports-header-options -->
+                </div>
+                <!-- /.reports-header -->
+                <div class="reports-graph">
+                    <div class="reports-graph-caption">
+                        <div class="reports-graph-title">174 delivered (last month)</div>
+                        <div class="reports-graph-options">
+                            <div class="reports-graph-option-actions">
+                                <select class="select">
+                                    <option>All actions</option>
+                                </select>
+                            </div>
+                            <div class="reports-graph-option">
+                                <select class="select">
+                                    <option>Delivered</option>
+                                </select>
+                            </div>
+                            <div class="reports-graph-option">
+                                <select class="select">
+                                    <option>Last month</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.reports-graph-caption -->
+                    <div class="aspect-ratio">
+                        <canvas id="chart"></canvas>
+                    </div>
+                </div>
+                <!-- /.reports-graph -->
+                <div class="reports-actions">
+                    <div class="reports-actions-caption">
+                        <div class="reports-actions-title">Actions activity (last month)</div>
+                        <div class="reports-actions-options">
+                            <div class="reports-actions-option">
+                                <select class="select">
+                                    <option>All actions</option>
+                                </select>
+                            </div>
+                            <div class="reports-actions-option">
+                                <select class="select">
+                                    <option>Last month</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.reports-actions-caption -->
+                    <div class="reports-actions-list">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="reports-actions-list-caption">
+                                            <div class="reports-actions-list-title">Campaign name</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="reports-actions-list-caption">
+                                            <div class="reports-actions-list-title">Audience</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="reports-actions-list-caption">
+                                            <div class="reports-actions-list-title">Delivered</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="reports-actions-list-caption">
+                                            <div class="reports-actions-list-title">Opened</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="reports-actions-list-caption">
+                                            <div class="reports-actions-list-title">Clicked</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="reports-actions-list-caption">
+                                            <div class="reports-actions-list-title">Bounced</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="reports-actions-list-caption">
+                                            <div class="reports-actions-list-title">Unsubscribed</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="reports-actions-list-caption">
+                                            <div class="reports-actions-list-title">Complaints</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>First test email <span class="reports-actions-tag">Email</span></td>
+                                    <td>174</td>
+                                    <td>174</td>
+                                    <td>107</td>
+                                    <td>50</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>First test SMS <span class="reports-actions-tag reports-actions-tag-yellow">SMS</span></td>
+                                    <td>174</td>
+                                    <td>174</td>
+                                    <td>95</td>
+                                    <td>34</td>
+                                    <td>2</td>
+                                    <td>1</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>First test message <span class="reports-actions-tag reports-actions-tag-blue">Messenger</span></td>
+                                    <td>174</td>
+                                    <td>174</td>
+                                    <td>73</td>
+                                    <td>13</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Second test email <span class="reports-actions-tag">Email</span></td>
+                                    <td>174</td>
+                                    <td>174</td>
+                                    <td>126</td>
+                                    <td>78</td>
+                                    <td>5</td>
+                                    <td>7</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Second test SMS <span class="reports-actions-tag reports-actions-tag-yellow">SMS</span></td>
+                                    <td>174</td>
+                                    <td>174</td>
+                                    <td>87</td>
+                                    <td>75</td>
+                                    <td>4</td>
+                                    <td>3</td>
+                                    <td>0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.reports-actions-list -->
+                </div>
+                <!-- /.reports-actions -->
+                <div class="reports-action">
+                    <a href="#" class="reports-action-toggle">
+                        <span class="reports-action-title">First test email <span class="reports-actions-tag">Email</span></span>
+                    </a>
+                    <div class="reports-action-block">
+                        <div class="reports-action-sorting">
+                            <select class="select">
+                                <option>Last month</option>
+                            </select>
+                        </div>
+                        <div class="reports-action-data">
+                            <table>
+                                <tr>
+                                    <td>Audience</td>
+                                    <td>174</td>
+                                </tr>
+                                <tr>
+                                    <td>Delivered</td>
+                                    <td>174</td>
+                                </tr>
+                                <tr>
+                                    <td>Opened</td>
+                                    <td>107</td>
+                                </tr>
+                                <tr>
+                                    <td>Clicked</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>Bounced</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Unsubscribed</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Complaints</td>
+                                    <td>0</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- /.reports-action-data -->
+                    </div>
+                    <!-- /.reports-action-block -->
+                </div>
+                <!-- /.reports-action -->
+                <div class="reports-action">
+                    <a href="#" class="reports-action-toggle">
+                        <span class="reports-action-title">First test SMS <span class="reports-actions-tag reports-actions-tag-yellow">SMS</span></span>
+                    </a>
+                    <div class="reports-action-block">
+                        <div class="reports-action-sorting">
+                            <select class="select">
+                                <option>Last month</option>
+                            </select>
+                        </div>
+                        <div class="reports-action-data">
+                            <table>
+                                <tr>
+                                    <td>Audience</td>
+                                    <td>174</td>
+                                </tr>
+                                <tr>
+                                    <td>Delivered</td>
+                                    <td>174</td>
+                                </tr>
+                                <tr>
+                                    <td>Opened</td>
+                                    <td>95</td>
+                                </tr>
+                                <tr>
+                                    <td>Clicked</td>
+                                    <td>34</td>
+                                </tr>
+                                <tr>
+                                    <td>Bounced</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>Unsubscribed</td>
+                                    <td>1</td>
+                                </tr>
+                                <tr>
+                                    <td>Complaints</td>
+                                    <td>0</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- /.reports-action-data -->
+                    </div>
+                    <!-- /.reports-action-block -->
+                </div>
+                <!-- /.reports-action -->
+                <div class="reports-action">
+                    <a href="#" class="reports-action-toggle">
+                        <span class="reports-action-title">First test message <span class="reports-actions-tag reports-actions-tag-blue">Messenger</span></span>
+                    </a>
+                    <div class="reports-action-block">
+                        <div class="reports-action-sorting">
+                            <select class="select">
+                                <option>Last month</option>
+                            </select>
+                        </div>
+                        <div class="reports-action-data">
+                            <table>
+                                <tr>
+                                    <td>Audience</td>
+                                    <td>174</td>
+                                </tr>
+                                <tr>
+                                    <td>Delivered</td>
+                                    <td>174</td>
+                                </tr>
+                                <tr>
+                                    <td>Opened</td>
+                                    <td>73</td>
+                                </tr>
+                                <tr>
+                                    <td>Clicked</td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>Bounced</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Unsubscribed</td>
+                                    <td>0</td>
+                                </tr>
+                                <tr>
+                                    <td>Complaints</td>
+                                    <td>0</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- /.reports-action-data -->
+                    </div>
+                    <!-- /.reports-action-block -->
+                </div>
+                <!-- /.reports-action -->
+                <div class="reports-action">
+                    <a href="#" class="reports-action-toggle">
+                        <span class="reports-action-title">Second test email <span class="reports-actions-tag">Email</span></span>
+                    </a>
+                    <div class="reports-action-block">
+                        <div class="reports-action-sorting">
+                            <select class="select">
+                                <option>Last month</option>
+                            </select>
+                        </div>
+                        <div class="reports-action-data">
+                            <table>
+                                <tr>
+                                    <td>Audience</td>
+                                    <td>174</td>
+                                </tr>
+                                <tr>
+                                    <td>Delivered</td>
+                                    <td>174</td>
+                                </tr>
+                                <tr>
+                                    <td>Opened</td>
+                                    <td>126</td>
+                                </tr>
+                                <tr>
+                                    <td>Clicked</td>
+                                    <td>78</td>
+                                </tr>
+                                <tr>
+                                    <td>Bounced</td>
+                                    <td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>Unsubscribed</td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>Complaints</td>
+                                    <td>0</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- /.reports-action-data -->
+                    </div>
+                    <!-- /.reports-action-block -->
+                </div>
+                <!-- /.reports-action -->
+                <div class="reports-action">
+                    <a href="#" class="reports-action-toggle">
+                        <span class="reports-action-title">Second test SMS <span class="reports-actions-tag reports-actions-tag-yellow">SMS</span></span>
+                    </a>
+                    <div class="reports-action-block">
+                        <div class="reports-action-sorting">
+                            <select class="select">
+                                <option>Last month</option>
+                            </select>
+                        </div>
+                        <div class="reports-action-data">
+                            <table>
+                                <tr>
+                                    <td>Audience</td>
+                                    <td>174</td>
+                                </tr>
+                                <tr>
+                                    <td>Delivered</td>
+                                    <td>174</td>
+                                </tr>
+                                <tr>
+                                    <td>Opened</td>
+                                    <td>87</td>
+                                </tr>
+                                <tr>
+                                    <td>Clicked</td>
+                                    <td>75</td>
+                                </tr>
+                                <tr>
+                                    <td>Bounced</td>
+                                    <td>4</td>
+                                </tr>
+                                <tr>
+                                    <td>Unsubscribed</td>
+                                    <td>3</td>
+                                </tr>
+                                <tr>
+                                    <td>Complaints</td>
+                                    <td>0</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <!-- /.reports-action-data -->
+                    </div>
+                    <!-- /.reports-action-block -->
+                </div>
+                <!-- /.reports-action -->
+                <div class="reports-audience">
+                    <div class="reports-audience-caption">
+                        <div class="reports-audience-title">Target audience</div>
+                        <div class="reports-audience-options">
+                            <div class="reports-audience-option-show">
+                                <label class="reports-audience-option-show-label">Show</label>
+                                <div class="reports-audience-option-show-select">
+                                    <select class="select">
+                                        <option>10</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="reports-audience-option-status">
+                                <select class="select">
+                                    <option>All campaigns</option>
+                                </select>
+                            </div>
+                            <div class="reports-audience-option-status">
+                                <select class="select">
+                                    <option>Success</option>
+                                </select>
+                            </div>
+                            <div class="reports-audience-option-export">
+                                <a href="#" class="button button-secondary">Export CSV</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.reports-audience-caption -->
+                    <div class="reports-audience-list">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <div class="reports-audience-list-caption">
+                                            <div class="reports-audience-list-title reports-audience-list-title-desktop">Number</div>
+                                            <div class="reports-audience-list-title reports-audience-list-title-mobile">#</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="reports-audience-list-caption">
+                                            <div class="reports-audience-list-title">Name</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="reports-audience-list-caption">
+                                            <div class="reports-audience-list-title">Email</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="reports-audience-list-caption">
+                                            <div class="reports-audience-list-title">Status</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="reports-audience-list-caption">
+                                            <div class="reports-audience-list-title">Opened</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                    <th>
+                                        <div class="reports-audience-list-caption">
+                                            <div class="reports-audience-list-title">Clicked</div>
+                                            <div class="reports-sorting">
+                                                <a href="#" class="reports-sorting-up"><!-- @import "images/sorting-up.svg" --></a>
+                                                <a href="#" class="reports-sorting-down"><!-- @import "images/sorting-down.svg" --></a>
+                                            </div>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Isaac Mulbah</td>
+                                    <td>imulbah@gmail.com</td>
+                                    <td>bounced</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Ruona Phido</td>
+                                    <td>info@s4ltraining.com</td>
+                                    <td>bounced</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Mallory Levinsky</td>
+                                    <td>mallory@y2yoga.com</td>
+                                    <td>opened</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Rusty Bridges</td>
+                                    <td>rbridges@trufusion.com</td>
+                                    <td>opened</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Daniela Nero</td>
+                                    <td>aryafitness.ct@gmail.com</td>
+                                    <td>delivered</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- /.reports-audience-list -->
+                    <div class="reports-pagination-block">
+                        <div class="reports-pagination-info">Showing 1 to 10 of 181 entries</div>
+                        <div class="reports-pagination">
+                            <ul class="reports-pagination-list">
+                                <li><a href="#" class="reports-pagination-prev"><!-- @import "images/back.svg" --></a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li class="reports-pagination-mobile-hidden"><a href="#">4</a></li>
+                                <li class="reports-pagination-mobile-hidden"><a href="#">5</a></li>
+                                <li><a href="#">...</a></li>
+                                <li><a href="#">19</a></li>
+                                <li><a href="#" class="reports-pagination-next"><!-- @import "images/back.svg" --></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- /.reports-pagination-block -->
+                </div>
+                <!-- /.reports-audience -->
+            </div>
+            <!-- /.reports -->
+        </div>
+    </main>
+    <!-- /.main-site -->
+<!-- @import "parts/_foot.kit" -->

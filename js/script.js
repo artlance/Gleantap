@@ -981,31 +981,35 @@ $(document).ready(function () {
 
     //panzoom
     var panZoomElement = $('.panzoom');
-    panZoomElement.panzoom({
-        $zoomIn: $(".zoom-in"),
-        $zoomOut: $(".zoom-out"),
-        startTransform: undefined,
-        maxScale: 1,
-        minScale: 0.2,
-        increment: 0.1,
-        //contain: true,
-        transition: true,
-    });
 
-    var panX = ($('.panzoom-parent').innerWidth() - parseInt($('.panzoom')[0].style.width)) / 2;
-    //console.log(panX);
-    panZoomElement.panzoom("pan", panX, 0, {
-        animate: false,
-        silent: true
-    });
+    if (panZoomElement.length) {
+        panZoomElement.panzoom({
+            $zoomIn: $(".zoom-in"),
+            $zoomOut: $(".zoom-out"),
+            startTransform: undefined,
+            maxScale: 1,
+            minScale: 0.2,
+            increment: 0.1,
+            //contain: true,
+            transition: true,
+        });
 
-    $(window).resize(function () {
         var panX = ($('.panzoom-parent').innerWidth() - parseInt($('.panzoom')[0].style.width)) / 2;
+
+        //console.log(panX);
         panZoomElement.panzoom("pan", panX, 0, {
-            animate: true,
+            animate: false,
             silent: true
         });
-    });
+
+        $(window).resize(function () {
+            var panX = ($('.panzoom-parent').innerWidth() - parseInt($('.panzoom')[0].style.width)) / 2;
+            panZoomElement.panzoom("pan", panX, 0, {
+                animate: true,
+                silent: true
+            });
+        });
+    }
 
     $(document).on('mouseenter', '.panzoom select, .panzoom input, .panzoom textarea', function () {
         panZoomElement.panzoom("option", "disablePan", true);
@@ -1024,6 +1028,7 @@ $(document).ready(function () {
     $(document).on('click', '.zoom-change-height', function () {
         panZoomHeight();
     });
+
 
     $(document).on('click', '.edit-campaign-automations-delay', function () {
         var thisParent = $(this).parents('.create-campaign-automations-filled-item');
