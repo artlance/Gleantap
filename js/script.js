@@ -1131,8 +1131,14 @@ $(document).ready(function () {
 
     $(document).on('click', '.cmp-create-from-scratch-item-segments-list-item', function (event) {
         event.preventDefault();
-        $(this).find('.cmp-create-from-scratch-item-segments-list-item-status').toggleClass('done');
-        console.log('toggle class done');
+        var thisParent = $(this).find('.cmp-create-from-scratch-item-segments-list-item-status');
+        thisParent.toggleClass('done');
+        if (thisParent.hasClass('done')) {
+            console.log('checked');
+        } else {
+            console.log('unchecked');
+        }
+
     });
 
     // var thisClone = $('.clone');
