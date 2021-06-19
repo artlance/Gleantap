@@ -1138,7 +1138,15 @@ $(document).ready(function () {
         } else {
             console.log('unchecked');
         }
+    });
 
+    //change checkbox
+    $(document).on('change', '.create-campaign-segmentation-checkbox input', function () {
+        if ($(this).is(':checked')) {
+            console.log('checked +');
+        } else {
+            console.log('unchecked -');
+        }
     });
 
     // var thisClone = $('.clone');
