@@ -55,6 +55,73 @@ $(document).ready(function () {
 
     //-----------------------------------------//
 
+    const getOrCreateLegendList = (chart, id) => {
+        const legendContainer = document.getElementById(id);
+        let listContainer = legendContainer.querySelector('ul');
+
+        if (!listContainer) {
+            listContainer = document.createElement('ul');
+
+            legendContainer.appendChild(listContainer);
+        }
+
+        return listContainer;
+    };
+
+    const htmlLegendPlugin = {
+        id: 'htmlLegend',
+        afterUpdate(chart, args, options) {
+            const ul = getOrCreateLegendList(chart, options.containerID);
+            ul.classList.add('new-reports-legend-ul');
+
+            // Remove old legend items
+            while (ul.firstChild) {
+                ul.firstChild.remove();
+            }
+
+            // Reuse the built-in legendItems generator
+            const items = chart.options.plugins.legend.labels.generateLabels(chart);
+
+            items.forEach((item, index) => {
+                const li = document.createElement('li');
+
+                li.onclick = () => {
+                    const { type } = chart.config;
+                    if (type === 'pie' || type === 'doughnut') {
+                        // Pie and doughnut charts only have a single dataset and visibility is per item
+                        chart.toggleDataVisibility(item.index);
+                    } else {
+                        chart.setDatasetVisibility(item.datasetIndex, !chart.isDatasetVisible(item.datasetIndex));
+                    }
+                    chart.update();
+                };
+
+                // Color box
+                const boxSpan = document.createElement('span');
+                boxSpan.classList.add('new-reports-legend-icon');
+                boxSpan.style.background = item.fillStyle;
+                boxSpan.style.borderColor = item.strokeStyle;
+                boxSpan.style.borderWidth = item.lineWidth + 'px';
+
+                // Text
+                const textContainer = document.createElement('p');
+                textContainer.style.color = item.fontColor;
+                textContainer.style.textDecoration = item.hidden ? 'line-through' : '';
+
+                const text = document.createElement('span');
+                text.innerHTML = '<span class="new-reports-legend-label">' + item.text + '</span><span class="new-reports-legend-value"> ' + chart.data.datasets[0].data[index] + '</span>';
+                textContainer.appendChild(text);
+
+                li.appendChild(boxSpan);
+                li.appendChild(textContainer);
+                ul.appendChild(li);
+            });
+        }
+    };
+
+    const chartColors1 = ['#3A66ED', '#F5717A', '#FBC563', '#99DC13', '#DFDFDF'],
+        chartColors2 = ['#3F68E5', '#7994EB', '#8CA3EE', '#B2C2F4', '#C7D4FB'];
+
     //chart.js
     if ($('#chart').length) {
 
@@ -104,8 +171,8 @@ $(document).ready(function () {
                     tension: 0.4
                 }
             },
-            legend: {
-                display: false
+            plugins: {
+                legend: false
             },
             point: {
                 backgroundColor: '#8A8B93'
@@ -197,8 +264,8 @@ $(document).ready(function () {
                     tension: 0.4
                 }
             },
-            legend: {
-                display: false
+            plugins: {
+                legend: false
             },
             point: {
                 backgroundColor: '#8A8B93'
@@ -281,8 +348,8 @@ $(document).ready(function () {
                     tension: 0.4
                 }
             },
-            legend: {
-                display: false
+            plugins: {
+                legend: false
             },
             point: {
                 backgroundColor: '#8A8B93'
@@ -365,8 +432,8 @@ $(document).ready(function () {
                     tension: 0.4
                 }
             },
-            legend: {
-                display: false
+            plugins: {
+                legend: false
             },
             point: {
                 backgroundColor: '#8A8B93'
@@ -451,8 +518,8 @@ $(document).ready(function () {
                     tension: 0.4
                 }
             },
-            legend: {
-                display: false
+            plugins: {
+                legend: false
             },
             point: {
                 backgroundColor: '#8A8B93'
@@ -507,34 +574,34 @@ $(document).ready(function () {
                 easing: 'easeInOutQuad',
                 duration: 520,
                 onComplete: function () {
-                    var ctx = this.chart.ctx;
-                    ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
-                    ctx.textAlign = 'center';
-                    ctx.textBaseline = 'bottom';
+                    // var ctx = this.chart.ctx;
+                    // ctx.font = Chart.helpers.fontString(Chart.defaults.global.defaultFontFamily, 'normal', Chart.defaults.global.defaultFontFamily);
+                    // ctx.textAlign = 'center';
+                    // ctx.textBaseline = 'bottom';
 
-                    this.data.datasets.forEach(function (dataset) {
+                    // this.data.datasets.forEach(function (dataset) {
 
-                        for (var i = 0; i < dataset.data.length; i++) {
-                            var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model,
-                                total = dataset._meta[Object.keys(dataset._meta)[0]].total,
-                                mid_radius = model.innerRadius + (model.outerRadius - model.innerRadius) / 2,
-                                start_angle = model.startAngle,
-                                end_angle = model.endAngle,
-                                mid_angle = start_angle + (end_angle - start_angle) / 2;
+                    //     for (var i = 0; i < dataset.data.length; i++) {
+                    //         var model = dataset._meta[Object.keys(dataset._meta)[0]].data[i]._model,
+                    //             total = dataset._meta[Object.keys(dataset._meta)[0]].total,
+                    //             mid_radius = model.innerRadius + (model.outerRadius - model.innerRadius) / 2,
+                    //             start_angle = model.startAngle,
+                    //             end_angle = model.endAngle,
+                    //             mid_angle = start_angle + (end_angle - start_angle) / 2;
 
-                            var x = mid_radius * Math.cos(mid_angle);
-                            var y = mid_radius * Math.sin(mid_angle);
+                    //         var x = mid_radius * Math.cos(mid_angle);
+                    //         var y = mid_radius * Math.sin(mid_angle);
 
-                            ctx.fillStyle = '#fff';
-                            if (i == 3) { // Darker text color for lighter background
-                                ctx.fillStyle = '#444';
-                            }
-                            var percent = String(Math.round(dataset.data[i] / total * 100)) + "%";
-                            //ctx.fillText(dataset.data[i], model.x + x, model.y + y);
-                            // Display percent in another line, line break doesn't work for fillText
-                            ctx.fillText(percent, model.x + x, model.y + y);
-                        }
-                    });
+                    //         ctx.fillStyle = '#fff';
+                    //         if (i == 3) { // Darker text color for lighter background
+                    //             ctx.fillStyle = '#444';
+                    //         }
+                    //         var percent = String(Math.round(dataset.data[i] / total * 100)) + "%";
+                    //         //ctx.fillText(dataset.data[i], model.x + x, model.y + y);
+                    //         // Display percent in another line, line break doesn't work for fillText
+                    //         ctx.fillText(percent, model.x + x, model.y + y);
+                    //     }
+                    // });
                 }
             },
             elements: {
@@ -542,8 +609,13 @@ $(document).ready(function () {
                     tension: 0.4
                 }
             },
-            legend: {
-                position: 'right',
+            // legend: {
+            //     position: 'right',
+            // },
+            plugins: {
+                legend: {
+                    position: 'right'
+                }
             },
             point: {
                 backgroundColor: '#8A8B93'
@@ -560,6 +632,1191 @@ $(document).ready(function () {
         });
 
     }
+
+    if ($('#chart-customers').length) {
+
+        var chart = document.getElementById('chart-customers').getContext('2d');
+
+        var data = {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June'],
+            datasets: [
+                {
+                    data: [40, 95, 30, 95, 42, 68, 70],
+                    label: 'Cancelled Customers',
+                    backgroundColor: '#3F68E5',
+                    borderColor: '#F3F4F5',
+                    borderWidth: 0,
+                    borderRadius: 8,
+                    borderSkipped: false,
+                }
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1.5,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                        tickColor: '#ffffff',
+                        borderColor: '#ffffff',
+                    },
+                    ticks: {
+                        color: '#6D6D6D',
+                    },
+                },
+                y: {
+                    display: false,
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            }
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+
+    }
+
+    if ($('#chart-gender').length) {
+
+        var chart = document.getElementById('chart-gender').getContext('2d');
+
+        var data = {
+            labels: ['Women', 'Men'],
+            datasets: [
+                {
+                    data: [25, 250],
+                    label: '',
+                    backgroundColor: ['#F5717A', '#3F68E5'],
+                    borderWidth: 0,
+                    pointStyle: 'cross',
+                }
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1.5,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    display: false,
+                },
+                y: {
+                    display: false,
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                htmlLegend: {
+                    containerID: 'legend-container-gender',
+                },
+                legend: {
+                    display: false,
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 10,
+                        boxHeight: 10,
+                        padding: 20,
+                        usePointStyle: true,
+                    },
+                },
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            },
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'doughnut',
+            data: data,
+            options: options,
+            plugins: [htmlLegendPlugin],
+        });
+
+    }
+
+    if ($('#chart-age').length) {
+
+        var chart = document.getElementById('chart-age').getContext('2d');
+
+        var data = {
+            labels: ['20s', '30s', '40s', '50s', '60+'],
+            datasets: [
+                {
+                    data: [25, 20, 20, 20, 15],
+                    label: '',
+                    backgroundColor: ['#3A66ED', '#F5717A', '#FBC563', '#99DC13', '#DFDFDF'],
+                    borderWidth: 0,
+                    pointStyle: 'circle',
+                }
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1.5,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    display: false,
+                },
+                y: {
+                    display: false,
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                htmlLegend: {
+                    containerID: 'legend-container-age',
+                },
+                legend: {
+                    display: false,
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 10,
+                        boxHeight: 10,
+                        padding: 20,
+                        usePointStyle: true,
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            }
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'doughnut',
+            data: data,
+            options: options,
+            plugins: [htmlLegendPlugin],
+        });
+
+    }
+
+    if ($('#chart-breakdown').length) {
+
+        var chart = document.getElementById('chart-breakdown').getContext('2d'),
+            gradient = chart.createLinearGradient(0, 0, 0, 330);
+
+        gradient.addColorStop(0, 'rgba(60, 104, 236, 0.2)');
+        gradient.addColorStop(0.5, 'rgba(60, 104, 236, 0.15)');
+        gradient.addColorStop(1, 'rgba(60, 104, 236, 0)');
+
+        var data = {
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
+            datasets: [{
+                label: 'Active',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: gradient,
+                pointBackgroundColor: '#3A66ED',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#3A66ED',
+                fill: true,
+                data: [0, 100, 40, 80, 42, 18, 60, 80, 30],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            },
+            {
+                label: 'Churned',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: 'transparent',
+                pointBackgroundColor: '#F6C161',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#F6C161',
+                fill: true,
+                data: [0, 30, 90, 100, 52, 30, 18, 60, 80],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            }]
+        };
+
+        var options = {
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 2.85,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            radius: 6,
+            hoverRadius: 6,
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                        tickColor: '#ffffff',
+                        borderColor: 'transparent',
+                    },
+                    ticks: {
+                        color: '#6D6D6D',
+                    },
+                },
+                y: {
+                    grid: {
+                        //display: false,
+                        tickColor: '#ffffff',
+                        borderColor: '#F2F2F2',
+                        borderDash: [5, 5],
+                        drawBorder: false
+                    },
+                    ticks: {
+                        display: false
+                        //color: 'transparent',
+                    },
+                },
+
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'line',
+            data: data,
+            options: options
+        });
+
+    }
+
+    if ($('#chart-age-2').length) {
+
+        var chart = document.getElementById('chart-age-2').getContext('2d');
+
+        var data = {
+            labels: ['20s', '30s', '40s', '50s', '60+'],
+            datasets: [
+                {
+                    data: [25, 20, 20, 20, 15],
+                    label: '',
+                    backgroundColor: chartColors2,
+                    borderWidth: 0,
+                    pointStyle: 'circle',
+                }
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1.5,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    display: false,
+                },
+                y: {
+                    display: false,
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                htmlLegend: {
+                    containerID: 'legend-container-age-2',
+                },
+                legend: {
+                    display: false,
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 10,
+                        boxHeight: 10,
+                        padding: 20,
+                        usePointStyle: true,
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            }
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'doughnut',
+            data: data,
+            options: options,
+            plugins: [htmlLegendPlugin],
+        });
+
+    }
+
+    if ($('#chart-membership').length) {
+
+        var chart = document.getElementById('chart-membership').getContext('2d');
+
+        var data = {
+            labels: ['Plan A', 'Plan B', 'Plan C', 'Plan D', 'Plan E'],
+            datasets: [
+                {
+                    data: [2500, 3000, 2700, 2800, 3200],
+                    label: '',
+                    backgroundColor: chartColors1,
+                    borderWidth: 0,
+                    pointStyle: 'circle',
+                }
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1.5,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    display: false,
+                },
+                y: {
+                    display: false,
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                htmlLegend: {
+                    containerID: 'legend-container-membership',
+                },
+                legend: {
+                    display: false,
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 10,
+                        boxHeight: 10,
+                        padding: 20,
+                        usePointStyle: true,
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            }
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'doughnut',
+            data: data,
+            options: options,
+            plugins: [htmlLegendPlugin],
+        });
+
+    }
+
+    if ($('#chart-trainer').length) {
+
+        var chart = document.getElementById('chart-trainer').getContext('2d'),
+            gradient = chart.createLinearGradient(0, 0, 0, 330);
+
+        gradient.addColorStop(0, 'rgba(60, 104, 236, 0.2)');
+        gradient.addColorStop(0.5, 'rgba(60, 104, 236, 0.15)');
+        gradient.addColorStop(1, 'rgba(60, 104, 236, 0)');
+
+        var data = {
+            labels: ['Jan 2020', 'Feb 2020', 'Mar 2020', 'Apr 2020', 'May 2020', 'Jun 2020', 'Jul 2020', 'Aug 2020', 'Sep 2020'],
+            datasets: [{
+                label: 'Highest rates',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: gradient,
+                pointBackgroundColor: '#3A66ED',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#3A66ED',
+                fill: true,
+                data: [0, 100, 40, 80, 42, 18, 60, 80, 30],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            }]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 2.85,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            radius: 6,
+            hoverRadius: 6,
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                        tickColor: '#ffffff',
+                        borderColor: 'transparent',
+                    },
+                    ticks: {
+                        color: '#6D6D6D',
+                    },
+                },
+                y: {
+                    grid: {
+                        //display: false,
+                        tickColor: '#ffffff',
+                        borderColor: '#F2F2F2',
+                        borderDash: [5, 5],
+                        drawBorder: false
+                    },
+                    ticks: {
+                        display: false
+                        //color: 'transparent',
+                    },
+                },
+
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'line',
+            data: data,
+            options: options
+        });
+
+    }
+
+    if ($('#chart-studio').length) {
+
+        var chart = document.getElementById('chart-studio').getContext('2d'),
+            gradient = chart.createLinearGradient(0, 0, 0, 330);
+
+        gradient.addColorStop(0, 'rgba(255, 191, 75, 0.2)');
+        gradient.addColorStop(0.5, 'rgba(255, 191, 75, 0.15)');
+        gradient.addColorStop(1, 'rgba(255, 191, 75, 0)');
+
+        var data = {
+            labels: ['01', '02', '03', '04', '05', '06', '07', '07', '09', '10', '11', '12', '13', '14', '15'],
+            datasets: [{
+                label: 'Under rates today',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: gradient,
+                pointBackgroundColor: '#FFBF4B',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#FFBF4B',
+                fill: true,
+                data: [0, 70, 40, 80, 42, 18, 60, 80, 30, 40, 100, 40, 80, 42, 18],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            }]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 2.85,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            radius: 6,
+            hoverRadius: 6,
+            scales: {
+                x: {
+                    grid: {
+                        //display: false,
+                        tickColor: '#ffffff',
+                        borderColor: '#F2F2F2',
+                        borderDash: [5, 5],
+                        drawBorder: false
+                    },
+                    ticks: {
+                        color: '#6D6D6D',
+                    },
+                },
+                y: {
+                    grid: {
+                        lineWidth: 2,
+                        //display: false,
+                        color: function (context) {
+                            if (context.tick.value == 50) {
+                                return '#FFBF4B';
+                            }
+                            return 'transparent';
+                        },
+                        tickColor: '#ffffff',
+                        borderColor: 'transparent',
+                        borderDash: [5, 5],
+                        drawBorder: false
+                    },
+                    ticks: {
+                        display: false
+                        //color: 'transparent',
+                    },
+                },
+
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'line',
+            data: data,
+            options: options
+        });
+
+    }
+
+    if ($('#chart-engagement').length) {
+
+        var chart = document.getElementById('chart-engagement').getContext('2d'),
+            gradient = chart.createLinearGradient(0, 0, 0, 330);
+
+        gradient.addColorStop(0, 'rgba(60, 104, 236, 0.2)');
+        gradient.addColorStop(0.5, 'rgba(60, 104, 236, 0.15)');
+        gradient.addColorStop(1, 'rgba(60, 104, 236, 0)');
+
+        var data = {
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
+            datasets: [{
+                label: 'Loyal Customer',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: gradient,
+                pointBackgroundColor: '#3A66ED',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#3A66ED',
+                fill: true,
+                data: [0, 100, 40, 80, 42, 18, 60, 80, 30],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            },
+            {
+                label: 'Churned Customer',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: 'transparent',
+                pointBackgroundColor: '#F5717A',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#F5717A',
+                fill: true,
+                data: [0, 30, 90, 100, 52, 30, 18, 60, 80],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            }]
+        };
+
+        var options = {
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 2.85,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            radius: 6,
+            hoverRadius: 6,
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                        tickColor: '#ffffff',
+                        borderColor: 'transparent',
+                    },
+                    ticks: {
+                        color: '#6D6D6D',
+                    },
+                },
+                y: {
+                    grid: {
+                        //display: false,
+                        tickColor: '#ffffff',
+                        borderColor: '#F2F2F2',
+                        borderDash: [5, 5],
+                        drawBorder: false
+                    },
+                    ticks: {
+                        display: false
+                        //color: 'transparent',
+                    },
+                },
+
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'line',
+            data: data,
+            options: options
+        });
+
+    }
+
+    if ($('#chart-engagement-persona').length) {
+
+        var chart = document.getElementById('chart-engagement-persona').getContext('2d');
+
+        var data = {
+            labels: ['Persona 1', 'Persona 2', 'Persona 3', 'Persona 4', 'Persona 5', 'Persona 6', 'Persona 7', 'Persona 8', 'Persona 9', 'Persona 10'],
+            datasets: [
+                {
+                    data: [25, 20, 20, 20, 15, 25, 20, 20, 20, 15],
+                    label: '',
+                    backgroundColor: chartColors2,
+                    borderWidth: 0,
+                    pointStyle: 'circle',
+                }
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    display: false,
+                },
+                y: {
+                    display: false,
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                htmlLegend: {
+                    containerID: 'legend-container-engagement-persona',
+                },
+                legend: {
+                    display: false,
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 10,
+                        boxHeight: 10,
+                        padding: 20,
+                        usePointStyle: true,
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            }
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'doughnut',
+            data: data,
+            options: options,
+            plugins: [htmlLegendPlugin],
+        });
+
+    }
+
+    if ($('#chart-engagement-age').length) {
+
+        var chart = document.getElementById('chart-engagement-age').getContext('2d');
+
+        var data = {
+            labels: ['20s', '30s', '40s', '50s', '60+'],
+            datasets: [
+                {
+                    data: [25, 20, 20, 20, 15],
+                    label: '',
+                    backgroundColor: chartColors1,
+                    borderWidth: 0,
+                    pointStyle: 'circle',
+                }
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    display: false,
+                },
+                y: {
+                    display: false,
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                htmlLegend: {
+                    containerID: 'legend-container-engagement-age',
+                },
+                legend: {
+                    display: false,
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 10,
+                        boxHeight: 10,
+                        padding: 20,
+                        usePointStyle: true,
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            }
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'doughnut',
+            data: data,
+            options: options,
+            plugins: [htmlLegendPlugin],
+        });
+
+    }
+
+    if ($('#chart-engagement-gender').length) {
+
+        var chart = document.getElementById('chart-engagement-gender').getContext('2d');
+
+        var data = {
+            labels: ['Women', 'Men'],
+            datasets: [
+                {
+                    data: [25, 250],
+                    label: '',
+                    backgroundColor: ['#F5717A', '#3F68E5'],
+                    borderWidth: 0,
+                    pointStyle: 'cross',
+                }
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    display: false,
+                },
+                y: {
+                    display: false,
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                htmlLegend: {
+                    containerID: 'legend-container-engagement-gender',
+                },
+                legend: {
+                    display: false,
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 10,
+                        boxHeight: 10,
+                        padding: 20,
+                        usePointStyle: true,
+                    },
+                },
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            },
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'doughnut',
+            data: data,
+            options: options,
+            plugins: [htmlLegendPlugin],
+        });
+
+    }
+
+    if ($('#chart-trainer-retention').length) {
+
+        var chart = document.getElementById('chart-trainer-retention').getContext('2d'),
+            gradient = chart.createLinearGradient(0, 0, 0, 330);
+
+        gradient.addColorStop(0, 'rgba(60, 104, 236, 0.2)');
+        gradient.addColorStop(0.5, 'rgba(60, 104, 236, 0.15)');
+        gradient.addColorStop(1, 'rgba(60, 104, 236, 0)');
+
+        var data = {
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9'],
+            datasets: [{
+                label: 'Total People targeted',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: gradient,
+                pointBackgroundColor: '#3A66ED',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#3A66ED',
+                fill: true,
+                data: [0, 100, 40, 80, 42, 18, 60, 80, 30],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            },
+            {
+                label: 'People Engaged',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: 'transparent',
+                pointBackgroundColor: '#F5717A',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#F5717A',
+                fill: true,
+                data: [0, 30, 90, 100, 52, 30, 18, 60, 80],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            },
+            {
+                label: 'Response',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: 'transparent',
+                pointBackgroundColor: '#F4C673',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#F4C673',
+                fill: true,
+                data: [10, 20, 40, 40, 62, 20, 78, 90, 100],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            }]
+        };
+
+        var options = {
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 2.85,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            radius: 6,
+            hoverRadius: 6,
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                        tickColor: '#ffffff',
+                        borderColor: 'transparent',
+                    },
+                    ticks: {
+                        color: '#6D6D6D',
+                    },
+                },
+                y: {
+                    grid: {
+                        //display: false,
+                        tickColor: '#ffffff',
+                        borderColor: '#F2F2F2',
+                        borderDash: [5, 5],
+                        drawBorder: false
+                    },
+                    ticks: {
+                        display: false
+                        //color: 'transparent',
+                    },
+                },
+
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'line',
+            data: data,
+            options: options
+        });
+
+    }
+
+    $('.equal-height').matchHeight(options);
+
 
     $(document).on('click', '.charts-criteria-toggle', function (event) {
         event.preventDefault();
@@ -913,6 +2170,32 @@ $(document).ready(function () {
             dateFormat: "mm-dd-yy",
         });
     }
+
+    //-----------------------------------------//
+
+    //new reports datepicker
+    $('.mask-date').mask('99/99/9999', { placeholder: 'mm/dd/yyyy' });
+    $('.new-reports-datepicker').datepicker({
+        showOtherMonths: true,
+        selectOtherMonths: true,
+        dateFormat: "mm/dd/yy",
+    });
+
+    //-----------------------------------------//
+
+    //new reports engaged mobile
+    $(document).on('click', '.new-reports-engaged-toggle', function (event) {
+        event.preventDefault();
+        $(this).parents('.new-reports-engaged-item').toggleClass('active');
+    });
+
+    //-----------------------------------------//
+
+    //new reports campaign mobile
+    $(document).on('click', '.new-reports-campaign-toggle', function (event) {
+        event.preventDefault();
+        $(this).parents('.new-reports-campaign-item').toggleClass('active');
+    });
 
     //-----------------------------------------//
 
