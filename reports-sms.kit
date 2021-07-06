@@ -1,0 +1,518 @@
+<!-- $site-title = SMS Report -->
+<!-- $menu-reports = active opened -->
+<!-- @import "parts/_head.kit" -->
+    <main class="main-site">
+        <!-- @import "parts/_sidebar-reports.kit" -->
+        <div class="content-site content-site-gray">
+            <div class="new-reports">
+                <div class="new-reports-header">
+                    <div class="new-reports-type drop">
+                        <a href="#" class="new-reports-type-toggle drop-toggle">
+                            SMS Report
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.99999 10.9766L14.125 6.85156L15.3033 8.0299L9.99999 13.3332L4.69666 8.0299L5.87499 6.85156L9.99999 10.9766Z" fill="#1C2538"/></svg>
+                        </a>
+                        <div class="new-reports-type-panel drop-block">
+                            <!-- $report-menu-sms = active -->
+                            <!-- @import "parts/_report-menu.kit" -->
+                        </div>
+                        <!-- /.new-reports-type-panel -->
+                    </div>
+                    <!-- /.new-reports-type -->
+                    <div class="new-reports-header-content">
+                        <div class="new-reports-header-content-inner">
+                            <div class="new-reports-header-location drop">
+                                <a href="#" class="new-reports-header-location-toggle drop-toggle">
+                                    <span class="new-reports-header-location-toggle-filter">
+                                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.625 5.25V7H18.375V5.25H2.625ZM8.75 15.75H12.25V14H8.75V15.75ZM15.75 11.375H5.25V9.625H15.75V11.375Z" fill="#1C2538"/></svg>
+                                        <span class="new-reports-header-location-toggle-filter-number">1</span>
+                                    </span>
+                                    <span class="new-reports-header-location-toggle-title">
+                                        Loc : <span class="new-reports-header-location-toggle-text">Washington, DC</span>
+                                    </span>
+                                    <span class="new-reports-header-location-toggle-arrow">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.99999 8.78047L11.3 5.48047L12.2427 6.42314L7.99999 10.6658L3.75732 6.42314L4.69999 5.48047L7.99999 8.78047Z" fill="#828289"/></svg>
+                                    </span>
+                                </a>
+                                <div class="new-reports-header-location-panel drop-block">
+                                    <div class="new-reports-header-location-search">
+                                        <input type="text" class="new-reports-header-location-search-text" placeholder="Search a location">
+                                        <button class="new-reports-header-location-search-button">
+                                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.5216 14.5954L12.7165 11.791C13.553 10.7475 14.008 9.44957 14.0061 8.11219C14.0061 4.85847 11.3654 2.21777 8.1117 2.21777C4.85798 2.21777 2.21729 4.85847 2.21729 8.11219C2.21729 11.3659 4.85798 14.0066 8.1117 14.0066C9.44908 14.0085 10.747 13.5535 11.7905 12.717L14.5949 15.5221L15.5216 14.5954ZM12.6962 8.11219C12.6981 9.30445 12.2339 10.4502 11.4027 11.305L11.3045 11.4032C10.4497 12.2344 9.30396 12.6986 8.1117 12.6967C5.57841 12.6967 3.52716 10.6448 3.52716 8.11219C3.52716 5.5789 5.57841 3.52764 8.1117 3.52764C10.6443 3.52764 12.6962 5.5789 12.6962 8.11219Z" fill="#1C2538"/></svg>
+                                        </button>
+                                    </div>
+                                    <ul class="new-reports-header-location-list">
+                                        <li><strong>Recent Location</strong></li>
+                                        <li class="active"><a href="#">Washington, DC</a></li>
+                                    </ul>
+                                    <ul class="new-reports-header-location-list new-reports-header-location-list-full">
+                                        <li><strong>All Location</strong></li>
+                                        <li><a href="#">Atlanta, GA</a></li>
+                                        <li><a href="#">Austin, TX</a></li>
+                                        <li><a href="#">Charlotte, NC</a></li>
+                                        <li><a href="#">Denver, CO</a></li>
+                                        <li><a href="#">Houston, TX</a></li>
+                                        <li><a href="#">Minneapolis-Saint Paul, MN</a></li>
+                                        <li><a href="#">Phoenix, AZ</a></li>
+                                        <li><a href="#">Portland, OR</a></li>
+                                        <li class="disabled"><a href="#">Riverside, CA</a></li>
+                                    </ul>
+                                </div>
+                                <!-- /.new-reports-header-location-panel -->
+                            </div>
+                            <!-- /.new-reports-header-location -->
+                            <div class="new-reports-header-period">
+                                <label class="new-reports-header-period-label" for="new-reports-header-period-from">From</label>
+                                <div class="new-reports-header-period-input">
+                                    <input type="text" class="new-reports-datepicker mask-date" placeholder="mm/dd/yyyy" value="03/10/2020" id="new-reports-header-period-from">
+                                    <div class="new-reports-header-period-icon">
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.4583 2.37435H16.625C17.0622 2.37435 17.4167 2.72879 17.4167 3.16602V15.8327C17.4167 16.2699 17.0622 16.6243 16.625 16.6243H2.37501C1.93778 16.6243 1.58334 16.2699 1.58334 15.8327V3.16602C1.58334 2.72879 1.93778 2.37435 2.37501 2.37435H5.54168V0.791016H7.12501V2.37435H11.875V0.791016H13.4583V2.37435ZM3.16668 7.12435V15.041H15.8333V7.12435H3.16668ZM8.70834 10.291H4.75001V13.4577H8.70834V10.291Z" fill="#808087"/></svg>
+                                    </div>
+                                </div>
+                                <label class="new-reports-header-period-label" for="new-reports-header-period-to">To</label>
+                                <div class="new-reports-header-period-input">
+                                    <input type="text" class="new-reports-datepicker mask-date" placeholder="mm/dd/yyyy" value="03/10/2020" id="new-reports-header-period-to">
+                                    <div class="new-reports-header-period-icon">
+                                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13.4583 2.37435H16.625C17.0622 2.37435 17.4167 2.72879 17.4167 3.16602V15.8327C17.4167 16.2699 17.0622 16.6243 16.625 16.6243H2.37501C1.93778 16.6243 1.58334 16.2699 1.58334 15.8327V3.16602C1.58334 2.72879 1.93778 2.37435 2.37501 2.37435H5.54168V0.791016H7.12501V2.37435H11.875V0.791016H13.4583V2.37435ZM3.16668 7.12435V15.041H15.8333V7.12435H3.16668ZM8.70834 10.291H4.75001V13.4577H8.70834V10.291Z" fill="#808087"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.new-reports-header-period -->
+                        </div>
+                        <!-- /.new-reports-header-content-inner -->
+                    </div>
+                    <!-- /.new-reports-header-content -->
+                </div>
+                <!-- /.new-reports-header -->
+                <div class="new-reports-graph">
+                    <div class="new-reports-graph-caption">
+                        <div class="new-reports-graph-title">Weekly SMS</div>
+                    </div>
+                    <!-- /.new-reports-graph-caption -->
+                    <div class="new-reports-graph-total-list">
+                        <div class="new-reports-graph-total">
+                            <span class="new-reports-graph-total-number">2,562</span>
+                            <span class="new-reports-graph-total-percent green">+1,2%</span>
+                            <span class="new-reports-graph-total-title">Sent in selected period</span>
+                        </div>
+                        <!-- /.new-reports-graph-total -->
+                        <div class="new-reports-graph-total">
+                            <span class="new-reports-graph-total-number">1,243</span>
+                            <span class="new-reports-graph-total-percent">-0,5%</span>
+                            <span class="new-reports-graph-total-title">Received in selected period</span>
+                        </div>
+                        <!-- /.new-reports-graph-total -->
+                    </div>
+                    <!-- /.new-reports-graph-total-list -->
+                    <div class="aspect-ratio">
+                        <canvas id="chart-weekly-sms"></canvas>
+                    </div>
+                </div>
+                <!-- /.new-reports-graph -->
+                <div class="new-reports-info-blocks">
+                    <div class="new-reports-info-blocks-col">
+                        <div class="new-reports-info-block">
+                            <div class="new-reports-info-block-icon"><i class="fas fa-inbox-in"></i></div>
+                            <div class="new-reports-info-block-content">
+                                <div class="new-reports-info-block-caption">
+                                    <div class="new-reports-info-block-number">1,725</div>
+                                    <div class="new-reports-info-block-percent">-0,6%</div>
+                                </div>
+                                <div class="new-reports-info-block-title">Total messages received</div>
+                            </div>
+                        </div>
+                        <!-- /.new-reports-info-block -->
+                    </div>
+                    <!-- /.new-reports-info-blocks-col -->
+                    <div class="new-reports-info-blocks-col">
+                        <div class="new-reports-info-block">
+                            <div class="new-reports-info-block-icon"><i class="fas fa-reply-all"></i></div>
+                            <div class="new-reports-info-block-content">
+                                <div class="new-reports-info-block-caption">
+                                    <div class="new-reports-info-block-number">86%</div>
+                                    <div class="new-reports-info-block-percent green">+1,2%</div>
+                                </div>
+                                <div class="new-reports-info-block-title">Reply rate</div>
+                            </div>
+                        </div>
+                        <!-- /.new-reports-info-block -->
+                    </div>
+                    <!-- /.new-reports-info-blocks-col -->
+                    <div class="new-reports-info-blocks-col">
+                        <div class="new-reports-info-block">
+                            <div class="new-reports-info-block-icon"><i class="fas fa-paper-plane"></i></div>
+                            <div class="new-reports-info-block-content">
+                                <div class="new-reports-info-block-caption">
+                                    <div class="new-reports-info-block-number">92%</div>
+                                    <div class="new-reports-info-block-percent">-0,6%</div>
+                                </div>
+                                <div class="new-reports-info-block-title">Delivery rate</div>
+                            </div>
+                        </div>
+                        <!-- /.new-reports-info-block -->
+                    </div>
+                    <!-- /.new-reports-info-blocks-col -->
+                </div>
+                <!-- /.new-reports-info-blocks -->
+                <div class="new-reports-diagram-blocks">
+                    <div class="new-reports-diagram-blocks-col new-reports-diagram-blocks-col-x2">
+                        <div class="new-reports-diagram-block">
+                            <div class="new-reports-diagram-block-caption new-reports-diagram-block-caption-v3">
+                                <div class="new-reports-diagram-block-caption-inner">
+                                    <div class="new-reports-diagram-block-title">Top 5 campaigns</div>
+                                    <div class="new-reports-diagram-block-all"><a href="#">542 Campaigns&nbsp;&rarr;</a></div>
+                                    <div class="new-reports-diagram-block-nav">
+                                        <ul class="new-reports-diagram-block-nav-list">
+                                            <li class="active"><a href="#">Ongoing</a></li>
+                                            <li><a href="#">One-time</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-caption-inner -->
+                                <div class="new-reports-diagram-block-select">
+                                    <select class="select">
+                                        <option>Last 30 days</option>
+                                        <option>This month</option>
+                                    </select>
+                                </div>
+                                <!-- /.new-reports-diagram-block-select -->
+                            </div>
+                            <!-- /.new-reports-diagram-block-caption -->
+                            <div class="new-reports-campaign-list">
+                                <div class="new-reports-campaign-item">
+                                    <a href="#" class="new-reports-campaign-toggle">
+                                        <span class="new-reports-campaign-toggle-text">
+                                            Saturday Class
+                                            <span class="new-reports-campaign-label">
+                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"/></svg>
+                                            </span>
+                                        </span>
+                                        <span class="new-reports-campaign-toggle-arrow">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.49996 8.23242L10.5937 5.13867L11.4775 6.02242L7.49996 9.99992L3.52246 6.02242L4.40621 5.13867L7.49996 8.23242Z" fill="#828289"/></svg>
+                                        </span>
+                                    </a>
+                                    <div class="new-reports-campaign-content">
+                                        <div class="new-reports-campaign-row">
+                                            <div class="new-reports-campaign-title">
+                                                Saturday Class
+                                                <span class="new-reports-campaign-label">
+                                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"/></svg>
+                                                </span>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-paper-plane"></i></div>
+                                                <div class="new-reports-campaign-info-text">13</div>
+                                                <div class="new-reports-campaign-info-subtitle">Sent</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-arrow-alt-up"></i></div>
+                                                <div class="new-reports-campaign-info-text">85%</div>
+                                                <div class="new-reports-campaign-info-subtitle">Opened</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="far fa-chart-bar"></i></div>
+                                                <div class="new-reports-campaign-info-text">$23k</div>
+                                                <div class="new-reports-campaign-info-subtitle">Label</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-mobile-android-alt"></i></div>
+                                                <div class="new-reports-campaign-info-text">579</div>
+                                                <div class="new-reports-campaign-info-subtitle">Label</div>
+                                            </div>
+                                            <div class="new-reports-campaign-status-block">
+                                                <div class="new-reports-campaign-status green">Completed</div>
+                                            </div>
+                                        </div>
+                                        <!-- /.new-reports-campaign-row -->
+                                    </div>
+                                    <!-- /.new-reports-campaign-content -->
+                                </div>
+                                <!-- /.new-reports-campaign-item -->
+                                <div class="new-reports-campaign-item">
+                                    <a href="#" class="new-reports-campaign-toggle">
+                                        <span class="new-reports-campaign-toggle-text">
+                                            Friday Class
+                                            <span class="new-reports-campaign-label">
+                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"/></svg>
+                                            </span>
+                                        </span>
+                                        <span class="new-reports-campaign-toggle-arrow">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.49996 8.23242L10.5937 5.13867L11.4775 6.02242L7.49996 9.99992L3.52246 6.02242L4.40621 5.13867L7.49996 8.23242Z" fill="#828289"/></svg>
+                                        </span>
+                                    </a>
+                                    <div class="new-reports-campaign-content">
+                                        <div class="new-reports-campaign-row">
+                                            <div class="new-reports-campaign-title">
+                                                Friday Class
+                                                <span class="new-reports-campaign-label">
+                                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"/></svg>
+                                                </span>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-paper-plane"></i></div>
+                                                <div class="new-reports-campaign-info-text">13</div>
+                                                <div class="new-reports-campaign-info-subtitle">Sent</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-arrow-alt-up"></i></div>
+                                                <div class="new-reports-campaign-info-text">85%</div>
+                                                <div class="new-reports-campaign-info-subtitle">Opened</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="far fa-chart-bar"></i></div>
+                                                <div class="new-reports-campaign-info-text">$23k</div>
+                                                <div class="new-reports-campaign-info-subtitle">Label</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-mobile-android-alt"></i></div>
+                                                <div class="new-reports-campaign-info-text">579</div>
+                                                <div class="new-reports-campaign-info-subtitle">Label</div>
+                                            </div>
+                                            <div class="new-reports-campaign-status-block">
+                                                <div class="new-reports-campaign-status">Drafted</div>
+                                            </div>
+                                        </div>
+                                        <!-- /.new-reports-campaign-row -->
+                                    </div>
+                                    <!-- /.new-reports-campaign-content -->
+                                </div>
+                                <!-- /.new-reports-campaign-item -->
+                                <div class="new-reports-campaign-item">
+                                    <a href="#" class="new-reports-campaign-toggle">
+                                        <span class="new-reports-campaign-toggle-text">
+                                            Zumba Session
+                                            <span class="new-reports-campaign-label">
+                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"/></svg>
+                                            </span>
+                                        </span>
+                                        <span class="new-reports-campaign-toggle-arrow">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.49996 8.23242L10.5937 5.13867L11.4775 6.02242L7.49996 9.99992L3.52246 6.02242L4.40621 5.13867L7.49996 8.23242Z" fill="#828289"/></svg>
+                                        </span>
+                                    </a>
+                                    <div class="new-reports-campaign-content">
+                                        <div class="new-reports-campaign-row">
+                                            <div class="new-reports-campaign-title">
+                                                Zumba Session
+                                                <span class="new-reports-campaign-label">
+                                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"/></svg>
+                                                </span>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-paper-plane"></i></div>
+                                                <div class="new-reports-campaign-info-text">13</div>
+                                                <div class="new-reports-campaign-info-subtitle">Sent</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-arrow-alt-up"></i></div>
+                                                <div class="new-reports-campaign-info-text">85%</div>
+                                                <div class="new-reports-campaign-info-subtitle">Opened</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="far fa-chart-bar"></i></div>
+                                                <div class="new-reports-campaign-info-text">$23k</div>
+                                                <div class="new-reports-campaign-info-subtitle">Label</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-mobile-android-alt"></i></div>
+                                                <div class="new-reports-campaign-info-text">579</div>
+                                                <div class="new-reports-campaign-info-subtitle">Label</div>
+                                            </div>
+                                            <div class="new-reports-campaign-status-block">
+                                                <div class="new-reports-campaign-status green">Completed</div>
+                                            </div>
+                                        </div>
+                                        <!-- /.new-reports-campaign-row -->
+                                    </div>
+                                    <!-- /.new-reports-campaign-content -->
+                                </div>
+                                <!-- /.new-reports-campaign-item -->
+                                <div class="new-reports-campaign-item">
+                                    <a href="#" class="new-reports-campaign-toggle">
+                                        <span class="new-reports-campaign-toggle-text">
+                                            Gym Training
+                                            <span class="new-reports-campaign-label">
+                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"/></svg>
+                                            </span>
+                                        </span>
+                                        <span class="new-reports-campaign-toggle-arrow">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.49996 8.23242L10.5937 5.13867L11.4775 6.02242L7.49996 9.99992L3.52246 6.02242L4.40621 5.13867L7.49996 8.23242Z" fill="#828289"/></svg>
+                                        </span>
+                                    </a>
+                                    <div class="new-reports-campaign-content">
+                                        <div class="new-reports-campaign-row">
+                                            <div class="new-reports-campaign-title">
+                                                Gym Training
+                                                <span class="new-reports-campaign-label">
+                                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"/></svg>
+                                                </span>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-paper-plane"></i></div>
+                                                <div class="new-reports-campaign-info-text">13</div>
+                                                <div class="new-reports-campaign-info-subtitle">Sent</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-arrow-alt-up"></i></div>
+                                                <div class="new-reports-campaign-info-text">85%</div>
+                                                <div class="new-reports-campaign-info-subtitle">Opened</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="far fa-chart-bar"></i></div>
+                                                <div class="new-reports-campaign-info-text">$23k</div>
+                                                <div class="new-reports-campaign-info-subtitle">Label</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-mobile-android-alt"></i></div>
+                                                <div class="new-reports-campaign-info-text">579</div>
+                                                <div class="new-reports-campaign-info-subtitle">Label</div>
+                                            </div>
+                                            <div class="new-reports-campaign-status-block">
+                                                <div class="new-reports-campaign-status">Drafted</div>
+                                            </div>
+                                        </div>
+                                        <!-- /.new-reports-campaign-row -->
+                                    </div>
+                                    <!-- /.new-reports-campaign-content -->
+                                </div>
+                                <!-- /.new-reports-campaign-item -->
+                                <div class="new-reports-campaign-item">
+                                    <a href="#" class="new-reports-campaign-toggle">
+                                        <span class="new-reports-campaign-toggle-text">
+                                            Meditation Session
+                                            <span class="new-reports-campaign-label">
+                                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"/></svg>
+                                            </span>
+                                        </span>
+                                        <span class="new-reports-campaign-toggle-arrow">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.49996 8.23242L10.5937 5.13867L11.4775 6.02242L7.49996 9.99992L3.52246 6.02242L4.40621 5.13867L7.49996 8.23242Z" fill="#828289"/></svg>
+                                        </span>
+                                    </a>
+                                    <div class="new-reports-campaign-content">
+                                        <div class="new-reports-campaign-row">
+                                            <div class="new-reports-campaign-title">
+                                                Meditation Session
+                                                <span class="new-reports-campaign-label">
+                                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 0C4.41828 0 8 3.58172 8 8H0V0Z" fill="#FFBF4B"/></svg>
+                                                </span>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-paper-plane"></i></div>
+                                                <div class="new-reports-campaign-info-text">13</div>
+                                                <div class="new-reports-campaign-info-subtitle">Sent</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-arrow-alt-up"></i></div>
+                                                <div class="new-reports-campaign-info-text">85%</div>
+                                                <div class="new-reports-campaign-info-subtitle">Opened</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="far fa-chart-bar"></i></div>
+                                                <div class="new-reports-campaign-info-text">$23k</div>
+                                                <div class="new-reports-campaign-info-subtitle">Label</div>
+                                            </div>
+                                            <div class="new-reports-campaign-info">
+                                                <div class="new-reports-campaign-info-icon"><i class="fas fa-mobile-android-alt"></i></div>
+                                                <div class="new-reports-campaign-info-text">579</div>
+                                                <div class="new-reports-campaign-info-subtitle">Label</div>
+                                            </div>
+                                            <div class="new-reports-campaign-status-block">
+                                                <div class="new-reports-campaign-status green">Completed</div>
+                                            </div>
+                                        </div>
+                                        <!-- /.new-reports-campaign-row -->
+                                    </div>
+                                    <!-- /.new-reports-campaign-content -->
+                                </div>
+                                <!-- /.new-reports-campaign-item -->
+                            </div>
+                            <!-- /.new-reports-campaign-list -->
+                        </div>
+                        <!-- /.new-reports-diagram-block -->
+                    </div>
+                    <!-- /.new-reports-diagram-blocks-col -->
+                    <div class="new-reports-diagram-blocks-col">
+                        <div class="new-reports-info-block">
+                            <div class="new-reports-info-block-icon"><i class="fas fa-arrow-circle-left"></i></div>
+                            <div class="new-reports-info-block-content">
+                                <div class="new-reports-info-block-caption">
+                                    <div class="new-reports-info-block-number">86%</div>
+                                    <div class="new-reports-info-block-percent green">+1,2%</div>
+                                </div>
+                                <div class="new-reports-info-block-title">Total Opt-in</div>
+                            </div>
+                        </div>
+                        <!-- /.new-reports-info-block -->
+                        <div class="new-reports-info-block">
+                            <div class="new-reports-info-block-icon"><i class="fas fa-arrow-circle-right"></i></div>
+                            <div class="new-reports-info-block-content">
+                                <div class="new-reports-info-block-caption">
+                                    <div class="new-reports-info-block-number">92%</div>
+                                    <div class="new-reports-info-block-percent">-0,6%</div>
+                                </div>
+                                <div class="new-reports-info-block-title">Total Opt-out</div>
+                            </div>
+                        </div>
+                        <!-- /.new-reports-info-block -->
+                        <div class="new-reports-info-block">
+                            <div class="new-reports-info-block-icon"><i class="fas fa-inbox-in"></i></div>
+                            <div class="new-reports-info-block-content">
+                                <div class="new-reports-info-block-caption">
+                                    <div class="new-reports-info-block-number">1,725</div>
+                                    <div class="new-reports-info-block-percent">-0,6%</div>
+                                </div>
+                                <div class="new-reports-info-block-title">Total messages received</div>
+                            </div>
+                        </div>
+                        <!-- /.new-reports-info-block -->
+                    </div>
+                    <!-- /.new-reports-diagram-blocks-col -->
+                </div>
+                <!-- /.new-reports-diagram-blocks -->
+                <div class="new-reports-diagram-blocks">
+                    <div class="new-reports-diagram-blocks-col new-reports-diagram-blocks-col-half">
+                        <div class="new-reports-diagram-block equal-height">
+                            <div class="new-reports-diagram-block-caption new-reports-diagram-block-caption-v3">
+                                <div class="new-reports-diagram-block-title">SMS sent by Hour</div>
+                                <div class="new-reports-diagram-block-select">
+                                    <select class="select">
+                                        <option>Jan 2020</option>
+                                        <option>Feb 2020</option>
+                                    </select>
+                                </div>
+                                <!-- /.new-reports-diagram-block-select -->
+                            </div>
+                            <!-- /.new-reports-diagram-block-caption -->
+                            <div class="aspect-ratio" style="padding-bottom: 66.67%;">
+                                <canvas id="chart-sms-hour"></canvas>
+                            </div>
+                        </div>
+                        <!-- /.new-reports-diagram-block -->
+                    </div>
+                    <!-- /.new-reports-diagram-blocks-col -->
+                    <div class="new-reports-diagram-blocks-col new-reports-diagram-blocks-col-half">
+                        <div class="new-reports-diagram-block equal-height">
+                            <div class="new-reports-diagram-block-caption new-reports-diagram-block-caption-v3">
+                                <div class="new-reports-diagram-block-title">SMS sent by Days</div>
+                                <div class="new-reports-diagram-block-select">
+                                    <select class="select">
+                                        <option>Week 01</option>
+                                        <option>Week 02</option>
+                                    </select>
+                                </div>
+                                <!-- /.new-reports-diagram-block-select -->
+                            </div>
+                            <!-- /.new-reports-diagram-block-caption -->
+                            <div class="aspect-ratio" style="padding-bottom: 66.67%;">
+                                <canvas id="chart-sms-day"></canvas>
+                            </div>
+                        </div>
+                        <!-- /.new-reports-diagram-block -->
+                    </div>
+                    <!-- /.new-reports-diagram-blocks-col -->
+                </div>
+                <!-- /.new-reports-diagram-blocks -->
+            </div>
+            <!-- /.new-reports -->
+        </div>
+    </main>
+    <!-- /.main-site -->
+<!-- @import "parts/_foot.kit" -->

@@ -1815,6 +1815,850 @@ $(document).ready(function () {
 
     }
 
+    if ($('#chart-weekly-sms').length) {
+
+        var chart = document.getElementById('chart-weekly-sms').getContext('2d'),
+            gradient = chart.createLinearGradient(0, 0, 0, 330);
+
+        gradient.addColorStop(0, 'rgba(60, 104, 236, 0.2)');
+        gradient.addColorStop(0.5, 'rgba(60, 104, 236, 0.15)');
+        gradient.addColorStop(1, 'rgba(60, 104, 236, 0)');
+
+        var data = {
+            labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9'],
+            datasets: [{
+                label: 'SMS Sent',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: gradient,
+                pointBackgroundColor: '#3A66ED',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#3A66ED',
+                fill: true,
+                data: [0, 100, 40, 80, 42, 18, 60, 80, 30],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            },
+            {
+                label: 'SMS Received',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: 'transparent',
+                pointBackgroundColor: '#F6C161',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#F6C161',
+                fill: true,
+                data: [0, 30, 90, 100, 52, 30, 18, 60, 80],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            }]
+        };
+
+        var options = {
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 2.85,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            radius: 6,
+            hoverRadius: 6,
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                        tickColor: '#ffffff',
+                        borderColor: 'transparent',
+                    },
+                    ticks: {
+                        color: '#6D6D6D',
+                    },
+                },
+                y: {
+                    grid: {
+                        //display: false,
+                        tickColor: '#ffffff',
+                        borderColor: '#F2F2F2',
+                        borderDash: [5, 5],
+                        drawBorder: false
+                    },
+                    ticks: {
+                        display: false
+                        //color: 'transparent',
+                    },
+                },
+
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'line',
+            data: data,
+            options: options
+        });
+
+    }
+
+    if ($('#chart-sms-hour').length) {
+
+        var chart = document.getElementById('chart-sms-hour').getContext('2d');
+
+        var data = {
+            labels: ['8A', '9A', '10A', '11A', '12A', '1P', '2P', '3P', '4P', '5P', '6P', '7P', '9P'],
+            datasets: [
+                {
+                    data: [35, 10, 25, 42, 38, 30, 45, 30, 20, 12, 38, 40, 45],
+                    label: 'Yours',
+                    backgroundColor: '#3A66ED',
+                    borderColor: '#CFCFCF',
+                    borderWidth: 2,
+                    pointWith: 20,
+                    pointHeight: 20,
+                    borderRadius: 20,
+                    borderSkipped: false,
+                    pointBackgroundColor: '#3A66ED',
+                    pointBorderWidth: 3,
+                    fill: false,
+                    borderDash: [5, 5],
+                    pointBorderColor: '#ffffff',
+                    //stack: 'combined',
+                    type: 'line',
+                    radius: 8
+                },
+                {
+                    data: [45, 20, 35, 52, 48, 40, 55, 40, 30, 22, 48, 50, 55],
+                    label: 'Average',
+                    backgroundColor: '#FFBF4B',
+                    borderColor: '#FFBF4B',
+                    borderWidth: 0,
+                    borderRadius: 8,
+                    borderSkipped: false,
+                    //stack: 'combined',
+                    type: 'bar'
+                },
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1.5,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                        tickColor: '#ffffff',
+                        borderColor: '#ffffff',
+                    },
+                    ticks: {
+                        color: '#6D6D6D',
+                    },
+                },
+                y: {
+                    display: false,
+                    //stacked: true
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            }
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'line',
+            data: data,
+            options: options
+        });
+
+    }
+
+    if ($('#chart-sms-day').length) {
+
+        var chart = document.getElementById('chart-sms-day').getContext('2d');
+
+        var data = {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [
+                {
+                    data: [40, 95, 30, 95, 42, 68, 70, 60],
+                    label: '',
+                    backgroundColor: '#3F68E5',
+                    borderColor: '#F3F4F5',
+                    borderWidth: 0,
+                    borderRadius: 8,
+                    borderSkipped: false,
+                }
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1.5,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                        tickColor: '#ffffff',
+                        borderColor: '#ffffff',
+                    },
+                    ticks: {
+                        color: '#6D6D6D',
+                    },
+                },
+                y: {
+                    display: false,
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            }
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+
+    }
+
+    if ($('#chart-weekly-email').length) {
+
+        var chart = document.getElementById('chart-weekly-email').getContext('2d'),
+            gradient = chart.createLinearGradient(0, 0, 0, 330);
+
+        gradient.addColorStop(0, 'rgba(60, 104, 236, 0.2)');
+        gradient.addColorStop(0.5, 'rgba(60, 104, 236, 0.15)');
+        gradient.addColorStop(1, 'rgba(60, 104, 236, 0)');
+
+        var data = {
+            labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6', 'Week 7', 'Week 8', 'Week 9'],
+            datasets: [{
+                label: 'Email Sent',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: gradient,
+                pointBackgroundColor: '#3A66ED',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#3A66ED',
+                fill: true,
+                data: [0, 100, 40, 80, 42, 18, 60, 80, 30],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            },
+            {
+                label: 'Email Opened',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: 'transparent',
+                pointBackgroundColor: '#F3535E',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#F3535E',
+                fill: true,
+                data: [0, 30, 90, 100, 52, 30, 18, 60, 80],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            }]
+        };
+
+        var options = {
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 2.85,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            radius: 6,
+            hoverRadius: 6,
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                        tickColor: '#ffffff',
+                        borderColor: 'transparent',
+                    },
+                    ticks: {
+                        color: '#6D6D6D',
+                    },
+                },
+                y: {
+                    grid: {
+                        //display: false,
+                        tickColor: '#ffffff',
+                        borderColor: '#F2F2F2',
+                        borderDash: [5, 5],
+                        drawBorder: false
+                    },
+                    ticks: {
+                        display: false
+                        //color: 'transparent',
+                    },
+                },
+
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'line',
+            data: data,
+            options: options
+        });
+
+    }
+
+    if ($('#chart-email-breakdown').length) {
+
+        var chart = document.getElementById('chart-email-breakdown').getContext('2d');
+
+        var data = {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [
+                {
+                    data: [30, 55, 20, 75, 32, 58, 60, 40],
+                    label: 'Yours',
+                    backgroundColor: '#3A66ED',
+                    borderColor: '#CFCFCF',
+                    borderWidth: 2,
+                    pointWith: 20,
+                    pointHeight: 20,
+                    borderRadius: 20,
+                    borderSkipped: false,
+                    pointBackgroundColor: '#3A66ED',
+                    pointBorderWidth: 3,
+                    fill: false,
+                    borderDash: [5, 5],
+                    pointBorderColor: '#ffffff',
+                    //stack: 'combined',
+                    type: 'line',
+                    radius: 8
+                },
+                {
+                    data: [40, 95, 30, 95, 42, 68, 70, 60],
+                    label: '',
+                    backgroundColor: '#3F68E5',
+                    borderColor: '#F3F4F5',
+                    borderWidth: 0,
+                    borderRadius: 8,
+                    borderSkipped: false,
+                    type: 'bar'
+                }
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1.5,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                        tickColor: '#ffffff',
+                        borderColor: '#ffffff',
+                    },
+                    ticks: {
+                        color: '#6D6D6D',
+                    },
+                },
+                y: {
+                    display: false,
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            }
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+
+    }
+
+    if ($('#chart-email-open').length) {
+
+        var chart = document.getElementById('chart-email-open').getContext('2d');
+
+        var data = {
+            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+            datasets: [
+                {
+                    data: [30, 55, 20, 75, 32, 58, 60, 40],
+                    label: 'Yours',
+                    backgroundColor: '#3A66ED',
+                    borderColor: '#CFCFCF',
+                    borderWidth: 2,
+                    pointWith: 20,
+                    pointHeight: 20,
+                    borderRadius: 20,
+                    borderSkipped: false,
+                    pointBackgroundColor: '#3A66ED',
+                    pointBorderWidth: 3,
+                    fill: false,
+                    borderDash: [5, 5],
+                    pointBorderColor: '#ffffff',
+                    //stack: 'combined',
+                    type: 'line',
+                    radius: 8
+                },
+                {
+                    data: [40, 95, 30, 95, 42, 68, 70, 60],
+                    label: '',
+                    backgroundColor: '#3F68E5',
+                    borderColor: '#F3F4F5',
+                    borderWidth: 0,
+                    borderRadius: 8,
+                    borderSkipped: false,
+                    type: 'bar'
+                }
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1.5,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                        tickColor: '#ffffff',
+                        borderColor: '#ffffff',
+                    },
+                    ticks: {
+                        color: '#6D6D6D',
+                    },
+                },
+                y: {
+                    display: false,
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            }
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'bar',
+            data: data,
+            options: options
+        });
+
+    }
+
+    if ($('#chart-video-people').length) {
+
+        var chart = document.getElementById('chart-video-people').getContext('2d'),
+            gradient = chart.createLinearGradient(0, 0, 0, 330);
+
+        gradient.addColorStop(0, 'rgba(60, 104, 236, 0.2)');
+        gradient.addColorStop(0.5, 'rgba(60, 104, 236, 0.15)');
+        gradient.addColorStop(1, 'rgba(60, 104, 236, 0)');
+
+        var data = {
+            labels: ['8A', '9A', '10A', '11A', '12A', '1P', '2P', '3P', '4P', '5P', '6P', '7P', '9P'],
+            datasets: [{
+                label: 'Most People Watched',
+                pointWith: 20,
+                pointHeight: 20,
+                backgroundColor: gradient,
+                pointBackgroundColor: '#3A66ED',
+                pointBorderWidth: 3,
+                pointBorderColor: '#ffffff',
+                borderWidth: 3,
+                borderColor: '#3A66ED',
+                fill: true,
+                data: [0, 60, 40, 80, 42, 38, 60, 80, 30, 40, 20, 40, 30],
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#ffffff'
+            }]
+        };
+
+        var options = {
+            interaction: {
+                intersect: false,
+                mode: 'index',
+            },
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 2.85,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            radius: 6,
+            hoverRadius: 6,
+            scales: {
+                x: {
+                    grid: {
+                        display: false,
+                        tickColor: '#ffffff',
+                        borderColor: 'transparent',
+                    },
+                    ticks: {
+                        color: '#6D6D6D',
+                    },
+                },
+                y: {
+                    grid: {
+                        //display: false,
+                        tickColor: '#ffffff',
+                        borderColor: '#F2F2F2',
+                        borderDash: [5, 5],
+                        drawBorder: false
+                    },
+                    ticks: {
+                        display: false
+                        //color: 'transparent',
+                    },
+                },
+
+            },
+            plugins: {
+                legend: false,
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'line',
+            data: data,
+            options: options
+        });
+
+    }
+
+    if ($('#chart-breakdown-class').length) {
+
+        var chart = document.getElementById('chart-breakdown-class').getContext('2d');
+
+        var data = {
+            labels: ['Class 1', 'Class 2', 'Class 3', 'Class 4'],
+            datasets: [
+                {
+                    data: [25, 20, 20, 20],
+                    label: '',
+                    backgroundColor: chartColors1,
+                    borderWidth: 0,
+                    pointStyle: 'circle',
+                }
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    display: false,
+                },
+                y: {
+                    display: false,
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                htmlLegend: {
+                    containerID: 'legend-container-breakdown-class',
+                },
+                legend: {
+                    display: false,
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 10,
+                        boxHeight: 10,
+                        padding: 20,
+                        usePointStyle: true,
+                    }
+                },
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            }
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'doughnut',
+            data: data,
+            options: options,
+            plugins: [htmlLegendPlugin],
+        });
+
+    }
+
+    if ($('#chart-videos-breakdown-gender').length) {
+
+        var chart = document.getElementById('chart-videos-breakdown-gender').getContext('2d');
+
+        var data = {
+            labels: ['Women', 'Men'],
+            datasets: [
+                {
+                    data: [25, 250],
+                    label: '',
+                    backgroundColor: ['#F5717A', '#3F68E5'],
+                    borderWidth: 0,
+                    pointStyle: 'cross',
+                }
+            ]
+        };
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: 1,
+            animation: {
+                easing: 'easeInOutQuad',
+                duration: 520
+            },
+            scales: {
+                x: {
+                    display: false,
+                },
+                y: {
+                    display: false,
+                },
+
+            },
+            elements: {
+                line: {
+                    tension: 0.4
+                }
+            },
+            point: {
+                backgroundColor: '#8A8B93'
+            },
+            plugins: {
+                htmlLegend: {
+                    containerID: 'legend-container-videos-breakdown-gender',
+                },
+                legend: {
+                    display: false,
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 10,
+                        boxHeight: 10,
+                        padding: 20,
+                        usePointStyle: true,
+                    },
+                },
+                tooltip: {
+                    backgroundColor: '#fff',
+                    titleColor: '#000',
+                    titleFont: '#000',
+                    bodyColor: '#000',
+                    // xAlign: 'center',
+                    // yAlign: 'center',
+                    borderWidth: 1,
+                    borderColor: 'rgba(0, 0, 0, 0.1)',
+                    displayColors: false,
+                    padding: 12
+                },
+            },
+        };
+
+        var chartInstance = new Chart(chart, {
+            type: 'doughnut',
+            data: data,
+            options: options,
+            plugins: [htmlLegendPlugin],
+        });
+
+    }
+
     $('.equal-height').matchHeight(options);
 
 
@@ -2195,6 +3039,14 @@ $(document).ready(function () {
     $(document).on('click', '.new-reports-campaign-toggle', function (event) {
         event.preventDefault();
         $(this).parents('.new-reports-campaign-item').toggleClass('active');
+    });
+
+    //-----------------------------------------//
+
+    //new reports diagram nav
+    $(document).on('click', '.new-reports-diagram-block-nav-list a', function (event) {
+        event.preventDefault();
+        $(this).parent('li').addClass('active').siblings('li').removeClass('active');
     });
 
     //-----------------------------------------//

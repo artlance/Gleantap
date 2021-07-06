@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
-    <title>Churn/Retention Report</title>
+    <title>Video Report</title>
     <meta name="description" content="description">
     <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
@@ -174,7 +174,7 @@
                 <div class="new-reports-header">
                     <div class="new-reports-type drop">
                         <a href="#" class="new-reports-type-toggle drop-toggle">
-                            Churn Report
+                            Video Report
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.99999 10.9766L14.125 6.85156L15.3033 8.0299L9.99999 13.3332L4.69666 8.0299L5.87499 6.85156L9.99999 10.9766Z" fill="#1C2538"/></svg>
                         </a>
                         <div class="new-reports-type-panel drop-block">
@@ -182,10 +182,10 @@
     <li><a href="#">Report</a></li>
     <li class=""><a href="reports-sms.html">SMS Report</a></li>
     <li class=""><a href="reports-email.html">Email Report<span class="new-reports-type-number">5</span></a></li>
-    <li class=""><a href="reports-video.html">Video Report</a></li>
+    <li class="active"><a href="reports-video.html">Video Report</a></li>
     <li><a href="#">Full Video Report<span class="new-reports-type-number">9</span></a></li>
     <li><a href="#">Class Report</a></li>
-    <li class="active"><a href="reports-churn.html">Churn Report</a></li>
+    <li class=""><a href="reports-churn.html">Churn Report</a></li>
     <li class=""><a href="reports-trainer.html">Trainer Report</a></li>
     <li class=""><a href="reports-engagement.html">Engagement Report</a></li>
     <li class=""><a href="reports-campaign.html">Campaign Report</a></li>
@@ -221,44 +221,19 @@
                                     <ul class="new-reports-header-location-list">
                                         <li><strong>Recent Location</strong></li>
                                         <li class="active"><a href="#">Washington, DC</a></li>
+                                    </ul>
+                                    <ul class="new-reports-header-location-list new-reports-header-location-list-full">
+                                        <li><strong>All Location</strong></li>
                                         <li><a href="#">Atlanta, GA</a></li>
+                                        <li><a href="#">Austin, TX</a></li>
+                                        <li><a href="#">Charlotte, NC</a></li>
+                                        <li><a href="#">Denver, CO</a></li>
+                                        <li><a href="#">Houston, TX</a></li>
+                                        <li><a href="#">Minneapolis-Saint Paul, MN</a></li>
+                                        <li><a href="#">Phoenix, AZ</a></li>
+                                        <li><a href="#">Portland, OR</a></li>
+                                        <li class="disabled"><a href="#">Riverside, CA</a></li>
                                     </ul>
-                                    <ul class="new-reports-header-location-filter">
-                                        <li><strong>Class Option</strong></li>
-                                        <li>
-                                            <div class="new-reports-header-location-checkbox">
-                                                <input type="checkbox" id="checkbox-option-1" name="checkbox-option-1">
-                                                <label for="checkbox-option-1">Class Option A</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="new-reports-header-location-checkbox">
-                                                <input type="checkbox" id="checkbox-option-2" name="checkbox-option-2" checked>
-                                                <label for="checkbox-option-2">Class Option B</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="new-reports-header-location-checkbox">
-                                                <input type="checkbox" id="checkbox-option-3" name="checkbox-option-3">
-                                                <label for="checkbox-option-3">Class Option C</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="new-reports-header-location-checkbox">
-                                                <input type="checkbox" id="checkbox-option-4" name="checkbox-option-4" checked>
-                                                <label for="checkbox-option-4">Class Option D</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="new-reports-header-location-checkbox">
-                                                <input type="checkbox" id="checkbox-option-5" name="checkbox-option-5">
-                                                <label for="checkbox-option-5">Class Option E</label>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="new-reports-header-location-apply">
-                                        <button class="new-reports-header-location-apply-button">Apply Filters</button>
-                                    </div>
                                 </div>
                                 <!-- /.new-reports-header-location-panel -->
                             </div>
@@ -288,7 +263,7 @@
                 <!-- /.new-reports-header -->
                 <div class="new-reports-graph">
                     <div class="new-reports-graph-caption">
-                        <div class="new-reports-graph-title">Breakdown by Active VS Churned</div>
+                        <div class="new-reports-graph-title">Average People Watch</div>
                         <div class="new-reports-graph-period">
                             <div class="new-reports-graph-period-inner">
                                 <div class="new-reports-graph-period-select">
@@ -319,145 +294,382 @@
                     </div>
                     <!-- /.new-reports-graph-caption -->
                     <div class="new-reports-graph-total">
-                        <span class="new-reports-graph-total-number">7,270</span>
-                        <span class="new-reports-graph-total-percent">-0,6%</span>
+                        <span class="new-reports-graph-total-number">75%</span>
+                        <span class="new-reports-graph-total-percent green">+0,5%</span>
                         <span class="new-reports-graph-total-title">in selected period</span>
                     </div>
                     <!-- /.new-reports-graph-total -->
                     <div class="aspect-ratio">
-                        <canvas id="chart-breakdown"></canvas>
+                        <canvas id="chart-video-people"></canvas>
                     </div>
                 </div>
                 <!-- /.new-reports-graph -->
-                <div class="new-reports-info-blocks">
-                    <div class="new-reports-info-blocks-col">
-                        <div class="new-reports-info-block">
-                            <div class="new-reports-info-block-icon"><i class="fas fa-user-circle"></i></div>
-                            <div class="new-reports-info-block-content">
-                                <div class="new-reports-info-block-caption">
-                                    <div class="new-reports-info-block-number">1,725</div>
-                                    <div class="new-reports-info-block-percent">-0,6%</div>
+                <div class="new-reports-diagram-blocks new-reports-diagram-blocks-v5">
+                    <div class="new-reports-diagram-blocks-col">
+                        <div class="new-reports-diagram-block equal-height">
+                            <div class="new-reports-diagram-block-caption">
+                                <div class="new-reports-diagram-block-title">Top watched <span class="nowrap">categories <a href="#" class="new-reports-diagram-block-info"></a></span></div>
+                                <div class="new-reports-diagram-block-filter drop">
+                                    <a href="#" class="new-reports-diagram-block-filter-toggle drop-toggle">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 5.5V7.33333H19.25V5.5H2.75ZM9.16667 16.5H12.8333V14.6667H9.16667V16.5ZM16.5 11.9167H5.5V10.0833H16.5V11.9167Z" fill="#1A1B2A"/></svg>
+                                    </a>
+                                    <div class="new-reports-diagram-block-filter-panel drop-block">
+                                        <ul class="new-reports-diagram-block-filter-list">
+                                            <li class="active"><a href="#">All time</a></li>
+                                            <li><a href="#">This month</a></li>
+                                            <li><a href="#">This week</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.new-reports-diagram-block-filter-panel -->
                                 </div>
-                                <div class="new-reports-info-block-title">Cancelled members in year</div>
+                                <!-- /.new-reports-diagram-block-filter -->
                             </div>
-                        </div>
-                        <!-- /.new-reports-info-block -->
-                    </div>
-                    <!-- /.new-reports-info-blocks-col -->
-                    <div class="new-reports-info-blocks-col">
-                        <div class="new-reports-info-block">
-                            <div class="new-reports-info-block-icon"><i class="far fa-chart-bar"></i></div>
-                            <div class="new-reports-info-block-content">
-                                <div class="new-reports-info-block-caption">
-                                    <div class="new-reports-info-block-number">86%</div>
-                                    <div class="new-reports-info-block-percent green">+1,2%</div>
+                            <!-- /.new-reports-diagram-block-caption -->
+                            <div class="new-reports-diagram-block-video-list">
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb"><img src="upload/category.png" alt=""></div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">#Health Issues</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">173 Video total</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-views">
+                                            243k <span class="new-reports-diagram-block-video-views-text">views</span>
+                                        </div>
+                                        <div class="new-reports-diagram-block-video-indicator">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.125 7.5V12.5H6.875V7.5H2.5L7.5 2.5L12.5 7.5H8.125Z" fill="#ADE241"/></svg>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="new-reports-info-block-title">Total churn rate</div>
-                            </div>
-                        </div>
-                        <!-- /.new-reports-info-block -->
-                    </div>
-                    <!-- /.new-reports-info-blocks-col -->
-                    <div class="new-reports-info-blocks-col">
-                        <div class="new-reports-info-block">
-                            <div class="new-reports-info-block-icon"><i class="fas fa-calendar"></i></div>
-                            <div class="new-reports-info-block-content">
-                                <div class="new-reports-info-block-caption">
-                                    <div class="new-reports-info-block-number">92%</div>
-                                    <div class="new-reports-info-block-percent">-0,6%</div>
+                                <!-- /.new-reports-diagram-block-video -->
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb"><img src="upload/category.png" alt=""></div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">#Marketing</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">234 Video total</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-views">
+                                            167k <span class="new-reports-diagram-block-video-views-text">views</span>
+                                        </div>
+                                        <div class="new-reports-diagram-block-video-indicator">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.125 7.5V2.5H6.875V7.5H2.5L7.5 12.5L12.5 7.5H8.125Z" fill="#F3535E"/></svg>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="new-reports-info-block-title">Monthly churn rate</div>
+                                <!-- /.new-reports-diagram-block-video -->
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb"><img src="upload/category.png" alt=""></div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">#GymTraining</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">85 Video total</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-views">
+                                            126k <span class="new-reports-diagram-block-video-views-text">views</span>
+                                        </div>
+                                        <div class="new-reports-diagram-block-video-indicator">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="9" height="2" fill="#FFCC64"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-video -->
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb"><img src="upload/category.png" alt=""></div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">#FitnessFood</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">100 Video total</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-views">
+                                            74k <span class="new-reports-diagram-block-video-views-text">views</span>
+                                        </div>
+                                        <div class="new-reports-diagram-block-video-indicator">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.125 7.5V12.5H6.875V7.5H2.5L7.5 2.5L12.5 7.5H8.125Z" fill="#ADE241"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-video -->
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb"><img src="upload/category.png" alt=""></div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">#WorkoutRoutine</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">234 Video total</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-views">
+                                            43k <span class="new-reports-diagram-block-video-views-text">views</span>
+                                        </div>
+                                        <div class="new-reports-diagram-block-video-indicator">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.125 7.5V12.5H6.875V7.5H2.5L7.5 2.5L12.5 7.5H8.125Z" fill="#ADE241"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-video -->
                             </div>
+                            <!-- /.new-reports-diagram-block-video-list -->
                         </div>
-                        <!-- /.new-reports-info-block -->
+                        <!-- /.new-reports-diagram-block -->
                     </div>
-                    <!-- /.new-reports-info-blocks-col -->
+                    <!-- /.new-reports-diagram-blocks-col -->
+                    <div class="new-reports-diagram-blocks-col">
+                        <div class="new-reports-diagram-block equal-height">
+                            <div class="new-reports-diagram-block-caption">
+                                <div class="new-reports-diagram-block-title">Top 5 <span class="nowrap">trainers <a href="#" class="new-reports-diagram-block-info"></a></span></div>
+                                <div class="new-reports-diagram-block-filter drop">
+                                    <a href="#" class="new-reports-diagram-block-filter-toggle drop-toggle">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 5.5V7.33333H19.25V5.5H2.75ZM9.16667 16.5H12.8333V14.6667H9.16667V16.5ZM16.5 11.9167H5.5V10.0833H16.5V11.9167Z" fill="#1A1B2A"/></svg>
+                                    </a>
+                                    <div class="new-reports-diagram-block-filter-panel drop-block">
+                                        <ul class="new-reports-diagram-block-filter-list">
+                                            <li class="active"><a href="#">All time</a></li>
+                                            <li><a href="#">This month</a></li>
+                                            <li><a href="#">This week</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.new-reports-diagram-block-filter-panel -->
+                                </div>
+                                <!-- /.new-reports-diagram-block-filter -->
+                            </div>
+                            <!-- /.new-reports-diagram-block-caption -->
+                            <div class="new-reports-diagram-block-video-list">
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb"><img src="upload/trainer2.png" alt=""></div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">Cameron Rogers</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">pom@gmail.com</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-percent">85%</div>
+                                        <div class="new-reports-diagram-block-video-indicator">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.125 7.5V12.5H6.875V7.5H2.5L7.5 2.5L12.5 7.5H8.125Z" fill="#ADE241"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-video -->
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb"><img src="upload/trainer2.png" alt=""></div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">Sanne Viscaal</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">socne@gmail.com</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-percent">74%</div>
+                                        <div class="new-reports-diagram-block-video-indicator">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.125 7.5V2.5H6.875V7.5H2.5L7.5 12.5L12.5 7.5H8.125Z" fill="#F3535E"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-video -->
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb"><img src="upload/trainer2.png" alt=""></div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">Yasaman Foroutan</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">emdendo@gmail.com</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-percent">70%</div>
+                                        <div class="new-reports-diagram-block-video-indicator">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="7" width="9" height="2" fill="#FFCC64"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-video -->
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb"><img src="upload/trainer2.png" alt=""></div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">Jontray Arnold</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">buf@gmail.com</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-percent">69%</div>
+                                        <div class="new-reports-diagram-block-video-indicator">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.125 7.5V12.5H6.875V7.5H2.5L7.5 2.5L12.5 7.5H8.125Z" fill="#ADE241"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-video -->
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb"><img src="upload/trainer2.png" alt=""></div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">Kevin Noboa</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">rakgizem@gmail.com</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-percent">64%</div>
+                                        <div class="new-reports-diagram-block-video-indicator">
+                                            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.125 7.5V12.5H6.875V7.5H2.5L7.5 2.5L12.5 7.5H8.125Z" fill="#ADE241"/></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-video -->
+                            </div>
+                            <!-- /.new-reports-diagram-block-video-list -->
+                        </div>
+                        <!-- /.new-reports-diagram-block -->
+                    </div>
+                    <!-- /.new-reports-diagram-blocks-col -->
+                    <div class="new-reports-diagram-blocks-col new-reports-diagram-blocks-col-tablet-full">
+                        <div class="new-reports-diagram-block equal-height">
+                            <div class="new-reports-diagram-block-caption">
+                                <div class="new-reports-diagram-block-title">Top 5 <span class="nowrap">videos <a href="#" class="new-reports-diagram-block-info"></a></span></div>
+                                <div class="new-reports-diagram-block-filter drop">
+                                    <a href="#" class="new-reports-diagram-block-filter-toggle drop-toggle">
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 5.5V7.33333H19.25V5.5H2.75ZM9.16667 16.5H12.8333V14.6667H9.16667V16.5ZM16.5 11.9167H5.5V10.0833H16.5V11.9167Z" fill="#1A1B2A"/></svg>
+                                    </a>
+                                    <div class="new-reports-diagram-block-filter-panel drop-block">
+                                        <ul class="new-reports-diagram-block-filter-list">
+                                            <li class="active"><a href="#">All time</a></li>
+                                            <li><a href="#">This month</a></li>
+                                            <li><a href="#">This week</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- /.new-reports-diagram-block-filter-panel -->
+                                </div>
+                                <!-- /.new-reports-diagram-block-filter -->
+                            </div>
+                            <!-- /.new-reports-diagram-block-caption -->
+                            <div class="new-reports-diagram-block-video-list">
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb">
+                                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="38" rx="19" fill="#1C2538"/><path d="M15.46 13.5324L24.2167 18.6407C24.3444 18.7155 24.4228 18.8523 24.4228 19.0003C24.4228 19.1483 24.3444 19.2851 24.2167 19.3599L15.46 24.4682C15.3309 24.5436 15.1712 24.544 15.0417 24.4692C14.9122 24.3945 14.8327 24.2561 14.8333 24.1065V13.8924C14.8333 13.7431 14.9131 13.6053 15.0425 13.531C15.1719 13.4566 15.3311 13.4572 15.46 13.5324Z" fill="white"/></svg>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">Video Tittle here</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">Adaora Azubuike</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-views">
+                                            243k <span class="new-reports-diagram-block-video-views-text">views</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-video -->
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb">
+                                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="38" rx="19" fill="#1C2538"/><path d="M15.46 13.5324L24.2167 18.6407C24.3444 18.7155 24.4228 18.8523 24.4228 19.0003C24.4228 19.1483 24.3444 19.2851 24.2167 19.3599L15.46 24.4682C15.3309 24.5436 15.1712 24.544 15.0417 24.4692C14.9122 24.3945 14.8327 24.2561 14.8333 24.1065V13.8924C14.8333 13.7431 14.9131 13.6053 15.0425 13.531C15.1719 13.4566 15.3311 13.4572 15.46 13.5324Z" fill="white"/></svg>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">Video Tittle here</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">Jarrett Cawsey</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-views">
+                                            167k <span class="new-reports-diagram-block-video-views-text">views</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-video -->
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb">
+                                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="38" rx="19" fill="#1C2538"/><path d="M15.46 13.5324L24.2167 18.6407C24.3444 18.7155 24.4228 18.8523 24.4228 19.0003C24.4228 19.1483 24.3444 19.2851 24.2167 19.3599L15.46 24.4682C15.3309 24.5436 15.1712 24.544 15.0417 24.4692C14.9122 24.3945 14.8327 24.2561 14.8333 24.1065V13.8924C14.8333 13.7431 14.9131 13.6053 15.0425 13.531C15.1719 13.4566 15.3311 13.4572 15.46 13.5324Z" fill="white"/></svg>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">Video Tittle here</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">Karl Kalagin</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-views">
+                                            126k <span class="new-reports-diagram-block-video-views-text">views</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-video -->
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb">
+                                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="38" rx="19" fill="#1C2538"/><path d="M15.46 13.5324L24.2167 18.6407C24.3444 18.7155 24.4228 18.8523 24.4228 19.0003C24.4228 19.1483 24.3444 19.2851 24.2167 19.3599L15.46 24.4682C15.3309 24.5436 15.1712 24.544 15.0417 24.4692C14.9122 24.3945 14.8327 24.2561 14.8333 24.1065V13.8924C14.8333 13.7431 14.9131 13.6053 15.0425 13.531C15.1719 13.4566 15.3311 13.4572 15.46 13.5324Z" fill="white"/></svg>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">Video Tittle here</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">Nghiêm Thế Quyền</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-views">
+                                            74k <span class="new-reports-diagram-block-video-views-text">views</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-video -->
+                                <div class="new-reports-diagram-block-video">
+                                    <div class="new-reports-diagram-block-video-thumb">
+                                        <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="38" height="38" rx="19" fill="#1C2538"/><path d="M15.46 13.5324L24.2167 18.6407C24.3444 18.7155 24.4228 18.8523 24.4228 19.0003C24.4228 19.1483 24.3444 19.2851 24.2167 19.3599L15.46 24.4682C15.3309 24.5436 15.1712 24.544 15.0417 24.4692C14.9122 24.3945 14.8327 24.2561 14.8333 24.1065V13.8924C14.8333 13.7431 14.9131 13.6053 15.0425 13.531C15.1719 13.4566 15.3311 13.4572 15.46 13.5324Z" fill="white"/></svg>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-caption">
+                                        <div class="new-reports-diagram-block-video-title">Video Tittle here</div>
+                                        <div class="new-reports-diagram-block-video-subtitle">Olivia Eklund</div>
+                                    </div>
+                                    <div class="new-reports-diagram-block-video-info">
+                                        <div class="new-reports-diagram-block-video-views">
+                                            43k <span class="new-reports-diagram-block-video-views-text">views</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.new-reports-diagram-block-video -->
+                            </div>
+                            <!-- /.new-reports-diagram-block-video-list -->
+                        </div>
+                        <!-- /.new-reports-diagram-block -->
+                    </div>
+                    <!-- /.new-reports-diagram-blocks-col -->
                 </div>
-                <!-- /.new-reports-info-blocks -->
+                <!-- /.new-reports-diagram-blocks -->
                 <div class="new-reports-diagram-blocks">
-                    <div class="new-reports-diagram-blocks-col">
+                    <div class="new-reports-diagram-blocks-col new-reports-diagram-blocks-col-half">
                         <div class="new-reports-diagram-block equal-height">
-                            <div class="new-reports-diagram-block-caption">
-                                <div class="new-reports-diagram-block-title">Cancelled customers</div>
-                                <div class="new-reports-diagram-block-filter drop">
-                                    <a href="#" class="new-reports-diagram-block-filter-toggle drop-toggle">
-                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 5.5V7.33333H19.25V5.5H2.75ZM9.16667 16.5H12.8333V14.6667H9.16667V16.5ZM16.5 11.9167H5.5V10.0833H16.5V11.9167Z" fill="#1A1B2A"/></svg>
-                                    </a>
-                                    <div class="new-reports-diagram-block-filter-panel drop-block">
-                                        <ul class="new-reports-diagram-block-filter-list">
-                                            <li class="active"><a href="#">All time</a></li>
-                                            <li><a href="#">This month</a></li>
-                                            <li><a href="#">This week</a></li>
-                                        </ul>
-                                    </div>
-                                    <!-- /.new-reports-diagram-block-filter-panel -->
+                            <div class="new-reports-diagram-block-caption new-reports-diagram-block-caption-v3">
+                                <div class="new-reports-diagram-block-title">Videos breakdown by&nbsp;Class</div>
+                                <div class="new-reports-diagram-block-select">
+                                    <select class="select">
+                                        <option>This month</option>
+                                        <option>Last 30 days</option>
+                                    </select>
                                 </div>
-                                <!-- /.new-reports-diagram-block-filter -->
+                                <!-- /.new-reports-diagram-block-select -->
                             </div>
                             <!-- /.new-reports-diagram-block-caption -->
-                            <div class="aspect-ratio" style="padding-bottom: 66.67%;">
-                                <canvas id="chart-customers"></canvas>
+                            <div class="new-reports-chart-columns">
+                                <div class="new-reports-chart-column-main">
+                                    <div class="new-reports-chart-column-wrap">
+                                        <div class="aspect-ratio" style="padding-bottom: 100%;">
+                                            <canvas id="chart-breakdown-class"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="new-reports-chart-column-legend">
+                                    <div class="legend-container" id="legend-container-breakdown-class"></div>
+                                </div>
                             </div>
+                            <!-- /.new-reports-chart-columns -->
                         </div>
                         <!-- /.new-reports-diagram-block -->
                     </div>
                     <!-- /.new-reports-diagram-blocks-col -->
-                    <div class="new-reports-diagram-blocks-col">
+                    <div class="new-reports-diagram-blocks-col new-reports-diagram-blocks-col-half">
                         <div class="new-reports-diagram-block equal-height">
-                            <div class="new-reports-diagram-block-caption">
-                                <div class="new-reports-diagram-block-title">Cancellation by&nbsp;Gender</div>
-                                <div class="new-reports-diagram-block-filter drop">
-                                    <a href="#" class="new-reports-diagram-block-filter-toggle drop-toggle">
-                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 5.5V7.33333H19.25V5.5H2.75ZM9.16667 16.5H12.8333V14.6667H9.16667V16.5ZM16.5 11.9167H5.5V10.0833H16.5V11.9167Z" fill="#1A1B2A"/></svg>
-                                    </a>
-                                    <div class="new-reports-diagram-block-filter-panel drop-block">
-                                        <ul class="new-reports-diagram-block-filter-list">
-                                            <li class="active"><a href="#">All time</a></li>
-                                            <li><a href="#">This month</a></li>
-                                            <li><a href="#">This week</a></li>
-                                        </ul>
-                                    </div>
-                                    <!-- /.new-reports-diagram-block-filter-panel -->
+                            <div class="new-reports-diagram-block-caption new-reports-diagram-block-caption-v3">
+                                <div class="new-reports-diagram-block-title">Videos breakdown by&nbsp;Gender</div>
+                                <div class="new-reports-diagram-block-select">
+                                    <select class="select">
+                                        <option>Last 30 days</option>
+                                        <option>This month</option>
+                                    </select>
                                 </div>
-                                <!-- /.new-reports-diagram-block-filter -->
+                                <!-- /.new-reports-diagram-block-select -->
                             </div>
                             <!-- /.new-reports-diagram-block-caption -->
-                            <div class="new-reports-chart-small">
-                                <div class="aspect-ratio" style="padding-bottom: 66.67%;">
-                                    <canvas id="chart-gender"></canvas>
-                                </div>
-                            </div>
-                            <div class="legend-container" id="legend-container-gender"></div>
-                        </div>
-                        <!-- /.new-reports-diagram-block -->
-                    </div>
-                    <!-- /.new-reports-diagram-blocks-col -->
-                    <div class="new-reports-diagram-blocks-col">
-                        <div class="new-reports-diagram-block equal-height">
-                            <div class="new-reports-diagram-block-caption">
-                                <div class="new-reports-diagram-block-title">Cancellation by&nbsp;Age</div>
-                                <div class="new-reports-diagram-block-filter drop">
-                                    <a href="#" class="new-reports-diagram-block-filter-toggle drop-toggle">
-                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.75 5.5V7.33333H19.25V5.5H2.75ZM9.16667 16.5H12.8333V14.6667H9.16667V16.5ZM16.5 11.9167H5.5V10.0833H16.5V11.9167Z" fill="#1A1B2A"/></svg>
-                                    </a>
-                                    <div class="new-reports-diagram-block-filter-panel drop-block">
-                                        <ul class="new-reports-diagram-block-filter-list">
-                                            <li class="active"><a href="#">All time</a></li>
-                                            <li><a href="#">This month</a></li>
-                                            <li><a href="#">This week</a></li>
-                                        </ul>
+                            <div class="new-reports-chart-columns">
+                                <div class="new-reports-chart-column-main">
+                                    <div class="new-reports-chart-column-wrap">
+                                        <div class="aspect-ratio" style="padding-bottom: 100%;">
+                                            <canvas id="chart-videos-breakdown-gender"></canvas>
+                                        </div>
                                     </div>
-                                    <!-- /.new-reports-diagram-block-filter-panel -->
                                 </div>
-                                <!-- /.new-reports-diagram-block-filter -->
-                            </div>
-                            <!-- /.new-reports-diagram-block-caption -->
-                            <div class="new-reports-chart-small">
-                                <div class="aspect-ratio" style="padding-bottom: 66.67%;">
-                                    <canvas id="chart-age"></canvas>
+                                <div class="new-reports-chart-column-legend">
+                                    <div class="legend-container" id="legend-container-videos-breakdown-gender"></div>
                                 </div>
                             </div>
-                            <div class="legend-container" id="legend-container-age"></div>
+                            <!-- /.new-reports-chart-columns -->
                         </div>
                         <!-- /.new-reports-diagram-block -->
                     </div>
