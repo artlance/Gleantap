@@ -771,6 +771,9 @@
                         padding-right: 16px;
                     }
                 }
+                & + .new-reports-graph-total {
+                    margin-top: -23px;
+                }
             }
             &-title {
                 padding: 10px 0 2px;
@@ -952,9 +955,9 @@
             }
             &-class {
                 position: relative;
-                margin-bottom: 26px;
+                margin-bottom: 24px;
                 &:last-child {
-                    margin-bottom: 6px;
+                    margin-bottom: 4px;
                 }
                 &-title {
                     margin-bottom: 5px;
@@ -981,6 +984,7 @@
                 &-info {
                     padding-left: 19px;
                     position: relative;
+                    margin-bottom: 2px;
                     &-list {
                         display: flex;
                         flex-wrap: wrap;
@@ -991,6 +995,7 @@
                         width: 14px;
                         height: 14px;
                         position: relative;
+                        margin-bottom: 2px;
                         &::after {
                             content: "";
                             position: absolute;
@@ -1013,6 +1018,13 @@
                             font-size: 14px;
                             vertical-align: top;
                             color: #757B86;
+                        }
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 50%;
                         }
                     }
                     &-text {
@@ -1749,7 +1761,7 @@
                     top: -4px;
                 }
                 &-class {
-                    margin-bottom: 18px;
+                    margin-bottom: 16px;
                 }
             }
         }
@@ -2074,6 +2086,9 @@
                         .new-reports-diagram-block-title {
                             padding-right: 10px;
                         }
+                    }
+                    & + .new-reports-graph-total {
+                        margin-top: -18px;
                     }
                 }
                 &-title {

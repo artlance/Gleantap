@@ -2797,6 +2797,14 @@ $(document).ready(function () {
 
     //-----------------------------------------//
 
+    //new group step
+    $(document).on('click', '.new-group-step-caption', function (event) {
+        event.preventDefault();
+        $(this).parents('.new-group-step').toggleClass('active').siblings('.new-group-step').removeClass('active');
+    });
+
+    //-----------------------------------------//
+
     //mask
     $('.mask-dob').mask('9999-99-99', { placeholder: 'YYYY-MM-DD' });
     $('.mask-time').mask('99:99', { placeholder: '00:00' });
