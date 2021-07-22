@@ -38,6 +38,12 @@ $(document).ready(function () {
         $('#create-new-campaign').fadeIn('200');
     });
 
+    $(document).on('click', '.modal-demo', function (event) {
+        event.preventDefault();
+        $('.modal-shadow').fadeIn('200');
+        $('#demo').fadeIn('200');
+    });
+
     $(document).on('click', '.modal-close', function (event) {
         event.preventDefault();
         $('.modal-shadow').fadeOut('200');

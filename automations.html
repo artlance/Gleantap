@@ -880,6 +880,43 @@
                     </div>
                 </div>
                 <!-- /.new-segmentation-conditions-item -->
+                <div class="new-segmentation-conditions-item">
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Check-In</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Equal To</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <div class="new-segmentation-conditions-col-split-wrap">
+                            <div class="new-segmentation-conditions-col-split">
+                                <select class="select">
+                                    <option>A</option>
+                                </select>
+                            </div>
+                            <div class="new-segmentation-conditions-col-split">
+                                <select class="select">
+                                    <option>B</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- /.new-segmentation-conditions-col-split-wrap -->
+                    </div>
+                    <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                        <a href="#" class="new-segmentation-conditions-delete">
+                            <span class="new-segmentation-conditions-delete-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="new-segmentation-conditions-delete-text">Delete</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.new-segmentation-conditions-item -->
                 <a href="#" class="new-segmentation-conditions-add"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#1C2538" class="svg-fill"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#1C2538" class="svg-fill"/>
@@ -1884,7 +1921,7 @@ Add new conditions</a>
 </a>
                 </div>
                 <div class="add-action-form-options-item">
-                    <a href="#" class="add-action-form-option"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a href="#" class="modal-demo add-action-form-option"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15 20H19V4H15V2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H15V20Z" fill="#1C2538" class="svg-fill"/>
 <path d="M9 20H5L5 4H9V2H4C3.44772 2 3 2.44772 3 3L3 21C3 21.5523 3.44772 22 4 22H9V20Z" fill="#1C2538" class="svg-fill"/>
 </svg>
@@ -2112,7 +2149,24 @@ Add new conditions</a>
     </div>
     <!-- /.panel-content -->
 </div>
-<!-- /.panel -->    <script src="js/jquery.js"></script>
+<!-- /.panel -->
+
+<div class="modal-shadow"></div>
+<div class="modal" id="demo">
+    <button class="modal-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</button>
+    <div class="modal-header">
+        <div class="modal-header-title">Title</div>
+    </div>
+    <div class="modal-content">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta alias accusantium a odit velit commodi quibusdam itaque rem voluptatem distinctio at ex quo eum ipsam, in est facilis. Minima, tenetur.</p>
+    </div>
+</div>
+<!-- /.modal -->    <script src="js/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/migrate.js"></script>
     <script src="js/library.js"></script>
