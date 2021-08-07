@@ -1671,11 +1671,9 @@
     padding: 0;
     max-height: 100%;
     overflow-y: auto;
-
     .chat-header-name {
-            color: $qualify-label;
+        color: $qualify-label;
     }
-
     @media screen and (max-width: 660px) {
         position: absolute;
         right: 0;
@@ -1683,8 +1681,6 @@
         width: 100%;
         min-width: auto;
     }
-
-
     &::-webkit-scrollbar {
         width: 6px;
     }
@@ -1782,8 +1778,8 @@
         }
         &-tabs {
             display: flex;
-            justify-content: center;
             align-items: center;
+            width: 100%;
             padding: 5px;
             background: $theme-light-gray;
             border-radius: 10px;
@@ -1793,17 +1789,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex: 1 1 0;
+            max-width: 100%;
             border: none;
             background-color: transparent;
-            padding: 11px;
-            width: 160px;
-
-            @media screen and (max-width: 370px) {
-                width: 140px;
-            }
-            @media screen and (max-width: 340px) {
-                width: 120px;
-            }
+            padding: 11px 10px 10px;
             &-text {
                 font-style: normal;
                 font-weight: 800;
@@ -1815,10 +1805,7 @@
                 outline: none;
             }
             svg {
-                height: 12px;
-                width: 12px;
-                object-fit: contain;
-                margin-right: 12px;
+                margin-right: 6px;
             }
             path {
                 fill: $theme-quaternary;
@@ -1879,7 +1866,6 @@
         width: 100%;
         margin-top: 11px;
     }
-
     &-activities {
         &-header {
             padding: 25px 20px;
@@ -1945,7 +1931,6 @@
                 line-height: 140%;
                 letter-spacing: -0.02em;
                 display: block;
-                padding-bottom: 6px;
             }
 
             &-description {
@@ -1974,6 +1959,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
+                padding-top: 6px;
             }
 
             &-sep {
@@ -2055,6 +2041,172 @@
             background-repeat: no-repeat;
             background-position: 100% 46%;
             background-size: 10px 6px;
+        }
+    }
+    &-info {
+        &-item {
+            padding: 23px 20px 24px;
+            border-bottom: 1px solid $row-border;
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+        &-title {
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 1.334;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: $theme-quaternary;
+            margin-bottom: 11px;
+        }
+        &-text {
+            font-size: 14px;
+            line-height: 1.5;
+            font-family: 'Roboto', $font-sans-serif;
+            p {
+                margin: 0;
+            }
+        }
+        &-phone {
+            font-size: 14px;
+            line-height: 1.143;
+            font-family: 'Roboto', $font-sans-serif;
+            position: relative;
+            padding-left: 24px;
+            svg {
+                position: absolute;
+                left: 0;
+                top: 0;
+                margin: 0;
+            }
+        }
+        &-company {
+            font-size: 14px;
+            line-height: 1.143;
+            &-title {
+                padding-top: 2px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            &-address {
+                font-family: 'Roboto', $font-sans-serif;
+                position: relative;
+                padding-left: 24px;
+                svg {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    margin: 0;
+                }
+            }
+        }
+        &-tags {
+            padding: 7px 2px 2px 7px;
+            background: $tabs-back;
+            border-radius: 10px;
+            .create-campaign-tag {
+                padding: 4px 32px 4px 9px;
+                font-weight: normal;
+                font-family: 'Roboto', $font-sans-serif;
+                color: $theme-primary;
+                border-radius: 12px;
+                border: 1px solid #C7D3F9;
+                background: $theme-white;
+                &-delete {
+                    top: 5px;
+                    right: 9px;
+                    width: 16px;
+                    height: 16px;
+                    padding: 0;
+                    .svg-fill {
+                        fill: $theme-primary;
+                    }
+                }
+                &s {
+                    margin: 0;
+                    &-item {
+                        padding: 0 5px 5px 0;
+                    }
+                    &-new {
+                        min-width: 0;
+                        width: 100px;
+                        padding: 0 5px 5px 0;
+                        &-text {
+                            height: 28px;
+                            padding: 0 0 0 5px;
+                            font-family: 'Roboto', $font-sans-serif;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-notes {
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: calc(100vh - 254px);
+            padding: 4px 20px 20px;
+        }
+        &-content {
+            flex: 1 0 auto;
+            max-width: 100%;
+        }
+        &-item {
+            padding: 16px 0;
+            border-bottom: 1px solid $row-border;
+            &:last-child {
+                border-bottom: 0;
+            }
+            &-header {
+                display: flex;
+                align-items: center;
+                margin-bottom: 12px;
+            }
+            &-name {
+                flex-grow: 1;
+                font-size: 14px;
+                line-height: 1.43;
+                font-weight: bold;
+                color: #111111;
+            }
+            &-date {
+                text-align: right;
+                padding-left: 10px;
+                font-family: 'Roboto', $font-sans-serif;
+                font-size: 12px;
+                line-height: 1.334;
+                color: rgba(#111111, 0.4);
+                letter-spacing: -0.02em;;
+            }
+            &-text {
+                font-family: 'Roboto', $font-sans-serif;
+                font-size: 12px;
+                line-height: 1.5;
+                color: $theme-gray;
+            }
+        }
+        &-add {
+            flex: 0 0 auto;
+            max-width: 100%;
+            &-text {
+                margin-bottom: 10px;
+            }
+            &-button {
+                .button {
+                    vertical-align: top;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-tasks {
+        &-add {
+            padding: 0 20px 20px;
+            .button {
+                width: 100%;
+            }
         }
     }
 }
