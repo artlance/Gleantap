@@ -522,3 +522,74 @@ button.button {
 .Zebra_Tooltip_Close {
     display: none !important;
 }
+
+
+.xdsoft_autocomplete{
+    width: 100% !important;
+    display: block !important;
+    background: $theme-light-gray;
+    border-radius: 10px;
+}
+.xdsoft_autocomplete .xdsoft_input{
+	position:relative;
+	z-index:2;
+}
+.xdsoft_autocomplete .xdsoft_autocomplete_dropdown{
+	position:absolute;
+	border: 1px solid $theme-light-gray;
+	box-shadow: 0 2px 10px -4px rgba(0,0,0,0.2);
+    padding: 10px 0;
+    border-radius: 10px;
+	cursor: default;
+	display:none;
+	z-index: 1001;
+	background-color:#fff;
+	min-width:100%;
+	overflow:auto;
+    max-height: 240px !important;
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 0;
+    }
+    &::-webkit-scrollbar-track {
+        background: #F0F0F0;
+        border-radius: 3px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $theme-quaternary;
+        border-radius: 3px;
+        outline: none;
+    }
+    &::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+        display: none;
+    }
+    &::-webkit-scrollbar-corner {
+        background: $tr;
+    }
+}
+.xdsoft_autocomplete .xdsoft_autocomplete_hint{
+	position:absolute;
+	z-index:1;
+	color:#ccc !important;
+	-webkit-text-fill-color:#ccc !important;
+	text-fill-color:#ccc  !important;
+	overflow:hidden !important;
+	white-space: pre  !important;
+}
+.xdsoft_autocomplete .xdsoft_autocomplete_hint span{
+	color:transparent;
+	opacity: 0;
+}
+.xdsoft_autocomplete .xdsoft_autocomplete_dropdown > div{
+	background:#fff;
+	white-space: nowrap;
+	cursor: pointer;
+	padding: 8px 0;
+    font-size: 14px;
+    transition: color $d $f, background-color $d $f, border-color $d $f;
+}
+.xdsoft_autocomplete .xdsoft_autocomplete_dropdown > div.active{
+	background: $theme-secondary;
+}
