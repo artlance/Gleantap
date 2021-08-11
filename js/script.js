@@ -3328,22 +3328,31 @@ $(document).ready(function () {
     //-----------------------------------------//
 
     //https://xdsoft.net/jqplugins/autocomplete/
-    var states = [
-        'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
-        'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia',
-        'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa',
-        'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland',
-        'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi',
-        'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
-        'New Jersey', 'New Mexico', 'New York', 'North Carolina',
-        'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania',
-        'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee',
-        'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington',
-        'West Virginia', 'Wisconsin', 'Wyoming'
-    ];
+    var autocompleteData1 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
-    $("input#autocomplete").autocomplete({
-        source: [states]
+    var autocomplete1 = '#autocomplete';
+    $(autocomplete1).autocomplete({
+        source: [autocompleteData1]
+    });
+
+    function compareAutoData(data, value) {
+        var data = data + '';
+        data = data.toLowerCase();
+        value = value.toLowerCase();
+        if (data.indexOf(value) != '-1') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    $(document).on('keyup', autocomplete1, function () {
+        var compareResult = compareAutoData(autocompleteData1, $(this).val());
+        if (compareResult) {
+            $(this).removeClass('error');
+        } else {
+            $(this).addClass('error');
+        }
     });
 
     //-----------------------------------------//
