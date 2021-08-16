@@ -3634,10 +3634,12 @@ $(document).ready(function () {
     // toggle pipeline row n columns
     if (document.querySelector(`#pipeline-leads-rows-toggle`)) {
         document.querySelector(`#pipeline-leads-rows-toggle`).onclick = e => {
-            document.querySelector(`#pipeline-leads-columns`).style.display = `none`
             document.querySelector(`#pipeline-leads-rows`).style.display = `block`
+            document.querySelector(`#pipeline-leads-columns`).style.display = `none`
+            document.querySelector(`#pipeline-leads-tiles`).style.display = `none`
             document.querySelector(`#pipeline-leads-rows-toggle`).classList.add(`selected`)
             document.querySelector(`#pipeline-leads-columns-toggle`).classList.remove(`selected`)
+            document.querySelector(`#pipeline-leads-tiles-toggle`).classList.remove(`selected`)
             document.querySelector(`#add-new-lead-toggle`).classList.remove(`hidden`)
             document.querySelector(`#leads-header-input`).classList.remove(`hidden`)
             document.querySelector(`#leads-header-buttons`).classList.remove(`hidden`)
@@ -3648,10 +3650,28 @@ $(document).ready(function () {
     }
     if (document.querySelector(`#pipeline-leads-columns-toggle`)) {
         document.querySelector(`#pipeline-leads-columns-toggle`).onclick = e => {
-            document.querySelector(`#pipeline-leads-rows`).style.display = `none`
             document.querySelector(`#pipeline-leads-columns`).style.display = `flex`
+            document.querySelector(`#pipeline-leads-rows`).style.display = `none`
+            document.querySelector(`#pipeline-leads-tiles`).style.display = `none`
             document.querySelector(`#pipeline-leads-columns-toggle`).classList.add(`selected`)
             document.querySelector(`#pipeline-leads-rows-toggle`).classList.remove(`selected`)
+            document.querySelector(`#pipeline-leads-tiles-toggle`).classList.remove(`selected`)
+            document.querySelector(`#add-new-lead-toggle`).classList.add(`hidden`)
+            document.querySelector(`#leads-header-input`).classList.add(`hidden`)
+            document.querySelector(`#leads-header-buttons`).classList.add(`hidden`)
+            document.querySelector(`#pipeline-header-input`).classList.remove(`hidden`)
+            document.querySelector(`#pipeline-header-button`).classList.remove(`hidden`)
+            document.querySelector(`#add-column-toggle`).classList.remove(`hidden`)
+        }
+    }
+    if (document.querySelector(`#pipeline-leads-tiles-toggle`)) {
+        document.querySelector(`#pipeline-leads-tiles-toggle`).onclick = e => {
+            document.querySelector(`#pipeline-leads-tiles`).style.display = `block`
+            document.querySelector(`#pipeline-leads-rows`).style.display = `none`
+            document.querySelector(`#pipeline-leads-columns`).style.display = `none`
+            document.querySelector(`#pipeline-leads-tiles-toggle`).classList.add(`selected`)
+            document.querySelector(`#pipeline-leads-rows-toggle`).classList.remove(`selected`)
+            document.querySelector(`#pipeline-leads-columns-toggle`).classList.remove(`selected`)
             document.querySelector(`#add-new-lead-toggle`).classList.add(`hidden`)
             document.querySelector(`#leads-header-input`).classList.add(`hidden`)
             document.querySelector(`#leads-header-buttons`).classList.add(`hidden`)
