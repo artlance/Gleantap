@@ -192,6 +192,195 @@
             width: 100%;
         }
     }
+    &-tabs {
+        display: flex;
+        align-items: center;
+        margin: -5px 0 20px;
+        padding: 5px;
+        list-style: none;
+        max-width: 550px;
+        background: $theme-light-gray;
+        border-radius: 10px;
+        li {
+            flex: 0 0 50%;
+            max-width: 50%;
+            a {
+                display: block;
+                font-size: 13px;
+                line-height: 1.385;
+                font-weight: 800;
+                text-align: center;
+                padding: 11px 5px 10px;
+                color: $theme-gray;
+                border-radius: 10px;
+                &:hover {
+                    color: $theme-primary;
+                }
+            }
+            &.active {
+                a {
+                    color: $theme-primary;
+                    background: $theme-white;
+                }
+            }
+        }
+    }
+    &-create {
+        &-segmentation {
+            &-row {
+                display: flex;
+                align-items: flex-start;
+                margin: 0 0 0 -5px;
+            }
+            &-col {
+                flex: 1 1 0;
+                max-width: 100%;
+                padding: 0 5px 10px;
+                &:first-child {
+                    padding-right: 25px;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 22px;
+                        right: -5px;
+                        width: 30px;
+                        height: 1px;
+                        background: $theme-tertiary;
+                    }
+                }
+                &:last-child {
+                    flex: 0 0 45px;
+                    max-width: 45px;
+                    padding-right: 0;
+                }
+            }
+            &-input {
+                input.input-text {
+                    border-color: $theme-tertiary;
+                    background: $theme-white;
+                    font-weight: bold;
+                }
+            }
+            &-filter {
+                padding-top: 30px;
+                position: relative;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 25px;
+                    top: 0;
+                    height: 30px;
+                    width: 1px;
+                    background: $theme-tertiary;
+                }
+                &-add {
+                    display: inline-block;
+                    vertical-align: top;
+                    position: relative;
+                    padding: 15px 17px 13px 45px;
+                    font-size: 14px;
+                    line-height: 1.29;
+                    font-weight: bold;
+                    color: $theme-text;
+                    background: $theme-light-gray;
+                    border-radius: 8px;
+                    svg {
+                        position: absolute;
+                        left: 15px;
+                        top: 13px;
+                        width: 20px;
+                        height: 20px;
+                    }
+                    &:hover {
+                        color: $theme-primary;
+                        .svg-fill {
+                            fill: $theme-primary;
+                        }
+                    }
+                }
+            }
+            &-delete {
+                display: block;
+                padding: 14px 0;
+                &-icon {
+                    display: block;
+                    svg {
+                        display: block;
+                        margin: 0 auto;
+                    }
+                    .svg-fill {
+                        fill: $theme-red;
+                    }
+                }
+                &-text {
+                    display: none;
+                }
+            }
+        }
+        &-caption {
+            padding: 30px 30px 15px;
+            border-bottom: 1px solid $theme-tertiary;
+            .create-campaign-segmentation-search {
+               flex: 0 0 100%;
+               max-width: 100%;
+               padding-left: 0;
+               padding-right: 0;
+               &-button {
+                   right: 0;
+               }
+            }
+        }
+        &-title {
+            font-size: 18px;
+            line-height: 1.39;
+            font-weight: 800;
+            margin-bottom: 15px;
+            padding-right: 20px;
+        }
+        &-list {
+            flex: 0 0 33.333333%;
+            max-width: 33.333333%;
+            padding: 0 10px 20px;
+            margin: 0;
+            list-style: none;
+            &-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            li {
+                a {
+                    display: block;
+                    position: relative;
+                    padding: 12px 40px 11px 15px;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    color: $theme-text;
+                    font-family: 'Roboto', $font-sans-serif;
+                    border-radius: 10px;
+                    &::after {
+                        opacity: 0;
+                        content: "";
+                        position: absolute;
+                        right: 15px;
+                        top: 14px;
+                        width: 16px;
+                        height: 16px;
+                        background: $theme-transparent url('../images/arrow-right.svg') 50% 50% no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+                &.active {
+                    a {
+                        background-color: $theme-light-gray;
+                        &::after {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 1199.98px) {
@@ -289,6 +478,78 @@
             .new-segmentation-add-group {
                 .button {
                     max-width: 100%;
+                }
+            }
+        }
+        &-create {
+            &-segmentation {
+                &-row {
+                    flex-wrap: wrap;
+                    margin: 0;
+                }
+                &-col {
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                    padding-left: 0;
+                    padding-right: 0;
+                    &:first-child {
+                        padding-right: 0;
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    &:last-child {
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+                &-filter {
+                    margin-bottom: 20px;
+                }
+                &-delete {
+                    text-align: center;
+                    padding: 13px 13px 14px;
+                    font-size: 14px;
+                    font-weight: bold;
+                    line-height: normal;
+                    color: $theme-red;
+                    background: rgba(243, 83, 94, 0.1);
+                    border-radius: 10px;
+                    &-icon {
+                        display: none;
+                    }
+                    &-text {
+                        display: block;
+                    }
+                }
+            }
+            &-caption {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            &-list {
+                flex: 0 0 100%;
+                max-width: 100%;
+                padding-left: 0;
+                padding-right: 0;
+                li {
+                    a {
+                        &::after {
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 521.98px) {
+    .new-group {
+        &-tabs {
+            li {
+                a {
+                    font-size: 12px;
+                    line-height: 1.5;
                 }
             }
         }

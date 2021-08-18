@@ -77,180 +77,230 @@
                             <span class="new-group-step-number">2</span>
                             <span class="new-group-step-title">Segmentation</span>
                         </a>
-                        <div class="new-group-step-content">
-                            <div class="new-group-segmentation-caption">
-                                <div class="create-campaign-segmentation-search">
-                                    <input type="text" class="input-text create-campaign-segmentation-search-text" placeholder="Search...">
-                                    <button class="create-campaign-segmentation-search-button"><!-- @import "images/search.svg" --></button>
+                        <div class="new-group-step-content tab">
+                            <ul class="new-group-tabs tabs">
+                                <li><a href="#">Templates</a></li>
+                                <li class="active"><a href="#">Create from scratch</a></li>
+                            </ul>
+                            <div class="box">
+                                <div class="new-group-segmentation-caption">
+                                    <div class="create-campaign-segmentation-search">
+                                        <input type="text" class="input-text create-campaign-segmentation-search-text" placeholder="Search...">
+                                        <button class="create-campaign-segmentation-search-button"><!-- @import "images/search.svg" --></button>
+                                    </div>
+                                    <div class="create-campaign-segmentation-option">
+                                        <select class="select">
+                                            <option>All Categories</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="create-campaign-segmentation-option">
-                                    <a href="#new-segmentation" class="button button-secondary panel-toggle">Create new</a>
+                                <!-- /.new-group-segmentation-caption -->
+                                <div class="create-campaign-segmentation-list">
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-1" name="new-group-segmentation-1" checked>
+                                        <label for="new-group-segmentation-1" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-2" name="new-group-segmentation-2">
+                                        <label for="new-group-segmentation-2" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-3" name="new-group-segmentation-3">
+                                        <label for="new-group-segmentation-3" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-4" name="new-group-segmentation-4">
+                                        <label for="new-group-segmentation-4" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-5" name="new-group-segmentation-5">
+                                        <label for="new-group-segmentation-5" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-6" name="new-group-segmentation-6">
+                                        <label for="new-group-segmentation-6" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-7" name="new-group-segmentation-7">
+                                        <label for="new-group-segmentation-7" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="cnew-group-segmentation-8" name="cnew-group-segmentation-8">
+                                        <label for="cnew-group-segmentation-8" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-9" name="new-group-segmentation-9">
+                                        <label for="new-group-segmentation-9" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-10" name="new-group-segmentation-10">
+                                        <label for="new-group-segmentation-10" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-11" name="new-group-segmentation-11">
+                                        <label for="new-group-segmentation-11" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-12" name="new-group-segmentation-12">
+                                        <label for="new-group-segmentation-12" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-13" name="new-group-segmentation-13">
+                                        <label for="new-group-segmentation-13" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-14" name="new-group-segmentation-14">
+                                        <label for="new-group-segmentation-14" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-15" name="new-group-segmentation-15">
+                                        <label for="new-group-segmentation-15" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-16" name="new-group-segmentation-16">
+                                        <label for="new-group-segmentation-16" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-17" name="new-group-segmentation-17">
+                                        <label for="new-group-segmentation-17" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-18" name="new-group-segmentation-18">
+                                        <label for="new-group-segmentation-18" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-19" name="new-group-segmentation-19">
+                                        <label for="new-group-segmentation-19" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-20" name="new-group-segmentation-20">
+                                        <label for="new-group-segmentation-20" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
                                 </div>
+                                <!-- /.create-campaign-segmentation-list -->
                             </div>
-                            <!-- /.new-group-segmentation-caption -->
-                            <div class="create-campaign-segmentation-list">
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-1" name="new-group-segmentation-1" checked>
-                                    <label for="new-group-segmentation-1" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Active new clients</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
+                            <!-- /.box -->
+                            <div class="box visible">
+                                <div class="new-group-create-segmentation">
+                                    <div class="new-group-create-segmentation-row">
+                                        <div class="new-group-create-segmentation-col">
+                                            <div class="new-group-create-segmentation-input">
+                                                <input type="text" class="input-text" value="Purchases" readonly>
+                                            </div>
+                                            <div class="new-group-create-segmentation-filter">
+                                                <a href="#new-group-create" class="new-group-create-segmentation-filter-add panel-toggle"><!-- @import "images/add.svg" -->Add filter</a>
+                                            </div>
+                                        </div>
+                                        <!-- /.new-group-create-segmentation-col -->
+                                        <div class="new-group-create-segmentation-col">
+                                            <div class="new-group-create-segmentation-input">
+                                                <input type="text" class="input-text" value="Last purchase date" readonly>
+                                            </div>
+                                        </div>
+                                        <!-- /.new-group-create-segmentation-col -->
+                                        <div class="new-group-create-segmentation-col">
+                                            <select class="select">
+                                                <option>after</option>
+                                            </select>
+                                        </div>
+                                        <!-- /.new-group-create-segmentation-col -->
+                                        <div class="new-group-create-segmentation-col">
+                                            <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                                        </div>
+                                        <!-- /.new-group-create-segmentation-col -->
+                                        <div class="new-group-create-segmentation-col">
+                                            <a href="#" class="new-group-create-segmentation-delete">
+                                                <span class="new-group-create-segmentation-delete-icon"><!-- @import "images/delete.svg" --></span>
+                                                <span class="new-group-create-segmentation-delete-text">Delete</span>
+                                            </a>
+                                        </div>
+                                        <!-- /.new-group-create-segmentation-col -->
+                                    </div>
+                                    <!-- /.new-group-create-segmentation-row -->
                                 </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-2" name="new-group-segmentation-2">
-                                    <label for="new-group-segmentation-2" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All users in your city</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-3" name="new-group-segmentation-3">
-                                    <label for="new-group-segmentation-3" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All registered users</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-4" name="new-group-segmentation-4">
-                                    <label for="new-group-segmentation-4" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Welcome email</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-5" name="new-group-segmentation-5">
-                                    <label for="new-group-segmentation-5" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Active new clients</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-6" name="new-group-segmentation-6">
-                                    <label for="new-group-segmentation-6" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All users in your city</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-7" name="new-group-segmentation-7">
-                                    <label for="new-group-segmentation-7" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All registered users</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="cnew-group-segmentation-8" name="cnew-group-segmentation-8">
-                                    <label for="cnew-group-segmentation-8" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Welcome email</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-9" name="new-group-segmentation-9">
-                                    <label for="new-group-segmentation-9" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Active new clients</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-10" name="new-group-segmentation-10">
-                                    <label for="new-group-segmentation-10" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All users in your city</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-11" name="new-group-segmentation-11">
-                                    <label for="new-group-segmentation-11" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All registered users</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-12" name="new-group-segmentation-12">
-                                    <label for="new-group-segmentation-12" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Welcome email</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-13" name="new-group-segmentation-13">
-                                    <label for="new-group-segmentation-13" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Active new clients</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-14" name="new-group-segmentation-14">
-                                    <label for="new-group-segmentation-14" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All users in your city</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-15" name="new-group-segmentation-15">
-                                    <label for="new-group-segmentation-15" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All registered users</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-16" name="new-group-segmentation-16">
-                                    <label for="new-group-segmentation-16" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Welcome email</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-17" name="new-group-segmentation-17">
-                                    <label for="new-group-segmentation-17" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Active new clients</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-18" name="new-group-segmentation-18">
-                                    <label for="new-group-segmentation-18" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All users in your city</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-19" name="new-group-segmentation-19">
-                                    <label for="new-group-segmentation-19" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All registered users</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-20" name="new-group-segmentation-20">
-                                    <label for="new-group-segmentation-20" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Welcome email</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
+                                <!-- /.new-group-create-segmentation -->
                             </div>
-                            <!-- /.create-campaign-segmentation-list -->
+                            <!-- /.box -->
                         </div>
                         <!-- /.new-group-step-content -->
                     </div>

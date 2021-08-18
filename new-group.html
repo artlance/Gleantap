@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/summernote-lite.css">
     <title>03.01.01. New group</title>
     <meta name="description" content="description">
     <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
-</head>
+
 <body class="no-js">
     <main class="main-site">
 <header class="sidebar-site-mobile">
@@ -243,183 +244,241 @@
                             <span class="new-group-step-number">2</span>
                             <span class="new-group-step-title">Segmentation</span>
                         </a>
-                        <div class="new-group-step-content">
-                            <div class="new-group-segmentation-caption">
-                                <div class="create-campaign-segmentation-search">
-                                    <input type="text" class="input-text create-campaign-segmentation-search-text" placeholder="Search...">
-                                    <button class="create-campaign-segmentation-search-button"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <div class="new-group-step-content tab">
+                            <ul class="new-group-tabs tabs">
+                                <li><a href="#">Templates</a></li>
+                                <li class="active"><a href="#">Create from scratch</a></li>
+                            </ul>
+                            <div class="box">
+                                <div class="new-group-segmentation-caption">
+                                    <div class="create-campaign-segmentation-search">
+                                        <input type="text" class="input-text create-campaign-segmentation-search-text" placeholder="Search...">
+                                        <button class="create-campaign-segmentation-search-button"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.595 17.4159L15.0258 13.8476C16.0901 12.5199 16.669 10.8684 16.6666 9.16675C16.6666 5.02675 13.3066 1.66675 9.16663 1.66675C5.02663 1.66675 1.66663 5.02675 1.66663 9.16675C1.66663 13.3067 5.02663 16.6667 9.16663 16.6667C10.8683 16.6692 12.5197 16.0903 13.8475 15.0259L17.4158 18.5951L18.595 17.4159ZM15 9.16675C15.0023 10.6838 14.4117 12.1417 13.3541 13.2292L13.2291 13.3542C12.1415 14.4118 10.6837 15.0025 9.16663 15.0001C5.94329 15.0001 3.33329 12.3892 3.33329 9.16675C3.33329 5.94341 5.94329 3.33341 9.16663 3.33341C12.3891 3.33341 15 5.94341 15 9.16675Z" fill="#1C2538"/>
 </svg>
 </button>
+                                    </div>
+                                    <div class="create-campaign-segmentation-option">
+                                        <select class="select">
+                                            <option>All Categories</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="create-campaign-segmentation-option">
-                                    <a href="#new-segmentation" class="button button-secondary panel-toggle">Create new</a>
+                                <!-- /.new-group-segmentation-caption -->
+                                <div class="create-campaign-segmentation-list">
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-1" name="new-group-segmentation-1" checked>
+                                        <label for="new-group-segmentation-1" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-2" name="new-group-segmentation-2">
+                                        <label for="new-group-segmentation-2" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-3" name="new-group-segmentation-3">
+                                        <label for="new-group-segmentation-3" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-4" name="new-group-segmentation-4">
+                                        <label for="new-group-segmentation-4" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-5" name="new-group-segmentation-5">
+                                        <label for="new-group-segmentation-5" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-6" name="new-group-segmentation-6">
+                                        <label for="new-group-segmentation-6" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-7" name="new-group-segmentation-7">
+                                        <label for="new-group-segmentation-7" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="cnew-group-segmentation-8" name="cnew-group-segmentation-8">
+                                        <label for="cnew-group-segmentation-8" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-9" name="new-group-segmentation-9">
+                                        <label for="new-group-segmentation-9" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-10" name="new-group-segmentation-10">
+                                        <label for="new-group-segmentation-10" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-11" name="new-group-segmentation-11">
+                                        <label for="new-group-segmentation-11" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-12" name="new-group-segmentation-12">
+                                        <label for="new-group-segmentation-12" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-13" name="new-group-segmentation-13">
+                                        <label for="new-group-segmentation-13" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-14" name="new-group-segmentation-14">
+                                        <label for="new-group-segmentation-14" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-15" name="new-group-segmentation-15">
+                                        <label for="new-group-segmentation-15" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-16" name="new-group-segmentation-16">
+                                        <label for="new-group-segmentation-16" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-17" name="new-group-segmentation-17">
+                                        <label for="new-group-segmentation-17" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Active new clients</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-18" name="new-group-segmentation-18">
+                                        <label for="new-group-segmentation-18" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All users in your city</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-19" name="new-group-segmentation-19">
+                                        <label for="new-group-segmentation-19" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">All registered users</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
+                                    <div class="create-campaign-segmentation-checkbox">
+                                        <input type="checkbox" id="new-group-segmentation-20" name="new-group-segmentation-20">
+                                        <label for="new-group-segmentation-20" class="create-campaign-segmentation-item">
+                                            <span class="create-campaign-segmentation-title">Welcome email</span>
+                                            <span class="create-campaign-segmentation-subtitle">Size: 25</span>
+                                        </label>
+                                    </div>
+                                    <!-- /.create-campaign-segmentation-checkbox -->
                                 </div>
+                                <!-- /.create-campaign-segmentation-list -->
                             </div>
-                            <!-- /.new-group-segmentation-caption -->
-                            <div class="create-campaign-segmentation-list">
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-1" name="new-group-segmentation-1" checked>
-                                    <label for="new-group-segmentation-1" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Active new clients</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
+                            <!-- /.box -->
+                            <div class="box visible">
+                                <div class="new-group-create-segmentation">
+                                    <div class="new-group-create-segmentation-row">
+                                        <div class="new-group-create-segmentation-col">
+                                            <div class="new-group-create-segmentation-input">
+                                                <input type="text" class="input-text" value="Purchases" readonly>
+                                            </div>
+                                            <div class="new-group-create-segmentation-filter">
+                                                <a href="#new-group-create" class="new-group-create-segmentation-filter-add panel-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 4C4.44772 4 4 4.44772 4 5V19C4 19.5523 4.44772 20 5 20H19C19.5523 20 20 19.5523 20 19V5C20 4.44772 19.5523 4 19 4H5ZM2 5C2 3.34315 3.34315 2 5 2H19C20.6569 2 22 3.34315 22 5V19C22 20.6569 20.6569 22 19 22H5C3.34315 22 2 20.6569 2 19V5Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 7C12.5523 7 13 7.44772 13 8V16C13 16.5523 12.5523 17 12 17C11.4477 17 11 16.5523 11 16V8C11 7.44772 11.4477 7 12 7Z" fill="#1C2538" class="svg-fill"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 12C7 11.4477 7.44772 11 8 11H16C16.5523 11 17 11.4477 17 12C17 12.5523 16.5523 13 16 13H8C7.44772 13 7 12.5523 7 12Z" fill="#1C2538" class="svg-fill"/>
+</svg>
+Add filter</a>
+                                            </div>
+                                        </div>
+                                        <!-- /.new-group-create-segmentation-col -->
+                                        <div class="new-group-create-segmentation-col">
+                                            <div class="new-group-create-segmentation-input">
+                                                <input type="text" class="input-text" value="Last purchase date" readonly>
+                                            </div>
+                                        </div>
+                                        <!-- /.new-group-create-segmentation-col -->
+                                        <div class="new-group-create-segmentation-col">
+                                            <select class="select">
+                                                <option>after</option>
+                                            </select>
+                                        </div>
+                                        <!-- /.new-group-create-segmentation-col -->
+                                        <div class="new-group-create-segmentation-col">
+                                            <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                                        </div>
+                                        <!-- /.new-group-create-segmentation-col -->
+                                        <div class="new-group-create-segmentation-col">
+                                            <a href="#" class="new-group-create-segmentation-delete">
+                                                <span class="new-group-create-segmentation-delete-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                                                <span class="new-group-create-segmentation-delete-text">Delete</span>
+                                            </a>
+                                        </div>
+                                        <!-- /.new-group-create-segmentation-col -->
+                                    </div>
+                                    <!-- /.new-group-create-segmentation-row -->
                                 </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-2" name="new-group-segmentation-2">
-                                    <label for="new-group-segmentation-2" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All users in your city</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-3" name="new-group-segmentation-3">
-                                    <label for="new-group-segmentation-3" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All registered users</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-4" name="new-group-segmentation-4">
-                                    <label for="new-group-segmentation-4" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Welcome email</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-5" name="new-group-segmentation-5">
-                                    <label for="new-group-segmentation-5" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Active new clients</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-6" name="new-group-segmentation-6">
-                                    <label for="new-group-segmentation-6" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All users in your city</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-7" name="new-group-segmentation-7">
-                                    <label for="new-group-segmentation-7" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All registered users</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="cnew-group-segmentation-8" name="cnew-group-segmentation-8">
-                                    <label for="cnew-group-segmentation-8" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Welcome email</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-9" name="new-group-segmentation-9">
-                                    <label for="new-group-segmentation-9" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Active new clients</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-10" name="new-group-segmentation-10">
-                                    <label for="new-group-segmentation-10" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All users in your city</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-11" name="new-group-segmentation-11">
-                                    <label for="new-group-segmentation-11" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All registered users</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-12" name="new-group-segmentation-12">
-                                    <label for="new-group-segmentation-12" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Welcome email</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-13" name="new-group-segmentation-13">
-                                    <label for="new-group-segmentation-13" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Active new clients</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-14" name="new-group-segmentation-14">
-                                    <label for="new-group-segmentation-14" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All users in your city</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-15" name="new-group-segmentation-15">
-                                    <label for="new-group-segmentation-15" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All registered users</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-16" name="new-group-segmentation-16">
-                                    <label for="new-group-segmentation-16" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Welcome email</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-17" name="new-group-segmentation-17">
-                                    <label for="new-group-segmentation-17" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Active new clients</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-18" name="new-group-segmentation-18">
-                                    <label for="new-group-segmentation-18" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All users in your city</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-19" name="new-group-segmentation-19">
-                                    <label for="new-group-segmentation-19" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">All registered users</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
-                                <div class="create-campaign-segmentation-checkbox">
-                                    <input type="checkbox" id="new-group-segmentation-20" name="new-group-segmentation-20">
-                                    <label for="new-group-segmentation-20" class="create-campaign-segmentation-item">
-                                        <span class="create-campaign-segmentation-title">Welcome email</span>
-                                        <span class="create-campaign-segmentation-subtitle">Size: 25</span>
-                                    </label>
-                                </div>
-                                <!-- /.create-campaign-segmentation-checkbox -->
+                                <!-- /.new-group-create-segmentation -->
                             </div>
-                            <!-- /.create-campaign-segmentation-list -->
+                            <!-- /.box -->
                         </div>
                         <!-- /.new-group-step-content -->
                     </div>
@@ -646,6 +705,11 @@ Add new conditions</a>
                         </select>
                     </div>
                     <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Select</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
                         <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
                     </div>
                     <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
@@ -673,6 +737,43 @@ Add new conditions</a>
                     </div>
                     <div class="new-segmentation-conditions-col">
                         <input type="text" class="input-text mask-dob input-datepicker" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
+                        <a href="#" class="new-segmentation-conditions-delete">
+                            <span class="new-segmentation-conditions-delete-icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</span>
+                            <span class="new-segmentation-conditions-delete-text">Delete</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.new-segmentation-conditions-item -->
+                <div class="new-segmentation-conditions-item">
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Check-In</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <select class="select">
+                            <option>Equal To</option>
+                        </select>
+                    </div>
+                    <div class="new-segmentation-conditions-col">
+                        <div class="new-segmentation-conditions-col-split-wrap">
+                            <div class="new-segmentation-conditions-col-split">
+                                <select class="select">
+                                    <option>A</option>
+                                </select>
+                            </div>
+                            <div class="new-segmentation-conditions-col-split">
+                                <select class="select">
+                                    <option>B</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- /.new-segmentation-conditions-col-split-wrap -->
                     </div>
                     <div class="new-segmentation-conditions-col new-segmentation-conditions-col-delete">
                         <a href="#" class="new-segmentation-conditions-delete">
@@ -1407,30 +1508,271 @@ Add new conditions</a>
 </a>
                     <div class="emotions-panel drop-block">
                         <ul class="emotions-list" data-emotions-textarea="textarea-newsletter">
-                            <li><button>😀</button></li>
-                            <li><button>😃</button></li>
-                            <li><button>😄</button></li>
-                            <li><button>😁</button></li>
-                            <li><button>😆</button></li>
-                            <li><button>😅</button></li>
-                            <li><button>😂</button></li>
-                            <li><button>🤣</button></li>
-                            <li><button>😀</button></li>
-                            <li><button>😃</button></li>
-                            <li><button>😄</button></li>
-                            <li><button>😁</button></li>
-                            <li><button>😆</button></li>
-                            <li><button>😅</button></li>
-                            <li><button>😂</button></li>
-                            <li><button>🤣</button></li>
-                            <li><button>😀</button></li>
-                            <li><button>😃</button></li>
-                            <li><button>😄</button></li>
-                            <li><button>😁</button></li>
-                            <li><button>😆</button></li>
-                            <li><button>😅</button></li>
-                            <li><button>😂</button></li>
-                            <li><button>🤣</button></li>
+                            </button></li>
+                            <li>
+                                <button>😀</button>
+                            </li>
+                            <li>
+                                <button>😃</button>
+                            </li>
+                            <li>
+                                <button>😄</button>
+                            </li>
+                            <li>
+                                <button>😁</button>
+                            </li>
+                            <li>
+                                <button>😆</button>
+                            </li>
+                            <li>
+                                <button>😅</button>
+                            </li>
+                            <li>
+                                <button>😂</button>
+                            </li>
+                            <li>
+                                <button>🤣</button>
+                            </li>
+                            <li>
+                                <button>🥲</button>
+                            </li>
+                            <li>
+                                <button>😊</button>
+                            </li>
+                            <li>
+                                <button>😇</button>
+                            </li>
+                            <li>
+                                <button>🙂</button>
+                            </li>
+                            <li>
+                                <button>🙃</button>
+                            </li>
+                            <li>
+                                <button>😉</button>
+                            </li>
+                            <li>
+                                <button>😌</button>
+                            </li>
+                            <li>
+                                <button>😍</button>
+                            </li>
+                            <li>
+                                <button>🥰</button>
+                            </li>
+                            <li>
+                                <button>😘</button>
+                            </li>
+                            <li>
+                                <button>😗</button>
+                            </li>
+                            <li>
+                                <button>😙</button>
+                            </li>
+                            <li>
+                                <button>😚</button>
+                            </li>
+                            <li>
+                                <button>😋</button>
+                            </li>
+                            <li>
+                                <button>😛</button>
+                            </li>
+                            <li>
+                                <button>😝</button>
+                            </li>
+                            <li>
+                                <button>😜</button>
+                            </li>
+                            <li>
+                                <button>🤪</button>
+                            </li>
+                            <li>
+                                <button>🤨</button>
+                            </li>
+                            <li>
+                                <button>🧐</button>
+                            </li>
+                            <li>
+                                <button>🤓</button>
+                            </li>
+                            <li>
+                                <button>😎</button>
+                            </li>
+                            <li>
+                                <button>🥸</button>
+                            </li>
+                            <li>
+                                <button>🤩</button>
+                            </li>
+                            <li>
+                                <button>🥳</button>
+                            </li>
+                            <li>
+                                <button>😏</button>
+                            </li>
+                            <li>
+                                <button>😒</button>
+                            </li>
+                            <li>
+                                <button>😞</button>
+                            </li>
+                            <li>
+                                <button>😔</button>
+                            </li>
+                            <li>
+                                <button>😟</button>
+                            </li>
+                            <li>
+                                <button>😕</button>
+                            </li>
+                            <li>
+                                <button>🙁</button>
+                            </li>
+                            <li>
+                                <button>😣</button>
+                            </li>
+                            <li>
+                                <button>😖</button>
+                            </li>
+                            <li>
+                                <button>😫</button>
+                            </li>
+                            <li>
+                                <button>😩</button>
+                            </li>
+                            <li>
+                                <button>🥺</button>
+                            </li>
+                            <li>
+                                <button>😢</button>
+                            </li>
+                            <li>
+                                <button>😭</button>
+                            </li>
+                            <li>
+                                <button>😤</button>
+                            </li>
+                            <li>
+                                <button>😠</button>
+                            </li>
+                            <li>
+                                <button>😡</button>
+                            </li>
+                            <li>
+                                <button>🤬</button>
+                            </li>
+                            <li>
+                                <button>🤯</button>
+                            </li>
+                            <li>
+                                <button>😳</button>
+                            </li>
+                            <li>
+                                <button>🥵</button>
+                            </li>
+                            <li>
+                                <button>🥶</button>
+                            </li>
+                            <li>
+                                <button>😱</button>
+                            </li>
+                            <li>
+                                <button>😨</button>
+                            </li>
+                            <li>
+                                <button>😰</button>
+                            </li>
+                            <li>
+                                <button>😥</button>
+                            </li>
+                            <li>
+                                <button>😓</button>
+                            </li>
+                            <li>
+                                <button>🤗</button>
+                            </li>
+                            <li>
+                                <button>🤔</button>
+                            </li>
+                            <li>
+                                <button>🤭</button>
+                            </li>
+                            <li>
+                                <button>🤫</button>
+                            </li>
+                            <li>
+                                <button>🤥</button>
+                            </li>
+                            <li>
+                                <button>😶</button>
+                            </li>
+                            <li>
+                                <button>😐</button>
+                            </li>
+                            <li>
+                                <button>😑</button>
+                            </li>
+                            <li>
+                                <button>😬</button>
+                            </li>
+                            <li>
+                                <button>🙄</button>
+                            </li>
+                            <li>
+                                <button>😯</button>
+                            </li>
+                            <li>
+                                <button>😦</button>
+                            </li>
+                            <li>
+                                <button>😧</button>
+                            </li>
+                            <li>
+                                <button>😮</button>
+                            </li>
+                            <li>
+                                <button>😲</button>
+                            </li>
+                            <li>
+                                <button>🥱</button>
+                            </li>
+                            <li>
+                                <button>😴</button>
+                            </li>
+                            <li>
+                                <button>🤤</button>
+                            </li>
+                            <li>
+                                <button>😪</button>
+                            </li>
+                            <li>
+                                <button>😵</button>
+                            </li>
+                            <li>
+                                <button>🤐</button>
+                            </li>
+                            <li>
+                                <button>🥴</button>
+                            </li>
+                            <li>
+                                <button>🤢</button>
+                            </li>
+                            <li>
+                                <button>🤮</button>
+                            </li>
+                            <li>
+                                <button>🤧</button>
+                            </li>
+                            <li>
+                                <button>😷</button>
+                            </li>
+                            <li>
+                                <button>🤒</button>
+                            </li>
+                            <li>
+                                <button>🤕</button>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -1448,7 +1790,7 @@ Add new conditions</a>
 </a>
                 </div>
                 <div class="add-action-form-options-item">
-                    <a href="#" class="add-action-form-option"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <a href="#" class="modal-demo add-action-form-option"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15 20H19V4H15V2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22H15V20Z" fill="#1C2538" class="svg-fill"/>
 <path d="M9 20H5L5 4H9V2H4C3.44772 2 3 2.44772 3 3L3 21C3 21.5523 3.44772 22 4 22H9V20Z" fill="#1C2538" class="svg-fill"/>
 </svg>
@@ -1667,7 +2009,8 @@ Add new conditions</a>
             <div class="box">
                 <div class="mobile-phone">
                     <div class="mobile-phone-inner">
-                        <img src="upload/email.jpg" alt="">
+                        <!-- <img src="upload/email.jpg" alt=""> -->
+                        <iframe width="375" height="546" style="border: 0;" src="images/email.html" title="W3Schools Free Online Web Tutorials"></iframe>
                     </div>
                 </div>
             </div>
@@ -1675,10 +2018,81 @@ Add new conditions</a>
     </div>
     <!-- /.panel-content -->
 </div>
-<!-- /.panel -->    <script src="js/jquery.js"></script>
+<!-- /.panel -->
+<div class="panel panel-w6" data-panel="new-group-create">
+    <button class="panel-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</button>
+    <div class="panel-top">
+        <div class="new-group-create-caption">
+            <div class="new-group-create-title">Add filter</div>
+            <div class="create-campaign-segmentation-search">
+                <input type="text" class="input-text create-campaign-segmentation-search-text" placeholder="Search...">
+                <button class="create-campaign-segmentation-search-button"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.595 17.4159L15.0258 13.8476C16.0901 12.5199 16.669 10.8684 16.6666 9.16675C16.6666 5.02675 13.3066 1.66675 9.16663 1.66675C5.02663 1.66675 1.66663 5.02675 1.66663 9.16675C1.66663 13.3067 5.02663 16.6667 9.16663 16.6667C10.8683 16.6692 12.5197 16.0903 13.8475 15.0259L17.4158 18.5951L18.595 17.4159ZM15 9.16675C15.0023 10.6838 14.4117 12.1417 13.3541 13.2292L13.2291 13.3542C12.1415 14.4118 10.6837 15.0025 9.16663 15.0001C5.94329 15.0001 3.33329 12.3892 3.33329 9.16675C3.33329 5.94341 5.94329 3.33341 9.16663 3.33341C12.3891 3.33341 15 5.94341 15 9.16675Z" fill="#1C2538"/>
+</svg>
+</button>
+            </div>
+        </div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <div class="new-group-create-list-wrapper">
+            <ul class="new-group-create-list">
+                <li class="active"><a href="#">Personal Info</a></li>
+                <li><a href="#">Membership Info</a></li>
+                <li><a href="#">Contract Info</a></li>
+                <li><a href="#">Purchase Info</a></li>
+                <li><a href="#">Visit Info</a></li>
+                <li><a href="#">Email Engagement</a></li>
+                <li><a href="#">SMS Engagement</a></li>
+                <li><a href="#">Segments</a></li>
+                <li><a href="#">Custom</a></li>
+            </ul>
+            <!-- /.new-group-create-list -->
+            <ul class="new-group-create-list">
+                <li><a href="#">Fullname</a></li>
+                <li><a href="#">First Name</a></li>
+                <li><a href="#">Last Name</a></li>
+                <li class="active"><a href="#">Gender</a></li>
+                <li><a href="#">DOB</a></li>
+            </ul>
+            <!-- /.new-group-create-list -->
+            <ul class="new-group-create-list">
+                <li><a href="#">Male</a></li>
+                <li><a href="#">Female</a></li>
+            </ul>
+            <!-- /.new-group-create-list -->
+        </div>
+        <!-- /.new-group-create-list-wrapper -->
+    </div>
+    <!-- /.panel-content -->
+</div>
+<!-- /.panel -->
+
+<div class="modal-shadow"></div>
+<div class="modal" id="demo">
+    <button class="modal-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</button>
+    <div class="modal-header">
+        <div class="modal-header-title">Title</div>
+    </div>
+    <div class="modal-content">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta alias accusantium a odit velit commodi quibusdam itaque rem voluptatem distinctio at ex quo eum ipsam, in est facilis. Minima, tenetur.</p>
+    </div>
+</div>
+<!-- /.modal -->    <script src="js/jquery.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/migrate.js"></script>
     <script src="js/library.js"></script>
+    <script src="js/summernote-lite.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
