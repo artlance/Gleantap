@@ -3357,6 +3357,51 @@ $(document).ready(function () {
 
     //-----------------------------------------//
 
+    var autocomplete = new SelectPure(".autocomplete-select", {
+        options: [
+            {
+                label: "Barbina",
+                value: "ba",
+            },
+            {
+                label: "Bigoli",
+                value: "bg",
+            },
+            {
+                label: "Bucatini",
+                value: "bu",
+            },
+            {
+                label: "Busiate",
+                value: "bus",
+            },
+            {
+                label: "Capellini",
+                value: "cp",
+            },
+            {
+                label: "Fedelini",
+                value: "fe",
+            },
+            {
+                label: "Maccheroni",
+                value: "ma",
+            },
+            {
+                label: "Spaghetti",
+                value: "sp",
+            },
+        ],
+        placeholder: "Search...",
+        value: [],
+        multiple: true,
+        autocomplete: true,
+        //icon: "fa fa-times",
+        onChange: value => { console.log(value); },
+    });
+
+    //-----------------------------------------//
+
     $(document).on('click', '.cmp-info-plus', function (event) {
         event.preventDefault();
         var thisTemplate = $('#cmp-footer-subject').html();
