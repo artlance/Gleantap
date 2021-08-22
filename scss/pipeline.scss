@@ -845,9 +845,19 @@
 #pipeline-leads-rows {
     display: none;
 }
+#pipeline-leads-tiles {
+    margin-top: -15px;
+}
 .pipeline-columns-v2 {
-    margin-bottom: 10px;
+    padding-bottom: 5px;
+    .pipeline-column {
+        width: 275px;
+        min-width: 275px;
+        margin-right: 10px;
+    }
     .pipeline-column-header {
+        margin-bottom: 10px;
+        padding: 9px 19px;
         border-color: $theme-transparent;
     }
     .pipeline-column-color {
@@ -862,5 +872,63 @@
     }
     .pipeline-column-menu {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='4' fill='none'%3E%3Cpath d='M1.7.3C.7.3 0 1.1 0 2c0 1 .8 1.7 1.7 1.7.9 0 1.6-.8 1.6-1.7C3.3 1 2.6.3 1.7.3zm11.6 0c-.9 0-1.6.8-1.6 1.7 0 1 .7 1.7 1.6 1.7 1 0 1.7-.8 1.7-1.7 0-1-.8-1.7-1.7-1.7zM7.5.3c-1 0-1.7.8-1.7 1.7 0 1 .8 1.7 1.7 1.7 1 0 1.7-.8 1.7-1.7C9.2 1 8.4.3 7.5.3z' fill='%23FFFFFF'/%3E%3C/svg%3E");
+    }
+    .pipeline-column-body {
+        padding: 9px;
+    }
+    .pipeline-column-button {
+        max-width: 100%;
+        margin-top: 10px;
+        height: 40px;
+        min-height: 40px;
+        font-size: 14px;
+        svg {
+            margin-right: 12px;
+            margin-bottom: 3px;
+        }
+    }
+    .pipeline-column-list {
+        min-height: 86px;
+        max-height: 268px;
+        padding-right: 5px;
+        margin-right: -5px;
+    }
+    .pipeline-column-item {
+        padding: 4px 14px 9px;
+        margin-bottom: 5px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .pipeline-column-item-title {
+        padding-bottom: 5px;
+    }
+    .pipeline-column-item-bottom {
+        padding-top: 0;
+        align-items: flex-end;
+    }
+    .pipeline-column-item-button {
+        margin-bottom: 2px;
+        margin-right: 10px;
+    }
+    .profile-activities-item-avatars {
+        margin-top: -5px;
+    }
+    .pipeline-column-empty-item {
+        height: 86px;
+        max-width: 100%;
+        width: auto;
+        right: 5px;
+    }
+}
+@media screen and (max-width: 660px) {
+    .pipeline-columns-v2 {
+        .pipeline-column {
+            width: 220px;
+            min-width: 220px;
+        }
+        .pipeline-column-body {
+            padding: 0;
+        }
     }
 }

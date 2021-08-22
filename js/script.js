@@ -3327,6 +3327,14 @@ $(document).ready(function () {
 
     //-----------------------------------------//
 
+    $(document).on('click', '.new-group-create-list a', function (event) {
+        event.preventDefault();
+        $(this).parents('li').addClass('active').siblings('li').removeClass('active');
+        $(this).parents('ul').next('ul').removeClass('hidden');
+    });
+
+    //-----------------------------------------//
+
     //https://xdsoft.net/jqplugins/autocomplete/
     var autocompleteData1 = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'];
 
