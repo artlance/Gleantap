@@ -565,13 +565,6 @@
                         background: $tr;
                     }
                 }
-                li {
-                    a {
-                        &::after {
-                            transform: rotate(90deg);
-                        }
-                    }
-                }
             }
         }
     }
