@@ -3410,6 +3410,31 @@ $(document).ready(function () {
 
     //-----------------------------------------//
 
+    function showAppointments(value) {
+        $('.appointments-section').addClass('hidden');
+        switch (value) {
+            case 'Monthly':
+                $('.appointments-monthly').removeClass('hidden');
+                break;
+            case 'Weekly':
+                $('.appointments-weekly').removeClass('hidden');
+                break;
+            case 'Daily':
+                $('.appointments-daily').removeClass('hidden');
+                break;
+            default:
+                $('.appointments-section').eq(0).removeClass('hidden');
+                break;
+        }
+    }
+
+    $(document).on('change', '#appointments-sorting-trigger', function (event) {
+        event.preventDefault();
+        showAppointments($(this).val());
+    });
+
+    //-----------------------------------------//
+
     $(document).on('click', '.cmp-info-plus', function (event) {
         event.preventDefault();
         var thisTemplate = $('#cmp-footer-subject').html();

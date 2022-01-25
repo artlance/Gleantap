@@ -1,0 +1,1063 @@
+<!-- $site-title = Appointments -->
+<!-- @import "parts/_head.kit" -->
+    <main class="main-site sidebar-collapse">
+        <!-- @import "parts/_sidebar-appointments.kit" -->
+        <div class="content-site content-site-lightgray">
+            <div class="appointments">
+                <div class="appointments-header">
+                    <div class="appointments-title">
+                        <h1>Appointments</h1>
+                    </div>
+                    <div class="appointments-search">
+                        <input type="text" class="appointments-search-text" placeholder="Find a lead...">
+                        <button class="appointments-search-button"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.5223 12.4631L16.7345 15.6746L15.6733 16.7359L12.4618 13.5236C11.2668 14.4815 9.78053 15.0025 8.24902 15.0004C4.52302 15.0004 1.49902 11.9764 1.49902 8.25037C1.49902 4.52437 4.52302 1.50037 8.24902 1.50037C11.975 1.50037 14.999 4.52437 14.999 8.25037C15.0012 9.78187 14.4802 11.2682 13.5223 12.4631ZM12.0178 11.9066C12.9696 10.9278 13.5012 9.61569 13.499 8.25037C13.499 5.34937 11.1493 3.00037 8.24902 3.00037C5.34802 3.00037 2.99902 5.34937 2.99902 8.25037C2.99902 11.1506 5.34802 13.5004 8.24902 13.5004C9.61435 13.5025 10.9264 12.971 11.9053 12.0191L12.0178 11.9066Z" fill="#9C9C9C" class="svg-fill"/></svg></button>
+                    </div>
+                    <!-- /.appointments-search -->
+                    <div class="appointments-header-add">
+                        <button class="button appointments-header-add-button">
+                            <span class="button-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9.16626 9.16687V4.16687H10.8329V9.16687H15.8329V10.8335H10.8329V15.8335H9.16626V10.8335H4.16626V9.16687H9.16626Z" fill="white"/></svg></span>
+                            Add appointment
+                        </button>
+                    </div>
+                    <!-- /.appointments-header-add -->
+                </div>
+                <!-- /.appointments-header -->
+                <div class="appointments-content">
+                    <div class="appointments-caption">
+                        <div class="appointments-navigation">
+                            <div class="appointments-navigation-inner">
+                                <a href="#" class="appointments-navigation-prev">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke="#2C3E50" class="svg-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                                <div class="appointments-navigation-title">January, 2022</div>
+                                <a href="#" class="appointments-navigation-next">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke="#2C3E50" class="svg-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                            </div>
+                            <!-- /.appointments-navigation-inner -->
+                        </div>
+                        <!-- /.appointments-navigation -->
+                        <div class="appointments-sorting">
+                            <div class="appointments-sorting-inner">
+                                <div class="appointments-sorting-select">
+                                    <select id="appointments-sorting-trigger" class="select">
+                                        <option value="Monthly">Monthly</option>
+                                        <option value="Weekly">Weekly</option>
+                                        <option value="Daily">Daily</option>
+                                    </select>
+                                </div>
+                                <div class="appointments-sorting-all">
+                                    <a href="#" class="appointments-sorting-all-button">All Appointments</a>
+                                </div>
+                            </div>
+                            <!-- /.appointments-sorting-inner -->
+                        </div>
+                        <!-- /.appointments-sorting -->
+                    </div>
+                    <!-- /.appointments-caption -->
+                    <div class="appointments-section appointments-monthly">
+                        <div class="appointments-overflow">
+                            <div class="appointments-overflow-inner">
+                                <div class="appointments-monthly-caption">
+                                    <div class="appointments-monthly-day">Mon</div>
+                                    <div class="appointments-monthly-day">Tue</div>
+                                    <div class="appointments-monthly-day">Wed</div>
+                                    <div class="appointments-monthly-day">Thu</div>
+                                    <div class="appointments-monthly-day">Fri</div>
+                                    <div class="appointments-monthly-day">Sat</div>
+                                    <div class="appointments-monthly-day">Sun</div>
+                                </div>
+                                <!-- /.appointments-monthly-caption -->
+                                <div class="appointments-monthly-list">
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">1</div>
+                                        <a href="#" class="appointments-item appointments-item-primary">
+                                            <span class="appointments-item-title">Lorem ipsum dolor sit amet</span>
+                                            <span class="appointments-item-time">08:20 to 08:50</span>
+                                            <span class="appointments-item-responsible">B</span>
+                                        </a>
+                                        <!-- /.appointments-item -->
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">2</div>
+                                        <a href="#" class="appointments-item">
+                                            <span class="appointments-item-title">Lorem ipsum dolor sit amet</span>
+                                            <span class="appointments-item-time">08:20 to 08:50</span>
+                                            <span class="appointments-item-responsible">J</span>
+                                        </a>
+                                        <!-- /.appointments-item -->
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">3</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">4</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">5</div>
+                                        <a href="#" class="appointments-item">
+                                            <span class="appointments-item-title">Lorem ipsum dolor sit amet</span>
+                                            <span class="appointments-item-time">08:20 to 08:50</span>
+                                            <span class="appointments-item-responsible">R</span>
+                                        </a>
+                                        <!-- /.appointments-item -->
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">6</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">7</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">8</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">9</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">10</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">11</div>
+                                        <a href="#" class="appointments-item appointments-item-primary">
+                                            <span class="appointments-item-title">Lorem ipsum dolor sit amet</span>
+                                            <span class="appointments-item-time">08:20 to 08:50</span>
+                                            <span class="appointments-item-responsible">S</span>
+                                        </a>
+                                        <!-- /.appointments-item -->
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">12</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">13</div>
+                                        <a href="#" class="appointments-item">
+                                            <span class="appointments-item-title">Lorem ipsum dolor sit amet</span>
+                                            <span class="appointments-item-time">08:20 to 08:50</span>
+                                            <span class="appointments-item-responsible">J</span>
+                                        </a>
+                                        <!-- /.appointments-item -->
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">14</div>
+                                        <a href="#" class="appointments-item">
+                                            <span class="appointments-item-title">Lorem ipsum dolor sit amet</span>
+                                            <span class="appointments-item-time">08:20 to 08:50</span>
+                                            <span class="appointments-item-responsible">L</span>
+                                        </a>
+                                        <!-- /.appointments-item -->
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">15</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">16</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">17</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">18</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">19</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">20</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">21</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">22</div>
+                                        <a href="#" class="appointments-item">
+                                            <span class="appointments-item-title">Lorem ipsum dolor sit amet</span>
+                                            <span class="appointments-item-time">08:20 to 08:50</span>
+                                            <span class="appointments-item-responsible">I</span>
+                                        </a>
+                                        <!-- /.appointments-item -->
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">23</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">24</div>
+                                        <a href="#" class="appointments-item">
+                                            <span class="appointments-item-title">Lorem ipsum dolor sit amet</span>
+                                            <span class="appointments-item-time">08:20 to 08:50</span>
+                                            <span class="appointments-item-responsible">K</span>
+                                        </a>
+                                        <!-- /.appointments-item -->
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">25</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">26</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">27</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">28</div>
+                                        <a href="#" class="appointments-item">
+                                            <span class="appointments-item-title">Lorem ipsum dolor sit amet</span>
+                                            <span class="appointments-item-time">08:20 to 08:50</span>
+                                            <span class="appointments-item-responsible">M</span>
+                                        </a>
+                                        <!-- /.appointments-item -->
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">29</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">30</div>
+                                        <a href="#" class="appointments-item">
+                                            <span class="appointments-item-title">Lorem ipsum dolor sit amet</span>
+                                            <span class="appointments-item-time">08:20 to 08:50</span>
+                                            <span class="appointments-item-responsible">R</span>
+                                        </a>
+                                        <!-- /.appointments-item -->
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item">
+                                        <div class="appointments-monthly-date">31</div>
+                                        <a href="#" class="appointments-item">
+                                            <span class="appointments-item-title">Lorem ipsum dolor sit amet</span>
+                                            <span class="appointments-item-time">08:20 to 08:50</span>
+                                            <span class="appointments-item-responsible">O</span>
+                                        </a>
+                                        <!-- /.appointments-item -->
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item appointments-monthly-item-other">
+                                        <div class="appointments-monthly-date">1</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item appointments-monthly-item-other">
+                                        <div class="appointments-monthly-date">2</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item appointments-monthly-item-other">
+                                        <div class="appointments-monthly-date">3</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                    <div class="appointments-monthly-item appointments-monthly-item-other">
+                                        <div class="appointments-monthly-date">4</div>
+                                    </div>
+                                    <!-- /.appointments-monthly-item -->
+                                </div>
+                                <!-- /.appointments-monthly-list -->
+                            </div>
+                            <!-- /.appointments-overflow-inner -->
+                        </div>
+                        <!-- /.appointments-overflow -->
+                    </div>
+                    <!-- /.appointments-monthly -->
+                    <div class="appointments-section appointments-weekly hidden">
+                        <div class="appointments-overflow">
+                            <div class="appointments-overflow-inner">
+                                <div class="appointments-weekly-caption">
+                                    <div class="appointments-weekly-day">Mon 29</div>
+                                    <div class="appointments-weekly-day">Tue 30</div>
+                                    <div class="appointments-weekly-day">Wed 1</div>
+                                    <div class="appointments-weekly-day">Thu 2</div>
+                                    <div class="appointments-weekly-day">Fri 3</div>
+                                    <div class="appointments-weekly-day">Sat 4</div>
+                                    <div class="appointments-weekly-day">Sun 5</div>
+                                </div>
+                                <!-- /.appointments-weekly-caption -->
+                                <div class="appointments-weekly-list">
+                                    <div class="appointments-weekly-top">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">04:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-top-line"></div>
+                                    </div>
+                                    <!-- /.appointments-weekly-top -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">05:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">06:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">05:20 to 05:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">07:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">08:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">08:20 to 08:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">09:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">08:20 to 08:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">10:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">11:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">12:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">08:20 to 08:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">13:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">14:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">08:20 to 08:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">15:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">16:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                </div>
+                                <!-- /.appointments-weekly-list -->
+                            </div>
+                            <!-- /.appointments-overflow-inner -->
+                        </div>
+                        <!-- /.appointments-overflow -->
+                    </div>
+                    <!-- /.appointments-weekly -->
+                    <div class="appointments-section appointments-daily hidden">
+                        <div class="appointments-weekly-caption">
+                            <div class="appointments-weekly-day">Mon 29</div>
+                        </div>
+                        <!-- /.appointments-weekly-caption -->
+                        <div class="appointments-overflow">
+                            <div class="appointments-overflow-inner">
+                                <div class="appointments-weekly-list">
+                                    <div class="appointments-weekly-top">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">04:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-top-line"></div>
+                                    </div>
+                                    <!-- /.appointments-weekly-top -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">05:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">06:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">05:20 to 05:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">07:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item appointments-item-primary">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">08:20 to 08:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">08:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">08:20 to 08:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">09:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">08:20 to 08:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">08:20 to 08:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">10:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">08:20 to 08:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">11:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">12:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">08:20 to 08:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">13:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">14:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">08:20 to 08:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">15:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                            <a href="#" class="appointments-item">
+                                                <span class="appointments-item-title">Lorem ipsum dolor</span>
+                                                <span class="appointments-item-time">08:20 to 08:50</span>
+                                            </a>
+                                            <!-- /.appointments-item -->
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                    <div class="appointments-weekly-row">
+                                        <div class="appointments-weekly-time-col">
+                                            <div class="appointments-weekly-time">16:00</div>
+                                        </div>
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                        <div class="appointments-weekly-item">
+                                        </div>
+                                        <!-- /.appointments-weekly-item -->
+                                    </div>
+                                    <!-- /.appointments-weekly-row -->
+                                </div>
+                                <!-- /.appointments-weekly-list -->
+                            </div>
+                            <!-- /.appointments-overflow-inner -->
+                        </div>
+                        <!-- /.appointments-overflow -->
+                    </div>
+                    <!-- /.appointments-daily -->
+                </div>
+                <!-- /.appointments-content -->
+            </div>
+            <!-- /.appointments -->
+        </div>
+    </main>
+    <!-- /.main-site -->
+<!-- @import "parts/_foot.kit" -->
