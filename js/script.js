@@ -3410,28 +3410,146 @@ $(document).ready(function () {
 
     //-----------------------------------------//
 
-    function showAppointments(value) {
-        $('.appointments-section').addClass('hidden');
-        switch (value) {
-            case 'Monthly':
-                $('.appointments-monthly').removeClass('hidden');
-                break;
-            case 'Weekly':
-                $('.appointments-weekly').removeClass('hidden');
-                break;
-            case 'Daily':
-                $('.appointments-daily').removeClass('hidden');
-                break;
-            default:
-                $('.appointments-section').eq(0).removeClass('hidden');
-                break;
-        }
+    let calendarEl = document.getElementById('appointments-calendar');
+    if (calendarEl) {
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            customButtons: {
+                myCustomButton: {
+                    text: 'All Appointments',
+                    click: function () {
+                        alert('clicked the custom button!');
+                    }
+                }
+            },
+            initialView: 'dayGridMonth',
+            initialDate: '2022-01-07',
+            height: 'auto',
+            buttonText: {
+                month: 'Monthly',
+                week: 'Weekly',
+                day: 'Daily'
+            },
+            headerToolbar: {
+                left: '',
+                center: 'prev,title,next',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay myCustomButton'
+            },
+            eventContent: function (arg) {
+                let customEvent = document.createElement('div');
+                customEvent.classList.add('appointments-item');
+                customEvent.style.borderColor = arg.event.borderColor;
+
+                let customHTML = '';
+
+                if (arg.event._def.title) {
+                    customHTML += '<span class="appointments-item-title">' + arg.event._def.title + '</span>';
+                }
+                if (arg.event.extendedProps.time) {
+                    customHTML += '<span class="appointments-item-time">' + arg.event.extendedProps.time + '</span>';
+                }
+                if (arg.event.extendedProps.responsible) {
+                    customHTML += '<span class="appointments-item-responsible">' + arg.event.extendedProps.responsible + '</span>';
+                }
+
+                customEvent.innerHTML = customHTML;
+
+                let arrayOfDomNodes = [customEvent]
+                return { domNodes: arrayOfDomNodes }
+            },
+            events: [
+                {
+                    title: 'Lorem ipsum dolor sit amet',
+                    start: '2022-01-01T10:30:00',
+                    end: '2022-01-01T12:30:00',
+                    borderColor: '#3c68ec',
+                    backgroundColor: '#fff',
+                    time: '08:20 to 08:50',
+                    responsible: 'E'
+                },
+                {
+                    title: 'Lorem ipsum dolor sit amet',
+                    start: '2022-01-03T10:30:00',
+                    end: '2022-01-03T12:30:00',
+                    borderColor: '#3c68ec',
+                    backgroundColor: '#fff',
+                    time: '08:20 to 08:50',
+                    responsible: 'S'
+                },
+                {
+                    title: 'Lorem ipsum dolor sit amet',
+                    start: '2022-01-07T10:30:00',
+                    end: '2022-01-07T12:30:00',
+                    borderColor: '#f00',
+                    backgroundColor: '#fff',
+                    time: '08:20 to 08:50',
+                    responsible: 'K'
+                },
+                {
+                    title: 'Lorem ipsum dolor sit amet',
+                    start: '2022-01-12T10:30:00',
+                    end: '2022-01-12T12:30:00',
+                    borderColor: '#3c68ec',
+                    backgroundColor: '#fff',
+                    time: '08:20 to 08:50',
+                    responsible: 'S'
+                },
+                {
+                    title: 'Lorem ipsum dolor sit amet',
+                    start: '2022-01-17T10:30:00',
+                    end: '2022-01-17T12:30:00',
+                    borderColor: '#f00',
+                    backgroundColor: '#fff',
+                    time: '08:20 to 08:50',
+                    responsible: 'K'
+                },
+                {
+                    title: 'Lorem ipsum dolor sit amet',
+                    start: '2022-01-27T10:30:00',
+                    end: '2022-01-27T12:30:00',
+                    borderColor: '#f00',
+                    backgroundColor: '#fff',
+                    time: '08:20 to 08:50',
+                    responsible: 'J'
+                },
+                {
+                    title: 'Lorem ipsum dolor sit amet',
+                    start: '2022-01-30T10:30:00',
+                    end: '2022-01-30T12:30:00',
+                    borderColor: '#f00',
+                    backgroundColor: '#fff',
+                    time: '08:20 to 08:50',
+                    responsible: 'B'
+                }
+            ]
+        });
+        calendar.render();
+        calendar.updateSize();
     }
 
-    $(document).on('change', '#appointments-sorting-trigger', function (event) {
-        event.preventDefault();
-        showAppointments($(this).val());
-    });
+    //-----------------------------------------//
+
+    // function showAppointments(value) {
+    //     $('.appointments-section').addClass('hidden');
+    //     switch (value) {
+    //         case 'Monthly':
+    //             $('.appointments-monthly').removeClass('hidden');
+    //             break;
+    //         case 'Weekly':
+    //             $('.appointments-weekly').removeClass('hidden');
+    //             break;
+    //         case 'Daily':
+    //             $('.appointments-daily').removeClass('hidden');
+    //             break;
+    //         default:
+    //             $('.appointments-section').eq(0).removeClass('hidden');
+    //             break;
+    //     }
+    // }
+
+    // $(document).on('change', '#appointments-sorting-trigger', function (event) {
+    //     event.preventDefault();
+    //     showAppointments($(this).val());
+    // });
 
     //-----------------------------------------//
 
