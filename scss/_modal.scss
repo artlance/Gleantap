@@ -12,6 +12,92 @@
     border-radius: 10px;
     padding: 30px;
     text-align: center;
+    &-appointment {
+        width: 90%;
+        max-width: 502px;
+        text-align: left;
+        padding: 0;
+        .modal-header {
+            padding-top: 72px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            &-title {
+                margin: 0;
+                padding: 22px 60px 15px;
+                font-size: 24px;
+                border-top: 1px solid #ECEEEF;
+            }
+        }
+        .modal-content {
+            font-size: 14px;
+            line-height: 1.5;
+            color: $theme-text;
+            padding: 0 60px 30px;
+            p {
+                opacity: 0.8;
+            }
+        }
+        .modal-close {
+            top: 24px;
+            right: 25px;
+        }
+        .modal-edit {
+            top: 24px;
+            right: 121px;
+        }
+        .modal-delete {
+            top: 24px;
+            right: 73px;
+        }
+        &-person {
+            display: flex;
+            align-items: center;
+            &-ico {
+                background: #9c92b9;
+                flex: 0 0 32px;
+                max-width: 32px;
+                height: 32px;
+                text-align: center;
+                line-height: 32px;
+                color: $theme-white;
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 50%;
+            }
+            &-content {
+                padding-left: 10px;
+                .modal-appointment-value {
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                .modal-appointment-label {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &-row {
+            margin-top: 40px;
+        }
+        &-value {
+            font-size: 16px;
+            font-weight: 600;
+        }
+        &-label {
+            opacity: 0.6;
+            font-size: 12px;
+            margin-bottom: 6px;
+        }
+        &-columns {
+            display: flex;
+            flex-wrap: wrap;
+            .modal-appointment-row {
+                padding-right: 55px;
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
     &-header {
         font-size: 18px;
         font-weight: 800;
@@ -36,6 +122,8 @@
         opacity: 0.2;
         display: none;
     }
+    &-edit,
+    &-delete,
     &-close {
         position: absolute;
         right: 19px;
@@ -86,6 +174,31 @@
     .modal {
         padding-left: 20px;
         padding-right: 20px;
+        &-appointment {
+            padding: 0;
+            .modal-header {
+                &-title {
+                    padding-left: 24px;
+                    padding-right: 24px;
+                }
+            }
+            .modal-content {
+                padding-left: 24px;
+                padding-right: 24px;
+                padding-bottom: 20px;
+            }
+            &-row {
+                margin-top: 24px;
+            }
+            &-columns {
+                .modal-appointment-row {
+                    padding-right: 24px;
+                    &:last-child {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -172,6 +285,7 @@
         will-change: opacity, visibility;
     }
     &-inner-close,
+    &-delete,
     &-close {
         position: absolute;
         z-index: 3060;
@@ -188,6 +302,13 @@
         }
         &:focus {
             outline: none;
+        }
+    }
+    &-delete {
+        right: 55px;
+        path {
+            fill: #1C2538;
+            opacity: 0.5;
         }
     }
     &-inner {
@@ -577,6 +698,36 @@
 
 .ongoing {
     margin-top: -20px;
+    &-spacer {
+        height: 14px;
+    }
+    &-stick {
+        display: flex;
+        &-col {
+            flex: 0 0 68px;
+            max-width: 68px;
+            &:nth-child(1) {
+                select.select {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+            &:nth-child(2) {
+                flex: 0 0 50px;
+                max-width: 50px;
+                select.select {
+                    padding-left: 0;
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+            &-spacer {
+                flex: 0 0 10px;
+                width: 10px;
+                height: 1px;
+            }
+        }
+    }
     &-caption {
         padding: 21px 50px 5px 20px;
         font-size: 18px;
@@ -621,6 +772,10 @@
         padding: 0 5px 10px;
         flex: 1 1 auto;
         max-width: 100%;
+        &.ongoing-col-auto {
+            flex: 0 1 auto !important;
+            max-width: 100% !important;
+        }
         &:nth-child(2) {
             flex: 0 0 75px;
             max-width: 75px;
@@ -715,6 +870,10 @@
         &-col {
             flex: 0 0 50%;
             max-width: 50%;
+            &.col-auto {
+                flex: 1 1 auto;
+                max-width: 100%;
+            }
             &:nth-child(2),
             &:nth-child(3) {
                 flex: 0 0 25%;

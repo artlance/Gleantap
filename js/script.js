@@ -44,6 +44,12 @@ $(document).ready(function () {
         $('#demo').fadeIn('200');
     });
 
+    $(document).on('click', '.appointments-item', function (event) {
+        event.preventDefault();
+        $('.modal-shadow').fadeIn('200');
+        $('#view-appointment').fadeIn('200');
+    });
+
     $(document).on('click', '.modal-close', function (event) {
         event.preventDefault();
         $('.modal-shadow').fadeOut('200');
@@ -2769,6 +2775,10 @@ $(document).ready(function () {
         }
         if (thisId == 'form-preview') {
             $('[data-panel="form-newsletter-email"]').removeClass('show').fadeOut('300');
+        }
+        if (thisId == 'edit-appointment') {
+            $('.modal-shadow').fadeOut('200');
+            $('#view-appointment').fadeOut('200');
         }
     });
 

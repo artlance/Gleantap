@@ -2072,6 +2072,248 @@ Add new conditions</a>
     <!-- /.panel-content -->
 </div>
 <!-- /.panel -->
+<div class="panel panel-w2" data-panel="create-appointment">
+    <button class="panel-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</button>
+    <div class="panel-top">
+        <div class="ongoing-caption">Create Appointment</div>
+    </div>
+    <!-- /.panel-top -->
+
+    <div class="panel-content">
+        <div class="ongoing">
+            <div class="ongoing-spacer"></div>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <input type="text" class="input-text" placeholder="Title">
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-row">
+                <div class="ongoing-col ongoing-col-auto col-auto">
+                    <label for="ongoing-end-date" class="ongoing-label">Start Time</label>
+                    <div class="ongoing-stick">
+                        <div class="ongoing-stick-col">
+                            <select class="select select-time">
+                                <option>00:00</option>
+                                <option>00:30</option>
+                            </select>
+                        </div>
+                        <div class="ongoing-stick-col">
+                            <select class="select">
+                                <option>AM</option>
+                                <option>PM</option>
+                            </select>
+                        </div>
+                        <div class="ongoing-stick-col-spacer"></div>
+                    </div>
+                </div>
+                <div class="ongoing-col ongoing-col-auto col-auto">
+                    <label for="ongoing-end-date" class="ongoing-label">End Time</label>
+                    <div class="ongoing-stick">
+                        <div class="ongoing-stick-col">
+                            <select class="select select-time">
+                                <option>00:00</option>
+                                <option>00:30</option>
+                            </select>
+                        </div>
+                        <div class="ongoing-stick-col">
+                            <select class="select">
+                                <option>AM</option>
+                                <option>PM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <label for="appointment-date" class="ongoing-label">Date</label>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <input type="text" class="input-text input-datepicker input-datepicker-icon" value="Oct 20, 2020" id="appointment-date">
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <label for="appointment-repeatable" class="ongoing-label">Repeatable</label>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <div class="ongoing-day-select">
+                        <select class="select" id="appointment-repeatable">
+                            <option value="1" selected>None repeatable</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <label for="appointment-responsible" class="ongoing-label">Responsible</label>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <div class="ongoing-day-select">
+                        <select class="select" id="appointment-responsible">
+                            <option value="1" selected>Cameron Williamson</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-spacer"></div>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <textarea class="textarea textarea-small" placeholder="Notes"></textarea>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+        </div>
+        <!-- /.ongoing -->
+    </div>
+    <!-- /.panel-content -->
+    <div class="panel-bottom">
+        <div class="ongoing-options">
+            <div class="ongoing-option"></div>
+            <div class="ongoing-option"><a href="#" class="button">Create</a></div>
+        </div>
+        <!-- /.ongoing-options -->
+    </div>
+    <!-- /.panel-bottom -->
+</div>
+<!-- /.panel -->
+<div class="panel panel-w2" data-panel="edit-appointment">
+    <button class="panel-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</button>
+    <button class="panel-delete"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.66665 1.33325V2.66659H1.33331V3.99992H2.66665V13.9999C2.66665 14.3681 2.96512 14.6666 3.33331 14.6666H12.6666C13.0348 14.6666 13.3333 14.3681 13.3333 13.9999V3.99992H14.6666V2.66659H11.3333V1.33325H4.66665ZM3.99998 13.3333V3.99992H12V13.3333H3.99998ZM5.99998 5.99992H7.33331V11.3333H5.99998V5.99992ZM9.99998 5.99992H8.66665V11.3333H9.99998V5.99992Z" fill="#B7BABF" class="svg-fill"/>
+</svg>
+</button>
+    <div class="panel-top">
+        <div class="ongoing-caption">Create Appointment</div>
+    </div>
+    <!-- /.panel-top -->
+
+    <div class="panel-content">
+        <div class="ongoing">
+            <div class="ongoing-spacer"></div>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <input type="text" class="input-text" placeholder="Title" value="Lorem ipsum dolor sit amet">
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-row">
+                <div class="ongoing-col ongoing-col-auto col-auto">
+                    <label for="ongoing-end-date" class="ongoing-label">Start Time</label>
+                    <div class="ongoing-stick">
+                        <div class="ongoing-stick-col">
+                            <select class="select select-time">
+                                <option>00:00</option>
+                                <option>00:30</option>
+                            </select>
+                        </div>
+                        <div class="ongoing-stick-col">
+                            <select class="select">
+                                <option>AM</option>
+                                <option>PM</option>
+                            </select>
+                        </div>
+                        <div class="ongoing-stick-col-spacer"></div>
+                    </div>
+                </div>
+                <div class="ongoing-col ongoing-col-auto col-auto">
+                    <label for="ongoing-end-date" class="ongoing-label">End Time</label>
+                    <div class="ongoing-stick">
+                        <div class="ongoing-stick-col">
+                            <select class="select select-time">
+                                <option>00:00</option>
+                                <option>00:30</option>
+                            </select>
+                        </div>
+                        <div class="ongoing-stick-col">
+                            <select class="select">
+                                <option>AM</option>
+                                <option>PM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <label for="appointment-edit-date" class="ongoing-label">Date</label>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <input type="text" class="input-text input-datepicker input-datepicker-icon" value="Oct 20, 2020" id="appointment-edit-date">
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <label for="appointment-edit-repeatable" class="ongoing-label">Repeatable</label>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <div class="ongoing-day-select">
+                        <select class="select" id="appointment-edit-repeatable">
+                            <option value="1" selected>None repeatable</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <label for="appointment-edit-responsible" class="ongoing-label">Responsible</label>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <div class="ongoing-day-select">
+                        <select class="select" id="appointment-edit-responsible">
+                            <option value="1" selected>Cameron Williamson</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-spacer"></div>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <textarea class="textarea textarea-medium" placeholder="Notes">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio sem in sit maecenas suspendisse maecenas pellentesque in semper. Ac nibh nulla eu netus dignissim fringilla porta orci odio.</textarea>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+        </div>
+        <!-- /.ongoing -->
+    </div>
+    <!-- /.panel-content -->
+    <div class="panel-bottom">
+        <div class="ongoing-options">
+            <div class="add-action-option"><a href="#" class="button button-secondary panel-inner-cancel">Cancel</a></div>
+            <div class="ongoing-option"><a href="#" class="button">Save</a></div>
+        </div>
+        <!-- /.ongoing-options -->
+    </div>
+    <!-- /.panel-bottom -->
+</div>
+<!-- /.panel -->
 
 <div class="modal-shadow"></div>
 <div class="modal" id="demo">
@@ -2086,6 +2328,59 @@ Add new conditions</a>
     </div>
     <div class="modal-content">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta alias accusantium a odit velit commodi quibusdam itaque rem voluptatem distinctio at ex quo eum ipsam, in est facilis. Minima, tenetur.</p>
+    </div>
+</div>
+<!-- /.modal -->
+
+<div class="modal modal-appointment" id="view-appointment">
+    <button class="modal-close"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 6L6 18" stroke="#2C3E50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M6 6L18 18" stroke="#2C3E50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</button>
+    <a href="#edit-appointment" class="modal-edit show-edit-appointment panel-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 7H6C5.46957 7 4.96086 7.21071 4.58579 7.58579C4.21071 7.96086 4 8.46957 4 9V18C4 18.5304 4.21071 19.0391 4.58579 19.4142C4.96086 19.7893 5.46957 20 6 20H15C15.5304 20 16.0391 19.7893 16.4142 19.4142C16.7893 19.0391 17 18.5304 17 18V15" stroke="#2C3E50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 15H12L20.5 6.49998C20.8978 6.10216 21.1213 5.56259 21.1213 4.99998C21.1213 4.43737 20.8978 3.89781 20.5 3.49998C20.1022 3.10216 19.5626 2.87866 19 2.87866C18.4374 2.87866 17.8978 3.10216 17.5 3.49998L9 12V15Z" stroke="#2C3E50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 5L19 8" stroke="#2C3E50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</a>
+    <button class="modal-delete"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 7H20" stroke="#2C3E50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10 11V17" stroke="#2C3E50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14 11V17" stroke="#2C3E50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M5 7L6 19C6 19.5304 6.21071 20.0391 6.58579 20.4142C6.96086 20.7893 7.46957 21 8 21H16C16.5304 21 17.0391 20.7893 17.4142 20.4142C17.7893 20.0391 18 19.5304 18 19L19 7" stroke="#2C3E50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 7V4C9 3.73478 9.10536 3.48043 9.29289 3.29289C9.48043 3.10536 9.73478 3 10 3H14C14.2652 3 14.5196 3.10536 14.7071 3.29289C14.8946 3.48043 15 3.73478 15 4V7" stroke="#2C3E50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+</button>
+    <div class="modal-header">
+        <div class="modal-header-title">Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="modal-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Odio sem in sit maecenas suspendisse maecenas pellentesque in semper. Ac nibh nulla eu netus dignissim fringilla porta orci odio.</p>
+        <div class="modal-appointment-row">
+            <div class="modal-appointment-label">Responsible</div>
+            <div class="modal-appointment-person">
+                <div class="modal-appointment-person-ico">J</div>
+                <div class="modal-appointment-person-content">
+                    <div class="modal-appointment-value">Jane Cooper</div>
+                    <div class="modal-appointment-label">Manager</div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-appointment-row">
+            <div class="modal-appointment-label">Date</div>
+            <div class="modal-appointment-value">Monday, January 10</div>
+        </div>
+        <div class="modal-appointment-columns">
+            <div class="modal-appointment-row">
+                <div class="modal-appointment-label">Start Time</div>
+                <div class="modal-appointment-value">9:20 AM</div>
+            </div>
+            <div class="modal-appointment-row">
+                <div class="modal-appointment-label">End Time</div>
+                <div class="modal-appointment-value">10:20 AM</div>
+            </div>
+        </div>
     </div>
 </div>
 <!-- /.modal -->    <script src="js/jquery.js"></script>

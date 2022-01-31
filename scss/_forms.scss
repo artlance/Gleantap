@@ -35,6 +35,13 @@ select.select {
         color: $theme-quaternary;
     }
 }
+input.input-datepicker-icon {
+    padding-right: 50px;
+    background-image: url('../images/date.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 8px) 50%;
+    background-size: 20px 20px;
+}
 .file-custom {
     width: 0;
     height: 0;
@@ -52,6 +59,12 @@ textarea.textarea {
     -webkit-overflow-scrolling: touch;
     overflow-scrolling: touch;
     scrollbar-width: none;
+    &.textarea-small {
+        height: 80px;
+    }
+    &.textarea-medium {
+        height: 135px;
+    }
     &::-webkit-scrollbar {
         width: 0;
         height: 0;
