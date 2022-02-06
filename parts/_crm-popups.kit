@@ -5,53 +5,84 @@
             <button class="notes-list-close popup-right-close" id="close-add-task-on-page"></button>
         </div>
         <form action="" class="popup-right-form popup-center-form add-task-form">
-            <input type="text" class="text-input popup-right-input" placeholder="Title" />
-            <div class="popup-center-dates">
-                <input type="date" placeholder="Due to" />
-                <select class="select popup-right-select">
-                    <option>Assigned to</option>
-                </select>
-            </div>
-            <select class="select popup-right-select">
-                <option>Contact person</option>
-            </select>
-            <select class="select popup-right-select">
-                <option>Type of task</option>
-            </select>
-            <textarea class="text-input popup-right-input popup-right-textarea popup-center-textarea" cols="30" rows="4" placeholder="Description"></textarea>
-            <div class="popup-center-attachment">
-                <span class="checklist-title popup-center-attachment-title">Attachment</span>
-            </div>
-            <div class="popup-center-file">
-                <label class="label" for="upload-file-task-on-page">
-                    <!-- @import "../images/upload-file-1.svg" -->
-                    <!-- @import "../images/uploaded-file.svg" -->
-                    <span class="title">+ Upload from your device</span>
-                    <ul class="files-list">
-                        <li class="files-list-item">
-                            <div class="files-list-item-icon">
-                                <img src="upload/template-5.png" />
-                            </div>
-                            <div class="files-list-item-text">
-                                image.png
-                                <button class="files-list-item-remove"></button>
-                            </div>
-                        </li>
-                        <li class="files-list-item">
-                            <div class="files-list-item-icon">
-                                <svg fill="none" viewBox="0 0 18 18">
-                                    <defs />
-                                    <path fill="#FFBF4B" d="M14.8 17.3H3.2a2.5 2.5 0 01-2.5-2.5V1.5a.8.8 0 01.8-.8h11.7a.8.8 0 01.8.8v8.3c0 1 .7 1.7 1.7 1.7.9 0 1.6.7 1.6 1.7v1.6a2.5 2.5 0 01-2.5 2.5zm0-4.1c-.4 0-.8.3-.8.8v.8a.8.8 0 001.7 0V14c0-.5-.4-.8-.9-.8zm-10-8.4a.8.8 0 000 1.7h5a.8.8 0 100-1.7h-5zm0 3.4a.8.8 0 000 1.6h5a.8.8 0 100-1.6h-5zm0 3.3a.8.8 0 000 1.7h2.5a.8.8 0 100-1.7H4.8z" />
-                                </svg>
-                            </div>
-                            <div class="files-list-item-text">
-                                docs.pdf
-                                <button class="files-list-item-remove"></button>
-                            </div>
-                        </li>
-                    </ul>
-                    <input type="file" name="csv" id="upload-file-task-on-page" />
-                </label>
+            <div>
+                <div class="ongoing-row">
+                    <div class="ongoing-col col-auto">
+                        <input type="text" class="input-text" placeholder="Title">
+                    </div>
+                </div>
+                <!-- /.ongoing-row -->
+                <div class="ongoing-row">
+                    <div class="ongoing-col col-auto">
+                        <input type="text" class="input-text mask-dob input-datepicker input-datepicker-icon" placeholder="Due to">
+                    </div>
+                </div>
+                <!-- /.ongoing-row -->
+                <div class="ongoing-row">
+                    <div class="ongoing-col col-auto">
+                        <select class="select">
+                            <option>Assigned to</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- /.ongoing-row -->
+                <div class="ongoing-row">
+                    <div class="ongoing-col col-auto">
+                        <select class="select">
+                            <option>Contact person</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- /.ongoing-row -->
+                <div class="ongoing-row">
+                    <div class="ongoing-col col-auto">
+                        <select class="select">
+                            <option>Type of task</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- /.ongoing-row -->
+                <div class="ongoing-row">
+                    <div class="ongoing-col col-auto">
+                        <textarea class="textarea textarea-medium" placeholder="Description"></textarea>
+                    </div>
+                </div>
+                <!-- /.ongoing-row -->
+                <div class="popup-center-attachment">
+                    <span class="checklist-title popup-center-attachment-title">Attachment</span>
+                </div>
+                <div class="popup-center-file">
+                    <label class="label" for="upload-file-task-on-page">
+                        <!-- @import "../images/upload-file-1.svg" -->
+                        <!-- @import "../images/uploaded-file.svg" -->
+                        <span class="title">+ Upload from your device</span>
+                        <ul class="files-list">
+                            <li class="files-list-item">
+                                <div class="files-list-item-icon">
+                                    <img src="upload/template-5.png" />
+                                </div>
+                                <div class="files-list-item-text">
+                                    image.png
+                                    <button class="files-list-item-remove"></button>
+                                </div>
+                            </li>
+                            <li class="files-list-item">
+                                <div class="files-list-item-icon">
+                                    <svg fill="none" viewBox="0 0 18 18">
+                                        <defs />
+                                        <path fill="#FFBF4B" d="M14.8 17.3H3.2a2.5 2.5 0 01-2.5-2.5V1.5a.8.8 0 01.8-.8h11.7a.8.8 0 01.8.8v8.3c0 1 .7 1.7 1.7 1.7.9 0 1.6.7 1.6 1.7v1.6a2.5 2.5 0 01-2.5 2.5zm0-4.1c-.4 0-.8.3-.8.8v.8a.8.8 0 001.7 0V14c0-.5-.4-.8-.9-.8zm-10-8.4a.8.8 0 000 1.7h5a.8.8 0 100-1.7h-5zm0 3.4a.8.8 0 000 1.6h5a.8.8 0 100-1.6h-5zm0 3.3a.8.8 0 000 1.7h2.5a.8.8 0 100-1.7H4.8z" />
+                                    </svg>
+                                </div>
+                                <div class="files-list-item-text">
+                                    docs.pdf
+                                    <button class="files-list-item-remove"></button>
+                                </div>
+                            </li>
+                        </ul>
+                        <input type="file" name="csv" id="upload-file-task-on-page" />
+                    </label>
+                </div>
+                <div class="ongoing-spacer"></div>
             </div>
             <button type="submit" class="blue-button popup-right-blue-button add-task-submit add-task-on-page-submit">
                 <!-- @import "../images/plus_1.svg" -->
@@ -79,20 +110,48 @@
                     <span class="blue-button-title">Mark as Done</span>
                 </button>
             </div>
-            <input type="text" class="text-input popup-right-input" placeholder="Title" />
-            <div class="popup-center-dates">
-                <input type="date" placeholder="Due to" />
-                <select class="select popup-right-select">
-                    <option>Assigned to</option>
-                </select>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <input type="text" class="input-text" placeholder="Title">
+                </div>
             </div>
-            <select class="select popup-right-select">
-                <option>Contact person</option>
-            </select>
-            <select class="select popup-right-select">
-                <option>Type of task</option>
-            </select>
-            <textarea class="text-input popup-right-input popup-right-textarea popup-center-textarea" cols="30" rows="4" placeholder="Description"></textarea>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <input type="text" class="input-text mask-dob input-datepicker input-datepicker-icon" placeholder="Due to">
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <select class="select">
+                        <option>Assigned to</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <select class="select">
+                        <option>Contact person</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <select class="select">
+                        <option>Type of task</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <textarea class="textarea textarea-medium" placeholder="Description"></textarea>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
             <div class="popup-center-attachment">
                 <span class="checklist-title popup-center-attachment-title">Attachment</span>
             </div>

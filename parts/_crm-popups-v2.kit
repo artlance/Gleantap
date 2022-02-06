@@ -1,3 +1,4 @@
+<div class="panel-mask"></div>
 <div class="popup" id="add-task-on-page">
     <div class="popup-right">
         <div class="popup-right-header">
@@ -1041,6 +1042,94 @@
     </div>
 </div>
 
+<div class="panel panel-w2" data-panel="panel-add-task">
+    <button class="panel-close"><!-- @import "../images/close.svg" --></button>
+    <div class="panel-top">
+        <div class="ongoing-caption">Add a task</div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <form action="" class="popup-right-form popup-center-form add-task-form">
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <input type="text" class="input-text" placeholder="Title">
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="popup-center-dates">
+                <input type="date" class="input-text" placeholder="Due to">
+                <select class="select popup-right-select">
+                    <option>Assigned to</option>
+                </select>
+            </div>
+            <select class="select popup-right-select">
+                <option>Contact person</option>
+            </select>
+            <select class="select popup-right-select">
+                <option>Type of task</option>
+            </select>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <textarea class="textarea textarea-small" placeholder="Description"></textarea>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="popup-center-checklist checklist">
+                <span class="checklist-title">Checklist</span>
+                <ul class="checklist-list">
+                    <li class="checklist-item">
+                        <label class="lead-table-check custom-checkbox checklist-check">
+                            <input type="checkbox" class="checklist-check-hiden">
+                            <span class="checklist-text">Task 001</span>
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </li>
+                    <li class="checklist-item">
+                        <label class="lead-table-check custom-checkbox checklist-check">
+                            <input type="checkbox" class="checklist-check-hiden">
+                            <span class="checklist-text">Task 002</span>
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </li>
+                    <li class="checklist-item">
+                        <label class="lead-table-check custom-checkbox checklist-check">
+                            <input type="checkbox" class="checklist-check-hiden">
+                            <span class="checklist-text">Task 003</span>
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="popup-center-attachment">
+                <span class="checklist-title popup-center-attachment-title">Attachment</span>
+            </div>
+            <div class="popup-center-file">
+                <label class="label" for="upload-file-task">
+                    <!-- @import "../images/upload-file-1.svg" -->
+                    <!-- @import "../images/uploaded-file.svg" -->
+                    <span class="title">+ Upload from your device</span>
+                    <input type="file" name="csv" id="upload-file-task">
+                </label>
+            </div>
+
+        </form>
+    </div>
+    <!-- /.panel-content -->
+    <div class="panel-bottom">
+        <div class="ongoing-options">
+            <div class="ongoing-option ongoing-option-full">
+                <button type="submit" class="button popup-right-blue-button add-task-submit">
+                    <!-- @import "../images/plus_1.svg" -->
+                    <span class="blue-button-title">Add a task</span>
+                </button>
+            </div>
+        </div>
+        <!-- /.ongoing-options -->
+    </div>
+    <!-- /.panel-bottom -->
+</div>
+<!-- /.panel -->
+
 <div class="popup" id="filters">
     <form class="popup-right">
         <div class="popup-right-header">
@@ -1146,7 +1235,7 @@
             </div>
             <div class="popup-right-accord accord">
                 <div class="accord-header text-input">
-                    <span class="accord-title">Leads</span>
+                    <span class="accord-title">Contacts</span>
                     <span class="accord-icon"></span>
                 </div>
                 <div class="accord-body">
@@ -1242,7 +1331,7 @@
             </div>
             <div class="popup-right-accord accord">
                 <div class="accord-header text-input">
-                    <span class="accord-title">Leads</span>
+                    <span class="accord-title">Opportunities</span>
                     <span class="accord-icon"></span>
                 </div>
                 <div class="accord-body">
@@ -1338,7 +1427,7 @@
             </div>
             <div class="popup-right-accord accord">
                 <div class="accord-header text-input">
-                    <span class="accord-title">Leads</span>
+                    <span class="accord-title">Emails</span>
                     <span class="accord-icon"></span>
                 </div>
                 <div class="accord-body">
@@ -1434,7 +1523,7 @@
             </div>
             <div class="popup-right-accord accord">
                 <div class="accord-header text-input">
-                    <span class="accord-title">Leads</span>
+                    <span class="accord-title">Calls</span>
                     <span class="accord-icon"></span>
                 </div>
                 <div class="accord-body">
@@ -1530,7 +1619,391 @@
             </div>
             <div class="popup-right-accord accord">
                 <div class="accord-header text-input">
-                    <span class="accord-title">Leads</span>
+                    <span class="accord-title">Meetings</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">SMS</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">Communication</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">Notes</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">Tasks</span>
                     <span class="accord-icon"></span>
                 </div>
                 <div class="accord-body">

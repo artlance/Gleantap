@@ -3,339 +3,348 @@
 <main class="main-site leads">
     <!-- @import "parts/_sidebar-crm.kit" -->
     <div class="content-site">
-        <h1 class="leads-title">Tasks</h1>
-        <section class="leads-header">
-            <input type="text" class="leads-header-input text-input tasks" placeholder="Find a task..." />
-            <div class="leads-header-right">
-                <select class="select sort-tasks-select">
-                    <option>Sort by: Task type</option>
-                </select>
-                <button class="square-button square-button--empty tasks-empty-button">
-                    <!-- @import "images/filter.svg" -->
-                    <span class="square-button-label">1</span>
-                </button>
-                <button style="display: none;" class="square-button square-button--empty tasks-empty-button" id="task-snooze">
-                    <!-- @import "images/watch.svg" -->
-                    <div class="task-snooze-popup">
-                        <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                        <input type="time" class="task-snooze-popup-time" value="07:00" />
-                        <select class="task-snooze-popup-daytime select">
-                            <option value="AM" selected>AM</option>
-                            <option value="PM">PM</option>
+        <div class="content-header-columns">
+            <div class="content-header-title">
+                <h1 class="leads-title">Tasks</h1>
+            </div>
+            <div class="content-header-toolbar">
+                <section class="leads-header">
+                    <input type="text" class="leads-header-input text-input tasks" placeholder="Find a task..." />
+                    <div class="leads-header-right">
+                        <select class="select sort-tasks-select">
+                            <option>Sort by: Task type</option>
                         </select>
-                        <input type="date" class="task-snooze-popup-date" />
+                        <button class="square-button square-button--empty tasks-empty-button">
+                            <!-- @import "images/filter.svg" -->
+                            <span class="square-button-label">1</span>
+                        </button>
+                        <button class="square-button square-button--empty tasks-empty-button" id="task-snooze">
+                            <!-- @import "images/watch.svg" -->
+                            <div class="task-snooze-popup">
+                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
+                                <input type="time" class="task-snooze-popup-time" value="07:00" />
+                                <select class="task-snooze-popup-daytime select">
+                                    <option value="AM" selected>AM</option>
+                                    <option value="PM">PM</option>
+                                </select>
+                                <input type="date" class="task-snooze-popup-date" />
+                            </div>
+                        </button>
+                        <button class="square-button square-button--empty tasks-empty-button">
+                            <!-- @import "images/empty-trash.svg" -->
+                        </button>
+                        <button class="leads-header-blue-button blue-button add-a-task-button" id="add-task-on-page-toggle" data-id="add-task-on-page">
+                            <!-- @import "images/plus_1.svg" -->
+                            <span class="blue-button-title">Add a task</span>
+                        </button>
                     </div>
-                </button>
-                <button style="display: none;" class="square-button square-button--empty tasks-empty-button">
-                    <!-- @import "images/empty-trash.svg" -->
-                </button>
-                <button class="leads-header-blue-button blue-button add-a-task-button" id="add-task-on-page-toggle" data-id="add-task-on-page">
-                    <!-- @import "images/plus_1.svg" -->
-                    <span class="blue-button-title">Add a task</span>
-                </button>
+                </section>
             </div>
-        </section>
-        <section class="leads-table">
-            <div class="leads-table-row leads-table-header tasks">
-                <div class="leads-table-td">
-                    <label class="lead-table-check custom-checkbox">
-                        <input type="checkbox" class="custom-checkbox-hiden" />
-                        <span class="custom-checkbox-check"></span>
-                    </label>
-                </div>
-                <div class="leads-table-td">
-                    <span class="leads-table-title tasks">task</span>
-                    <button class="sort-button tasks"></button>
-                </div>
-                <div class="leads-table-td">
-                    <span class="leads-table-title">due to...</span>
-                </div>
-                <div class="leads-table-td">
-                    <span class="leads-table-title">assign to</span>
-                </div>
-                <div class="leads-table-td">
-                    <span class="leads-table-title">contact person</span>
-                </div>
-                <div class="leads-table-td">
-                    <!-- <span class="leads-table-title" id="task-description">description</span> -->
-                </div>
-            </div>
-            <div class="leads-table-body tasks">
-                <div class="leads-table-row tasks" data-id="1">
+        </div>
+        <!-- /.content-header-columns -->
+        <div class="leads-table-overflow">
+            <section class="leads-table">
+                <div class="leads-table-row leads-table-header tasks">
                     <div class="leads-table-td">
                         <label class="lead-table-check custom-checkbox">
                             <input type="checkbox" class="custom-checkbox-hiden" />
                             <span class="custom-checkbox-check"></span>
                         </label>
                     </div>
-                    <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                        <span class="leads-table-text leads-table-text--bold">Create landing page</span>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title tasks">task</span>
+                        <button class="sort-button tasks"></button>
                     </div>
                     <div class="leads-table-td">
-                        <span class="leads-table-text tasks">10/02/2021</span>
+                        <span class="leads-table-title">due to...</span>
                     </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title">assign to</span>
                     </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title">contact person</span>
                     </div>
-                    <div class="leads-table-td leads-table-notes tasks">
-                        <!-- @import "images/note.svg" -->
-                        <!-- @import "parts/notes-list-for-tasks.kit" -->
-                        <!-- @import "images/watch-snooze-task.svg" -->
-                        <div class="task-snooze-popup">
-                            <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                            <input type="time" class="task-snooze-popup-time" value="07:00" />
-                            <select class="task-snooze-popup-daytime select">
-                                <option value="AM" selected>AM</option>
-                                <option value="PM">PM</option>
-                            </select>
-                            <input type="date" class="task-snooze-popup-date" />
+                    <div class="leads-table-td">
+                        <!-- <span class="leads-table-title" id="task-description">description</span> -->
+                    </div>
+                </div>
+                <div class="leads-table-body tasks">
+                    <div class="leads-table-row tasks" data-id="1">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
                         </div>
-                        <div class="remove-current-task">
-                            <!-- @import "images/trash-red.svg" -->
+                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
+                            <span class="leads-table-text leads-table-text--bold">Create landing page</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text tasks">10/02/2021</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes tasks">
+                            <!-- @import "images/note.svg" -->
+                            <!-- @import "parts/notes-list-for-tasks.kit" -->
+                            <!-- @import "images/watch-snooze-task.svg" -->
+                            <div class="task-snooze-popup">
+                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
+                                <input type="time" class="task-snooze-popup-time" value="07:00" />
+                                <select class="task-snooze-popup-daytime select">
+                                    <option value="AM" selected>AM</option>
+                                    <option value="PM">PM</option>
+                                </select>
+                                <input type="date" class="task-snooze-popup-date" />
+                            </div>
+                            <div class="remove-current-task">
+                                <!-- @import "images/trash-red.svg" -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row tasks" data-id="2">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
+                            <span class="leads-table-text leads-table-text--bold">Designing Iconset 2.0</span>
+                        </div>
+                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
+                            <span class="leads-table-text tasks">10/02/2021</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes tasks">
+                            <!-- @import "images/note.svg" -->
+                            <!-- @import "parts/notes-list-for-tasks.kit" -->
+                            <!-- @import "images/watch-snooze-task.svg" -->
+                            <div class="task-snooze-popup">
+                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
+                                <input type="time" class="task-snooze-popup-time" value="07:00" />
+                                <select class="task-snooze-popup-daytime select">
+                                    <option value="AM" selected>AM</option>
+                                    <option value="PM">PM</option>
+                                </select>
+                                <input type="date" class="task-snooze-popup-date" />
+                            </div>
+                            <div class="remove-current-task">
+                                <!-- @import "images/trash-red.svg" -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row tasks" data-id="3">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
+                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text tasks">10/02/2021</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes tasks">
+                            <!-- @import "images/note.svg" -->
+                            <!-- @import "parts/notes-list-for-tasks.kit" -->
+                            <!-- @import "images/watch-snooze-task.svg" -->
+                            <div class="task-snooze-popup">
+                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
+                                <input type="time" class="task-snooze-popup-time" value="07:00" />
+                                <select class="task-snooze-popup-daytime select">
+                                    <option value="AM" selected>AM</option>
+                                    <option value="PM">PM</option>
+                                </select>
+                                <input type="date" class="task-snooze-popup-date" />
+                            </div>
+                            <div class="remove-current-task">
+                                <!-- @import "images/trash-red.svg" -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row tasks" data-id="4">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
+                            <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text tasks">10/02/2021</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes tasks">
+                            <!-- @import "images/note.svg" -->
+                            <!-- @import "parts/notes-list-for-tasks.kit" -->
+                            <!-- @import "images/watch-snooze-task.svg" -->
+                            <div class="task-snooze-popup">
+                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
+                                <input type="time" class="task-snooze-popup-time" value="07:00" />
+                                <select class="task-snooze-popup-daytime select">
+                                    <option value="AM" selected>AM</option>
+                                    <option value="PM">PM</option>
+                                </select>
+                                <input type="date" class="task-snooze-popup-date" />
+                            </div>
+                            <div class="remove-current-task">
+                                <!-- @import "images/trash-red.svg" -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row tasks" data-id="5">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
+                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text tasks">10/02/2021</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes tasks">
+                            <!-- @import "images/note.svg" -->
+                            <!-- @import "parts/notes-list-for-tasks.kit" -->
+                            <!-- @import "images/watch-snooze-task.svg" -->
+                            <div class="task-snooze-popup">
+                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
+                                <input type="time" class="task-snooze-popup-time" value="07:00" />
+                                <select class="task-snooze-popup-daytime select">
+                                    <option value="AM" selected>AM</option>
+                                    <option value="PM">PM</option>
+                                </select>
+                                <input type="date" class="task-snooze-popup-date" />
+                            </div>
+                            <div class="remove-current-task">
+                                <!-- @import "images/trash-red.svg" -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row tasks" data-id="6">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
+                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text tasks">10/02/2021</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes tasks">
+                            <!-- @import "images/note.svg" -->
+                            <!-- @import "parts/notes-list-for-tasks.kit" -->
+                            <!-- @import "images/watch-snooze-task.svg" -->
+                            <div class="task-snooze-popup">
+                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
+                                <input type="time" class="task-snooze-popup-time" value="07:00" />
+                                <select class="task-snooze-popup-daytime select">
+                                    <option value="AM" selected>AM</option>
+                                    <option value="PM">PM</option>
+                                </select>
+                                <input type="date" class="task-snooze-popup-date" />
+                            </div>
+                            <div class="remove-current-task">
+                                <!-- @import "images/trash-red.svg" -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row tasks" data-id="7">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
+                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text tasks">10/02/2021</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes tasks">
+                            <!-- @import "images/note.svg" -->
+                            <!-- @import "parts/notes-list-for-tasks.kit" -->
+                            <!-- @import "images/watch-snooze-task.svg" -->
+                            <div class="task-snooze-popup">
+                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
+                                <input type="time" class="task-snooze-popup-time" value="07:00" />
+                                <select class="task-snooze-popup-daytime select">
+                                    <option value="AM" selected>AM</option>
+                                    <option value="PM">PM</option>
+                                </select>
+                                <input type="date" class="task-snooze-popup-date" />
+                            </div>
+                            <div class="remove-current-task">
+                                <!-- @import "images/trash-red.svg" -->
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="leads-table-row tasks" data-id="2">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                        <span class="leads-table-text leads-table-text--bold">Designing Iconset 2.0</span>
-                    </div>
-                    <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                        <span class="leads-table-text tasks">10/02/2021</span>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes tasks">
-                        <!-- @import "images/note.svg" -->
-                        <!-- @import "parts/notes-list-for-tasks.kit" -->
-                        <!-- @import "images/watch-snooze-task.svg" -->
-                        <div class="task-snooze-popup">
-                            <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                            <input type="time" class="task-snooze-popup-time" value="07:00" />
-                            <select class="task-snooze-popup-daytime select">
-                                <option value="AM" selected>AM</option>
-                                <option value="PM">PM</option>
-                            </select>
-                            <input type="date" class="task-snooze-popup-date" />
-                        </div>
-                        <div class="remove-current-task">
-                            <!-- @import "images/trash-red.svg" -->
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row tasks" data-id="3">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text tasks">10/02/2021</span>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes tasks">
-                        <!-- @import "images/note.svg" -->
-                        <!-- @import "parts/notes-list-for-tasks.kit" -->
-                        <!-- @import "images/watch-snooze-task.svg" -->
-                        <div class="task-snooze-popup">
-                            <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                            <input type="time" class="task-snooze-popup-time" value="07:00" />
-                            <select class="task-snooze-popup-daytime select">
-                                <option value="AM" selected>AM</option>
-                                <option value="PM">PM</option>
-                            </select>
-                            <input type="date" class="task-snooze-popup-date" />
-                        </div>
-                        <div class="remove-current-task">
-                            <!-- @import "images/trash-red.svg" -->
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row tasks" data-id="4">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                        <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text tasks">10/02/2021</span>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes tasks">
-                        <!-- @import "images/note.svg" -->
-                        <!-- @import "parts/notes-list-for-tasks.kit" -->
-                        <!-- @import "images/watch-snooze-task.svg" -->
-                        <div class="task-snooze-popup">
-                            <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                            <input type="time" class="task-snooze-popup-time" value="07:00" />
-                            <select class="task-snooze-popup-daytime select">
-                                <option value="AM" selected>AM</option>
-                                <option value="PM">PM</option>
-                            </select>
-                            <input type="date" class="task-snooze-popup-date" />
-                        </div>
-                        <div class="remove-current-task">
-                            <!-- @import "images/trash-red.svg" -->
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row tasks" data-id="5">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text tasks">10/02/2021</span>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes tasks">
-                        <!-- @import "images/note.svg" -->
-                        <!-- @import "parts/notes-list-for-tasks.kit" -->
-                        <!-- @import "images/watch-snooze-task.svg" -->
-                        <div class="task-snooze-popup">
-                            <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                            <input type="time" class="task-snooze-popup-time" value="07:00" />
-                            <select class="task-snooze-popup-daytime select">
-                                <option value="AM" selected>AM</option>
-                                <option value="PM">PM</option>
-                            </select>
-                            <input type="date" class="task-snooze-popup-date" />
-                        </div>
-                        <div class="remove-current-task">
-                            <!-- @import "images/trash-red.svg" -->
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row tasks" data-id="6">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text tasks">10/02/2021</span>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes tasks">
-                        <!-- @import "images/note.svg" -->
-                        <!-- @import "parts/notes-list-for-tasks.kit" -->
-                        <!-- @import "images/watch-snooze-task.svg" -->
-                        <div class="task-snooze-popup">
-                            <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                            <input type="time" class="task-snooze-popup-time" value="07:00" />
-                            <select class="task-snooze-popup-daytime select">
-                                <option value="AM" selected>AM</option>
-                                <option value="PM">PM</option>
-                            </select>
-                            <input type="date" class="task-snooze-popup-date" />
-                        </div>
-                        <div class="remove-current-task">
-                            <!-- @import "images/trash-red.svg" -->
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row tasks" data-id="7">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text tasks">10/02/2021</span>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes tasks">
-                        <!-- @import "images/note.svg" -->
-                        <!-- @import "parts/notes-list-for-tasks.kit" -->
-                        <!-- @import "images/watch-snooze-task.svg" -->
-                        <div class="task-snooze-popup">
-                            <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                            <input type="time" class="task-snooze-popup-time" value="07:00" />
-                            <select class="task-snooze-popup-daytime select">
-                                <option value="AM" selected>AM</option>
-                                <option value="PM">PM</option>
-                            </select>
-                            <input type="date" class="task-snooze-popup-date" />
-                        </div>
-                        <div class="remove-current-task">
-                            <!-- @import "images/trash-red.svg" -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </div>
 </main>
 <!-- @import "parts/_crm-popups.kit" -->

@@ -75,594 +75,722 @@
     </div>
     <!-- /.sidebar-top -->
 </aside>    <div class="content-site">
-        <h1 class="leads-title">Leads</h1>
-        <section class="leads-header">
-            <input type="text" class="leads-header-input text-input" placeholder="Find a lead..." />
-            <div class="leads-header-buttons square-buttons">
-                <button class="square-buttons-button square-button" data-id="merge-leads" id="merge-leads-toggle">
-<svg width="19" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.1 5.8A3 3 0 008 8h4a5 5 0 015 4.1 3 3 0 11-2.1.1A3 3 0 0012 10H8a5 5 0 01-3-1v3.2a3 3 0 11-2 0V5.8a3 3 0 112.1 0z" fill="#3C68EC"/></svg>                    <span class="square-button-help">Merge lead</span>
-                </button>
-                <button style="display: none;" class="square-buttons-button square-button" data-id="add-note" id="toggle-add-note">
-<svg width="18" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.24 16H0v-4.24L11.44.32a1 1 0 011.4 0l2.84 2.83a1 1 0 010 1.42L4.24 16zM0 18h18v2H0v-2z" fill="#3C68EC"/></svg>                    <span class="square-button-help">Add a note about call</span>
-                </button>
-                <button class="square-buttons-button square-button" data-id="add-task" id="toggle-add-task">
-<svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 9V6l4 4-4 4v-3h-5v5h3l-4 4-4-4h3v-5H4v3l-4-4 4-4v3h5V4H6l4-4 4 4h-3v5h5z" fill="#3C68EC"/></svg>                    <span class="square-button-help">Full screen something</span>
-                </button>
-
-                <button style="display: none;" class="square-buttons-button square-button" data-id="chat-popup" id="chat-toggle">
-<svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 4V1a1 1 0 011-1h8a1 1 0 011 1v3h5v2h-2v13a1 1 0 01-1 1H3a1 1 0 01-1-1V6H0V4h5zm2-2v2h6V2H7z" fill="#3C68EC"/></svg>                    <span class="square-button-help">Remove lead</span>
-                </button>
+        <div class="content-header-columns">
+            <div class="content-header-title">
+                <h1 class="leads-title">Leads</h1>
             </div>
-            <div class="leads-header-right">
-                <button class="square-button square-button--empty" id="filters-toggle" data-id="filters">
-<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v2h18V0H0zm7 12h4v-2H7v2zm8-5H3V5h12v2z" fill="#1C2538"/></svg>                    <span class="square-button-label">1</span>
-                </button>
-                <button class="leads-header-blue-button blue-button" id="add-new-lead-toggle" data-id="add-new-lead">
-<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                    <span class="blue-button-title">Add a new lead</span>
-                </button>
+            <div class="content-header-toolbar">
+                <section class="leads-header">
+                    <div class="leads-header-buttons leads-header-buttons-hidden square-buttons">
+                        <a href="#" class="square-buttons-button square-button" data-id="merge-leads" id="merge-leads-toggle">
+<svg width="19" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.1 5.8A3 3 0 008 8h4a5 5 0 015 4.1 3 3 0 11-2.1.1A3 3 0 0012 10H8a5 5 0 01-3-1v3.2a3 3 0 11-2 0V5.8a3 3 0 112.1 0z" fill="#3C68EC"/></svg>                            <span class="square-button-help">Merge lead</span>
+                        </a>
+                        <a href="#" class="square-buttons-button square-button" data-id="chat-popup" id="chat-toggle">
+<svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 4V1a1 1 0 011-1h8a1 1 0 011 1v3h5v2h-2v13a1 1 0 01-1 1H3a1 1 0 01-1-1V6H0V4h5zm2-2v2h6V2H7z" fill="#3C68EC"/></svg>                            <span class="square-button-help">Remove lead</span>
+                        </a>
+                    </div>
+                    <input type="text" class="leads-header-input text-input" placeholder="Find a lead..." />
+                    <div class="leads-header-right">
+                        <button class="square-button square-button--empty" id="filters-toggle" data-id="filters">
+<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v2h18V0H0zm7 12h4v-2H7v2zm8-5H3V5h12v2z" fill="#1C2538"/></svg>                            <span class="square-button-label">1</span>
+                        </button>
+                        <button class="leads-header-blue-button blue-button" id="add-new-lead-toggle" data-id="add-new-lead">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                            <span class="blue-button-title">Add a new lead</span>
+                        </button>
+                    </div>
+                </section>
             </div>
-        </section>
-        <section class="leads-table">
-            <div class="leads-table-row leads-table-header">
-                <div class="leads-table-td">
-                    <label class="lead-table-check custom-checkbox">
-                        <input type="checkbox" class="custom-checkbox-hiden" />
-                        <span class="custom-checkbox-check"></span>
-                    </label>
-                </div>
-                <div class="leads-table-td">
-                    <span class="leads-table-title">lead name</span>
-                    <div class="lead-table-sort sort">
-                        <button class="sort-button sort-button"></button>
-                        <button class="sort-button sort-button sort-button--down"></button>
-                    </div>
-                </div>
-                <div class="leads-table-td">
-                    <span class="leads-table-title" id="contact-title">contact</span>
-                    <div class="lead-table-sort sort">
-                        <button class="sort-button sort-button"></button>
-                        <button class="sort-button sort-button sort-button--down"></button>
-                    </div>
-                </div>
-                <div class="leads-table-td">
-                    <span class="leads-table-title">stages</span>
-                    <div class="lead-table-sort sort">
-                        <button class="sort-button sort-button"></button>
-                        <button class="sort-button sort-button sort-button--down"></button>
-                    </div>
-                </div>
-                <div class="leads-table-td">
-                    <span class="leads-table-title">value</span>
-                    <div class="lead-table-sort sort">
-                        <button class="sort-button sort-button"></button>
-                        <button class="sort-button sort-button sort-button--down"></button>
-                    </div>
-                </div>
-                <div class="leads-table-td">
-                </div>
-            </div>
-            <div class="leads-table-body">
-                <div class="leads-table-row" data-id="1">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Qualify</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 0.00</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
         </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row" data-id="2">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Pitch</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 250.00</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row" data-id="3">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Qualify</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 10.99</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row" data-id="4">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Pitch</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 199.00</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">UI Kit for Mobile apps</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row" data-id="5">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Qualify</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 0.00</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row" data-id="6">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Pitch</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 250.00</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row" data-id="7">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Qualify</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 10.99</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
+        <!-- /.content-header-columns -->
+        <div class="leads-table-overflow">
+            <section class="leads-table">
                 <div class="popup-right-file uploaded" id="add-lead-success">
                     <label class="label" for="upload-csv-lead">
 <svg height="17" width="17" class="file-uploaded" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 17"><defs/><path fill="#99DC13" d="M8.5 16.8A8.3 8.3 0 118.5.2a8.3 8.3 0 010 16.6zm0-1.6a6.7 6.7 0 100-13.4 6.7 6.7 0 000 13.4zm-.8-3.4L4 8.3l1.2-1.2 2.4 2.4 4.7-4.7 1.2 1.1-6 6z"/></svg>                        <span class="title">New lead added successfully</span>
                         <button id="undo-new-lead">Undo</button>
                     </label>
                 </div>
-            </div>
-        </section>
+                <div class="leads-table-row leads-table-header">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title">lead name</span>
+                        <div class="lead-table-sort sort">
+                            <button class="sort-button sort-button"></button>
+                            <button class="sort-button sort-button sort-button--down"></button>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title">Date added</span>
+                        <div class="lead-table-sort sort">
+                            <button class="sort-button sort-button"></button>
+                            <button class="sort-button sort-button sort-button--down"></button>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title" id="contact-title">contact</span>
+                        <div class="lead-table-sort sort">
+                            <button class="sort-button sort-button"></button>
+                            <button class="sort-button sort-button sort-button--down"></button>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title">stages</span>
+                        <div class="lead-table-sort sort">
+                            <button class="sort-button sort-button"></button>
+                            <button class="sort-button sort-button sort-button--down"></button>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title">value</span>
+                        <div class="lead-table-sort sort">
+                            <button class="sort-button sort-button"></button>
+                            <button class="sort-button sort-button sort-button--down"></button>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title">notes</span>
+                        <div class="lead-table-sort sort">
+                            <button class="sort-button sort-button"></button>
+                            <button class="sort-button sort-button sort-button--down"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-body">
+                    <div class="leads-table-row" data-id="1">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Qualify</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 0.00</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row" data-id="2">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Pitch</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 250.00</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row" data-id="3">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Qualify</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 10.99</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row" data-id="4">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Pitch</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 199.00</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">UI Kit for Mobile apps</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row" data-id="5">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Qualify</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 0.00</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row" data-id="6">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Pitch</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 250.00</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row" data-id="7">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Qualify</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 10.99</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- /.leads-table-overflow -->
     </div>
 </main>
+<div class="panel-mask"></div>
 <div class="popup" id="add-task-on-page">
     <div class="popup-right">
         <div class="popup-right-header">
@@ -1649,6 +1777,96 @@
     </div>
 </div>
 
+<div class="panel panel-w2" data-panel="panel-add-task">
+    <button class="panel-close"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5">
+<path d="M11 9.70376L15.5375 5.16626L16.8337 6.46243L12.2962 10.9999L16.8337 15.5374L15.5375 16.8336L11 12.2961L6.4625 16.8336L5.16634 15.5374L9.70384 10.9999L5.16634 6.46243L6.4625 5.16626L11 9.70376Z" fill="#1C2538" class="svg-fill"/>
+</g>
+</svg>
+</button>
+    <div class="panel-top">
+        <div class="ongoing-caption">Add a task</div>
+    </div>
+    <!-- /.panel-top -->
+    <div class="panel-content">
+        <form action="" class="popup-right-form popup-center-form add-task-form">
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <input type="text" class="input-text" placeholder="Title">
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="popup-center-dates">
+                <input type="date" class="input-text" placeholder="Due to">
+                <select class="select popup-right-select">
+                    <option>Assigned to</option>
+                </select>
+            </div>
+            <select class="select popup-right-select">
+                <option>Contact person</option>
+            </select>
+            <select class="select popup-right-select">
+                <option>Type of task</option>
+            </select>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <textarea class="textarea textarea-small" placeholder="Description"></textarea>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="popup-center-checklist checklist">
+                <span class="checklist-title">Checklist</span>
+                <ul class="checklist-list">
+                    <li class="checklist-item">
+                        <label class="lead-table-check custom-checkbox checklist-check">
+                            <input type="checkbox" class="checklist-check-hiden">
+                            <span class="checklist-text">Task 001</span>
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </li>
+                    <li class="checklist-item">
+                        <label class="lead-table-check custom-checkbox checklist-check">
+                            <input type="checkbox" class="checklist-check-hiden">
+                            <span class="checklist-text">Task 002</span>
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </li>
+                    <li class="checklist-item">
+                        <label class="lead-table-check custom-checkbox checklist-check">
+                            <input type="checkbox" class="checklist-check-hiden">
+                            <span class="checklist-text">Task 003</span>
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="popup-center-attachment">
+                <span class="checklist-title popup-center-attachment-title">Attachment</span>
+            </div>
+            <div class="popup-center-file">
+                <label class="label" for="upload-file-task">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg><svg height="17" width="17" class="file-uploaded" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 17"><defs/><path fill="#99DC13" d="M8.5 16.8A8.3 8.3 0 118.5.2a8.3 8.3 0 010 16.6zm0-1.6a6.7 6.7 0 100-13.4 6.7 6.7 0 000 13.4zm-.8-3.4L4 8.3l1.2-1.2 2.4 2.4 4.7-4.7 1.2 1.1-6 6z"/></svg>                    <span class="title">+ Upload from your device</span>
+                    <input type="file" name="csv" id="upload-file-task">
+                </label>
+            </div>
+
+        </form>
+    </div>
+    <!-- /.panel-content -->
+    <div class="panel-bottom">
+        <div class="ongoing-options">
+            <div class="ongoing-option ongoing-option-full">
+                <button type="submit" class="button popup-right-blue-button add-task-submit">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                    <span class="blue-button-title">Add a task</span>
+                </button>
+            </div>
+        </div>
+        <!-- /.ongoing-options -->
+    </div>
+    <!-- /.panel-bottom -->
+</div>
+<!-- /.panel -->
+
 <div class="popup" id="filters">
     <form class="popup-right">
         <div class="popup-right-header">
@@ -1754,7 +1972,7 @@
             </div>
             <div class="popup-right-accord accord">
                 <div class="accord-header text-input">
-                    <span class="accord-title">Leads</span>
+                    <span class="accord-title">Contacts</span>
                     <span class="accord-icon"></span>
                 </div>
                 <div class="accord-body">
@@ -1850,7 +2068,7 @@
             </div>
             <div class="popup-right-accord accord">
                 <div class="accord-header text-input">
-                    <span class="accord-title">Leads</span>
+                    <span class="accord-title">Opportunities</span>
                     <span class="accord-icon"></span>
                 </div>
                 <div class="accord-body">
@@ -1946,7 +2164,7 @@
             </div>
             <div class="popup-right-accord accord">
                 <div class="accord-header text-input">
-                    <span class="accord-title">Leads</span>
+                    <span class="accord-title">Emails</span>
                     <span class="accord-icon"></span>
                 </div>
                 <div class="accord-body">
@@ -2042,7 +2260,7 @@
             </div>
             <div class="popup-right-accord accord">
                 <div class="accord-header text-input">
-                    <span class="accord-title">Leads</span>
+                    <span class="accord-title">Calls</span>
                     <span class="accord-icon"></span>
                 </div>
                 <div class="accord-body">
@@ -2138,7 +2356,391 @@
             </div>
             <div class="popup-right-accord accord">
                 <div class="accord-header text-input">
-                    <span class="accord-title">Leads</span>
+                    <span class="accord-title">Meetings</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">SMS</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">Communication</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">Notes</span>
+                    <span class="accord-icon"></span>
+                </div>
+                <div class="accord-body">
+                    <div class="accord-list">
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <select class="select popup-right-select accord-item">
+                            <option>Is any of</option>
+                        </select>
+                        <select class="select popup-right-select accord-item">
+                            <option>Andrew Vynarchyk</option>
+                        </select>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Current Status</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date created</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Date last updated</span>
+                        </label>
+                        <label class="lead-table-check custom-checkbox accord-item">
+                            <input type="checkbox" class="custom-checkbox-hiden">
+                            <span class="custom-checkbox-check"></span>
+                            <span class="accord-item-text">Created by</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-right-accord accord">
+                <div class="accord-header text-input">
+                    <span class="accord-title">Tasks</span>
                     <span class="accord-icon"></span>
                 </div>
                 <div class="accord-body">

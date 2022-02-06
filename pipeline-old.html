@@ -28,16 +28,16 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.4115 7.235C17.3316 6.41167 15.8681 6 14.0208 6C12.6875 6 11.4896 6.29833 10.4271 6.895C9.36458 7.49167 8.52778 8.34833 7.91667 9.465C7.30556 10.5817 7 11.9267 7 13.5C7 14.7 7.18056 15.765 7.54167 16.695C7.90278 17.625 8.40451 18.41 9.04688 19.05C9.68924 19.69 10.4358 20.175 11.2865 20.505C12.1372 20.835 13.0486 21 14.0208 21C15.4605 21 16.6985 20.7048 17.735 20.1145L16.1701 18.3389L16.1719 18.3325L16.0588 18.384C15.514 18.6209 14.8867 18.7362 14.1771 18.73C13.1701 18.7167 12.3316 18.4933 11.6615 18.06C10.9913 17.6267 10.4896 17.0217 10.1562 16.245C9.82292 15.4683 9.65625 14.5533 9.65625 13.5C9.65625 12.4467 9.82465 11.5267 10.1615 10.74C10.4983 9.95333 11 9.34333 11.6667 8.91C12.3333 8.47667 13.1701 8.26667 14.1771 8.28L14.3012 8.28133C15.2454 8.30169 16.0269 8.55625 16.6458 9.045C17.2888 9.55271 17.7528 10.2305 18.0378 11.0785L20.2569 9.65816C20.1491 9.40104 20.0281 9.15644 19.894 8.92439C19.5086 8.25785 19.0144 7.69472 18.4115 7.235ZM20.9583 13.15H14.4884L13.331 15.04H18.2917L18.2684 15.1844C18.1377 15.9472 17.9024 16.5874 17.5625 17.105L17.4939 17.2058L19.1315 19.0396C19.5362 18.6228 19.8795 18.1479 20.1615 17.615C20.7205 16.5583 21 15.35 21 13.99C21 13.95 20.9965 13.8267 20.9896 13.62L20.9837 13.4744C20.9794 13.3835 20.9742 13.3052 20.9681 13.2394L20.9583 13.15Z" fill="white"/>
 </svg>
 </span>
-            <span class="sidebar-header-logo-text">CRM</span>
+            <span class="sidebar-header-logo-text">Campaigns</span>
         </a>
     </div>
     <!-- /.sidebar-header -->
 </header>
 <aside class="sidebar-site">
     <div class="sidebar-top">
-        <div class="sidebar-header crm-sidebar-header">
+        <div class="sidebar-header">
             <div class="sidebar-header-navigation">
-                <button><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <button id="toggle-sidebar"><svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.625 3.5H18.375V5.25H2.625V3.5ZM2.625 9.625H18.375V11.375H2.625V9.625ZM18.375 15.75H2.625V17.5H18.375V15.75Z" fill="white"/>
 </svg>
 </button>
@@ -48,118 +48,1127 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.4115 7.235C17.3316 6.41167 15.8681 6 14.0208 6C12.6875 6 11.4896 6.29833 10.4271 6.895C9.36458 7.49167 8.52778 8.34833 7.91667 9.465C7.30556 10.5817 7 11.9267 7 13.5C7 14.7 7.18056 15.765 7.54167 16.695C7.90278 17.625 8.40451 18.41 9.04688 19.05C9.68924 19.69 10.4358 20.175 11.2865 20.505C12.1372 20.835 13.0486 21 14.0208 21C15.4605 21 16.6985 20.7048 17.735 20.1145L16.1701 18.3389L16.1719 18.3325L16.0588 18.384C15.514 18.6209 14.8867 18.7362 14.1771 18.73C13.1701 18.7167 12.3316 18.4933 11.6615 18.06C10.9913 17.6267 10.4896 17.0217 10.1562 16.245C9.82292 15.4683 9.65625 14.5533 9.65625 13.5C9.65625 12.4467 9.82465 11.5267 10.1615 10.74C10.4983 9.95333 11 9.34333 11.6667 8.91C12.3333 8.47667 13.1701 8.26667 14.1771 8.28L14.3012 8.28133C15.2454 8.30169 16.0269 8.55625 16.6458 9.045C17.2888 9.55271 17.7528 10.2305 18.0378 11.0785L20.2569 9.65816C20.1491 9.40104 20.0281 9.15644 19.894 8.92439C19.5086 8.25785 19.0144 7.69472 18.4115 7.235ZM20.9583 13.15H14.4884L13.331 15.04H18.2917L18.2684 15.1844C18.1377 15.9472 17.9024 16.5874 17.5625 17.105L17.4939 17.2058L19.1315 19.0396C19.5362 18.6228 19.8795 18.1479 20.1615 17.615C20.7205 16.5583 21 15.35 21 13.99C21 13.95 20.9965 13.8267 20.9896 13.62L20.9837 13.4744C20.9794 13.3835 20.9742 13.3052 20.9681 13.2394L20.9583 13.15Z" fill="white"/>
 </svg>
 </span>
-                <span class="sidebar-header-logo-text">CRM</span>
+                <span class="sidebar-header-logo-text">Campaigns</span>
             </a>
         </div>
         <!-- /.sidebar-header -->
+        <div class="sidebar-autor">
+            <a href="#" class="sidebar-autor-link">
+                <span class="sidebar-autor-image">
+                    <img src="upload/avatar.jpg" alt="">
+                </span>
+                <span class="sidebar-autor-content">
+                    <span class="sidebar-autor-name">Wilhelm Dowall</span>
+                    <span class="sidebar-autor-phone">(463) 929-6027</span>
+                </span>
+                <span class="sidebar-autor-drop"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.99999 3.78145L8.29999 0.481445L9.24266 1.42411L4.99999 5.66678L0.757324 1.42411L1.69999 0.481445L4.99999 3.78145Z" fill="white"/>
+</svg>
+</span>
+            </a>
+        </div>
         <ul class="sidebar-navigation">
-            <li class="active">
+            <li class="">
                 <a href="#">
-                    <span class="sidebar-navigation-icon"><svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M11 .17a10.84 10.84 0 110 21.67A10.84 10.84 0 0111 .17zM4.53 14.7c1.59 2.37 3.97 3.88 6.64 3.88 2.67 0 5.06-1.5 6.65-3.88a9.72 9.72 0 00-13.3 0zM11 9.92a3.25 3.25 0 100-6.5 3.25 3.25 0 000 6.5z"/></svg></span> Leads
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.3333 21.25C20.8396 21.25 21.25 20.8396 21.25 20.3333V10.6992C21.2502 10.4161 21.1196 10.1488 20.8962 9.97501L13.5628 4.27151C13.2318 4.01399 12.7682 4.01399 12.4372 4.27151L5.10383 9.97501C4.8804 10.1488 4.7498 10.4161 4.75 10.6992V20.3333C4.75 20.8396 5.16041 21.25 5.66667 21.25H20.3333ZM12.0833 19.4167V13.9167H13.9167V19.4167H12.0833Z" fill="white"/>
+</svg>
+</span>
+                    Dashboard
                 </a>
             </li>
-            <li>
-                <a href="#">
-                    <span class="sidebar-navigation-icon"><svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg></span> Tasks
+            <li class="">
+                <a href="create-campaign.html">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.83325 10.2445C3.83228 8.78602 4.4116 7.38707 5.44342 6.35629C6.47524 5.3255 7.87477 4.74757 9.33325 4.75001H16.6666C19.7035 4.75001 22.1666 7.22042 22.1666 10.2445V21.25H9.33325C6.29634 21.25 3.83325 18.7796 3.83325 15.7555V10.2445ZM14.8333 12.0833V13.9167H16.6666V12.0833H14.8333ZM9.33325 13.9167V12.0833H11.1666V13.9167H9.33325Z" fill="white"/>
+</svg>
+</span>
+                    Conversations
+                    <span class="sidebar-navigation-drop"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.99999 3.78145L8.29999 0.481445L9.24266 1.42411L4.99999 5.66678L0.757324 1.42411L1.69999 0.481445L4.99999 3.78145Z" fill="white"/>
+</svg>
+</span>
+                    <div class="sidebar-navigation-number">21</div>
                 </a>
+                <ul>
+                    <li><a href="#">Templates</a></li>
+                </ul>
             </li>
-            <li>
-                <a href="#">
+            <li class="">
+                <a href="automations.html">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20.3359 6.81261L19.1584 5.63428L15.9167 8.87511L17.9792 10.9376L15.9167 13.0001L17.9792 15.0634L15.9167 17.1251L19.1576 20.3668L20.3359 19.1884L18.2734 17.1259L20.3359 15.0634L18.2734 13.0001L20.3359 10.9376L18.2734 8.87511L20.3359 6.81261ZM13.8334 6.37928C13.8333 6.28327 13.8 6.19025 13.7392 6.11594V6.11511C13.6692 6.02953 13.568 5.97529 13.458 5.96435C13.348 5.95341 13.2381 5.98666 13.1526 6.05678L8.74091 9.66678H5.50008C5.03984 9.66678 4.66675 10.0399 4.66675 10.5001V15.5001C4.66675 15.9603 5.03984 16.3334 5.50008 16.3334L8.74175 16.3326L13.1526 19.9434C13.2772 20.0456 13.4495 20.0668 13.5951 19.9978C13.7407 19.9288 13.8335 19.7821 13.8334 19.6209V6.37928Z" fill="white"/>
+</svg>
+</span>
+                    Automations
+                    <span class="sidebar-navigation-drop"><svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.99999 3.78145L8.29999 0.481445L9.24266 1.42411L4.99999 5.66678L0.757324 1.42411L1.69999 0.481445L4.99999 3.78145Z" fill="white"/>
+</svg>
+</span>
+                    <div class="sidebar-navigation-number">34</div>
+                </a>
+                <ul>
+                    <li>
+                        <a href="#">
+                            Chatbot
+                            <div class="sidebar-navigation-number red">5</div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="active opened">
+                <a href="pipeline.html">
                     <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M21.3334 5.5H4.66675V7.16667H21.3334V5.5ZM13.8334 20.5V22.1667H12.1667V20.5H5.50008C5.03984 20.5 4.66675 20.1269 4.66675 19.6667V8H21.3334V19.6667C21.3334 20.1269 20.9603 20.5 20.5001 20.5H13.8334ZM9.66675 11.3333C8.28604 11.3333 7.16675 12.4526 7.16675 13.8333C7.16675 15.214 8.28604 16.3333 9.66675 16.3333C11.0475 16.3333 12.1667 15.214 12.1667 13.8333H9.66675V11.3333ZM13.8334 13V11.3333H18.8334V13H13.8334ZM13.8334 14.6667V16.3333H18.8334V14.6667H13.8334Z" fill="white"/>
 </svg>
-</span> Pipeline
+</span>
+                    Pipeline
+                </a>
+            </li>
+            <li class="">
+                <a href="reports.html">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.8334 21.3334H7.16675C5.78604 21.3334 4.66675 20.2141 4.66675 18.8334V5.50008C4.66675 5.03984 5.03984 4.66675 5.50008 4.66675H17.1667C17.627 4.66675 18.0001 5.03984 18.0001 5.50008V15.5001H21.3334V18.8334C21.3334 20.2141 20.2141 21.3334 18.8334 21.3334ZM18.0001 17.1667V18.8334C18.0001 19.2937 18.3732 19.6667 18.8334 19.6667C19.2937 19.6667 19.6667 19.2937 19.6667 18.8334V17.1667H18.0001ZM8.00008 10.5001V8.83341H14.6667V10.5001H8.00008ZM8.00008 12.1667V13.8334H14.6667V12.1667H8.00008ZM8.00008 17.1667V15.5001H12.1667V17.1667H8.00008Z" fill="white"/>
+</svg>
+</span>
+                    Reports
                 </a>
             </li>
         </ul>
     </div>
     <!-- /.sidebar-top -->
-</aside>    <div class="content-site">
-        <div class="content-header-columns">
-            <div class="content-header-title">
-                <h1 class="leads-title">Tasks</h1>
+    <div class="sidebar-bottom">
+        <ul class="sidebar-navigation">
+            <li>
+                <a href="#">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.7588 15.8862L19.1389 14.2573V10.2435C19.1604 8.75308 18.642 7.30515 17.6793 6.1671C16.7166 5.02905 15.3746 4.27775 13.9012 4.05192C13.0461 3.93931 12.1768 4.01036 11.3513 4.26033C10.5258 4.5103 9.76311 4.93344 9.11412 5.50152C8.46513 6.0696 7.94475 6.76956 7.58771 7.55469C7.23066 8.33982 7.04517 9.19206 7.04359 10.0546V14.2573L5.42369 15.8862C5.22022 16.0931 5.08224 16.3553 5.02699 16.6402C4.97175 16.925 5.0017 17.2199 5.1131 17.4878C5.2245 17.7557 5.4124 17.9849 5.65331 18.1466C5.89423 18.3083 6.17747 18.3954 6.46763 18.3971H9.49145V18.703C9.53348 19.6167 9.93598 20.4764 10.6107 21.0938C11.2855 21.7112 12.1775 22.0359 13.0912 21.9968C14.005 22.0359 14.897 21.7112 15.5717 21.0938C16.2465 20.4764 16.649 19.6167 16.691 18.703V18.3971H19.7148C20.005 18.3954 20.2882 18.3083 20.5291 18.1466C20.7701 17.9849 20.958 17.7557 21.0694 17.4878C21.1808 17.2199 21.2107 16.925 21.1555 16.6402C21.1002 16.3553 20.9622 16.0931 20.7588 15.8862ZM14.8911 18.703C14.8412 19.1359 14.6262 19.5328 14.2909 19.8111C13.9556 20.0894 13.5259 20.2276 13.0912 20.197C12.6566 20.2276 12.2268 20.0894 11.8915 19.8111C11.5562 19.5328 11.3412 19.1359 11.2913 18.703V18.3971H14.8911V18.703Z" fill="white"/>
+</svg>
+</span>
+                    Notifications
+                    <div class="sidebar-navigation-number">3</div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.1364 4.28882C8.93621 4.68389 7.83076 5.32308 6.88959 6.16615V6.16707C7.2953 7.20405 7.20691 8.36932 6.64942 9.33324C6.09309 10.299 5.12703 10.9587 4.025 11.1253C3.76771 12.3621 3.76771 13.6386 4.025 14.8754C5.12686 15.0418 6.09288 15.7011 6.64942 16.6666C7.2072 17.6307 7.2956 18.7964 6.88959 19.8337C7.83084 20.6764 8.93629 21.3153 10.1364 21.7101C10.8316 20.8391 11.8857 20.3323 13.0001 20.3332C14.1143 20.3321 15.1684 20.8386 15.8638 21.7092C17.0639 21.3143 18.1693 20.6755 19.1106 19.8327C18.7046 18.7955 18.793 17.6298 19.3508 16.6657C19.931 15.6619 20.9118 15.0367 21.9752 14.8736C22.2323 13.6371 22.2323 12.3609 21.9752 11.1244C20.8731 10.9578 19.9071 10.2981 19.3508 9.33232C18.7933 8.3684 18.7049 7.20313 19.1106 6.16615C18.1694 5.32308 17.064 4.68389 15.8638 4.28882C15.1686 5.15976 14.1145 5.66656 13.0001 5.66565C11.8857 5.66656 10.8316 5.15976 10.1364 4.28882ZM15.7659 12.9959C15.7637 13.9827 15.233 14.8927 14.3751 15.3805C13.061 16.1276 11.3902 15.674 10.6343 14.3649C9.87848 13.0558 10.321 11.382 11.6251 10.6175C12.4764 10.1184 13.5299 10.1137 14.3856 10.6052C15.2413 11.0968 15.768 12.0091 15.7659 12.9959Z" fill="white"/>
+</svg>
+</span>
+                    Settings
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="sidebar-navigation-icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.33341 13.0001H8.83341C9.75389 13.0001 10.5001 13.7463 10.5001 14.6667V18.8334C10.5001 19.7539 9.75389 20.5001 8.83341 20.5001H6.33341C5.41294 20.5001 4.66675 19.7539 4.66675 18.8334V13.0001C4.66675 8.39758 8.39758 4.66675 13.0001 4.66675C17.6026 4.66675 21.3334 8.39758 21.3334 13.0001V18.8334C21.3334 19.7539 20.5872 20.5001 19.6667 20.5001H17.1667C16.2463 20.5001 15.5001 19.7539 15.5001 18.8334V14.6667C15.5001 13.7463 16.2463 13.0001 17.1667 13.0001H19.6667C19.6667 9.31818 16.682 6.33341 13.0001 6.33341C9.31818 6.33341 6.33341 9.31818 6.33341 13.0001Z" fill="white"/>
+</svg>
+</span>
+                    Help center
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.sidebar-bottom -->
+</aside>    <div class="content-site pipeline-content">
+        <h1 class="leads-title">Pipeline</h1>
+        <section class="leads-header">
+            <input id="pipeline-header-input" type="text" class="leads-header-input text-input tasks pipeline-search" placeholder="Find a pipeline..." />
+            <button id="pipeline-header-button" class="square-button square-button--empty tasks-empty-button pipeline-filters-mobile" id="filters-toggle-mobile" data-id="filters">
+<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v2h18V0H0zm7 12h4v-2H7v2zm8-5H3V5h12v2z" fill="#1C2538"/></svg>            </button>
+            <input id="leads-header-input" type="text" class="leads-header-input text-input hidden" placeholder="Find a lead..." />
+            <div id="leads-header-buttons" class="leads-header-buttons square-buttons hidden">
+                <button class="square-buttons-button square-button" data-id="merge-leads" id="merge-leads-toggle" disabled>
+<svg width="19" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.1 5.8A3 3 0 008 8h4a5 5 0 015 4.1 3 3 0 11-2.1.1A3 3 0 0012 10H8a5 5 0 01-3-1v3.2a3 3 0 11-2 0V5.8a3 3 0 112.1 0z" fill="#3C68EC"/></svg>                    <span class="square-button-help">Merge lead</span>
+                </button>
+                <button style="display: none;" class="square-buttons-button square-button" data-id="add-note" id="toggle-add-note">
+<svg width="18" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.24 16H0v-4.24L11.44.32a1 1 0 011.4 0l2.84 2.83a1 1 0 010 1.42L4.24 16zM0 18h18v2H0v-2z" fill="#3C68EC"/></svg>                    <span class="square-button-help">Add a note about call</span>
+                </button>
+                <button class="square-buttons-button square-button" data-id="add-task" id="toggle-add-task" disabled>
+<svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 9V6l4 4-4 4v-3h-5v5h3l-4 4-4-4h3v-5H4v3l-4-4 4-4v3h5V4H6l4-4 4 4h-3v5h5z" fill="#3C68EC"/></svg>                    <span class="square-button-help">Full screen something</span>
+                </button>
+
+                <button style="display: none;" class="square-buttons-button square-button" data-id="chat-popup" id="chat-toggle">
+<svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 4V1a1 1 0 011-1h8a1 1 0 011 1v3h5v2h-2v13a1 1 0 01-1 1H3a1 1 0 01-1-1V6H0V4h5zm2-2v2h6V2H7z" fill="#3C68EC"/></svg>                    <span class="square-button-help">Remove lead</span>
+                </button>
             </div>
-            <div class="content-header-toolbar">
-                <section class="leads-header">
-                    <input type="text" class="leads-header-input text-input tasks" placeholder="Find a task..." />
-                    <div class="leads-header-right">
-                        <select class="select sort-tasks-select">
-                            <option>Sort by: Task type</option>
-                        </select>
-                        <button class="square-button square-button--empty tasks-empty-button">
-<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v2h18V0H0zm7 12h4v-2H7v2zm8-5H3V5h12v2z" fill="#1C2538"/></svg>                            <span class="square-button-label">1</span>
-                        </button>
-                        <button class="square-button square-button--empty tasks-empty-button" id="task-snooze">
-<svg fill="none" height="18" width="21" viewBox="0 0 18 21"><defs/><path fill="#1C2538" d="M12 0H6v2h6V0zM8 13h2V7H8v6zm8-6.6L17.4 5c-.4-.5-.8-1-1.4-1.4L14.6 5A9 9 0 000 12a9 9 0 1016-5.6zM9 19A7 7 0 119 5a7 7 0 010 14z"/></svg>                            <div class="task-snooze-popup">
-                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                                <input type="time" class="task-snooze-popup-time" value="07:00" />
-                                <select class="task-snooze-popup-daytime select">
-                                    <option value="AM" selected>AM</option>
-                                    <option value="PM">PM</option>
-                                </select>
-                                <input type="date" class="task-snooze-popup-date" />
-                            </div>
-                        </button>
-                        <button class="square-button square-button--empty tasks-empty-button">
-<svg fill="none" width="20" height="20" viewBox="0 0 20 20"><defs/><path fill="#1C2538" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                        </button>
-                        <button class="leads-header-blue-button blue-button add-a-task-button" id="add-task-on-page-toggle" data-id="add-task-on-page">
-<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                            <span class="blue-button-title">Add a task</span>
+            <div class="leads-header-right pipeline-header-right">
+                <button class="square-button square-button--empty tasks-empty-button pipeline-filters" id="filters-toggle" data-id="filters">
+<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v2h18V0H0zm7 12h4v-2H7v2zm8-5H3V5h12v2z" fill="#1C2538"/></svg>                </button>
+                <div class="automation">
+                    <button class="square-button square-button--empty tasks-empty-button automate-button" id="automation-toggle">
+<svg width="15" height="20" fill="none"><path d="M8.2 8.3H14L6.5 19.2v-7.5H.7L8.2.8v7.5z" fill="#757680"/></svg>                        <span class="empty-button-title">Automate stages</span>
+                        <div class="sidebar-navigation-number red empty-button-number">4</div>
+                    </button>
+                    <div class="automation-popup" id="automation-popup">
+                        <div class="popup-right-header automation-header">
+                            <span class="popup-right-title automation-title">Automate stages</span>
+                            <button class="notes-list-close popup-right-close" id="close-automation"></button>
+                        </div>
+                        <ul class="automation-list">
+                            <li class="automation-item" data-item-id="1">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 1</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+<svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="2">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 2</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+<svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="3">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 3</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+<svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="4">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 4</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+<svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="5">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 5</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+<svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="6">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 6</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+<svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="7">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 7</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+<svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
+                                </div>
+                            </li>
+                            <li class="automation-item" data-item-id="8">
+                                <div class="automation-item-content">
+                                    <span class="automation-item-title">Automation 8</span>
+                                    <div class="automation-item-section">
+                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
+                                        <span class="automation-item-section-title">New Leads</span>
+                                    </div>
+                                    <span class="automation-item-status">| Ondoing</span>
+                                </div>
+                                <div class="automation-item-buttons">
+                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
+                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+<svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class=" blue-button automation-submit" id="new-automation-toggle" data-id="new-automation">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                            <span class="blue-button-title">New automation</span>
                         </button>
                     </div>
-                </section>
+                </div>
+                <span class="square-button square-button--empty pipeline-views-toggles">
+                    <button class="pipeline-views-toggle selected" id="pipeline-leads-tiles-toggle">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="9" y="3" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="15" y="3" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="3" y="12" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="9" y="12" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="15" y="12" width="4" height="7" rx="1" fill="#3C68EC"/></svg>
+                    </button>
+                    <button class="pipeline-views-toggle" id="pipeline-leads-columns-toggle">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="4" height="16" rx="1" fill="#B7BABF"/><rect x="9" y="3" width="4" height="16" rx="1" fill="#B7BABF"/><rect x="15" y="3" width="4" height="16" rx="1" fill="#B7BABF"/></svg>
+                    </button>
+                    <button class="pipeline-views-toggle" id="pipeline-leads-rows-toggle">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11C3 10.4477 3.44772 10 4 10H6C6.55228 10 7 10.4477 7 11V13C7 13.5523 6.55228 14 6 14H4C3.44772 14 3 13.5523 3 13V11Z" fill="#B7BABF"/><path d="M3 5C3 4.44772 3.44772 4 4 4H6C6.55228 4 7 4.44772 7 5V7C7 7.55228 6.55228 8 6 8H4C3.44772 8 3 7.55228 3 7V5Z" fill="#B7BABF"/><path d="M9 11C9 10.4477 9.44772 10 10 10H12C12.5523 10 13 10.4477 13 11V13C13 13.5523 12.5523 14 12 14H10C9.44772 14 9 13.5523 9 13V11Z" fill="#B7BABF"/><path d="M15 11C15 10.4477 15.4477 10 16 10H18C18.5523 10 19 10.4477 19 11V13C19 13.5523 18.5523 14 18 14H16C15.4477 14 15 13.5523 15 13V11Z" fill="#B7BABF"/><path d="M3 18C3 17.4477 3.44772 17 4 17H18C18.5523 17 19 17.4477 19 18C19 18.5523 18.5523 19 18 19H4C3.44772 19 3 18.5523 3 18Z" fill="#B7BABF"/><path d="M9 5C9 4.44772 9.44772 4 10 4H12C12.5523 4 13 4.44772 13 5V7C13 7.55228 12.5523 8 12 8H10C9.44772 8 9 7.55228 9 7V5Z" fill="#B7BABF"/><path d="M15 5C15 4.44772 15.4477 4 16 4H18C18.5523 4 19 4.44772 19 5V7C19 7.55228 18.5523 8 18 8H16C15.4477 8 15 7.55228 15 7V5Z" fill="#B7BABF"/></svg>
+                    </button>
+                </span>
+                <button class="leads-header-blue-button blue-button add-a-column-button" id="add-column-toggle" data-id="add-column">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                    <span class="blue-button-title">Add a column</span>
+                </button>
+                <button class="leads-header-blue-button blue-button hidden" id="add-new-lead-toggle" data-id="add-new-lead">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                    <span class="blue-button-title">Add a new lead</span>
+                </button>
             </div>
-        </div>
-        <!-- /.content-header-columns -->
-        <div class="leads-table-overflow">
-            <section class="leads-table">
-                <div class="leads-table-row leads-table-header tasks">
+        </section>
+        <section id="pipeline-leads-tiles">
+            <div class="pipeline-columns pipeline-columns-v2">
+                <div class="pipeline-column">
+                    <div class="pipeline-column-header" style="background-color: #F3535E;">
+                        <span class="pipeline-column-color"></span>
+                        <span class="pipeline-column-title">New leads</span>
+                        <span class="pipeline-column-number">10</span>
+                        <button class="pipeline-column-menu"></button>
+                        <div class="task-snooze-popup pipeline-column-actions">
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                Edit
+                            </button>
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                Remove
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pipeline-column-body">
+                        <ul class="pipeline-column-list" >
+                            <li class="pipeline-column-empty-item">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg>                                Drop lead here
+                            </li>
+                            <li class="pipeline-column-item" data-id="1">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pipeline-column-item" data-id="2">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pipeline-column-item" data-id="3">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pipeline-column-item" data-id="4">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pipeline-column-item" data-id="5">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                            <span class="blue-button-title">Add a lead</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column">
+                    <div class="pipeline-column-header" style="background-color: #FFBF4B;">
+                        <span class="pipeline-column-color"></span>
+                        <span class="pipeline-column-title">Qualified leads</span>
+                        <span class="pipeline-column-number">2</span>
+                        <button class="pipeline-column-menu"></button>
+                        <div class="task-snooze-popup pipeline-column-actions">
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                Edit
+                            </button>
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                Remove
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pipeline-column-body">
+                        <ul class="pipeline-column-list" >
+                            <li class="pipeline-column-empty-item">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg>                                Drop lead here
+                            </li>
+                            <li class="pipeline-column-item" data-id="6">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pipeline-column-item" data-id="7">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                            <span class="blue-button-title">Add a lead</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column">
+                    <div class="pipeline-column-header" style="background-color: #99DC13;">
+                        <span class="pipeline-column-color"></span>
+                        <span class="pipeline-column-title">Quote sent</span>
+                        <span class="pipeline-column-number">0</span>
+                        <button class="pipeline-column-menu"></button>
+                        <div class="task-snooze-popup pipeline-column-actions">
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                Edit
+                            </button>
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                Remove
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pipeline-column-body">
+                        <ul class="pipeline-column-list" >
+                            <li class="pipeline-column-empty-item">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg>                                Drop lead here
+                            </li>
+                        </ul>
+                        <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                            <span class="blue-button-title">Add a lead</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column">
+                    <div class="pipeline-column-header" style="background-color: #B7BABF;">
+                        <span class="pipeline-column-color"></span>
+                        <span class="pipeline-column-title">Negative leads</span>
+                        <span class="pipeline-column-number">2</span>
+                        <button class="pipeline-column-menu"></button>
+                        <div class="task-snooze-popup pipeline-column-actions">
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                Edit
+                            </button>
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                Remove
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pipeline-column-body">
+                        <ul class="pipeline-column-list" >
+                            <li class="pipeline-column-empty-item">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg>                                Drop lead here
+                            </li>
+                        </ul>
+                        <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                            <span class="blue-button-title">Add a lead</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.pipeline-columns -->
+            <div class="pipeline-columns pipeline-columns-v2">
+                <div class="pipeline-column">
+                    <div class="pipeline-column-header" style="background-color: #F3535E;">
+                        <span class="pipeline-column-color"></span>
+                        <span class="pipeline-column-title">New leads</span>
+                        <span class="pipeline-column-number">10</span>
+                        <button class="pipeline-column-menu"></button>
+                        <div class="task-snooze-popup pipeline-column-actions">
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                Edit
+                            </button>
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                Remove
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pipeline-column-body">
+                        <ul class="pipeline-column-list" >
+                            <li class="pipeline-column-empty-item">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg>                                Drop lead here
+                            </li>
+                            <li class="pipeline-column-item" data-id="1">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pipeline-column-item" data-id="2">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pipeline-column-item" data-id="3">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pipeline-column-item" data-id="4">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pipeline-column-item" data-id="5">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                            <span class="blue-button-title">Add a lead</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column">
+                    <div class="pipeline-column-header" style="background-color: #FFBF4B;">
+                        <span class="pipeline-column-color"></span>
+                        <span class="pipeline-column-title">Qualified leads</span>
+                        <span class="pipeline-column-number">2</span>
+                        <button class="pipeline-column-menu"></button>
+                        <div class="task-snooze-popup pipeline-column-actions">
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                Edit
+                            </button>
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                Remove
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pipeline-column-body">
+                        <ul class="pipeline-column-list" >
+                            <li class="pipeline-column-empty-item">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg>                                Drop lead here
+                            </li>
+                            <li class="pipeline-column-item" data-id="6">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="pipeline-column-item" data-id="7">
+                                <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                                <div class="pipeline-column-item-middle">
+                                    <span class="pipeline-column-item-value">$ 2.00</span>
+                                    <div class="pipeline-column-item-tags">
+                                        <span class="pipeline-column-item-tag noselect">tags</span>
+                                    </div>
+                                </div>
+                                <div class="pipeline-column-item-bottom">
+                                    <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                    </button>
+                                    <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                        2/3
+                                    </button>
+                                    <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                        <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                        <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                            <span class="blue-button-title">Add a lead</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column">
+                    <div class="pipeline-column-header" style="background-color: #99DC13;">
+                        <span class="pipeline-column-color"></span>
+                        <span class="pipeline-column-title">Quote sent</span>
+                        <span class="pipeline-column-number">0</span>
+                        <button class="pipeline-column-menu"></button>
+                        <div class="task-snooze-popup pipeline-column-actions">
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                Edit
+                            </button>
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                Remove
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pipeline-column-body">
+                        <ul class="pipeline-column-list" >
+                            <li class="pipeline-column-empty-item">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg>                                Drop lead here
+                            </li>
+                        </ul>
+                        <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                            <span class="blue-button-title">Add a lead</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column">
+                    <div class="pipeline-column-header" style="background-color: #B7BABF;">
+                        <span class="pipeline-column-color"></span>
+                        <span class="pipeline-column-title">Negative leads</span>
+                        <span class="pipeline-column-number">2</span>
+                        <button class="pipeline-column-menu"></button>
+                        <div class="task-snooze-popup pipeline-column-actions">
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                Edit
+                            </button>
+                            <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                Remove
+                            </button>
+                        </div>
+                    </div>
+                    <div class="pipeline-column-body">
+                        <ul class="pipeline-column-list" >
+                            <li class="pipeline-column-empty-item">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg>                                Drop lead here
+                            </li>
+                        </ul>
+                        <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                            <span class="blue-button-title">Add a lead</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- /.pipeline-columns -->
+        </section>
+        <section class="pipeline-columns" id="pipeline-leads-columns">
+            <div class="pipeline-column">
+                <div class="pipeline-column-header">
+                    <span class="pipeline-column-color" style="background-color: #F3535E;"></span>
+                    <span class="pipeline-column-title">New leads</span>
+                    <span class="pipeline-column-number">10</span>
+                    <button class="pipeline-column-menu"></button>
+                    <div class="task-snooze-popup pipeline-column-actions">
+                        <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            Edit
+                        </button>
+                        <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            Remove
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column-body">
+                    <ul class="pipeline-column-list" >
+                        <li class="pipeline-column-empty-item">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg>                            Drop lead here
+                        </li>
+                        <li class="pipeline-column-item" data-id="1">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pipeline-column-item" data-id="2">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pipeline-column-item" data-id="3">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pipeline-column-item" data-id="4">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pipeline-column-item" data-id="5">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                        <span class="blue-button-title">Add a lead</span>
+                    </button>
+                </div>
+            </div>
+            <div class="pipeline-column">
+                <div class="pipeline-column-header">
+                    <span class="pipeline-column-color" style="background-color: #FFBF4B;"></span>
+                    <span class="pipeline-column-title">Qualified leads</span>
+                    <span class="pipeline-column-number">2</span>
+                    <button class="pipeline-column-menu"></button>
+                    <div class="task-snooze-popup pipeline-column-actions">
+                        <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            Edit
+                        </button>
+                        <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            Remove
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column-body">
+                    <ul class="pipeline-column-list" >
+                        <li class="pipeline-column-empty-item">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg>                            Drop lead here
+                        </li>
+                        <li class="pipeline-column-item" data-id="6">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="pipeline-column-item" data-id="7">
+                            <span class="pipeline-column-item-title noselect lead-chat-toggle" data-id="chat-popup">Very long lead name</span>
+                            <div class="pipeline-column-item-middle">
+                                <span class="pipeline-column-item-value">$ 2.00</span>
+                                <div class="pipeline-column-item-tags">
+                                    <span class="pipeline-column-item-tag noselect">tags</span>
+                                </div>
+                            </div>
+                            <div class="pipeline-column-item-bottom">
+                                <button class="pipeline-column-item-button pipeline-column-item-note">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                                </button>
+                                <button class="pipeline-column-item-button pipeline-column-item-tasks">
+<svg height="22" width="22" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 22 22"><defs/><path fill="#FDFDFD" d="M5.58 5.58V1.25A1.08 1.08 0 016.67.17h14.08a1.08 1.08 0 011.08 1.08v14.08a1.08 1.08 0 01-1.08 1.09h-4.33v4.32c0 .6-.49 1.1-1.1 1.1H1.27a1.09 1.09 0 01-1.1-1.1L.18 6.67c0-.6.49-1.09 1.1-1.09h4.31zm2.17 0h7.58c.6 0 1.09.49 1.09 1.1v7.57h3.25V2.33H7.75v3.25zM7.21 17.5l6.13-6.13-1.53-1.53-4.6 4.6-2.3-2.3-1.53 1.53 3.83 3.83z"/></svg>                                    2/3
+                                </button>
+                                <div class="profile-activities-item-avatars pipeline-column-item-avatars">
+                                    <span class="pipeline-column-item-avatar pipeline-column-item-avatar-empty" data-id="chat-popup">sc</span>
+                                    <img src="upload/avatar.jpg" class="profile-activities-item-avatar pipeline-column-item-avatar noselect" data-id="chat-popup">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                        <span class="blue-button-title">Add a lead</span>
+                    </button>
+                </div>
+            </div>
+            <div class="pipeline-column">
+                <div class="pipeline-column-header">
+                    <span class="pipeline-column-color" style="background-color: #99DC13;"></span>
+                    <span class="pipeline-column-title">Quote sent</span>
+                    <span class="pipeline-column-number">0</span>
+                    <button class="pipeline-column-menu"></button>
+                    <div class="task-snooze-popup pipeline-column-actions">
+                        <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            Edit
+                        </button>
+                        <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            Remove
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column-body">
+                    <ul class="pipeline-column-list" >
+                        <li class="pipeline-column-empty-item">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg>                            Drop lead here
+                        </li>
+                    </ul>
+                    <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                        <span class="blue-button-title">Add a lead</span>
+                    </button>
+                </div>
+            </div>
+            <div class="pipeline-column">
+                <div class="pipeline-column-header">
+                    <span class="pipeline-column-color" style="background-color: #B7BABF;"></span>
+                    <span class="pipeline-column-title">Negative leads</span>
+                    <span class="pipeline-column-number">2</span>
+                    <button class="pipeline-column-menu"></button>
+                    <div class="task-snooze-popup pipeline-column-actions">
+                        <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            Edit
+                        </button>
+                        <button class="pipeline-column-action pipeline-column-edit">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            Remove
+                        </button>
+                    </div>
+                </div>
+                <div class="pipeline-column-body">
+                    <ul class="pipeline-column-list" >
+                        <li class="pipeline-column-empty-item">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg>                            Drop lead here
+                        </li>
+                    </ul>
+                    <button class="blue-button pipeline-column-button" data-action="add-new-lead-pipeline-toggle" data-id="add-new-lead-pipeline">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                        <span class="blue-button-title">Add a lead</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="leads-table" id="pipeline-leads-rows">
+            <div class="leads-table-row leads-table-header">
+                <div class="leads-table-td">
+                    <label class="lead-table-check custom-checkbox">
+                        <input type="checkbox" class="custom-checkbox-hiden" />
+                        <span class="custom-checkbox-check"></span>
+                    </label>
+                </div>
+                <div class="leads-table-td">
+                    <span class="leads-table-title">lead name</span>
+                    <div class="lead-table-sort sort">
+                        <button class="sort-button sort-button"></button>
+                        <button class="sort-button sort-button sort-button--down"></button>
+                    </div>
+                </div>
+                <div class="leads-table-td">
+                    <span class="leads-table-title" id="contact-title">contact</span>
+                    <div class="lead-table-sort sort">
+                        <button class="sort-button sort-button"></button>
+                        <button class="sort-button sort-button sort-button--down"></button>
+                    </div>
+                </div>
+                <div class="leads-table-td">
+                    <span class="leads-table-title">stages</span>
+                    <div class="lead-table-sort sort">
+                        <button class="sort-button sort-button"></button>
+                        <button class="sort-button sort-button sort-button--down"></button>
+                    </div>
+                </div>
+                <div class="leads-table-td">
+                    <span class="leads-table-title">value</span>
+                    <div class="lead-table-sort sort">
+                        <button class="sort-button sort-button"></button>
+                        <button class="sort-button sort-button sort-button--down"></button>
+                    </div>
+                </div>
+                <div class="leads-table-td">
+                </div>
+            </div>
+            <div class="leads-table-body">
+                <div class="leads-table-row" data-id="1">
                     <div class="leads-table-td">
                         <label class="lead-table-check custom-checkbox">
                             <input type="checkbox" class="custom-checkbox-hiden" />
                             <span class="custom-checkbox-check"></span>
                         </label>
                     </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-title tasks">task</span>
-                        <button class="sort-button tasks"></button>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
                     </div>
                     <div class="leads-table-td">
-                        <span class="leads-table-title">due to...</span>
+                        <span class="leads-table-text">Cold call</span>
                     </div>
                     <div class="leads-table-td">
-                        <span class="leads-table-title">assign to</span>
+                        <span class="leads-table-text">Qualify</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
                     </div>
                     <div class="leads-table-td">
-                        <span class="leads-table-title">contact person</span>
+                        <span class="leads-table-text">$ 0.00</span>
                     </div>
-                    <div class="leads-table-td">
-                        <!-- <span class="leads-table-title" id="task-description">description</span> -->
-                    </div>
-                </div>
-                <div class="leads-table-body tasks">
-                    <div class="leads-table-row tasks" data-id="1">
-                        <div class="leads-table-td">
-                            <label class="lead-table-check custom-checkbox">
-                                <input type="checkbox" class="custom-checkbox-hiden" />
-                                <span class="custom-checkbox-check"></span>
-                            </label>
-                        </div>
-                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                            <span class="leads-table-text leads-table-text--bold">Create landing page</span>
-                        </div>
-                        <div class="leads-table-td">
-                            <span class="leads-table-text tasks">10/02/2021</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
-                        </div>
-                        <div class="leads-table-td leads-table-notes tasks">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg><div class="leads-table-notes-list notes-list note-list-for-tasks">
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
+<div class="leads-table-notes-list notes-list">
     <div class="notes-list-header">
         <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
         <span class="notes-list-title">Notes</span>
@@ -197,462 +1206,555 @@
         </div>
     </div>
     <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div><svg class="watch-snooze-task" fill="none" height="18" width="21" viewBox="0 0 18 21"><defs/><path fill="#1C2538" d="M12 0H6v2h6V0zM8 13h2V7H8v6zm8-6.6L17.4 5c-.4-.5-.8-1-1.4-1.4L14.6 5A9 9 0 000 12a9 9 0 1016-5.6zM9 19A7 7 0 119 5a7 7 0 010 14z"/></svg>                            <div class="task-snooze-popup">
-                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                                <input type="time" class="task-snooze-popup-time" value="07:00" />
-                                <select class="task-snooze-popup-daytime select">
-                                    <option value="AM" selected>AM</option>
-                                    <option value="PM">PM</option>
-                                </select>
-                                <input type="date" class="task-snooze-popup-date" />
-                            </div>
-                            <div class="remove-current-task">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </div>
-                        </div>
-                    </div>
-                    <div class="leads-table-row tasks" data-id="2">
-                        <div class="leads-table-td">
-                            <label class="lead-table-check custom-checkbox">
-                                <input type="checkbox" class="custom-checkbox-hiden" />
-                                <span class="custom-checkbox-check"></span>
-                            </label>
-                        </div>
-                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                            <span class="leads-table-text leads-table-text--bold">Designing Iconset 2.0</span>
-                        </div>
-                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                            <span class="leads-table-text tasks">10/02/2021</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                        </div>
-                        <div class="leads-table-td leads-table-notes tasks">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg><div class="leads-table-notes-list notes-list note-list-for-tasks">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div><svg class="watch-snooze-task" fill="none" height="18" width="21" viewBox="0 0 18 21"><defs/><path fill="#1C2538" d="M12 0H6v2h6V0zM8 13h2V7H8v6zm8-6.6L17.4 5c-.4-.5-.8-1-1.4-1.4L14.6 5A9 9 0 000 12a9 9 0 1016-5.6zM9 19A7 7 0 119 5a7 7 0 010 14z"/></svg>                            <div class="task-snooze-popup">
-                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                                <input type="time" class="task-snooze-popup-time" value="07:00" />
-                                <select class="task-snooze-popup-daytime select">
-                                    <option value="AM" selected>AM</option>
-                                    <option value="PM">PM</option>
-                                </select>
-                                <input type="date" class="task-snooze-popup-date" />
-                            </div>
-                            <div class="remove-current-task">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </div>
-                        </div>
-                    </div>
-                    <div class="leads-table-row tasks" data-id="3">
-                        <div class="leads-table-td">
-                            <label class="lead-table-check custom-checkbox">
-                                <input type="checkbox" class="custom-checkbox-hiden" />
-                                <span class="custom-checkbox-check"></span>
-                            </label>
-                        </div>
-                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                        </div>
-                        <div class="leads-table-td">
-                            <span class="leads-table-text tasks">10/02/2021</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                        </div>
-                        <div class="leads-table-td leads-table-notes tasks">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg><div class="leads-table-notes-list notes-list note-list-for-tasks">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div><svg class="watch-snooze-task" fill="none" height="18" width="21" viewBox="0 0 18 21"><defs/><path fill="#1C2538" d="M12 0H6v2h6V0zM8 13h2V7H8v6zm8-6.6L17.4 5c-.4-.5-.8-1-1.4-1.4L14.6 5A9 9 0 000 12a9 9 0 1016-5.6zM9 19A7 7 0 119 5a7 7 0 010 14z"/></svg>                            <div class="task-snooze-popup">
-                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                                <input type="time" class="task-snooze-popup-time" value="07:00" />
-                                <select class="task-snooze-popup-daytime select">
-                                    <option value="AM" selected>AM</option>
-                                    <option value="PM">PM</option>
-                                </select>
-                                <input type="date" class="task-snooze-popup-date" />
-                            </div>
-                            <div class="remove-current-task">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </div>
-                        </div>
-                    </div>
-                    <div class="leads-table-row tasks" data-id="4">
-                        <div class="leads-table-td">
-                            <label class="lead-table-check custom-checkbox">
-                                <input type="checkbox" class="custom-checkbox-hiden" />
-                                <span class="custom-checkbox-check"></span>
-                            </label>
-                        </div>
-                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                            <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
-                        </div>
-                        <div class="leads-table-td">
-                            <span class="leads-table-text tasks">10/02/2021</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
-                        </div>
-                        <div class="leads-table-td leads-table-notes tasks">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg><div class="leads-table-notes-list notes-list note-list-for-tasks">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div><svg class="watch-snooze-task" fill="none" height="18" width="21" viewBox="0 0 18 21"><defs/><path fill="#1C2538" d="M12 0H6v2h6V0zM8 13h2V7H8v6zm8-6.6L17.4 5c-.4-.5-.8-1-1.4-1.4L14.6 5A9 9 0 000 12a9 9 0 1016-5.6zM9 19A7 7 0 119 5a7 7 0 010 14z"/></svg>                            <div class="task-snooze-popup">
-                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                                <input type="time" class="task-snooze-popup-time" value="07:00" />
-                                <select class="task-snooze-popup-daytime select">
-                                    <option value="AM" selected>AM</option>
-                                    <option value="PM">PM</option>
-                                </select>
-                                <input type="date" class="task-snooze-popup-date" />
-                            </div>
-                            <div class="remove-current-task">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </div>
-                        </div>
-                    </div>
-                    <div class="leads-table-row tasks" data-id="5">
-                        <div class="leads-table-td">
-                            <label class="lead-table-check custom-checkbox">
-                                <input type="checkbox" class="custom-checkbox-hiden" />
-                                <span class="custom-checkbox-check"></span>
-                            </label>
-                        </div>
-                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
-                        </div>
-                        <div class="leads-table-td">
-                            <span class="leads-table-text tasks">10/02/2021</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
-                        </div>
-                        <div class="leads-table-td leads-table-notes tasks">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg><div class="leads-table-notes-list notes-list note-list-for-tasks">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div><svg class="watch-snooze-task" fill="none" height="18" width="21" viewBox="0 0 18 21"><defs/><path fill="#1C2538" d="M12 0H6v2h6V0zM8 13h2V7H8v6zm8-6.6L17.4 5c-.4-.5-.8-1-1.4-1.4L14.6 5A9 9 0 000 12a9 9 0 1016-5.6zM9 19A7 7 0 119 5a7 7 0 010 14z"/></svg>                            <div class="task-snooze-popup">
-                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                                <input type="time" class="task-snooze-popup-time" value="07:00" />
-                                <select class="task-snooze-popup-daytime select">
-                                    <option value="AM" selected>AM</option>
-                                    <option value="PM">PM</option>
-                                </select>
-                                <input type="date" class="task-snooze-popup-date" />
-                            </div>
-                            <div class="remove-current-task">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </div>
-                        </div>
-                    </div>
-                    <div class="leads-table-row tasks" data-id="6">
-                        <div class="leads-table-td">
-                            <label class="lead-table-check custom-checkbox">
-                                <input type="checkbox" class="custom-checkbox-hiden" />
-                                <span class="custom-checkbox-check"></span>
-                            </label>
-                        </div>
-                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                        </div>
-                        <div class="leads-table-td">
-                            <span class="leads-table-text tasks">10/02/2021</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                        </div>
-                        <div class="leads-table-td leads-table-notes tasks">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg><div class="leads-table-notes-list notes-list note-list-for-tasks">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div><svg class="watch-snooze-task" fill="none" height="18" width="21" viewBox="0 0 18 21"><defs/><path fill="#1C2538" d="M12 0H6v2h6V0zM8 13h2V7H8v6zm8-6.6L17.4 5c-.4-.5-.8-1-1.4-1.4L14.6 5A9 9 0 000 12a9 9 0 1016-5.6zM9 19A7 7 0 119 5a7 7 0 010 14z"/></svg>                            <div class="task-snooze-popup">
-                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                                <input type="time" class="task-snooze-popup-time" value="07:00" />
-                                <select class="task-snooze-popup-daytime select">
-                                    <option value="AM" selected>AM</option>
-                                    <option value="PM">PM</option>
-                                </select>
-                                <input type="date" class="task-snooze-popup-date" />
-                            </div>
-                            <div class="remove-current-task">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </div>
-                        </div>
-                    </div>
-                    <div class="leads-table-row tasks" data-id="7">
-                        <div class="leads-table-td">
-                            <label class="lead-table-check custom-checkbox">
-                                <input type="checkbox" class="custom-checkbox-hiden" />
-                                <span class="custom-checkbox-check"></span>
-                            </label>
-                        </div>
-                        <div class="leads-table-td task-view-toggle" data-id="edit-task-on-page">
-                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                        </div>
-                        <div class="leads-table-td">
-                            <span class="leads-table-text tasks">10/02/2021</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                        </div>
-                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                        </div>
-                        <div class="leads-table-td leads-table-notes tasks">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg><div class="leads-table-notes-list notes-list note-list-for-tasks">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div><svg class="watch-snooze-task" fill="none" height="18" width="21" viewBox="0 0 18 21"><defs/><path fill="#1C2538" d="M12 0H6v2h6V0zM8 13h2V7H8v6zm8-6.6L17.4 5c-.4-.5-.8-1-1.4-1.4L14.6 5A9 9 0 000 12a9 9 0 1016-5.6zM9 19A7 7 0 119 5a7 7 0 010 14z"/></svg>                            <div class="task-snooze-popup">
-                                <span class="leads-table-title task-snooze-popup-title">snooze until</span>
-                                <input type="time" class="task-snooze-popup-time" value="07:00" />
-                                <select class="task-snooze-popup-daytime select">
-                                    <option value="AM" selected>AM</option>
-                                    <option value="PM">PM</option>
-                                </select>
-                                <input type="date" class="task-snooze-popup-date" />
-                            </div>
-                            <div class="remove-current-task">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </div>
+</div>                        <div class="lead-buttons">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
+                            <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
                         </div>
                     </div>
                 </div>
-            </section>
+                <div class="leads-table-row" data-id="2">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Pitch</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 250.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
         </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                        <div class="lead-buttons">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
+                            <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="3">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Qualify</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 10.99</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                        <div class="lead-buttons">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
+                            <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="4">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Pitch</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 199.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">UI Kit for Mobile apps</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                        <div class="lead-buttons">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
+                            <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="5">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Qualify</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 0.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                        <div class="lead-buttons">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
+                            <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="6">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Pitch</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 250.00</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                        <div class="lead-buttons">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
+                            <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-row" data-id="7">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Cold call</span>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">Qualify</span>
+                        <div class="leads-table-qualify qualify">
+                            <span class="qualify-label"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                            <span class="qualify-label qualify-label--empty"></span>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-text">$ 10.99</span>
+                    </div>
+                    <div class="leads-table-td leads-table-notes">
+                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                        <div class="lead-buttons">
+<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
+<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
+                            <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-right-file uploaded" id="add-lead-success">
+                    <label class="label" for="upload-csv-lead">
+<svg height="17" width="17" class="file-uploaded" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 17"><defs/><path fill="#99DC13" d="M8.5 16.8A8.3 8.3 0 118.5.2a8.3 8.3 0 010 16.6zm0-1.6a6.7 6.7 0 100-13.4 6.7 6.7 0 000 13.4zm-.8-3.4L4 8.3l1.2-1.2 2.4 2.4 4.7-4.7 1.2 1.1-6 6z"/></svg>                        <span class="title">New lead added successfully</span>
+                        <button id="undo-new-lead">Undo</button>
+                    </label>
+                </div>
+            </div>
+        </section>
     </div>
 </main>
+<div class="popup" id="add-new-lead-pipeline">
+    <div class="popup-right">
+        <div class="popup-right-header">
+            <span class="popup-right-title">Add a lead</span>
+            <button class="notes-list-close popup-right-close" id="close-add-new-lead-pipeline"></button>
+        </div>
+        <span class="checklist-title add-lead-pipeline-title">find a lead you want to add</span>
+        <input type="text" class="leads-header-input text-input tasks pipeline-search" placeholder="Lead name..." />
+        <div class="pipeline-lead-search-result">
+            <div class="lead-item-card">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar lead-item-card-avatar">
+                <div class="lead-item-card-text">
+                    <div class="lead-item-card-name">Andrew Vynarchyk</div>
+                    <div class="lead-item-card-value">$ 2.00</div>
+                </div>
+                <div class="lead-item-card-qualify">
+                    <span class="leads-table-text">Qualify</span>
+                    <div class="leads-table-qualify qualify">
+                        <span class="qualify-label"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="lead-item-card">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar lead-item-card-avatar">
+                <div class="lead-item-card-text">
+                    <div class="lead-item-card-name">Andrew Vynarchyk</div>
+                    <div class="lead-item-card-value">$ 2.00</div>
+                </div>
+                <div class="lead-item-card-qualify">
+                    <span class="leads-table-text">Qualify</span>
+                    <div class="leads-table-qualify qualify">
+                        <span class="qualify-label"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pipeline-lead-search-result">
+            <div class="lead-item-card chosen-lead-item-card">
+                <img src="upload/avatar.jpg" alt="" class="leads-table-avatar lead-item-card-avatar">
+                <div class="lead-item-card-text">
+                    <div class="lead-item-card-name">John Doe</div>
+                    <div class="lead-item-card-value">$ 2.00</div>
+                </div>
+                <div class="lead-item-card-qualify">
+                    <span class="leads-table-text">Qualify</span>
+                    <div class="leads-table-qualify qualify">
+                        <span class="qualify-label"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                        <span class="qualify-label qualify-label--empty"></span>
+                    </div>
+                </div>
+                <button class="notes-list-close popup-right-close chat-header-close" ></button>
+            </div>
+        </div>
+        <div class="add-lead-pipeline-buttons">
+            <button class="blue-button pipeline-column-button" disabled>
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                <span class="blue-button-title">Add a leads</span>
+            </button>
+            <span class="popup-right-separate">or</span>
+            <button class="blue-button pipeline-column-button" id="add-lead-manualy-toggle">
+                <span class="blue-button-title">Add lead manualy</span>
+            </button>
+        </div>
+    </div>
+    <div class="popup-right" id="add-lead-manualy">
+        <div class="popup-right-header">
+            <span class="popup-right-title">
+                <button id="back-add-lead-manualy"></button>
+                Add a lead manualy
+            </span>
+            <button class="notes-list-close popup-right-close" id="close-add-lead-manualy"></button>
+        </div>
+        <form action="" class="popup-right-form" id="submit-add-lead-manualy">
+            <input type="text" class="text-input popup-right-input" placeholder="Lead name">
+            <select class="select popup-right-select">
+                <option>Select Stage</option>
+            </select>
+            <select class="select popup-right-select">
+                <option>Select Contact</option>
+            </select>
+            <input type="text" class="text-input popup-right-input" placeholder="Lead value (USD)">
+            <textarea class="text-input popup-right-input popup-right-textarea" cols="30" rows="4" placeholder="Notes"></textarea>
+            <button type="submit" class="blue-button popup-right-blue-button">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                <span class="blue-button-title">Add a new lead</span>
+            </button>
+        </form>
+    </div>
+</div>
 <div class="popup" id="add-task-on-page">
     <div class="popup-right">
         <div class="popup-right-header">

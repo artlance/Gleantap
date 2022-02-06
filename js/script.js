@@ -3219,6 +3219,17 @@ $(document).ready(function () {
 
     //-----------------------------------------//
 
+    $(document).on('change', '.custom-checkbox-hiden', function () {
+        let leadsCheckbox = $('.custom-checkbox-hiden').is(':checked');
+        if (leadsCheckbox) {
+            $('.leads-header-buttons').removeClass('leads-header-buttons-hidden');
+        } else {
+            $('.leads-header-buttons').addClass('leads-header-buttons-hidden');
+        }
+    });
+
+    //-----------------------------------------//
+
     //emotions-list
     $(document).on('click', '.emotions-list button', function (event) {
         event.preventDefault();
@@ -3536,6 +3547,12 @@ $(document).ready(function () {
         calendar.updateSize();
     }
 
+    $(document).on('click', '.toggle-modal', function (event) {
+        event.preventDefault();
+        let thisDataID = $(this).data('id');
+        $('#' + thisDataID).addClass('opened');
+    });
+
     //-----------------------------------------//
 
     // function showAppointments(value) {
@@ -3846,12 +3863,12 @@ $(document).ready(function () {
             document.querySelector(`#pipeline-leads-rows-toggle`).classList.add(`selected`)
             document.querySelector(`#pipeline-leads-columns-toggle`).classList.remove(`selected`)
             document.querySelector(`#pipeline-leads-tiles-toggle`).classList.remove(`selected`)
-            document.querySelector(`#add-new-lead-toggle`).classList.remove(`hidden`)
-            document.querySelector(`#leads-header-input`).classList.remove(`hidden`)
-            document.querySelector(`#leads-header-buttons`).classList.remove(`hidden`)
-            document.querySelector(`#pipeline-header-input`).classList.add(`hidden`)
+            //document.querySelector(`#add-new-lead-toggle`).classList.remove(`hidden`)
+            //document.querySelector(`#leads-header-input`).classList.remove(`hidden`)
+            //document.querySelector(`#leads-header-buttons`).classList.remove(`hidden`)
+            //document.querySelector(`#pipeline-header-input`).classList.add(`hidden`)
             document.querySelector(`#pipeline-header-button`).classList.add(`hidden`)
-            document.querySelector(`#add-column-toggle`).classList.add(`hidden`)
+            //document.querySelector(`#add-column-toggle`).classList.add(`hidden`)
         }
     }
     if (document.querySelector(`#pipeline-leads-columns-toggle`)) {
@@ -3862,9 +3879,9 @@ $(document).ready(function () {
             document.querySelector(`#pipeline-leads-columns-toggle`).classList.add(`selected`)
             document.querySelector(`#pipeline-leads-rows-toggle`).classList.remove(`selected`)
             document.querySelector(`#pipeline-leads-tiles-toggle`).classList.remove(`selected`)
-            document.querySelector(`#add-new-lead-toggle`).classList.add(`hidden`)
-            document.querySelector(`#leads-header-input`).classList.add(`hidden`)
-            document.querySelector(`#leads-header-buttons`).classList.add(`hidden`)
+            //document.querySelector(`#add-new-lead-toggle`).classList.add(`hidden`)
+            //document.querySelector(`#leads-header-input`).classList.add(`hidden`)
+            //document.querySelector(`#leads-header-buttons`).classList.add(`hidden`)
             document.querySelector(`#pipeline-header-input`).classList.remove(`hidden`)
             document.querySelector(`#pipeline-header-button`).classList.remove(`hidden`)
             document.querySelector(`#add-column-toggle`).classList.remove(`hidden`)
@@ -3878,9 +3895,9 @@ $(document).ready(function () {
             document.querySelector(`#pipeline-leads-tiles-toggle`).classList.add(`selected`)
             document.querySelector(`#pipeline-leads-rows-toggle`).classList.remove(`selected`)
             document.querySelector(`#pipeline-leads-columns-toggle`).classList.remove(`selected`)
-            document.querySelector(`#add-new-lead-toggle`).classList.add(`hidden`)
-            document.querySelector(`#leads-header-input`).classList.add(`hidden`)
-            document.querySelector(`#leads-header-buttons`).classList.add(`hidden`)
+            //document.querySelector(`#add-new-lead-toggle`).classList.add(`hidden`)
+            //document.querySelector(`#leads-header-input`).classList.add(`hidden`)
+            //document.querySelector(`#leads-header-buttons`).classList.add(`hidden`)
             document.querySelector(`#pipeline-header-input`).classList.remove(`hidden`)
             document.querySelector(`#pipeline-header-button`).classList.remove(`hidden`)
             document.querySelector(`#add-column-toggle`).classList.remove(`hidden`)
@@ -4066,17 +4083,17 @@ removeLeadPopup = e => {
 }
 
 checkselectedChecks = () => {
-    const checked = Array.from(document.querySelectorAll(`.leads-table-row .custom-checkbox-hiden`)).some(check => check.checked)
-    const merge = document.querySelector(`#merge-leads-toggle`)
-    const task = document.querySelector(`#toggle-add-task`)
+    // const checked = Array.from(document.querySelectorAll(`.leads-table-row .custom-checkbox-hiden`)).some(check => check.checked)
+    // const merge = document.querySelector(`#merge-leads-toggle`)
+    // const task = document.querySelector(`#toggle-add-task`)
 
-    if (checked) {
-        merge.disabled = false
-        task.disabled = false
-    } else {
-        merge.disabled = true
-        task.disabled = true
-    }
+    // if (checked) {
+    //     merge.disabled = false
+    //     task.disabled = false
+    // } else {
+    //     merge.disabled = true
+    //     task.disabled = true
+    // }
 }
 
 toggleLeadRow = e => {

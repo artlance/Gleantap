@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/summernote-lite.css">
-    <title>Template - Tasks</title>
+    <title>Template - Pipeline</title>
     <meta name="description" content="description">
     <link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png">
     <link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png">
@@ -171,194 +171,205 @@
     </div>
     <!-- /.sidebar-bottom -->
 </aside>    <div class="content-site pipeline-content">
-        <h1 class="leads-title">Pipeline</h1>
-        <section class="leads-header">
-            <input id="pipeline-header-input" type="text" class="leads-header-input text-input tasks pipeline-search" placeholder="Find a pipeline..." />
-            <button id="pipeline-header-button" class="square-button square-button--empty tasks-empty-button pipeline-filters-mobile" id="filters-toggle-mobile" data-id="filters">
-<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v2h18V0H0zm7 12h4v-2H7v2zm8-5H3V5h12v2z" fill="#1C2538"/></svg>            </button>
-            <input id="leads-header-input" type="text" class="leads-header-input text-input hidden" placeholder="Find a lead..." />
-            <div id="leads-header-buttons" class="leads-header-buttons square-buttons hidden">
-                <button class="square-buttons-button square-button" data-id="merge-leads" id="merge-leads-toggle" disabled>
-<svg width="19" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.1 5.8A3 3 0 008 8h4a5 5 0 015 4.1 3 3 0 11-2.1.1A3 3 0 0012 10H8a5 5 0 01-3-1v3.2a3 3 0 11-2 0V5.8a3 3 0 112.1 0z" fill="#3C68EC"/></svg>                    <span class="square-button-help">Merge lead</span>
-                </button>
-                <button style="display: none;" class="square-buttons-button square-button" data-id="add-note" id="toggle-add-note">
-<svg width="18" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.24 16H0v-4.24L11.44.32a1 1 0 011.4 0l2.84 2.83a1 1 0 010 1.42L4.24 16zM0 18h18v2H0v-2z" fill="#3C68EC"/></svg>                    <span class="square-button-help">Add a note about call</span>
-                </button>
-                <button class="square-buttons-button square-button" data-id="add-task" id="toggle-add-task" disabled>
-<svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 9V6l4 4-4 4v-3h-5v5h3l-4 4-4-4h3v-5H4v3l-4-4 4-4v3h5V4H6l4-4 4 4h-3v5h5z" fill="#3C68EC"/></svg>                    <span class="square-button-help">Full screen something</span>
-                </button>
-
-                <button style="display: none;" class="square-buttons-button square-button" data-id="chat-popup" id="chat-toggle">
-<svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 4V1a1 1 0 011-1h8a1 1 0 011 1v3h5v2h-2v13a1 1 0 01-1 1H3a1 1 0 01-1-1V6H0V4h5zm2-2v2h6V2H7z" fill="#3C68EC"/></svg>                    <span class="square-button-help">Remove lead</span>
-                </button>
-            </div>
-            <div class="leads-header-right pipeline-header-right">
-                <button class="square-button square-button--empty tasks-empty-button pipeline-filters" id="filters-toggle" data-id="filters">
-<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v2h18V0H0zm7 12h4v-2H7v2zm8-5H3V5h12v2z" fill="#1C2538"/></svg>                </button>
-                <div class="automation">
-                    <button class="square-button square-button--empty tasks-empty-button automate-button" id="automation-toggle">
-<svg width="15" height="20" fill="none"><path d="M8.2 8.3H14L6.5 19.2v-7.5H.7L8.2.8v7.5z" fill="#757680"/></svg>                        <span class="empty-button-title">Automate stages</span>
-                        <div class="sidebar-navigation-number red empty-button-number">4</div>
-                    </button>
-                    <div class="automation-popup" id="automation-popup">
-                        <div class="popup-right-header automation-header">
-                            <span class="popup-right-title automation-title">Automate stages</span>
-                            <button class="notes-list-close popup-right-close" id="close-automation"></button>
-                        </div>
+        <div class="content-header-columns">
+            <div class="content-header-title">
+                <div class="drop leads-title-drop">
+                    <a href="#" class="leads-title drop-toggle">
+                        Pipeline name
+                        <span class="leads-title-arrow">
+<svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.99999 3.78145L8.29999 0.481445L9.24266 1.42411L4.99999 5.66678L0.757324 1.42411L1.69999 0.481445L4.99999 3.78145Z" fill="white"/>
+</svg>
+                        </span>
+                    </a>
+                    <div class="drop-block">
                         <ul class="automation-list">
-                            <li class="automation-item" data-item-id="1">
+                            <li class="automation-item">
                                 <div class="automation-item-content">
-                                    <span class="automation-item-title">Automation 1</span>
-                                    <div class="automation-item-section">
-                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
-                                        <span class="automation-item-section-title">New Leads</span>
-                                    </div>
-                                    <span class="automation-item-status">| Ondoing</span>
+                                    <span class="automation-item-title">Pipeline name</span>
                                 </div>
                                 <div class="automation-item-buttons">
-                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
-                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
                                 </div>
                             </li>
-                            <li class="automation-item" data-item-id="2">
+                            <li class="automation-item">
                                 <div class="automation-item-content">
-                                    <span class="automation-item-title">Automation 2</span>
-                                    <div class="automation-item-section">
-                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
-                                        <span class="automation-item-section-title">New Leads</span>
-                                    </div>
-                                    <span class="automation-item-status">| Ondoing</span>
+                                    <span class="automation-item-title">Pipeline name</span>
                                 </div>
                                 <div class="automation-item-buttons">
-                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
-                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
                                 </div>
                             </li>
-                            <li class="automation-item" data-item-id="3">
+                            <li class="automation-item">
                                 <div class="automation-item-content">
-                                    <span class="automation-item-title">Automation 3</span>
-                                    <div class="automation-item-section">
-                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
-                                        <span class="automation-item-section-title">New Leads</span>
-                                    </div>
-                                    <span class="automation-item-status">| Ondoing</span>
+                                    <span class="automation-item-title">Pipeline name</span>
                                 </div>
                                 <div class="automation-item-buttons">
-                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
-                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
                                 </div>
                             </li>
-                            <li class="automation-item" data-item-id="4">
+                            <li class="automation-item">
                                 <div class="automation-item-content">
-                                    <span class="automation-item-title">Automation 4</span>
-                                    <div class="automation-item-section">
-                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
-                                        <span class="automation-item-section-title">New Leads</span>
-                                    </div>
-                                    <span class="automation-item-status">| Ondoing</span>
+                                    <span class="automation-item-title">Pipeline name</span>
                                 </div>
                                 <div class="automation-item-buttons">
-                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
-                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
                                 </div>
                             </li>
-                            <li class="automation-item" data-item-id="5">
+                            <li class="automation-item">
                                 <div class="automation-item-content">
-                                    <span class="automation-item-title">Automation 5</span>
-                                    <div class="automation-item-section">
-                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
-                                        <span class="automation-item-section-title">New Leads</span>
-                                    </div>
-                                    <span class="automation-item-status">| Ondoing</span>
+                                    <span class="automation-item-title">Pipeline name</span>
                                 </div>
                                 <div class="automation-item-buttons">
-                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
-                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
                                 </div>
                             </li>
-                            <li class="automation-item" data-item-id="6">
+                            <li class="automation-item">
                                 <div class="automation-item-content">
-                                    <span class="automation-item-title">Automation 6</span>
-                                    <div class="automation-item-section">
-                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
-                                        <span class="automation-item-section-title">New Leads</span>
-                                    </div>
-                                    <span class="automation-item-status">| Ondoing</span>
+                                    <span class="automation-item-title">Pipeline name</span>
                                 </div>
                                 <div class="automation-item-buttons">
-                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
-                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
                                 </div>
                             </li>
-                            <li class="automation-item" data-item-id="7">
+                            <li class="automation-item">
                                 <div class="automation-item-content">
-                                    <span class="automation-item-title">Automation 7</span>
-                                    <div class="automation-item-section">
-                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
-                                        <span class="automation-item-section-title">New Leads</span>
-                                    </div>
-                                    <span class="automation-item-status">| Ondoing</span>
+                                    <span class="automation-item-title">Pipeline name</span>
                                 </div>
                                 <div class="automation-item-buttons">
-                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
-                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
                                 </div>
                             </li>
-                            <li class="automation-item" data-item-id="8">
+                            <li class="automation-item">
                                 <div class="automation-item-content">
-                                    <span class="automation-item-title">Automation 8</span>
-                                    <div class="automation-item-section">
-                                        <span class="pipeline-column-color automation-item-section-color" style="background-color: #F3535E;"></span>
-                                        <span class="automation-item-section-title">New Leads</span>
-                                    </div>
-                                    <span class="automation-item-status">| Ondoing</span>
+                                    <span class="automation-item-title">Pipeline name</span>
                                 </div>
                                 <div class="automation-item-buttons">
-                                    <button class="automation-item-button automation-item-edit" data-id="edit-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                                    </button>
-                                    <button class="automation-item-button automation-item-remove" data-id="remove-automation">
+                                    <button class="automation-item-button">
 <svg fill="none" height="14" width="14" viewBox="0 0 14 14"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M3.7.3v1.4H.3V3h1.4v10c0 .4.3.7.6.7h9.4c.3 0 .6-.3.6-.7V3h1.4V1.7h-3.4V.3H3.7zm-.7 12V3h8v9.3H3zM5 5h1.3v5.3H5V5zm4 0H7.7v5.3H9V5z" clip-rule="evenodd"/></svg>                                    </button>
                                 </div>
                             </li>
                         </ul>
-                        <button class=" blue-button automation-submit" id="new-automation-toggle" data-id="new-automation">
-<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                            <span class="blue-button-title">New automation</span>
-                        </button>
                     </div>
                 </div>
-                <span class="square-button square-button--empty pipeline-views-toggles">
-                    <button class="pipeline-views-toggle selected" id="pipeline-leads-tiles-toggle">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="9" y="3" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="15" y="3" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="3" y="12" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="9" y="12" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="15" y="12" width="4" height="7" rx="1" fill="#3C68EC"/></svg>
-                    </button>
-                    <button class="pipeline-views-toggle" id="pipeline-leads-columns-toggle">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="4" height="16" rx="1" fill="#B7BABF"/><rect x="9" y="3" width="4" height="16" rx="1" fill="#B7BABF"/><rect x="15" y="3" width="4" height="16" rx="1" fill="#B7BABF"/></svg>
-                    </button>
-                    <button class="pipeline-views-toggle" id="pipeline-leads-rows-toggle">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11C3 10.4477 3.44772 10 4 10H6C6.55228 10 7 10.4477 7 11V13C7 13.5523 6.55228 14 6 14H4C3.44772 14 3 13.5523 3 13V11Z" fill="#B7BABF"/><path d="M3 5C3 4.44772 3.44772 4 4 4H6C6.55228 4 7 4.44772 7 5V7C7 7.55228 6.55228 8 6 8H4C3.44772 8 3 7.55228 3 7V5Z" fill="#B7BABF"/><path d="M9 11C9 10.4477 9.44772 10 10 10H12C12.5523 10 13 10.4477 13 11V13C13 13.5523 12.5523 14 12 14H10C9.44772 14 9 13.5523 9 13V11Z" fill="#B7BABF"/><path d="M15 11C15 10.4477 15.4477 10 16 10H18C18.5523 10 19 10.4477 19 11V13C19 13.5523 18.5523 14 18 14H16C15.4477 14 15 13.5523 15 13V11Z" fill="#B7BABF"/><path d="M3 18C3 17.4477 3.44772 17 4 17H18C18.5523 17 19 17.4477 19 18C19 18.5523 18.5523 19 18 19H4C3.44772 19 3 18.5523 3 18Z" fill="#B7BABF"/><path d="M9 5C9 4.44772 9.44772 4 10 4H12C12.5523 4 13 4.44772 13 5V7C13 7.55228 12.5523 8 12 8H10C9.44772 8 9 7.55228 9 7V5Z" fill="#B7BABF"/><path d="M15 5C15 4.44772 15.4477 4 16 4H18C18.5523 4 19 4.44772 19 5V7C19 7.55228 18.5523 8 18 8H16C15.4477 8 15 7.55228 15 7V5Z" fill="#B7BABF"/></svg>
-                    </button>
-                </span>
-                <button class="leads-header-blue-button blue-button add-a-column-button" id="add-column-toggle" data-id="add-column">
-<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                    <span class="blue-button-title">Add a column</span>
-                </button>
-                <button class="leads-header-blue-button blue-button hidden" id="add-new-lead-toggle" data-id="add-new-lead">
-<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                    <span class="blue-button-title">Add a new lead</span>
-                </button>
             </div>
-        </section>
+            <div class="content-header-toolbar">
+                <section class="leads-header">
+                    <input id="pipeline-header-input" type="text" class="leads-header-input text-input tasks pipeline-search" placeholder="Find a pipeline..." />
+                    <button id="pipeline-header-button" class="square-button square-button--empty tasks-empty-button pipeline-filters-mobile" id="filters-toggle-mobile" data-id="filters">
+<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v2h18V0H0zm7 12h4v-2H7v2zm8-5H3V5h12v2z" fill="#1C2538"/></svg>                    </button>
+                    <div class="leads-header-right pipeline-header-right">
+                        <button class="square-button square-button--empty tasks-empty-button pipeline-filters" id="filters-toggle" data-id="filters">
+<svg width="18" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0 0v2h18V0H0zm7 12h4v-2H7v2zm8-5H3V5h12v2z" fill="#1C2538"/></svg>                        </button>
+                        <span class="square-button square-button--empty pipeline-views-toggles">
+                            <button class="pipeline-views-toggle selected" id="pipeline-leads-tiles-toggle">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="9" y="3" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="15" y="3" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="3" y="12" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="9" y="12" width="4" height="7" rx="1" fill="#3C68EC"/><rect x="15" y="12" width="4" height="7" rx="1" fill="#3C68EC"/></svg>
+                            </button>
+                            <button class="pipeline-views-toggle" id="pipeline-leads-columns-toggle">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="4" height="16" rx="1" fill="#B7BABF"/><rect x="9" y="3" width="4" height="16" rx="1" fill="#B7BABF"/><rect x="15" y="3" width="4" height="16" rx="1" fill="#B7BABF"/></svg>
+                            </button>
+                            <button class="pipeline-views-toggle" id="pipeline-leads-rows-toggle">
+                                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 11C3 10.4477 3.44772 10 4 10H6C6.55228 10 7 10.4477 7 11V13C7 13.5523 6.55228 14 6 14H4C3.44772 14 3 13.5523 3 13V11Z" fill="#B7BABF"/><path d="M3 5C3 4.44772 3.44772 4 4 4H6C6.55228 4 7 4.44772 7 5V7C7 7.55228 6.55228 8 6 8H4C3.44772 8 3 7.55228 3 7V5Z" fill="#B7BABF"/><path d="M9 11C9 10.4477 9.44772 10 10 10H12C12.5523 10 13 10.4477 13 11V13C13 13.5523 12.5523 14 12 14H10C9.44772 14 9 13.5523 9 13V11Z" fill="#B7BABF"/><path d="M15 11C15 10.4477 15.4477 10 16 10H18C18.5523 10 19 10.4477 19 11V13C19 13.5523 18.5523 14 18 14H16C15.4477 14 15 13.5523 15 13V11Z" fill="#B7BABF"/><path d="M3 18C3 17.4477 3.44772 17 4 17H18C18.5523 17 19 17.4477 19 18C19 18.5523 18.5523 19 18 19H4C3.44772 19 3 18.5523 3 18Z" fill="#B7BABF"/><path d="M9 5C9 4.44772 9.44772 4 10 4H12C12.5523 4 13 4.44772 13 5V7C13 7.55228 12.5523 8 12 8H10C9.44772 8 9 7.55228 9 7V5Z" fill="#B7BABF"/><path d="M15 5C15 4.44772 15.4477 4 16 4H18C18.5523 4 19 4.44772 19 5V7C19 7.55228 18.5523 8 18 8H16C15.4477 8 15 7.55228 15 7V5Z" fill="#B7BABF"/></svg>
+                            </button>
+                        </span>
+                        <div class="header-add-panel drop">
+                            <button class="drop-toggle leads-header-blue-button blue-button add-a-column-button">
+<svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                                <span class="blue-button-title">Add</span>
+                            </button>
+                            <div class="drop-block">
+                                <ul class="header-add-list">
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon">
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.8779 4L16.8779 16L14.8779 16L14.8779 4L16.8779 4ZM11.8779 4L11.8779 16L9.87793 16L9.87793 4L11.8779 4ZM6.87793 16L6.87793 4L4.87793 4L4.87793 16L6.87793 16Z" fill="#757680"/>
+</svg>
+                                            </span>
+                                            <span class="text">New column</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon">
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.71159 5.83317V2.49984C6.71159 2.27882 6.79939 2.06686 6.95567 1.91058C7.11195 1.7543 7.32391 1.6665 7.54492 1.6665H18.3783C18.5993 1.6665 18.8112 1.7543 18.9675 1.91058C19.1238 2.06686 19.2116 2.27882 19.2116 2.49984V13.3332C19.2116 13.5542 19.1238 13.7661 18.9675 13.9224C18.8112 14.0787 18.5993 14.1665 18.3783 14.1665H15.0449V17.494C15.0449 17.9573 14.6708 18.3332 14.2058 18.3332H3.38409C3.27386 18.3333 3.16469 18.3116 3.06282 18.2695C2.96096 18.2274 2.86841 18.1656 2.79046 18.0876C2.71252 18.0097 2.65071 17.9171 2.60858 17.8153C2.56644 17.7134 2.54481 17.6042 2.54492 17.494L2.54742 6.67234C2.54742 6.209 2.92159 5.83317 3.38659 5.83317H6.71159ZM8.37826 5.83317H14.2058C14.6691 5.83317 15.0449 6.20734 15.0449 6.67234V12.4998H17.5449V3.33317H8.37826V5.83317ZM7.96409 14.9998L12.6774 10.2857L11.4991 9.10734L7.96409 12.6432L6.19492 10.8748L5.01659 12.0532L7.96409 14.9998Z" fill="#757680"/>
+</svg>
+                                            </span>
+                                            <span class="text"> New task</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon">
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.8783 1.6665C15.4783 1.6665 19.2116 5.39984 19.2116 9.99984C19.2116 14.5998 15.4783 18.3332 10.8783 18.3332C6.27826 18.3332 2.54492 14.5998 2.54492 9.99984C2.54492 5.39984 6.27826 1.6665 10.8783 1.6665ZM5.89742 12.8465C7.12076 14.6715 8.95742 15.8332 11.0116 15.8332C13.0649 15.8332 14.9024 14.6723 16.1249 12.8465C14.738 11.5503 12.9099 10.8305 11.0116 10.8332C9.11301 10.8303 7.28452 11.5501 5.89742 12.8465ZM10.8783 9.1665C11.5413 9.1665 12.1772 8.90311 12.646 8.43427C13.1149 7.96543 13.3783 7.32955 13.3783 6.6665C13.3783 6.00346 13.1149 5.36758 12.646 4.89874C12.1772 4.4299 11.5413 4.1665 10.8783 4.1665C10.2152 4.1665 9.57933 4.4299 9.11049 4.89874C8.64165 5.36758 8.37826 6.00346 8.37826 6.6665C8.37826 7.32955 8.64165 7.96543 9.11049 8.43427C9.57933 8.90311 10.2152 9.1665 10.8783 9.1665Z" fill="#757680"/>
+</svg>
+                                            </span>
+                                            <span class="text">New lead</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon">
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18.5 3.25H3.5V4.75H18.5V3.25ZM11.75 16.75V18.25H10.25V16.75H4.25C3.83579 16.75 3.5 16.4142 3.5 16V5.50002H18.5V16C18.5 16.4142 18.1642 16.75 17.75 16.75H11.75ZM7.99958 8.49997C6.75694 8.49997 5.74958 9.50733 5.74958 10.75C5.74958 11.9926 6.75694 13 7.99958 13C9.24222 13 10.2496 11.9926 10.2496 10.75H7.99958V8.49997ZM11.7499 9.99997V8.49997H16.2499V9.99997H11.7499ZM11.7499 11.4999V12.9999H16.2499V11.4999H11.7499Z" fill="#757680"/>
+</svg>
+                                            </span>
+                                            <span class="text">New pipeline</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon">
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.7109 8.33301H17.5443L10.0443 19.1663V11.6663H4.21094L11.7109 0.833008V8.33301Z" fill="#757680"/>
+</svg>
+                                            </span>
+                                            <span class="text">New automation</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon">
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.37777 0.833374V2.50004H13.3778V0.833374H15.0444V2.50004H18.3778C18.5988 2.50004 18.8107 2.58784 18.967 2.74412C19.1233 2.9004 19.2111 3.11236 19.2111 3.33337V16.6667C19.2111 16.8877 19.1233 17.0997 18.967 17.256C18.8107 17.4122 18.5988 17.5 18.3778 17.5H3.37777C3.15675 17.5 2.94479 17.4122 2.78851 17.256C2.63223 17.0997 2.54443 16.8877 2.54443 16.6667V3.33337C2.54443 3.11236 2.63223 2.9004 2.78851 2.74412C2.94479 2.58784 3.15675 2.50004 3.37777 2.50004H6.7111V0.833374H8.37777ZM17.5444 6.66671H4.2111V15.8334H17.5444V6.66671ZM13.4078 8.44671L14.5861 9.62504L10.4611 13.75L7.51443 10.8034L8.69443 9.62504L10.4619 11.3934L13.4086 8.44671H13.4078Z" fill="#757680"/>
+</svg>
+                                            </span>
+                                            <span class="text">New appointment</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /.drop -->
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- /.content-header-columns -->
         <section id="pipeline-leads-tiles">
             <div class="pipeline-columns pipeline-columns-v2">
                 <div class="pipeline-column">
@@ -1101,565 +1112,692 @@
                 </div>
             </div>
         </section>
-        <section class="leads-table" id="pipeline-leads-rows">
-            <div class="leads-table-row leads-table-header">
-                <div class="leads-table-td">
-                    <label class="lead-table-check custom-checkbox">
-                        <input type="checkbox" class="custom-checkbox-hiden" />
-                        <span class="custom-checkbox-check"></span>
-                    </label>
-                </div>
-                <div class="leads-table-td">
-                    <span class="leads-table-title">lead name</span>
-                    <div class="lead-table-sort sort">
-                        <button class="sort-button sort-button"></button>
-                        <button class="sort-button sort-button sort-button--down"></button>
-                    </div>
-                </div>
-                <div class="leads-table-td">
-                    <span class="leads-table-title" id="contact-title">contact</span>
-                    <div class="lead-table-sort sort">
-                        <button class="sort-button sort-button"></button>
-                        <button class="sort-button sort-button sort-button--down"></button>
-                    </div>
-                </div>
-                <div class="leads-table-td">
-                    <span class="leads-table-title">stages</span>
-                    <div class="lead-table-sort sort">
-                        <button class="sort-button sort-button"></button>
-                        <button class="sort-button sort-button sort-button--down"></button>
-                    </div>
-                </div>
-                <div class="leads-table-td">
-                    <span class="leads-table-title">value</span>
-                    <div class="lead-table-sort sort">
-                        <button class="sort-button sort-button"></button>
-                        <button class="sort-button sort-button sort-button--down"></button>
-                    </div>
-                </div>
-                <div class="leads-table-td">
-                </div>
-            </div>
-            <div class="leads-table-body">
-                <div class="leads-table-row" data-id="1">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Qualify</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 0.00</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row" data-id="2">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Pitch</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 250.00</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row" data-id="3">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Qualify</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 10.99</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row" data-id="4">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Pitch</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 199.00</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">UI Kit for Mobile apps</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row" data-id="5">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Qualify</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 0.00</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row" data-id="6">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Thom York</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Pitch</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 250.00</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="leads-table-row" data-id="7">
-                    <div class="leads-table-td">
-                        <label class="lead-table-check custom-checkbox">
-                            <input type="checkbox" class="custom-checkbox-hiden" />
-                            <span class="custom-checkbox-check"></span>
-                        </label>
-                    </div>
-                    <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
-                        <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
-                        <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Cold call</span>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">Qualify</span>
-                        <div class="leads-table-qualify qualify">
-                            <span class="qualify-label"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                            <span class="qualify-label qualify-label--empty"></span>
-                        </div>
-                    </div>
-                    <div class="leads-table-td">
-                        <span class="leads-table-text">$ 10.99</span>
-                    </div>
-                    <div class="leads-table-td leads-table-notes">
-                        <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
-<div class="leads-table-notes-list notes-list">
-    <div class="notes-list-header">
-        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
-        <span class="notes-list-title">Notes</span>
-        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
-        <button class="notes-list-close"></button>
-    </div>
-    <div class="notes-list-body">
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">03/03/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">02/02/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Shubham Sethi</span>
-            <span class="notes-list-item-date">01/01/2021</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-        <div class="notes-list-item">
-            <span class="notes-list-item-title">Andrew Vynarchyk</span>
-            <span class="notes-list-item-date">12/12/2020</span>
-            <span class="notes-list-item-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
-            </span>
-        </div>
-    </div>
-    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
-</div>                        <div class="lead-buttons">
-<svg class="note-icon" height="18" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 18"><defs/><path fill="#757680" d="M0 6a6 6 0 016-6h8a6 6 0 016 6v12H6a6 6 0 01-6-6V6zm18 10V6a4 4 0 00-4-4H6a4 4 0 00-4 4v6a4 4 0 004 4h12zm-6-8h2v2h-2V8zM6 8h2v2H6V8z"/></svg>                            <button class="edit-current-lead lead-button" data-id="add-note">
-<svg fill="none" width="12" height="14" viewBox="0 0 12 14"><defs/><path fill="#8A8B93" fill-rule="evenodd" d="M2.8 11H0V8.2L7.6.5c.3-.2.7-.2 1 0l1.9 2c.2.2.2.6 0 .9L2.8 11zm-.5-1.3L9 2.9 8 2 1.4 8.8v1h1zm9.7 2.6H0v1.4h12v-1.4z" clip-rule="evenodd"/></svg>                            </button>
-                            <button class="remove-current-lead lead-button">
-<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                            </button>
-                        </div>
-                    </div>
-                </div>
+        <div class="leads-table-overflow" id="pipeline-leads-rows">
+            <section class="leads-table">
                 <div class="popup-right-file uploaded" id="add-lead-success">
                     <label class="label" for="upload-csv-lead">
 <svg height="17" width="17" class="file-uploaded" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 17"><defs/><path fill="#99DC13" d="M8.5 16.8A8.3 8.3 0 118.5.2a8.3 8.3 0 010 16.6zm0-1.6a6.7 6.7 0 100-13.4 6.7 6.7 0 000 13.4zm-.8-3.4L4 8.3l1.2-1.2 2.4 2.4 4.7-4.7 1.2 1.1-6 6z"/></svg>                        <span class="title">New lead added successfully</span>
                         <button id="undo-new-lead">Undo</button>
                     </label>
                 </div>
-            </div>
-        </section>
+                <div class="leads-table-row leads-table-header">
+                    <div class="leads-table-td">
+                        <label class="lead-table-check custom-checkbox">
+                            <input type="checkbox" class="custom-checkbox-hiden" />
+                            <span class="custom-checkbox-check"></span>
+                        </label>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title">lead name</span>
+                        <div class="lead-table-sort sort">
+                            <button class="sort-button sort-button"></button>
+                            <button class="sort-button sort-button sort-button--down"></button>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title">Date added</span>
+                        <div class="lead-table-sort sort">
+                            <button class="sort-button sort-button"></button>
+                            <button class="sort-button sort-button sort-button--down"></button>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title" id="contact-title">contact</span>
+                        <div class="lead-table-sort sort">
+                            <button class="sort-button sort-button"></button>
+                            <button class="sort-button sort-button sort-button--down"></button>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title">stages</span>
+                        <div class="lead-table-sort sort">
+                            <button class="sort-button sort-button"></button>
+                            <button class="sort-button sort-button sort-button--down"></button>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title">value</span>
+                        <div class="lead-table-sort sort">
+                            <button class="sort-button sort-button"></button>
+                            <button class="sort-button sort-button sort-button--down"></button>
+                        </div>
+                    </div>
+                    <div class="leads-table-td">
+                        <span class="leads-table-title">notes</span>
+                        <div class="lead-table-sort sort">
+                            <button class="sort-button sort-button"></button>
+                            <button class="sort-button sort-button sort-button--down"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="leads-table-body">
+                    <div class="leads-table-row" data-id="1">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Qualify</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 0.00</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row" data-id="2">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Pitch</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 250.00</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row" data-id="3">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Qualify</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 10.99</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row" data-id="4">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Ozzy Osbourne</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Pitch</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 199.00</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">UI Kit for Mobile apps</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row" data-id="5">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Matthew Bellamy</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Qualify</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 0.00</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Create landing page</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row" data-id="6">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Thom York</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Pitch</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 250.00</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Designing Iconset 2.0</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="leads-table-row" data-id="7">
+                        <div class="leads-table-td">
+                            <label class="lead-table-check custom-checkbox">
+                                <input type="checkbox" class="custom-checkbox-hiden" />
+                                <span class="custom-checkbox-check"></span>
+                            </label>
+                        </div>
+                        <div class="leads-table-td lead-chat-toggle" data-id="chat-popup">
+                            <img src="upload/avatar.jpg" alt="" class="leads-table-avatar" />
+                            <span class="leads-table-text leads-table-text--bold">Corry Talor</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">10.10.2020</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Cold call</span>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">Qualify</span>
+                            <div class="leads-table-qualify qualify">
+                                <span class="qualify-label"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                                <span class="qualify-label qualify-label--empty"></span>
+                            </div>
+                        </div>
+                        <div class="leads-table-td">
+                            <span class="leads-table-text">$ 10.99</span>
+                        </div>
+                        <div class="leads-table-td leads-table-notes">
+                            <span class="leads-table-text leads-table-text--semi-bold task-view-toggle" data-id="edit-task-on-page">Styleguide for CRM Dashboard</span>
+<div class="leads-table-notes-list notes-list">
+    <div class="notes-list-header">
+        <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+        <span class="notes-list-title">Notes</span>
+        <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+        <button class="notes-list-close"></button>
+    </div>
+    <div class="notes-list-body">
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">03/03/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">02/02/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Shubham Sethi</span>
+            <span class="notes-list-item-date">01/01/2021</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+        <div class="notes-list-item">
+            <span class="notes-list-item-title">Andrew Vynarchyk</span>
+            <span class="notes-list-item-date">12/12/2020</span>
+            <span class="notes-list-item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+            </span>
+        </div>
+    </div>
+    <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+</div>                            <div class="lead-buttons">
+                                <button class="lead-button toggle-modal" data-id="merge-leads">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5.92046 7.32518C6.06502 7.85421 6.37946 8.32106 6.81539 8.65384C7.25131 8.98661 7.78454 9.16687 8.33296 9.16685H11.6663C12.648 9.16692 13.5981 9.51354 14.3493 10.1456C15.1004 10.7777 15.6043 11.6546 15.7721 12.6218C16.3377 12.8064 16.819 13.1865 17.1295 13.6939C17.4401 14.2014 17.5596 14.8029 17.4665 15.3905C17.3735 15.9781 17.074 16.5133 16.6219 16.8999C16.1697 17.2866 15.5946 17.4994 14.9996 17.5002C14.4176 17.5006 13.8536 17.298 13.405 16.9271C12.9563 16.5563 12.6511 16.0406 12.542 15.4688C12.4329 14.8971 12.5267 14.3052 12.8072 13.7952C13.0878 13.2852 13.5375 12.8891 14.0788 12.6752C13.9342 12.1461 13.6198 11.6793 13.1839 11.3465C12.7479 11.0137 12.2147 10.8335 11.6663 10.8335H8.33296C7.4312 10.8348 6.55357 10.5423 5.83296 10.0002V12.6418C6.38921 12.8384 6.85804 13.2253 7.1566 13.7342C7.45515 14.243 7.5642 14.841 7.46447 15.4225C7.36474 16.004 7.06265 16.5315 6.61161 16.9117C6.16056 17.292 5.58959 17.5006 4.99963 17.5006C4.40967 17.5006 3.8387 17.292 3.38765 16.9117C2.9366 16.5315 2.63452 16.004 2.53479 15.4225C2.43506 14.841 2.54411 14.243 2.84266 13.7342C3.14122 13.2253 3.61005 12.8384 4.1663 12.6418V7.35851C3.61378 7.16344 3.1473 6.78055 2.84826 6.27665C2.54922 5.77276 2.43661 5.17986 2.53007 4.60142C2.62354 4.02298 2.91716 3.49572 3.35968 3.11165C3.8022 2.72758 4.36553 2.5111 4.95137 2.49996C5.53721 2.48883 6.10836 2.68376 6.56516 3.05074C7.02195 3.41772 7.33538 3.93344 7.45076 4.50791C7.56613 5.08239 7.47613 5.67914 7.19645 6.19403C6.91677 6.70892 6.46517 7.10926 5.92046 7.32518Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="lead-button note-icon">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.66699 7.49501C1.66655 6.83851 1.79562 6.18837 2.0468 5.58183C2.29798 4.97528 2.66634 4.42424 3.13078 3.96026C3.59523 3.49628 4.14664 3.12847 4.75344 2.8779C5.36023 2.62733 6.0105 2.49891 6.66699 2.50001H13.3337C16.0945 2.50001 18.3337 4.74584 18.3337 7.49501V17.5H6.66699C3.90616 17.5 1.66699 15.2542 1.66699 12.505V7.49501ZM16.667 15.8333V7.49501C16.6648 6.61209 16.3127 5.76604 15.6879 5.14219C15.0632 4.51834 14.2166 4.16755 13.3337 4.16667H6.66699C6.22937 4.16558 5.79583 4.25088 5.39124 4.4177C4.98665 4.58451 4.61898 4.82955 4.30929 5.13877C3.99961 5.44799 3.75402 5.8153 3.5866 6.21963C3.41918 6.62397 3.33322 7.05738 3.33366 7.49501V12.505C3.33586 13.3879 3.68792 14.234 4.31271 14.8578C4.93749 15.4817 5.78407 15.8325 6.66699 15.8333H16.667ZM11.667 9.16667H13.3337V10.8333H11.667V9.16667ZM6.66699 9.16667H8.33366V10.8333H6.66699V9.16667Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="edit-current-lead lead-button" data-id="add-note">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.0003 9.16675V6.66675L18.3337 10.0001L15.0003 13.3334V10.8334H10.8337V15.0001H13.3337L10.0003 18.3334L6.66699 15.0001H9.16699V10.8334H5.00033V13.3334L1.66699 10.0001L5.00033 6.66675V9.16675H9.16699V5.00008H6.66699L10.0003 1.66675L13.3337 5.00008H10.8337V9.16675H15.0003Z" fill="#757680"/>
+</svg>
+                                </button>
+                                <button class="remove-current-lead lead-button">
+<svg fill="none" height="20" width="20" viewBox="0 0 20 20"><defs/><path fill="#F3535E" fill-rule="evenodd" d="M5 0v2H0v2h2v15c0 .6.4 1 1 1h14c.6 0 1-.4 1-1V4h2V2h-5V0H5zM4 18V4h12v14H4zM7 7h2v8H7V7zm6 0h-2v8h2V7z" clip-rule="evenodd"/></svg>                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- /.leads-table-overflow -->
     </div>
 </main>
 <div class="popup" id="add-new-lead-pipeline">
@@ -1762,51 +1900,82 @@
             <button class="notes-list-close popup-right-close" id="close-add-task-on-page"></button>
         </div>
         <form action="" class="popup-right-form popup-center-form add-task-form">
-            <input type="text" class="text-input popup-right-input" placeholder="Title" />
-            <div class="popup-center-dates">
-                <input type="date" placeholder="Due to" />
-                <select class="select popup-right-select">
-                    <option>Assigned to</option>
-                </select>
-            </div>
-            <select class="select popup-right-select">
-                <option>Contact person</option>
-            </select>
-            <select class="select popup-right-select">
-                <option>Type of task</option>
-            </select>
-            <textarea class="text-input popup-right-input popup-right-textarea popup-center-textarea" cols="30" rows="4" placeholder="Description"></textarea>
-            <div class="popup-center-attachment">
-                <span class="checklist-title popup-center-attachment-title">Attachment</span>
-            </div>
-            <div class="popup-center-file">
-                <label class="label" for="upload-file-task-on-page">
-<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg><svg height="17" width="17" class="file-uploaded" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 17"><defs/><path fill="#99DC13" d="M8.5 16.8A8.3 8.3 0 118.5.2a8.3 8.3 0 010 16.6zm0-1.6a6.7 6.7 0 100-13.4 6.7 6.7 0 000 13.4zm-.8-3.4L4 8.3l1.2-1.2 2.4 2.4 4.7-4.7 1.2 1.1-6 6z"/></svg>                    <span class="title">+ Upload from your device</span>
-                    <ul class="files-list">
-                        <li class="files-list-item">
-                            <div class="files-list-item-icon">
-                                <img src="upload/template-5.png" />
-                            </div>
-                            <div class="files-list-item-text">
-                                image.png
-                                <button class="files-list-item-remove"></button>
-                            </div>
-                        </li>
-                        <li class="files-list-item">
-                            <div class="files-list-item-icon">
-                                <svg fill="none" viewBox="0 0 18 18">
-                                    <defs />
-                                    <path fill="#FFBF4B" d="M14.8 17.3H3.2a2.5 2.5 0 01-2.5-2.5V1.5a.8.8 0 01.8-.8h11.7a.8.8 0 01.8.8v8.3c0 1 .7 1.7 1.7 1.7.9 0 1.6.7 1.6 1.7v1.6a2.5 2.5 0 01-2.5 2.5zm0-4.1c-.4 0-.8.3-.8.8v.8a.8.8 0 001.7 0V14c0-.5-.4-.8-.9-.8zm-10-8.4a.8.8 0 000 1.7h5a.8.8 0 100-1.7h-5zm0 3.4a.8.8 0 000 1.6h5a.8.8 0 100-1.6h-5zm0 3.3a.8.8 0 000 1.7h2.5a.8.8 0 100-1.7H4.8z" />
-                                </svg>
-                            </div>
-                            <div class="files-list-item-text">
-                                docs.pdf
-                                <button class="files-list-item-remove"></button>
-                            </div>
-                        </li>
-                    </ul>
-                    <input type="file" name="csv" id="upload-file-task-on-page" />
-                </label>
+            <div>
+                <div class="ongoing-row">
+                    <div class="ongoing-col col-auto">
+                        <input type="text" class="input-text" placeholder="Title">
+                    </div>
+                </div>
+                <!-- /.ongoing-row -->
+                <div class="ongoing-row">
+                    <div class="ongoing-col col-auto">
+                        <input type="text" class="input-text mask-dob input-datepicker input-datepicker-icon" placeholder="Due to">
+                    </div>
+                </div>
+                <!-- /.ongoing-row -->
+                <div class="ongoing-row">
+                    <div class="ongoing-col col-auto">
+                        <select class="select">
+                            <option>Assigned to</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- /.ongoing-row -->
+                <div class="ongoing-row">
+                    <div class="ongoing-col col-auto">
+                        <select class="select">
+                            <option>Contact person</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- /.ongoing-row -->
+                <div class="ongoing-row">
+                    <div class="ongoing-col col-auto">
+                        <select class="select">
+                            <option>Type of task</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- /.ongoing-row -->
+                <div class="ongoing-row">
+                    <div class="ongoing-col col-auto">
+                        <textarea class="textarea textarea-medium" placeholder="Description"></textarea>
+                    </div>
+                </div>
+                <!-- /.ongoing-row -->
+                <div class="popup-center-attachment">
+                    <span class="checklist-title popup-center-attachment-title">Attachment</span>
+                </div>
+                <div class="popup-center-file">
+                    <label class="label" for="upload-file-task-on-page">
+<svg class="file-upload" width="15" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.67 10.25V5.67a3.33 3.33 0 10-6.67 0v4.58a5.42 5.42 0 0010.83 0V2.33h1.67v7.92a7.08 7.08 0 01-14.17 0V5.67a5 5 0 0110 0v4.58a2.92 2.92 0 01-5.83 0V5.67h1.67v4.58a1.25 1.25 0 102.5 0z" fill="#9A9FA7"/></svg><svg height="17" width="17" class="file-uploaded" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 17"><defs/><path fill="#99DC13" d="M8.5 16.8A8.3 8.3 0 118.5.2a8.3 8.3 0 010 16.6zm0-1.6a6.7 6.7 0 100-13.4 6.7 6.7 0 000 13.4zm-.8-3.4L4 8.3l1.2-1.2 2.4 2.4 4.7-4.7 1.2 1.1-6 6z"/></svg>                        <span class="title">+ Upload from your device</span>
+                        <ul class="files-list">
+                            <li class="files-list-item">
+                                <div class="files-list-item-icon">
+                                    <img src="upload/template-5.png" />
+                                </div>
+                                <div class="files-list-item-text">
+                                    image.png
+                                    <button class="files-list-item-remove"></button>
+                                </div>
+                            </li>
+                            <li class="files-list-item">
+                                <div class="files-list-item-icon">
+                                    <svg fill="none" viewBox="0 0 18 18">
+                                        <defs />
+                                        <path fill="#FFBF4B" d="M14.8 17.3H3.2a2.5 2.5 0 01-2.5-2.5V1.5a.8.8 0 01.8-.8h11.7a.8.8 0 01.8.8v8.3c0 1 .7 1.7 1.7 1.7.9 0 1.6.7 1.6 1.7v1.6a2.5 2.5 0 01-2.5 2.5zm0-4.1c-.4 0-.8.3-.8.8v.8a.8.8 0 001.7 0V14c0-.5-.4-.8-.9-.8zm-10-8.4a.8.8 0 000 1.7h5a.8.8 0 100-1.7h-5zm0 3.4a.8.8 0 000 1.6h5a.8.8 0 100-1.6h-5zm0 3.3a.8.8 0 000 1.7h2.5a.8.8 0 100-1.7H4.8z" />
+                                    </svg>
+                                </div>
+                                <div class="files-list-item-text">
+                                    docs.pdf
+                                    <button class="files-list-item-remove"></button>
+                                </div>
+                            </li>
+                        </ul>
+                        <input type="file" name="csv" id="upload-file-task-on-page" />
+                    </label>
+                </div>
+                <div class="ongoing-spacer"></div>
             </div>
             <button type="submit" class="blue-button popup-right-blue-button add-task-submit add-task-on-page-submit">
 <svg class="plus" width="13" height="12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.7 5.2v-5h1.6v5h5v1.6h-5v5H5.7v-5h-5V5.2h5z" fill="#fff"/></svg>                <span class="blue-button-title">Add a task</span>
@@ -1830,20 +1999,48 @@
 <svg fill="none" height="11" width="15" viewBox="0 0 15 11"><defs/><path fill="#99DC13" d="M5.3 8.6L13 1l1.2 1.2L5.3 11 0 5.7l1.2-1.2 4.1 4.1z"/></svg>                    <span class="blue-button-title">Mark as Done</span>
                 </button>
             </div>
-            <input type="text" class="text-input popup-right-input" placeholder="Title" />
-            <div class="popup-center-dates">
-                <input type="date" placeholder="Due to" />
-                <select class="select popup-right-select">
-                    <option>Assigned to</option>
-                </select>
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <input type="text" class="input-text" placeholder="Title">
+                </div>
             </div>
-            <select class="select popup-right-select">
-                <option>Contact person</option>
-            </select>
-            <select class="select popup-right-select">
-                <option>Type of task</option>
-            </select>
-            <textarea class="text-input popup-right-input popup-right-textarea popup-center-textarea" cols="30" rows="4" placeholder="Description"></textarea>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <input type="text" class="input-text mask-dob input-datepicker input-datepicker-icon" placeholder="Due to">
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <select class="select">
+                        <option>Assigned to</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <select class="select">
+                        <option>Contact person</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <select class="select">
+                        <option>Type of task</option>
+                    </select>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
+            <div class="ongoing-row">
+                <div class="ongoing-col col-auto">
+                    <textarea class="textarea textarea-medium" placeholder="Description"></textarea>
+                </div>
+            </div>
+            <!-- /.ongoing-row -->
             <div class="popup-center-attachment">
                 <span class="checklist-title popup-center-attachment-title">Attachment</span>
             </div>
