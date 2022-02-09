@@ -3591,6 +3591,15 @@ $(document).ready(function () {
         $(this).parents('.cmp-footer-center-line').remove();
     });
 
+    //--------------------------------------------//
+
+    $(document).on('click', '.dashboard-tasks-title-tabs-list a', function (event) {
+        event.preventDefault();
+        $(this).parents('li').addClass('active').siblings('li').removeClass('active');
+    });
+
+    //--------------------------------------------//
+
     //
 
     // cut contact title on tablet
