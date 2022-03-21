@@ -31,6 +31,56 @@ $(document).ready(function () {
 
     //-----------------------------------------//
 
+    tippy('.note-icon', {
+        content: `<div class="leads-table-notes-list notes-list note-list-for-tasks show-permanent">
+            <div class="notes-list-header">
+                <img src="upload/avatar.jpg" alt="" class="notes-list-avatar leads-table-avatar">
+                <span class="notes-list-title">Notes</span>
+                <span class="notes-list-subtitle">Andrew Vynarchyk</span>
+                <button class="notes-list-close"></button>
+            </div>
+            <div class="notes-list-body">
+                <div class="notes-list-item">
+                    <span class="notes-list-item-title">Shubham Sethi</span>
+                    <span class="notes-list-item-date">03/03/2021</span>
+                    <span class="notes-list-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+                    </span>
+                </div>
+                <div class="notes-list-item">
+                    <span class="notes-list-item-title">Andrew Vynarchyk</span>
+                    <span class="notes-list-item-date">02/02/2021</span>
+                    <span class="notes-list-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+                    </span>
+                </div>
+                <div class="notes-list-item">
+                    <span class="notes-list-item-title">Shubham Sethi</span>
+                    <span class="notes-list-item-date">01/01/2021</span>
+                    <span class="notes-list-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+                    </span>
+                </div>
+                <div class="notes-list-item">
+                    <span class="notes-list-item-title">Andrew Vynarchyk</span>
+                    <span class="notes-list-item-date">12/12/2020</span>
+                    <span class="notes-list-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis lorem purus malesuada pellentesque.
+                    </span>
+                </div>
+            </div>
+            <input type="text" class="text-input notes-list-input" placeholder="Type message...">
+        </div>`,
+        allowHTML: true,
+        interactive: true,
+        trigger: 'click',
+        placement: 'bottom',
+        //hideOnClick: 'toggle',
+        appendTo: () => document.body
+    });
+
+    //-----------------------------------------//
+
     //modal
     $(document).on('click', '.modal-plus', function (event) {
         event.preventDefault();
@@ -4110,21 +4160,21 @@ toggleLeadRow = e => {
     checkselectedChecks()
 }
 toggleNotesList = e => {
-    const lists = document.querySelectorAll(`.leads-table-notes-list`)
-    const buttons = document.querySelectorAll(`.leads-table-td.leads-table-notes svg`)
+    // const lists = document.querySelectorAll(`.leads-table-notes-list`)
+    // const buttons = document.querySelectorAll(`.leads-table-td.leads-table-notes svg`)
 
-    if (e.currentTarget.classList.contains(`opened`)) {
-        lists.forEach(e => e.classList.remove(`shown`))
-        buttons.forEach(e => e.classList.remove(`opened`))
+    // if (e.currentTarget.classList.contains(`opened`)) {
+    //     lists.forEach(e => e.classList.remove(`shown`))
+    //     buttons.forEach(e => e.classList.remove(`opened`))
 
-        return false
-    }
+    //     return false
+    // }
 
-    if (window.innerWidth < 661) document.body.style.overflow = `hidden`
-    lists.forEach(e => e.classList.remove(`shown`))
-    buttons.forEach(e => e.classList.remove(`opened`))
-    e.currentTarget.classList.add(`opened`)
-    e.currentTarget.closest(`.leads-table-notes`).querySelector(`.leads-table-notes-list`).classList.add(`shown`)
+    // if (window.innerWidth < 661) document.body.style.overflow = `hidden`
+    // lists.forEach(e => e.classList.remove(`shown`))
+    // buttons.forEach(e => e.classList.remove(`opened`))
+    // e.currentTarget.classList.add(`opened`)
+    // e.currentTarget.closest(`.leads-table-notes`).querySelector(`.leads-table-notes-list`).classList.add(`shown`)
 }
 
 closeNotesList = () => {
